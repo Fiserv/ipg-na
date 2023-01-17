@@ -15,7 +15,7 @@ IPG NA supports 3-D Secure (3DS) transactions from a either a merchant 3DS servi
 - **Version 1:** The customer is redirected to the issuer's website to provide additional authentication data (e.g. password or an SMS verification code).
 - **Version 2:** The card issuer performs the authentication within the merchant's website or mobile app using passive, biometric, and two-factor authentication methods.
 
---
+---
 
 ## Integration Methods
 
