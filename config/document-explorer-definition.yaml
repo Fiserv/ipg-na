@@ -37,6 +37,12 @@
     - title: March 2022
       link: docs/release-notes/2022/march.md
 - sections:
+  - title: Schemas
+    link: docs/Schemas.md
+- sections:
+  - title: SDKs 
+    link: docs/Sdks.md
+- sections:
   - title: Digital Wallets  
     link: docs/DigitalWallets.md
       
