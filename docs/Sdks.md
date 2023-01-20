@@ -1,6 +1,6 @@
-## SDKs
+# SDKs
 
-### GITHUB REPOSITORIES
+## GITHUB REPOSITORIES
 
 [C# .NET](https://github.com/GBSEcom/DotNet)
 
@@ -14,7 +14,7 @@
 
 [Javascript](https://github.com/GBSEcom/NPM)
 
-#### PACKAGES
+## PACKAGES
 
 [Composer](https://packagist.org/packages/first-data/gateway)
 
