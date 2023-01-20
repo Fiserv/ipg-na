@@ -1,3 +1,4 @@
+
 # Digital Wallets
 
 ## USER GUIDES
@@ -10,4 +11,4 @@
 
 [Apple Pay](https://github.com/GBSEcom/ApplePaySDK)
 
-[Google Pay](https://github.com/GBSEcom/GooglePaySDK)
+[Google Pay](https://github.com/GBSEcom/GooglePaySDK)  
