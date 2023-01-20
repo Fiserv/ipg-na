@@ -44,8 +44,8 @@
 - sections:
   - title: Schemas
     sections:
-    - title: SDKs
-      link: docs/Sdks.md
+    - title: BasicResponse
+      link: docs/schemas-md/BasicResponse.md
 - sections:
   - title: Digital Wallets  
     link: docs/DigitalWallets.md
