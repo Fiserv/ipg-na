@@ -43,7 +43,9 @@
       link: docs/Sdks.md
 - sections:
   - title: Schemas
-    link: docs/Schemas.md
+    sections:
+    - title: SDKs
+      link: docs/Sdks.md
 - sections:
   - title: Digital Wallets  
     link: docs/DigitalWallets.md
