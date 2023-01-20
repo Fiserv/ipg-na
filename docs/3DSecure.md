@@ -1,5 +1,5 @@
 
-# 3-D Secure
+## 3-D Secure
 IPG NA supports 3-D Secure (3DS) transactions from a either a merchant 3DS service or through IPG NA's 3DS authentication service. For additional information about 3-D Secure visit the [EMVCo](https://www.emvco.com/emv-technologies/3d-secure/) website.
 
 ### How it Works
@@ -17,7 +17,7 @@ IPG NA supports 3-D Secure (3DS) transactions from a either a merchant 3DS servi
 
 ---
 
-## Integration Methods
+### Integration Methods
 
 Build an integration that to accept a 3-D Secure payment.
 
