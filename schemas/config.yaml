@@ -1,0 +1,10 @@
+
+
+---
+version: 1.0.0
+schemas:
+- link: schemas/BasicResponse.md
+  title: BasicResponse
+  type: schema
+- link: schemas/ErrorResponse.md
+  title: ErrorResponse   
