@@ -46,6 +46,9 @@
     sections:
     - title: BasicResponse
       link: docs/schemas-md/BasicResponse.md
+    sections:
+    - title: ErrorResponse
+      link: docs/schemas-md/ErrorResponse.md  
 - sections:
   - title: Digital Wallets  
     link: docs/DigitalWallets.md
