@@ -32,6 +32,9 @@
   - title: 3DSecure  
     link: docs/3DSecure.md
 - sections:
+  - title: Digital Wallets  
+    link: docs/DigitalWallets.md
+- sections:
   - title: Release notes
     sections:
     - title: March 2022
@@ -48,7 +51,5 @@
       link: docs/schemas-md/BasicResponse.md
     - title: ErrorResponse
       link: docs/schemas-md/ErrorResponse.md  
-- sections:
-  - title: Digital Wallets  
-    link: docs/DigitalWallets.md
-      
+    - title: TransactionErrorResponse
+      link: docs/schemas-md/TransactionErrorResponse.md   
