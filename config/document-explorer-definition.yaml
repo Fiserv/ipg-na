@@ -53,3 +53,5 @@
       link: docs/schemas-md/ErrorResponse.md  
     - title: TransactionErrorResponse
       link: docs/schemas-md/TransactionErrorResponse.md   
+    - title: PaymentUrlErrorResponse
+      link: docs/schemas-md/PaymentUrlErrorResponse.md   
