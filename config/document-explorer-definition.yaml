@@ -59,3 +59,13 @@
       link: docs/schemas-md/PaymentSchedulesErrorResponse.md     
     - title: PaymentTokenizationErrorResponse
       link: docs/schemas-md/PaymentTokenizationErrorResponse.md    
+    - title: OrderErrorResponse
+      link: docs/schemas-md/OrderErrorResponse.md    
+    - title: OrderResponse
+      link: docs/schemas-md/OrderResponse.md    
+    - title: PaymentTokenUpdateResponse
+      link: docs/schemas-md/PaymentTokenUpdateResponse.md    
+    - title: PaymentTokenizationResponse
+      link: docs/schemas-md/PaymentTokenizationResponse.md  
+    - title: PaymentSchedulesResponse
+      link: docs/schemas-md/PaymentSchedulesResponse.md           
