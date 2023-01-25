@@ -55,3 +55,7 @@
       link: docs/schemas-md/TransactionErrorResponse.md   
     - title: PaymentUrlErrorResponse
       link: docs/schemas-md/PaymentUrlErrorResponse.md   
+    - title: PaymentSchedulesErrorResponse
+      link: docs/schemas-md/PaymentSchedulesErrorResponse.md     
+    - title: PaymentTokenizationErrorResponse
+      link: docs/schemas-md/PaymentTokenizationErrorResponse.md    
