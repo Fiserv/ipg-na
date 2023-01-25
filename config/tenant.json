@@ -37,7 +37,7 @@
     "feature":[
       {
         "name": "sandBox",
-        "value": true
+        "value": false
       },
       {
         "name": "plugins",
@@ -49,7 +49,7 @@
       },
       {
         "name": "editParameterAPIExplorer",
-        "value": true
+        "value": false
       }
     ]
   },
