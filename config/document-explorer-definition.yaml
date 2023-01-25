@@ -68,4 +68,13 @@
     - title: PaymentTokenizationResponse
       link: docs/schemas-md/PaymentTokenizationResponse.md  
     - title: PaymentSchedulesResponse
-      link: docs/schemas-md/PaymentSchedulesResponse.md           
+      link: docs/schemas-md/PaymentSchedulesResponse.md     
+    - title: RecurringPaymentDetailsResponse
+      link: docs/schemas-md/RecurringPaymentDetailsResponse.md      
+    - title: ExchangeRateResponse
+      link: docs/schemas-md/ExchangeRateResponse.md
+    - title: PaymentUrlResponse
+      link: docs/schemas-md/PaymentUrlResponse.md          
+    - title: PaymentUrlDetailResponse
+      link: docs/schemas-md/PaymentUrlDetailResponse.md         
+               
