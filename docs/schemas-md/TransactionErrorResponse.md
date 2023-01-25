@@ -28,7 +28,7 @@
 | paymentAccountReferenceNumber |    ``` string ```  *maxLength: 30  example: 1234001AB101112131415161718CV*. Payment Account Reference Number from response, if supplied.|
 | secure3dResponse |   |
 | standinResponseDetails |   |
-| redirectURL |    ``` string ```  *example:  http://pay.issuer-bank.com/sessionID=123&sharedKey=456*. The endpoint redirection URL.|
+| redirectURL |    ``` string ```  *example:  `http://pay.issuer-bank.com/sessionID=123&sharedKey=456`*. The endpoint redirection URL.|
 | authenticationResponse |   |
 | schemeTransactionId |    ``` string ```  *maxLength: 40  example: 019078743804756*. The transaction ID received from schemes for the initial transaction of card on file flows.|
 | processor |   |
