@@ -1,5 +1,5 @@
 
-# PaymentUrlResponse
+# PaymentUrlDetailResponse
 
 | *description*:   | *Payment URL response with error field included.*|
 |----|----|

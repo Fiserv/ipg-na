@@ -77,4 +77,7 @@
       link: docs/schemas-md/PaymentUrlResponse.md          
     - title: PaymentUrlDetailResponse
       link: docs/schemas-md/PaymentUrlDetailResponse.md         
-               
+    - title: TransactionResponse
+      link: docs/schemas-md/TransactionResponse.md
+    - title: RecurringPaymentDetails
+      link: docs/schemas-md/RecurringPaymentDetails.md                             

@@ -1,7 +1,7 @@
 
-# TransactionErrorResponse
+# TransactionResponse
 
-| *description*:   | *Transaction response with error field included*.|
+| *description*:   | *Common object for primary and secondary payment request responses.*|
 |----|----|
 | clientRequestId |    ``` string ```  *example:   30dd879c-ee2f-11db-8314-0800200c9a66*. Echoes back the value in the request header for tracking.|
 | apiTraceId |    ``` string ```  *example: rrt-0bd552c12342d3448-b-ea-1142-12938318-7*. Request identifier in API, can be used to request logs from the support team.|
@@ -38,8 +38,7 @@
 | currencyConversionResponse |   |
 | requiredActions |   |
 | plannedDueDate |    ``` string ```  *pattern: ^\d{4}-(0[1-9]P1[0-2])-(0[1-9]P[12][0-9]P3[01])$  example: 2022-03-03*. Capture PlannedDueDate field sent for SEPA transactions.|
-| networkToken |   |
-| error | |  
+| networkToken |   |   
 
 
 
