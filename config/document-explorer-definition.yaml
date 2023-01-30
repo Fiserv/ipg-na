@@ -94,4 +94,24 @@
     - title: AccessTokenResponse
       link: docs/schemas-md/AccessTokenResponse.md   
     - title: CardVerificationRequest
-      link: docs/schemas-md/CardVerificationRequest.md                          
+      link: docs/schemas-md/CardVerificationRequest.md       
+    - title: GenerateCashReceiptRequest
+      link: docs/schemas-md/GenerateCashReceiptRequest.md      
+    - title: GenerateCashReceiptResponse
+      link: docs/schemas-md/GenerateCashReceiptResponse.md        
+    - title: DeliveryConfirmationRequest
+      link: docs/schemas-md/DeliveryConfirmationRequest.md   
+    - title: DeliveryConfirmationResponse
+      link: docs/schemas-md/DeliveryConfirmationResponse.md     
+    - title: PaymentCardVerificationRequest
+      link: docs/schemas-md/PaymentCardVerificationRequest.md     
+    - title: PaymentTokenVerificationRequest
+      link: docs/schemas-md/PaymentTokenVerificationRequest.md       
+    - title: ReferencedOrderPaymentTokenizationRequest
+      link: docs/schemas-md/ReferencedOrderPaymentTokenizationRequest.md       
+    - title: PaymentCardPaymentTokenizationRequest
+      link: docs/schemas-md/PaymentCardPaymentTokenizationRequest.md       
+    - title: PaymentDevicePaymentTokenizationRequest
+      link: docs/schemas-md/PaymentDevicePaymentTokenizationRequest.md       
+        
+                          
