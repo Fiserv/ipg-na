@@ -80,4 +80,18 @@
     - title: TransactionResponse
       link: docs/schemas-md/TransactionResponse.md
     - title: RecurringPaymentDetails
-      link: docs/schemas-md/RecurringPaymentDetails.md                             
+      link: docs/schemas-md/RecurringPaymentDetails.md 
+    - title: PaymentMethodPaymentSchedulesRequest
+      link: docs/schemas-md/PaymentMethodPaymentSchedulesRequest.md              
+    - title: ReferencedOrderPaymentSchedulesRequest
+      link: docs/schemas-md/ReferencedOrderPaymentSchedulesRequest.md            
+    - title: Frequency
+      link: docs/schemas-md/Frequency.md     
+    - title: ClientLocale
+      link: docs/schemas-md/ClientLocale.md        
+    - title: AccessTokenRequest
+      link: docs/schemas-md/AccessTokenRequest.md           
+    - title: AccessTokenResponse
+      link: docs/schemas-md/AccessTokenResponse.md   
+    - title: CardVerificationRequest
+      link: docs/schemas-md/CardVerificationRequest.md                          
