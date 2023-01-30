@@ -120,5 +120,11 @@
     - title: CardFunction
       link: docs/schemas-md/CardFunction.md 
     - title: ResponseType
-      link: docs/schemas-md/ResponseType.md         
+      link: docs/schemas-md/ResponseType.md  
+    - title: ProcessorData
+      link: docs/schemas-md/ProcessorData.md    
+    - title: Error
+      link: docs/schemas-md/Error.md         
+                                          
+                                   
                           
