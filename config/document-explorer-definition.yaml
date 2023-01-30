@@ -113,5 +113,12 @@
       link: docs/schemas-md/PaymentCardPaymentTokenizationRequest.md       
     - title: PaymentDevicePaymentTokenizationRequest
       link: docs/schemas-md/PaymentDevicePaymentTokenizationRequest.md       
-        
+    - title: UsePaymentToken
+      link: docs/schemas-md/UsePaymentToken.md      
+    - title: CreatePaymentToken
+      link: docs/schemas-md/CreatePaymentToken.md      
+    - title: CardFunction
+      link: docs/schemas-md/CardFunction.md 
+    - title: ResponseType
+      link: docs/schemas-md/ResponseType.md         
                           
