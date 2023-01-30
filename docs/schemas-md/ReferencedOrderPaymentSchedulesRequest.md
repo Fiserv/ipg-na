@@ -20,4 +20,5 @@
 | shipping |   |
 | industrySpecificExtensions |   |
 | comments |    ``` string ```  *example: This scheduled payment series is to pay for the thing.*. User supplied comments.|
-| referencedOrderId |  ``` string ```  *pattern: ^(?!\s*$).+  example: R-f9c2c198-b7cc-491a-a711-93d22fd0e589* Order ID used to create recurring payment from existing transaction.|
+| referencedOrderId |  ``` string ```  *pattern: ^(?!\s*$).+  example: R-f9c2c198-b7cc-491a-a711-93d22fd0e589* Order ID used to create recurring payment from existing transaction.|  
+

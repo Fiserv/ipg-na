@@ -20,4 +20,4 @@
 | shipping |   |
 | industrySpecificExtensions |   |
 | comments |    ``` string ```  *example: This scheduled payment series is to pay for the thing.*. User supplied comments.|
-| paymentMethod |   |
+| paymentMethod |   |   

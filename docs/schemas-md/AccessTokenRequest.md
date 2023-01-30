@@ -5,5 +5,6 @@
 |----|----|
 | domain |     ``` string ``` *example: somedomain.com*. Domain name.|
 | token |    ``` string ```  *example: gfgF92JHDJFjxcJHCQ23IbI12D*. The token value.|
-| publicKeyRequired |    ``` string ```  *example: true*. Indicates whether public key is requested or not.|
+| publicKeyRequired |    ``` string ```  *example: true*. Indicates whether public key is requested or not.|  
+
 
