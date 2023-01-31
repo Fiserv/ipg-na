@@ -17,7 +17,9 @@
 | paymentFacilitator | [PaymentFacilitator](?path=docs/schemas-md/PaymentFacilitator.md)|     
  
 **WalletSaleTransaction Example:**
+
 ```{r}
+
 {
   "requestType": "WalletSaleTransaction",
   "walletPaymentMethod": {
@@ -60,4 +62,5 @@
     }
   }
 }
-```  
+```
+  
