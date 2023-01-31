@@ -125,6 +125,42 @@
       link: docs/schemas-md/ProcessorData.md    
     - title: Error
       link: docs/schemas-md/Error.md         
-                                          
-                                   
+    - title: PaymentCardForcedTicketTransaction
+      link: docs/schemas-md/PaymentCardForcedTicketTransaction.md   
+    - title: PaymentCardPayerAuthTransaction
+      link: docs/schemas-md/PaymentCardPayerAuthTransaction.md     
+    - title: PaypalCreditTransaction
+      link: docs/schemas-md/PaypalCreditTransaction.md      
+    - title: ApmSaleTransaction
+      link: docs/schemas-md/ApmSaleTransaction.md   
+    - title: ApmPreAuthTransaction
+      link: docs/schemas-md/ApmPreAuthTransaction.md                                           
+    - title: ChinaPnRSaleTransaction
+      link: docs/schemas-md/ChinaPnRSaleTransaction.md                                   
+    - title: AliPaySaleTransaction
+      link: docs/schemas-md/AliPaySaleTransaction.md          
+    - title: SepaSaleTransaction
+      link: docs/schemas-md/SepaSaleTransaction.md         
+    - title: SepaCreditTransaction
+      link: docs/schemas-md/SepaCreditTransaction.md     
+    - title: WalletSaleTransaction
+      link: docs/schemas-md/WalletSaleTransaction.md       
+    - title: WalletPreAuthTransaction
+      link: docs/schemas-md/WalletPreAuthTransaction.md     
+    - title: PaymentTokenCreditTransaction
+      link: docs/schemas-md/PaymentTokenCreditTransaction.md    
+    - title: PaymentTokenPreAuthTransaction
+      link: docs/schemas-md/PaymentTokenPreAuthTransaction.md    
+    - title: PaymentTokenSaleTransaction
+      link: docs/schemas-md/PaymentTokenSaleTransaction.md      
+    - title: PaymentCardPreAuthTransaction
+      link: docs/schemas-md/PaymentCardPreAuthTransaction.md       
+    - title: PaymentCardSaleTransaction
+      link: docs/schemas-md/PaymentCardSaleTransaction.md      
+    - title: PaymentCardCreditTransaction
+      link: docs/schemas-md/PaymentCardCreditTransaction.md      
+    - title: PaymentCardDisbursementTransaction
+      link: docs/schemas-md/PaymentCardDisbursementTransaction.md      
+    - title: PaymentTokenDisbursementTransaction
+      link: docs/schemas-md/PaymentTokenDisbursementTransaction.md  
                           

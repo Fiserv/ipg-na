@@ -1,7 +1,7 @@
 
 # PaymentCardVerificationRequest
 
-| *description*:   | Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.*|
+| *description*:   | *Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.*|
 |----|----|
 | requestType |    ``` string ```  *example:   PaymentCardVerificationRequest*. Object name of the payment schedules request.|
 | billingAddress |    |  

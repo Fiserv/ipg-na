@@ -13,7 +13,7 @@
 | creationDateFormatted |    ``` string ```  *example: 2018-10-25*. Date recurring payment was created.|
 | startDateFormatted |    ``` string ```  *example: 2018-10-25*. Date of mandate signature.|
 | nextAttemptDateFormatted |    ``` string ```  *example: 2018-10-25*. Date of next transaction process attempt.
-| transactionAmount |   |
+| transactionAmount | [Amount](?path=docs/schemas-md/Amount.md)|
 | paymentMethodDetails |   |
 | frequency |   |
 | numberOfPayments |    ``` integer ``` ($int32)  *minimum: 1 maximum: 999 example: 10*. Number of times the recurring payment will process.|
