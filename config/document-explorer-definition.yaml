@@ -163,4 +163,6 @@
       link: docs/schemas-md/PaymentCardDisbursementTransaction.md      
     - title: PaymentTokenDisbursementTransaction
       link: docs/schemas-md/PaymentTokenDisbursementTransaction.md  
+    - title: PaymentDevicePreAuthTransaction
+      link: docs/schemas-md/PaymentDevicePreAuthTransaction.md    
                           
