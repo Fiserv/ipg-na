@@ -15,6 +15,49 @@
 | paymentMethod | [PaymentTokenPaymentMethod](?path=docs/schemas-md/PaymentTokenPaymentMethod.md)|
 | storedCredentials | [StoredCredential](?path=docs/schemas-md/StoredCredential.md)|   
 
+**PaymentTokenDisbursementTransaction Example:**
+```{r}
+{
+  "requestType": "PaymentTokenDisbursementTransaction",
+  "transactionAmount": {
+    "total": "50",
+    "currency": "USD"
+  },
+  "disbursement": {
+    "disbursementType": "DisbursementTransactionType",
+    "senderInfo": {
+      "name": "Franklin Sender Roosevelt",
+      "streetAddress": "5565 Glenridge Connector",
+      "city": "Atlanta",
+      "stateCode": "GA",
+      "countryCode": "US",
+      "postalCode": "30342",
+      "phoneNumber": "4044040740",
+      "birthDate": "19560121",
+      "referenceNumber": "12345678",
+      "accountNumber": "135246"
+    },
+    "receiverInfo": {
+      "name": "Abraham Receiver Lincoln",
+      "streetAddress": "5565 Glenridge Connector",
+      "city": "Atlanta",
+      "stateCode": "GA",
+      "countryCode": "US",
+      "postalCode": "30342",
+      "phoneNumber": "4044040740",
+      "referenceNumber": "12345678",
+      "accountNumber": "135246"
+    }
+  },
+  "paymentMethod": {
+    "paymentToken": {
+      "value": "1235325235236",
+      "function": "DEBIT",
+      "securityCode": "977"
+    }
+  }
+}
+```  
 
    
 

@@ -21,6 +21,31 @@
 | decrementalFlag |  DecrementalPreAuthFlag  ``` boolean ```  *default: false  example: false*. This flag can only be used in a preAuth transaction that updates the amount of a previous preAuth transaction to either increase the preAuth amount (DecrementalPreAuthFlag = false) or decrease the preAuth amount (DecrementalPreAuthFlag = true).|
 | parDataRequested |  PaymentAccountReferenceFlag  ``` boolean ```  *default: false example: false*. Indicates if the merchant wants payment account reference number from the network token using endpoint(PaymentAccountReferenceFlag = true).|    
 
+**PaymentCardSaleTransaction Example:**
+```{r}
+{
+  "transactionAmount": {
+    "total": 12.04,
+    "currency": "USD"
+  },
+  "requestType": "PaymentCardSaleTransaction",
+  "paymentMethod": {
+    "paymentCard": {
+      "number": "5424180279791732",
+      "securityCode": "977",
+      "expiryDate": {
+        "month": "12",
+        "year": "24"
+      }
+    }
+  },
+  "storedCredentials": {
+    "sequence": "FIRST",
+    "scheduled": true
+  },
+  "authOptimizationOverride": "Override"
+}
+```  
 
 
 

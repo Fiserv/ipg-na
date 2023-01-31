@@ -14,7 +14,30 @@
 | paymentMethod | [PaymentCardPaymentMethod](?path=docs/schemas-md/PaymentCardPaymentMethod.md)|
 | currencyConversion | [CurrencyConversion](?path=docs/schemas-md/CurrencyConversion.md)|   
 
-
+**PaymentCardCreditTransaction Example:**
+```{r}
+{
+  "transactionAmount": {
+    "total": 12.04,
+    "currency": "USD"
+  },
+  "requestType": "PaymentCardCreditTransaction",
+  "paymentMethod": {
+    "paymentCard": {
+      "number": "5424180279791732",
+      "securityCode": "977",
+      "expiryDate": {
+        "month": "12",
+        "year": "24"
+      }
+    }
+  },
+  "currencyConversion": {
+    "conversionType": "Dcc",
+    "inquiryRateId": "123456"
+  }
+}
+```  
 
 
 

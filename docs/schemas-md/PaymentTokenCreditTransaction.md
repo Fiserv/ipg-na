@@ -14,6 +14,23 @@
 | paymentMethod | [PaymentTokenPaymentMethod](?path=docs/schemas-md/PaymentTokenPaymentMethod.md)|   
 | currencyConversion | [CurrencyConversion](?path=docs/schemas-md/CurrencyConversion.md)|   
  
+**PaymentTokenCreditTransaction Example:**
+```{r}
+{
+  "transactionAmount": {
+    "total": 12.04,
+    "currency": "USD"
+  },
+  "requestType": "PaymentTokenCreditTransaction",
+  "paymentMethod": {
+    "paymentToken": {
+      "value": "1235325235236",
+      "function": "DEBIT",
+      "securityCode": "977"
+    }
+  }
+}
+```  
 
    
 

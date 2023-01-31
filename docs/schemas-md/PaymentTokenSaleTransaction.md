@@ -21,6 +21,28 @@
 | incrementalFlag |  IncrementalPreAuthFlag  ``` boolean ```  *default: false example: false*. This flag can only be used in a preAuth transaction that updates the amount of a previous preAuth transaction to increase the preAuth amount (IncrementalPreAuthFlag = true).|
 | authOptimization | [AuthOptimization](?path=docs/schemas-md/AuthOptimization.md)|     
 
+**PaymentTokenSaleTransaction Example:**
+```{r}
+{
+  "transactionAmount": {
+    "total": 12.04,
+    "currency": "USD"
+  },
+  "requestType": "PaymentTokenSaleTransaction",
+  "paymentMethod": {
+    "paymentToken": {
+      "value": "1235325235236",
+      "function": "DEBIT",
+      "securityCode": "977"
+    }
+  },
+  "storedCredentials": {
+    "sequence": "FIRST",
+    "scheduled": true
+  },
+  "authOptimizationOverride": "Override"
+}
+```  
 
 
 
