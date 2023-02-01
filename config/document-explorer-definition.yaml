@@ -177,11 +177,20 @@
       link: docs/schemas-md/KoreanPaymentSaleTransaction.md      
     - title: AchPreAuthTransaction 
       link: docs/schemas-md/AchPreAuthTransaction.md    
-      
-      
-      
-      
-      
+    - title: AchSaleTransaction 
+      link: docs/schemas-md/AchSaleTransaction.md    
+    - title: AchCreditTransaction 
+      link: docs/schemas-md/AchCreditTransaction.md      
+    - title: Disbursement 
+      link: docs/schemas-md/Disbursement.md      
+    - title: DisbursementTransactionType 
+      link: docs/schemas-md/DisbursementTransactionType.md  
+    - title: FundingTransactionType 
+      link: docs/schemas-md/FundingTransactionType.md    
+    - title: SenderInfo 
+      link: docs/schemas-md/SenderInfo.md      
+    - title: ReceiverInfo 
+      link: docs/schemas-md/ReceiverInfo.md   
       
       
       
