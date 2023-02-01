@@ -17,5 +17,26 @@
 | authenticationResult |   |   
 
    
+**PaymentCardPayerAuthTransaction Example:**
 
+```{r}
+
+{
+  "transactionAmount": {
+    "total": 12.04,
+    "currency": "USD"
+  },
+  "requestType": "PaymentCardPayerAuthTransaction",
+  "paymentMethod": {
+    "paymentCard": {
+      "number": "5424180279791732",
+      "securityCode": "977",
+      "expiryDate": {
+        "month": "12",
+        "year": "24"
+      }
+    }
+  }
+}
+```
 

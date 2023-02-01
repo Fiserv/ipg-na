@@ -5,3 +5,10 @@
 |----|----|
 |    |  ``` string ```  * example: DEBIT*. Enum:Array [ 5 ] - [ CREDIT, DEBIT, PREPAID, VOUCHER, UNDEFINED ]|
 
+**CardFunction Example:**
+
+```{r}
+
+"DEBIT"
+
+```

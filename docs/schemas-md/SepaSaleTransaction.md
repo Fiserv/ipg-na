@@ -13,7 +13,40 @@
 | allowPartialApproval |    ``` boolean ```  *example: true*. Indicates if the particular transaction is a partial approval transaction, if supplied.|
 | paymentMethod | [SepaSalePaymentMethod](?path=docs/schemas-md/SepaSalePaymentMethod.md)|   
 
+**SepaSaleTransaction Example:**
 
+```{r}
+
+{
+  "transactionAmount": {
+    "total": "23.00",
+    "currency": "EUR"
+  },
+  "requestType": "SepaSaleTransaction",
+  "sepa": {
+    "iban": "DE34500100600032121604",
+    "name": "John Doe",
+    "email": "john.doe@test.com",
+    "mandate": {
+      "reference": "3RBQVEE",
+      "url": "https://www.firstdata.com",
+      "signatureDate": "2017-07-15",
+      "type": "SINGLE"
+    }
+  },
+  "order": {
+    "billing": {
+      "address": {
+        "address1": "102,1st Floor",
+        "address2": "123 Main St.",
+        "postalCode": "30303",
+        "city": "Sandy Springs",
+        "country": "DEU"
+      }
+    }
+  }
+}
+```
    
 
 

@@ -1,7 +1,7 @@
 
-# SepaCreditTransaction
+# PaymentDeviceCreditTransaction
 
-| *description*:   | *Request to create credit transaction using sepa.*|
+| *description*:   | *Request to create credit transaction using decrypted card details from payment device. The transaction origin will be fixed as PHONE when data is manually entered into the device and as RETAIL when data is entered into the device via swipe.*|
 |----|----|
 | requestType |    ``` string ```  *example:   PaymentCardCreditTransaction*.Object name of the primary transaction request.|
 | transactionAmount | [Amount](?path=docs/schemas-md/Amount.md)|
@@ -11,32 +11,28 @@
 | order | [Order](?path=docs/schemas-md/Order.md)|
 | ipgTransactionId |    ``` integer ``` ($int64)  *example: 838916029301*. The response transaction ID.|
 | allowPartialApproval |    ``` boolean ```  *example: true*. Indicates if the particular transaction is a partial approval transaction, if supplied.|
-| paymentMethod | [SepaCreditPaymentMethod](?path=docs/schemas-md/SepaCreditPaymentMethod.md)|   
+| paymentMethod | [PaymentDevicePaymentMethod](?path=docs/schemas-md/PaymentDevicePaymentMethod.md)|
 
-**SepaCreditTransaction Example:**
+**PaymentDeviceCreditTransaction Example:**
 
 ```{r}
 
 {
+  "requestType": "PaymentDeviceCreditTransaction",
   "transactionAmount": {
-    "total": "23.00",
-    "currency": "EUR"
+    "total": 12.04,
+    "currency": "USD"
   },
-  "requestType": "SepaCreditTransaction",
-  "sepa": {
-    "iban": "DE34500100600032121604",
-    "name": "John Doe"
-  },
-  "order": {
-    "billing": {
-      "address": {
-        "address1": "102,1st Floor",
-        "address2": "123 Main St.",
-        "postalCode": "30303",
-        "city": "Sandy Springs",
-        "country": "DEU"
-      }
+  "paymentMethod": {
+    "paymentDevice": {
+      "deviceType": "SWIPE",
+      "data": "02A600C0170018008292;5424********1732=1810?*B73CD8C26233D4FFEC5500ED394439D97DDA5F530942D21D0000000000000000000000000000000000000000363434543035353734326299492410027300000260DC03",
+      "securityCode": "977",
+      "cardholderName": "First Cardholder",
+      "cardFunction": "CREDIT",
+      "brand": "VISA"
     }
   }
 }
-```
+```  
+

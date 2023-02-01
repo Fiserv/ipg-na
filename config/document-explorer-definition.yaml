@@ -116,7 +116,9 @@
     - title: UsePaymentToken
       link: docs/schemas-md/UsePaymentToken.md      
     - title: CreatePaymentToken
-      link: docs/schemas-md/CreatePaymentToken.md      
+      link: docs/schemas-md/CreatePaymentToken.md   
+    - title: UpdatePaymentToken
+      link: docs/schemas-md/UpdatePaymentToken.md     
     - title: CardFunction
       link: docs/schemas-md/CardFunction.md 
     - title: ResponseType
@@ -165,4 +167,30 @@
       link: docs/schemas-md/PaymentTokenDisbursementTransaction.md  
     - title: PaymentDevicePreAuthTransaction
       link: docs/schemas-md/PaymentDevicePreAuthTransaction.md    
+    - title: PaymentDeviceSaleTransaction
+      link: docs/schemas-md/PaymentDeviceSaleTransaction .md   
+    - title: PaymentDeviceCreditTransaction 
+      link: docs/schemas-md/PaymentDeviceCreditTransaction .md   
+    - title: PaymentDeviceDisbursementTransaction  
+      link: docs/schemas-md/PaymentDeviceDisbursementTransaction.md
+    - title: KoreanPaymentSaleTransaction 
+      link: docs/schemas-md/KoreanPaymentSaleTransaction.md      
+    - title: AchPreAuthTransaction 
+      link: docs/schemas-md/AchPreAuthTransaction.md    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
                           

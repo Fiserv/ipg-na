@@ -13,6 +13,24 @@
 | allowPartialApproval |    ``` boolean ```  *example: true*. Indicates if the particular transaction is a partial approval transaction, if supplied.|
 | paymentMethod | [AliPayPaymentMethod](?path=docs/schemas-md/AliPayPaymentMethod.md)|    
 
+**AliPaySaleTransaction Example:**
+
+```{r}
+
+{
+  "transactionAmount": {
+    "total": "16.00",
+    "currency": "USD"
+  },
+  "requestType": "AliPaySaleTransaction",
+  "aliPayPaymentMethod": {
+    "paymentDataType": "BARCODE",
+    "paymentData": "283047752805604753",
+    "orderTitle": "My Purchase",
+    "orderDetails": "These are details about my purchase."
+  }
+}
+```
     
 
 

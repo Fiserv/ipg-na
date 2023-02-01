@@ -16,7 +16,37 @@
 | consumerData | [Integration data provided by the payer. [ConsumerData](?path=docs/schemas-md/ConsumerData.md)]|   
 
 
+**ApmPreAuthTransaction Example:**
 
+```{r}
+
+{
+  "transactionAmount": {
+    "total": "40.00",
+    "currency": "PLN"
+  },
+  "requestType": "ApmPreAuthTransaction",
+  "paymentMethod": {
+    "type": "BLIK"
+  },
+  "integrationData": [
+    {
+      "item": "RETURN_URL",
+      "value": "https://clientdomain.com/orderDetails"
+    },
+    {
+      "item": "PAYER_IP",
+      "value": "1.1.1.1"
+    }
+  ],
+  "consumerData": [
+    {
+      "item": "BLIK_CODE",
+      "value": "777153"
+    }
+  ]
+}
+```
 
    
 

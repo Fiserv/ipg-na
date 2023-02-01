@@ -14,4 +14,26 @@
 | paymentMethod |    |
 | referenceNumber |    ``` string ```  *maxLength: 8  pattern: ^(?!\s*$).+  example: 123455*.Stores the six-digit reference number you have received as the result of a successful external authorization (e.g. by phone). The gateway needs this number for uniquely mapping a ForcedTicket transaction to a previously performed external authorization.|   
 
+*PaymentCardForcedTicketTransaction Example:**
 
+```{r}
+
+{
+  "transactionAmount": {
+    "total": 12.04,
+    "currency": "USD"
+  },
+  "requestType": "PaymentCardForcedTicketTransaction",
+  "paymentMethod": {
+    "paymentCard": {
+      "number": "5424180279791732",
+      "securityCode": "977",
+      "expiryDate": {
+        "month": "12",
+        "year": "24"
+      }
+    }
+  },
+  "referenceNumber": "123455"
+}
+```

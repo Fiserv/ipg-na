@@ -1,7 +1,7 @@
 
-# SepaCreditTransaction
+# AchPreAuthTransaction
 
-| *description*:   | *Request to create credit transaction using sepa.*|
+| *description*:   | *Request to create pre-auth primary transaction using ACH telecheck details.*|
 |----|----|
 | requestType |    ``` string ```  *example:   PaymentCardCreditTransaction*.Object name of the primary transaction request.|
 | transactionAmount | [Amount](?path=docs/schemas-md/Amount.md)|
@@ -11,32 +11,41 @@
 | order | [Order](?path=docs/schemas-md/Order.md)|
 | ipgTransactionId |    ``` integer ``` ($int64)  *example: 838916029301*. The response transaction ID.|
 | allowPartialApproval |    ``` boolean ```  *example: true*. Indicates if the particular transaction is a partial approval transaction, if supplied.|
-| paymentMethod | [SepaCreditPaymentMethod](?path=docs/schemas-md/SepaCreditPaymentMethod.md)|   
+| paymentMethod | [TeleCheckAchPaymentMethod](?path=docs/schemas-md/TeleCheckAchPaymentMethod.md)|
 
-**SepaCreditTransaction Example:**
+**AchPreAuthTransaction Example:**
 
 ```{r}
 
 {
+  "requestType": "AchPreAuthTransaction",
   "transactionAmount": {
-    "total": "23.00",
-    "currency": "EUR"
+    "total": 12.04,
+    "currency": "USD"
   },
-  "requestType": "SepaCreditTransaction",
-  "sepa": {
-    "iban": "DE34500100600032121604",
-    "name": "John Doe"
-  },
-  "order": {
-    "billing": {
-      "address": {
-        "address1": "102,1st Floor",
-        "address2": "123 Main St.",
-        "postalCode": "30303",
-        "city": "Sandy Springs",
-        "country": "DEU"
-      }
-    }
+  "paymentMethod": {
+    "achType": "TeleCheckICAPaymentMethod",
+    "routingNumber": "128367331",
+    "accountNumber": "2398649823984789",
+    "accountType": "S",
+    "checkNumber": "9878867880",
+    "checkType": "P",
+    "productCode": "12836",
+    "manualIdInfo": {
+      "idType": "DL",
+      "idData": "12345678"
+    },
+    "agentId": "RVK001",
+    "terminalId": "1283673312",
+    "registrationId": "12345",
+    "releaseType": "P",
+    "vipCustomer": "Y",
+    "organizationId": "XXXXXXXXXXXXXX",
+    "sessionId": "XXXXXXXXXXXXXX",
+    "terminalState": "GA",
+    "terminalCity": "Atlanta",
+    "customerIpAddress": "11.32.232.44",
+    "imeiCode": "990000862471854"
   }
 }
-```
+``` 

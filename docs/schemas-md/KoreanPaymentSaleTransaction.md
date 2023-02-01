@@ -1,7 +1,7 @@
 
-# SepaCreditTransaction
+# KoreanPaymentSaleTransaction
 
-| *description*:   | *Request to create credit transaction using sepa.*|
+| *description*:   | *Request to create sale transaction for Korean Payment.*|
 |----|----|
 | requestType |    ``` string ```  *example:   PaymentCardCreditTransaction*.Object name of the primary transaction request.|
 | transactionAmount | [Amount](?path=docs/schemas-md/Amount.md)|
@@ -11,32 +11,25 @@
 | order | [Order](?path=docs/schemas-md/Order.md)|
 | ipgTransactionId |    ``` integer ``` ($int64)  *example: 838916029301*. The response transaction ID.|
 | allowPartialApproval |    ``` boolean ```  *example: true*. Indicates if the particular transaction is a partial approval transaction, if supplied.|
-| paymentMethod | [SepaCreditPaymentMethod](?path=docs/schemas-md/SepaCreditPaymentMethod.md)|   
+| paymentMethod | [KoreanPaymentMethod](?path=docs/schemas-md/KoreanPaymentMethod.md)|
 
-**SepaCreditTransaction Example:**
+**KoreanPaymentSaleTransaction Example:**
 
 ```{r}
 
 {
   "transactionAmount": {
-    "total": "23.00",
-    "currency": "EUR"
+    "total": "4000",
+    "currency": "KRW"
   },
-  "requestType": "SepaCreditTransaction",
-  "sepa": {
-    "iban": "DE34500100600032121604",
-    "name": "John Doe"
-  },
-  "order": {
-    "billing": {
-      "address": {
-        "address1": "102,1st Floor",
-        "address2": "123 Main St.",
-        "postalCode": "30303",
-        "city": "Sandy Springs",
-        "country": "DEU"
-      }
+  "requestType": "KoreanPaymentSaleTransaction",
+  "paymentMethod": {
+    "koreanPayment": {
+      "billKeyId": "testipg5000000",
+      "entry": "web",
+      "billType": "TAX_FREE"
     }
   }
 }
-```
+```  
+

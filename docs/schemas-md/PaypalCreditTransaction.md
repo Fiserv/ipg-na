@@ -13,7 +13,23 @@
 | allowPartialApproval |    ``` boolean ```  *example: true*. Indicates if the particular transaction is a partial approval transaction, if supplied.|
 | paymentMethod |    |  
 
-   
+**PaypalCreditTransaction Example:**
+
+```{r}
+
+{
+  "transactionAmount": {
+    "total": 12.04,
+    "currency": "USD"
+  },
+  "requestType": "PaypalCreditTransaction",
+  "paymentMethod": {
+    "payPal": {
+      "recipientEmail": "John@tester.com"
+    }
+  }
+}   
+```
 
    
 

@@ -8,7 +8,17 @@
 | details | Detailed information about message format errors.|
 |         | **field** :  ``` string ```  *example: PaymentCard.number*. The property or attribute associated with the error.|
 |         | **message** :  ``` string ```  *example: may not be null*. Information specific to a property or attribute.|
-| declineReasonCode |     ``` string ```  *example: Do not try again*.Information about the decline reason.|   
+| declineReasonCode |     ``` string ```  *example: Do not try again*.Information about the decline reason.|
+
+**Error Example:**
+
+```{r}
+
+{
+  "code": "2303",
+  "message": "Invalid credit card number"
+}   
+```
 
 
 

@@ -17,6 +17,17 @@
 | debitReceiptNumber |   ``` string ```  *example:123456*.Receipt number from debit network provider.|
 | transactionIntegrityClass |   ``` string ```  *example:A1*. MasterCard provided Transaction Integrity Class for Point of Sale (POS) Purchase and Purchase with Cash Back transactions initiated on the Authorization Platform.|   
 
+**ProcessorData Example:**
+
+```{r}
+
+{
+  "responseCode": "00",
+  "responseMessage": "APPROVED",
+  "authorizationCode": "OK7118",
+  "network": "NYCE"
+}
+```
 
 
   
