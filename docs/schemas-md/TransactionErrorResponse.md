@@ -39,7 +39,8 @@
 | requiredActions |   |
 | plannedDueDate |    ``` string ```  *pattern: ^\d{4}-(0[1-9]P1[0-2])-(0[1-9]P[12][0-9]P3[01])$  example: 2022-03-03*. Capture PlannedDueDate field sent for SEPA transactions.|
 | networkToken |   |
-| error | |  
+| error | [Error](?path=docs/schemas-md/Error.md)|   
+  
 
 
 

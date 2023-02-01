@@ -10,3 +10,18 @@
 | expiryDate |   |  
 | **UpdatePaymentToken Example** | ```  { "value": "3425345345yygg", "reusable": true, "declineDuplicates": false, "paymentCard": {   "number": "5424180279791732", "expiryDate": { "month": "12", "year": "24","securityCode": "977" } } } ``` |    
 
+**UsePaymentToken Example:**
+
+```{r}
+
+{
+  "value": "1235325235236",
+  "tokenOriginStoreId": "12345500001",
+  "function": "DEBIT",
+  "securityCode": "977",
+  "expiryDate": {
+    "month": "12",
+    "year": "24"
+  }
+}
+```

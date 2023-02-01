@@ -12,5 +12,6 @@
 | mandate |  |  
 | transactions | *example: List [ OrderedMap { "transactionState": "AUTHORIZED", "ipgTransactionId": "838916029301", "transactionType": "SALE", "transactionAmount": OrderedMap { "total": 10.24, "currency": "USD" }, "storeId": "1109959991" } ]* Required for some payment methods (for example, Klarna).|
 | additionalDetails |   |  
-| error |   |  
+| error | [Error](?path=docs/schemas-md/Error.md)|  
+  
 

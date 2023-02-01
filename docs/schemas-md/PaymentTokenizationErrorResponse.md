@@ -18,5 +18,6 @@
 | ipgTransactionId | ``` string ```  * maxLength: 14  example: 838916029301*. The response transaction ID.|
 | merchantTransactionId | ``` string ```  * maxLength: 40  example: lsk23532djljff3*. The unique merchant transaction ID from the request header, if supplied.|
 | additionalResponseData |  |
-| error |   |  
+| error | [Error](?path=docs/schemas-md/Error.md)|   
+  
 

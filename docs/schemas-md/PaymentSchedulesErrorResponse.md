@@ -10,5 +10,6 @@
 | orderId |    ``` string ```  *example: 123456*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
 | state | RecurringPaymentState   ``` string ```  *example: Installed*. State of the recurring payment. Enum:Array [ 3 ] - [ Installed, Inactivated, Cancelled ]|
 | transactionResponse |  |
-| error |   |  
+| error | [Error](?path=docs/schemas-md/Error.md)|   
+  
 

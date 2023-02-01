@@ -11,5 +11,6 @@
 | paymentUrl |    ``` string ```  *example: `https://api.firstdata.com/connect/gateway/processing?storename=123456789&oid=R-96cdbaa4-c22e-4598-a2f1-c2b5fed79ef1&paymentUrlId=d3eb74fe-cf63-47e1-b89f-52ba0cc7965c`*. URL for embedded payment link.|
 | expiration |    ``` string ``` ($int64)  *example: 4102358400*. Time until payment URL expires. Returns EPOCH Seconds.|
 | transactionId |    ``` string ```  *example: 123978432*. ID code from the transaction.|
-| error |   |  
+| error | [Error](?path=docs/schemas-md/Error.md)|   
+  
 

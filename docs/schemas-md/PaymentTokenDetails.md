@@ -10,6 +10,20 @@
 | brand |    ``` string ```  *example: VISA*. Card brand, only for tokenization with payment.|
 | accountVerification |    ``` boolean ```  *example: true*. If the account the token was created from has been verified.|
 | type |    ``` string ```  *example: PAYMENT_CARD*. Indicates the type of tokenization source.|
-| error |     |    
+| error | [Error](?path=docs/schemas-md/Error.md)|    
 
+**PaymentTokenDetails Example:**
+
+```{r}
+
+{
+  "value": "234ljl124l12",
+  "reusable": true,
+  "declineDuplicates": false,
+  "last4": "4997",
+  "brand": "VISA",
+  "accountVerification": true,
+  "type": "PAYMENT_CARD"
+}
+```
 
