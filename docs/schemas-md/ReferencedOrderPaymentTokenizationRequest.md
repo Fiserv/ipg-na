@@ -12,7 +12,21 @@
 | additionalDetails |    |
 | referencedOrderId |  ``` string ```  *pattern: ^(?!\s*$).+  example: R-f9c2c198-b7cc-491a-a711-93d22fd0e589* Order ID used to create recurring payment from existing transaction.|  
 
+**ReferencedOrderPaymentTokenizationRequest Example:**
 
+```{r}
+
+{
+  "requestType": "ReferencedOrderPaymentTokenizationRequest",
+  "createToken": {
+    "value": "234ljl124l12",
+    "reusable": true,
+    "declineDuplicates": false
+  },
+  "referencedOrderId": "R-f9c2c198-b7cc-491a-a711-93d22fd0e589",
+  "accountVerification": true
+}
+```
 
 
 

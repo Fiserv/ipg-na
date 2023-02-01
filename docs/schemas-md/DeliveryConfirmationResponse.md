@@ -9,4 +9,12 @@
 | responseCode | ``` string ```  *example: 00*. Response code from endpoints.|
 | responseMessage | ``` string ```  *example: Amount specified exceeds allowable limit.*. Message returned from endpoints.|   
 
+**DeliveryConfirmationResponse Example:**
 
+```{r}
+
+{
+  "responseCode": "0000",
+  "responseMessage": "APPROVED"
+}
+```

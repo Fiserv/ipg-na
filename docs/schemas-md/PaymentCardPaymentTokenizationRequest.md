@@ -11,6 +11,33 @@
 | additionalDetails |    |
 | paymentCard |    |   
 
+**PaymentCardPaymentTokenizationRequest Example:**
 
+```{r}
+
+{
+  "requestType": "PaymentCardPaymentTokenizationRequest",
+  "paymentCard": {
+    "number": "4035874000424977",
+    "expiryDate": {
+      "month": "12",
+      "year": "25"
+    },
+    "securityCode": "977"
+  },
+  "billingAddress": {
+    "address1": "5565 Glenridge Conn",
+    "city": "Atlanta",
+    "postalCode": "30342",
+    "country": "USA"
+  },
+  "createToken": {
+    "value": "234ljl124l12",
+    "reusable": true,
+    "declineDuplicates": false
+  },
+  "accountVerification": true
+}
+```
 
 

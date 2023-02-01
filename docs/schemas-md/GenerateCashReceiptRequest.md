@@ -12,3 +12,19 @@
 | receiptType | ``` string ```  *example: EXPENSE_STATEMENT_FOR_LICENSEE*. Receipt Type is passed from Merchant for Deduction for personal and Expense statement for licensee. Enum:Array [ 2 ] - [ DEDUCTION_FOR_PERSONAL, EXPENSE_STATEMENT_FOR_LICENSEE ]|
 | billType | ``` string ```  *example: TAXABLE*. Bill Type is passed from Merchant for tax purpose to KPS. Enum:Array [ 2 ] - [ TAXABLE, TAX_FREE ]| 
 
+**GenerateCashReceiptRequest Example:**
+
+```{re}
+
+{
+  "storeId": "12345500000",
+  "ipgTransactionId": 8154886515,
+  "merchantTransactionId": "lsk23532djljff3",
+  "orderId": "CashReceipt01",
+  "tDate": "1518811817",
+  "TaxIdentifier": "01067501461",
+  "ReceiptType": "EXPENSE_STATEMENT_FOR_LICENSEE",
+  "BillType": "TAXABLE"
+}
+```
+

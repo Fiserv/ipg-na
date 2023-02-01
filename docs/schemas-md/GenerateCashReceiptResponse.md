@@ -8,5 +8,15 @@
 | responseType | ResponseType   ``` string ```   *example: Unauthenticated*. The type of the response. Enum:    > Array [ 9 ] - [ BadRequest, Unauthenticated, Unauthorized, NotFound, GatewayDeclined, EndpointDeclined, ServerError, EndpointCommunicationError, UnsupportedMediaType ]|
 | responseCode | ``` string ```  *example: 00*. Response code from endpoints.|
 | responseMessage | ``` string ```  *example: Amount specified exceeds allowable limit.*. Message returned from endpoints.|   
+
+**GenerateCashReceiptResponse Example:**
+
+```{r}
+
+{
+  "responseCode": "0000",
+  "responseMessage": "APPROVED"
+}
+```
   
 

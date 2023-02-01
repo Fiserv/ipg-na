@@ -9,3 +9,15 @@
 | orderId |    ``` string ```  *example: 123456*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
 | tDate | ``` string ```  *example: 1518811817*. The transaction time in seconds since epoch.|     
 
+**DeliveryConfirmationRequest Example:**
+
+```{r}
+
+{
+  "storeId": "12345500000",
+  "ipgTransactionId": 8154886515,
+  "merchantTransactionId": "lsk23532djljff3",
+  "orderId": "deliveryconfirmation01",
+  "tDate": "1518811817"
+}
+```
