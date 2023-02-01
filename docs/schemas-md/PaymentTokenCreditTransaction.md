@@ -15,7 +15,9 @@
 | currencyConversion | [CurrencyConversion](?path=docs/schemas-md/CurrencyConversion.md)|   
  
 **PaymentTokenCreditTransaction Example:**
+
 ```{r}
+
 {
   "transactionAmount": {
     "total": 12.04,

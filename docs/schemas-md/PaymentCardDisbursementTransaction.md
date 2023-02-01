@@ -17,7 +17,9 @@
 | createToken | [CreatePaymentToken](?path=docs/schemas-md/CreatePaymentToken.md)|    
 
 **PaymentCardDisbursementTransaction Example:**
+
 ```{r}
+
 {
   "requestType": "PaymentCardDisbursementTransaction",
   "transactionAmount": {

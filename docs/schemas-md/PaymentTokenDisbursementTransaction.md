@@ -16,7 +16,9 @@
 | storedCredentials | [StoredCredential](?path=docs/schemas-md/StoredCredential.md)|   
 
 **PaymentTokenDisbursementTransaction Example:**
+
 ```{r}
+
 {
   "requestType": "PaymentTokenDisbursementTransaction",
   "transactionAmount": {

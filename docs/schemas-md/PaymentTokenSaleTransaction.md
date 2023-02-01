@@ -22,7 +22,9 @@
 | authOptimization | [AuthOptimization](?path=docs/schemas-md/AuthOptimization.md)|     
 
 **PaymentTokenSaleTransaction Example:**
+
 ```{r}
+
 {
   "transactionAmount": {
     "total": 12.04,
