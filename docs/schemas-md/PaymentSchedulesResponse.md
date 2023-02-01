@@ -11,3 +11,15 @@
 | state | RecurringPaymentState   ``` string ```  *example: Installed*. State of the recurring payment. Enum:Array [ 3 ] - [ Installed, Inactivated, Cancelled ]|
 | transactionResponse |  |  
 
+**PaymentSchedulesResponse Example:**
+
+```{r}
+
+{
+  "clientRequestId": "30dd879c-ee2f-11db-8314-0800200c9a66",
+  "apiTraceId": "rrt-0bd552c12342d3448-b-ea-1142-12938318-7",
+  "requestStatus": "SUCCESS",
+  "orderId": "ABC12345"
+}
+```
+

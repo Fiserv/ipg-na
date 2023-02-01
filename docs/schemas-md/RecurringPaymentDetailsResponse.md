@@ -15,3 +15,39 @@ billing |  |
 | recurringPaymentDetails |   |   
 | industrySpecificExtensions |   |           
 
+**RecurringPaymentDetailsResponse Example:**
+
+```{r}
+
+{
+  "clientRequestId": "30dd879c-ee2f-11db-8314-0800200c9a66",
+  "apiTraceId": "rrt-0bd552c12342d3448-b-ea-1142-12938318-7",
+  "orderId": "123456",
+  "billing": {
+    "name": "John Doe",
+    "customerId": "1234567890",
+    "contact": {
+      "email": "John.Doe@example.com",
+      "phone": "5555555555"
+    }
+  },
+  "storeId": "1109959991",
+  "purchaseOrderNumber": "123055342",
+  "invoiceNumber": "96126098",
+  "creationDate": "2018-10-25",
+  "startDate": "2018-10-25",
+  "nextAttemptDate": "2018-10-25",
+  "transactionAmount": {
+    "total": 10.5,
+    "currency": "USD"
+  },
+  "frequency": {
+    "every": 3,
+    "unit": "DAY"
+  },
+  "numberOfPayments": "10",
+  "runCount": "3",
+  "state": "Installed",
+  "comments": "This scheduled payment series is to pay for the thing"
+}
+```

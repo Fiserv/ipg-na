@@ -22,3 +22,31 @@
 | comments |    ``` string ```  *example: This scheduled payment series is to pay for the thing.*. User supplied comments.|
 | referencedOrderId |  ``` string ```  *pattern: ^(?!\s*$).+  example: R-f9c2c198-b7cc-491a-a711-93d22fd0e589* Order ID used to create recurring payment from existing transaction.|  
 
+**ReferencedOrderPaymentSchedulesRequest Example:**
+
+```{r}
+
+{
+  "requestType": "ReferencedOrderPaymentSchedulesRequest",
+  "referencedOrderId": "R-f9c2c198-b7cc-491a-a711-93d22fd0e589",
+  "startDate": "2021-12-31",
+  "numberOfPayments": 10,
+  "maximumFailures": 1,
+  "invoiceNumber": "96126098",
+  "purchaseOrderNumber": "123055342",
+  "transactionOrigin": "ECOM",
+  "dynamicMerchantName": "MyWebsite",
+  "frequency": {
+    "every": 1,
+    "unit": "MONTH"
+  },
+  "transactionAmount": {
+    "total": 25.24,
+    "currency": "GBP"
+  },
+  "clientLocale": {
+    "language": "EN",
+    "country": "USA"
+  }
+}
+```

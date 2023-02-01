@@ -11,4 +11,20 @@
 | algorithm |    ``` string ```  *example: RSA/NONE/PKCS1PADDING*. Encyption algorithym. One way ECDH 256 bit key.|
 | clientRequestId |    ``` string ```  *example: 30dd879c-ee2f-11db-8314-0800200c9a66*. Echoes back the value from the request header for tracking.|   
 
+**AccessTokenResponse Example:**
+
+```{r}
+
+{
+  "tokenId": "gliF92ypj9cKRWUP8lpRIbI3bhNf",
+  "status": "ACTIVE",
+  "issuedOn": "1579021570941",
+  "expiresInSeconds": "899",
+  "publicKeyBase64": "LS0tLS1CRUdJTiBQLbnFSNXRnVmc4U08LS1FTkQgUFVCTElDIEtFWS0tLS0t",
+  "algorithm": "RSA/NONE/PKCS1PADDING",
+  "clientRequestId": "30dd879c-ee2f-11db-8314-0800200c9a66"
+}
+```
+
+
 

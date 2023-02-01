@@ -29,7 +29,7 @@
 | secure3dResponse |   |
 | standinResponseDetails |   |
 | redirectURL |    ``` string ```  *example:  `http://pay.issuer-bank.com/sessionID=123&sharedKey=456`*. The endpoint redirection URL.|
-| authenticationResponse |   |
+| authenticationResponse | [AuthenticationResponse](?path=docs/schemas-md/AuthenticationResponse.md)|
 | schemeTransactionId |    ``` string ```  *maxLength: 40  example: 019078743804756*. The transaction ID received from schemes for the initial transaction of card on file flows.|
 | processor |   |
 | additionalDetails |   |
@@ -39,6 +39,55 @@
 | requiredActions |   |
 | plannedDueDate |    ``` string ```  *pattern: ^\d{4}-(0[1-9]P1[0-2])-(0[1-9]P[12][0-9]P3[01])$  example: 2022-03-03*. Capture PlannedDueDate field sent for SEPA transactions.|
 | networkToken |   |   
+
+**TransactionResponse Example:**
+
+```{r}
+
+{
+  "clientRequestId": "30dd879c-ee2f-11db-8314-0800200c9a66",
+  "apiTraceId": "rrt-0c80a3403e2c2def0-d-ea-28805-6810951-2",
+  "ipgTransactionId": "838916029301",
+  "transactionType": "SALE",
+  "transactionTime": 1518811817,
+  "approvedAmount": {
+    "total": 10.24,
+    "currency": "USD"
+  },
+  "transactionStatus": "APPROVED",
+  "schemeTransactionId": "019078743804756",
+  "processor": {
+    "responseCode": "00",
+    "responseMessage": "APPROVED",
+    "authorizationCode": "OK7118"
+  },
+  "plannedDueDate": "2022-03-03",
+  "requiredActions": {
+    "requiredRedirectionData": {
+      "url": "https://payment.thirdparty.com",
+      "headerParameters": {
+        "headerParam1": "value1",
+        "headerParam2": "value2"
+      },
+      "method": "GET"
+    },
+    "requiredConsumerData": [
+      {
+        "hint": "Your 6-digit Code will be provided in your mobile application",
+        "validationExpression": "^\\\\d{6}$",
+        "key": "BLIK_CODE"
+      }
+    ],
+    "requiredIntegrationData": [
+      {
+        "hint": "Payment requires the user agent information on the browser/device.",
+        "key": "USER_AGENT"
+      }
+    ]
+  }
+}
+```
+
 
 
 

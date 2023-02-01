@@ -20,3 +20,27 @@
 | runCount |    ``` integer ``` ($int32)  *minimum: 0 maximum: 999 example: 10*. Times the recurring payment has already run.|
 | state | RecurringPaymentState   ``` string ```  *example: Installed*. Installed. Enum:Array [ 3 ] - [ Installed, Inactivated, Cancelled ]|
 | comments |    ``` string ```  *example: This scheduled payment series is to pay for the thing.*. User supplied comments.|  
+
+**RecurringPaymentDetails Example:**
+
+```{r}
+
+{
+  "storeId": "1109959991",
+  "invoiceNumber": "96126098",
+  "creationDate": "2018-10-25",
+  "startDate": "2018-10-25",
+  "transactionAmount": {
+    "total": 10.24,
+    "currency": "USD"
+  },
+  "frequency": {
+    "every": 3,
+    "unit": "DAY"
+  },
+  "numberOfPayments": 10,
+  "runCount": 3,
+  "state": "Installed",
+  "comments": "This scheduled payment series is to pay for the thing."
+}
+```

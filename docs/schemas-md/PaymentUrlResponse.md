@@ -12,4 +12,16 @@
 | expiration |    ``` string ``` ($int64)  *example: 4102358400*. Time until payment URL expires. Returns EPOCH Seconds.|
 | transactionId |    ``` string ```  *example: 123978432*. ID code from the transaction.|    
 
+**PaymentUrlResponse Example:**
 
+```{r}
+
+{
+  "clientRequestId": "30dd879c-ee2f-11db-8314-0800200c9a66",
+  "apiTraceId": "rrt-0bd552c12342d3448-b-ea-1142-12938318-7",
+  "requestStatus": "SUCCESS",
+  "orderId": "9723846",
+  "paymentUrl": "https://hyperlink-to-payment.com",
+  "transactionId": "2381723322"
+}
+```

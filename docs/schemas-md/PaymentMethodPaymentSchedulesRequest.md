@@ -21,3 +21,32 @@
 | industrySpecificExtensions |   |
 | comments |    ``` string ```  *example: This scheduled payment series is to pay for the thing.*. User supplied comments.|
 | paymentMethod |   |   
+
+**PaymentMethodPaymentSchedulesRequest Example:**
+
+```{r}
+
+{
+  "requestType": "PaymentMethodPaymentSchedulesRequest",
+  "transactionAmount": {
+    "total": 25.24,
+    "currency": "GBP"
+  },
+  "startDate": "2021-12-31",
+  "frequency": {
+    "every": 1,
+    "unit": "MONTH"
+  },
+  "paymentMethod": {
+    "paymentCard": {
+      "number": "5424180279791732",
+      "expiryDate": {
+        "month": "12",
+        "year": "25"
+      },
+      "securityCode": "977",
+      "brand": "VISA"
+    }
+  }
+}
+```
