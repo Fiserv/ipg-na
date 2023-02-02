@@ -31,9 +31,16 @@
 - sections:
   - title: 3DSecure  
     link: docs/3DSecure.md
-- sections:
-  - title: Digital Wallets  
-    link: docs/DigitalWallets.md
+#- sections:
+#  - title: Digital Wallets  
+#    link: docs/DigitalWallets.md
+  sections:
+  - title: Digital Wallets
+    sections:
+    - title: Apple Pay
+      link: docs/schemas-md/ApplePay.md  
+    - title: Google Pay
+      link: docs/schemas-md/GooglePay.md  
 - sections:
   - title: Release notes
     sections:
@@ -211,8 +218,15 @@
       link: docs/schemas-md/AchVoidTransaction.md   
     - title: PreAuthSecondaryTransaction 
       link: docs/schemas-md/PreAuthSecondaryTransaction.md     
-      
-      
-      
+    - title: SplitShipment 
+      link: docs/schemas-md/SplitShipment.md     
+    - title: SubMerchantSplit 
+      link: docs/schemas-md/SubMerchantSplit.md     
+    - title: SettlementSplit 
+      link: docs/schemas-md/SettlementSplit.md        
+    - title: AdditionalTransactionDetails 
+      link: docs/schemas-md/AdditionalTransactionDetails.md    
+    - title: AdditionalResponseData 
+      link: docs/schemas-md/AdditionalResponseData.md    
       
                           

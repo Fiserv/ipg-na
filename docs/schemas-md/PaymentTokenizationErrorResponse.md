@@ -17,7 +17,7 @@
 | orderId |    ``` string ```  * maxLength: 14  example: R-44df6542-ae0b-4415-88e8-7f3e62cc9e5d*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
 | ipgTransactionId | ``` string ```  * maxLength: 14  example: 838916029301*. The response transaction ID.|
 | merchantTransactionId | ``` string ```  * maxLength: 40  example: lsk23532djljff3*. The unique merchant transaction ID from the request header, if supplied.|
-| additionalResponseData |  |
+| additionalResponseData | [AdditionalResponseData](?path=docs/schemas-md/AdditionalResponseData.md)|  
 | error | [Error](?path=docs/schemas-md/Error.md)|   
   
 
