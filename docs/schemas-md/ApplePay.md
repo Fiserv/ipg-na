@@ -4,11 +4,11 @@ Apple Pay enables secure, simple checkouts in your app or on your website.
 
 User Action: the buyer taps the Apple Pay button in the app or on the website, selects the payment card and uses the Touch-ID to complete the transaction.
 
- - The Merchant App communicates with the merchant server and creates a transaction ID
- - The Merchant App obtains the encrypted transaction payload (The tokenized card data "DPAN", Cryptogram, and  	transaction details) from Apple's Pass Kit Framework
- - The Merchant App sends the encrypted transaction payload to processor API using the Apple Pay SDK
- - Processor API decrypts the encrypted transaction payload and processes the transaction
- - Processor API responds back to the Merchant App (through the SDK) with either an approval or decline
+ 	 - The Merchant App communicates with the merchant server and creates a transaction ID
+ 	 - The Merchant App obtains the encrypted transaction payload (The tokenized card data "DPAN", Cryptogram, and  	transaction details) from Apple's Pass Kit Framework
+ 	 - The Merchant App sends the encrypted transaction payload to processor API using the Apple Pay SDK
+ 	 - Processor API decrypts the encrypted transaction payload and processes the transaction
+	 - Processor API responds back to the Merchant App (through the SDK) with either an approval or decline
 
 To get more information on participating banks and countries for Apple Pay, [AuthOptimization](https://support.apple.com/en-us/HT204916)|.
 
@@ -26,47 +26,47 @@ Our Integration team will generate the CSR and share it with you along with the 
 
 Steps to create a Payment processing certificate in the Apple portal:
 
- - Login to apple 'Account' in developer.apple.com
- - In-order to generate certificate you must have a paid apple developer account or an organization account. New users must follow the prompts to set up a developer account.
- - Select Certificates, Identifiers and Profile :  
+	 - Login to apple 'Account' in developer.apple.com
+	 - In-order to generate certificate you must have a paid apple developer account or an organization account. New users must follow the prompts to set up a developer account.
+	 - Select Certificates, Identifiers and Profile :  
  
    [Certificates, Identifiers and Profile](assets/images/ApplePay1.jpg)  
    
- - Select Identifier's and in the dropdown in the upper-right corner select merchant id
- - Enter a unique merchant id, and upload a valid CSR in .pem format.
- - Once successfully uploaded, apple provides the payment processing certificate and the merchant id will come up in the certificate section.
- - Download payment processing certificate and install in your computer by double clicking it.
- - The certificate should show up in the 'Key chain access' of your Macbook.
+	 - Select Identifier's and in the dropdown in the upper-right corner select merchant id
+	 - Enter a unique merchant id, and upload a valid CSR in .pem format.
+ 	 - Once successfully uploaded, apple provides the payment processing certificate and the merchant id will come up in the certificate section.
+ 	 - Download payment processing certificate and install in your computer by double clicking it.
+ 	 - The certificate should show up in the 'Key chain access' of your Macbook.
 
 ## Upload and register the apple development certificate for your machine
 
- - Request a new certificate from your keychain access.  
+	 - Request a new certificate from your keychain access.  
  
    ![Certificate From Your Keychain Access](assets/images/ApplePay2.jpg)  
    
- - Follow the prompt and request the certificate to be saved on file.
- - In the 'Certificate' section in the apple portal, click on the '+' and follow the prompt to request apple developer certificate for 'IOS' development.
- - Upload the requested certificate
- - Download and install the apple pay developer certificate.
- - Your machine is now setup for programming IOS app using Xcode.
+	 - Follow the prompt and request the certificate to be saved on file.
+	 - In the 'Certificate' section in the apple portal, click on the '+' and follow the prompt to request apple developer certificate for 'IOS' development.
+	 - Upload the requested certificate
+	 - Download and install the apple pay developer certificate.
+	 - Your machine is now setup for programming IOS app using Xcode.
 
 ## Set-up Provision Profile for the application
 
- - In the 'Certificate, Identifier and Profile' section in the apple portal navigate to profile.
- - Click the '+' sign to create a new profile.
- - Choose, 'IOS' development and follow the prompts
- - In the capabilities select 'Apple Pay' and 'In-App Purchases'
- - You can also register the test devices here using, uuid. (Xcode also does this when the app is built on the phone)
- - Download the provision profile on to your mac.
+	 - In the 'Certificate, Identifier and Profile' section in the apple portal navigate to profile.
+	 - Click the '+' sign to create a new profile.
+	 - Choose, 'IOS' development and follow the prompts
+	 - In the capabilities select 'Apple Pay' and 'In-App Purchases'
+	 - You can also register the test devices here using, uuid. (Xcode also does this when the app is built on the phone)
+	 - Download the provision profile on to your mac.
 
 ## Set-up Project in Xcode
 
- - Select new xcode project with a single view or import an existing project.
- - Register the app using the app-id in the apple portal under Identifier->appId
- - Go to Xcode->Preferences,->accounts and install the downloaded provision profile, your profile is now linked to your Xcode.
- - Click on your project, go to Signing & Capabilities select 'Automatically manage signing'.
-'+ capabilities' add apple pay.
- - Under 'Apple Pay' click '+' and add the merchant id's registered in the portal, which in turn will be added to the entitlements file. 
+	 - Select new xcode project with a single view or import an existing project.
+	 - Register the app using the app-id in the apple portal under Identifier->appId
+	 - Go to Xcode->Preferences,->accounts and install the downloaded provision profile, your profile is now linked to your Xcode.
+	 - Click on your project, go to Signing & Capabilities select 'Automatically manage signing'.
+	'+ capabilities' add apple pay.
+	 - Under 'Apple Pay' click '+' and add the merchant id's registered in the portal, which in turn will be added to the entitlements file. 
 
 Now the Xcode is set-up for coding.
 
@@ -74,11 +74,11 @@ In the SDK enter the URL, api key and api secret and build the app:
 
    ![Enter URL,API Key and Secret](assets/images/ApplePay3.jpg)
    	  
- - Merchant id: Enter any valid merchant id registered in the apple portal. This gives the capability for a single user to use multiple merchant id's
- - Amount: Enter the amount of the transaction
- - Transaction type: Select PreAuth or Sale.
- - Apple Pay Button: Click this to produce payment sheet and fingerprint authentication for the transaction.
- - Once the user authenticates the transaction the apple returns the payment token, using which the SDK generates the following payload:
+	 - Merchant id: Enter any valid merchant id registered in the apple portal. This gives the capability for a single user to use multiple merchant id's
+	 - Amount: Enter the amount of the transaction
+	 - Transaction type: Select PreAuth or Sale.
+	 - Apple Pay Button: Click this to produce payment sheet and fingerprint authentication for the transaction.
+	 - Once the user authenticates the transaction the apple returns the payment token, using which the SDK generates the following payload:
 
  
 

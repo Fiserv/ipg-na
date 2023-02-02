@@ -38,4 +38,5 @@ The target audience for this document is a developer who wants to use Google Pay
 
 Please reach out to your local Integration Support team for getting your account enabled.
 
-## Prerequisites to build and run the sample Application
+## Prerequisites to build and run the sample Application  
+
