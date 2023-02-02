@@ -3,7 +3,7 @@
 
 | *description*:   | *Receiver information for a funding transaction.*|
 |----|----|
-| name* |    ``` string ```  *maxLength: 70 pattern: ^(?!\s*$).+   example: George Washington.*  Franklin D. Roosevelt. Receiver name.|
+| name* |    ``` string ```  *maxLength: 70 pattern: ^(?!\s*$).+   example: George Washington.* Receiver name.|
 | streetAddress* | ``` string ```  *maxLength: 50 pattern: ^(?!\s*$).+   example: 2900 Westside Pkwy*  Sender street address.|
 | city* | ``` string ```  *maxLength: 25 pattern: ^(?!\s*$).+   example: Alpharetta*  Sender city.|  
 | stateCode* | ``` string ```  *maxLength: 25 pattern: [A-Z]{2}   example: GA*  Sender state.|  

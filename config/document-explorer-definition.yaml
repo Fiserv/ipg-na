@@ -191,13 +191,26 @@
       link: docs/schemas-md/SenderInfo.md      
     - title: ReceiverInfo 
       link: docs/schemas-md/ReceiverInfo.md   
-      
-      
-      
-      
-      
-      
-      
+    - title: AdditionalDetails 
+      link: docs/schemas-md/AdditionalDetails.md     
+    - title: PostAuthTransaction 
+      link: docs/schemas-md/PostAuthTransaction.md       
+    - title: AchPostAuthTransaction 
+      link: docs/schemas-md/AchPostAuthTransaction.md    
+    - title: ReturnTransaction 
+      link: docs/schemas-md/ReturnTransaction.md     
+    - title: AchReturnTransaction 
+      link: docs/schemas-md/AchReturnTransaction.md    
+    - title: KoreanPaymentServiceReturnTransaction 
+      link: docs/schemas-md/KoreanPaymentServiceReturnTransaction.md    
+    - title: VoidTransaction 
+      link: docs/schemas-md/VoidTransaction.md     
+    - title: VoidPreAuthTransactions 
+      link: docs/schemas-md/VoidPreAuthTransactions.md   
+    - title: AchVoidTransaction 
+      link: docs/schemas-md/AchVoidTransaction.md   
+    - title: PreAuthSecondaryTransaction 
+      link: docs/schemas-md/PreAuthSecondaryTransaction.md     
       
       
       
