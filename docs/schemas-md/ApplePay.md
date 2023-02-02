@@ -30,7 +30,7 @@ Steps to create a Payment processing certificate in the Apple portal:
 	 - In-order to generate certificate you must have a paid apple developer account or an organization account. New users must follow the prompts to set up a developer account.
 	 - Select Certificates, Identifiers and Profile :  
  
-   [Certificates, Identifiers and Profile](assets/images/ApplePay1.jpg)  
+   ![Certificates, Identifiers and Profile](assets/images/ApplePay1.jpg)  
    
 	 - Select Identifier's and in the dropdown in the upper-right corner select merchant id
 	 - Enter a unique merchant id, and upload a valid CSR in .pem format.
@@ -84,7 +84,7 @@ In the SDK enter the URL, api key and api secret and build the app:
 
 ## Sample Apple Pay Request
 
-Endpoint: https://cert.api.firstdata.com/gateway/v2/payments
+Endpoint: "https://cert.api.firstdata.com/gateway/v2/payments"
 
 ```{r}
 
