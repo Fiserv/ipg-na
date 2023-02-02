@@ -34,7 +34,7 @@
 #- sections:
 #  - title: Digital Wallets  
 #    link: docs/DigitalWallets.md
-  sections:
+- sections:
   - title: Digital Wallets
     sections:
     - title: Apple Pay
