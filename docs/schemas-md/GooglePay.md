@@ -55,36 +55,32 @@ For more details, please refer https://developers.google.com/pay/api/android/gui
 
 The following parameters need to be defined:
 
-a. Merchant ID
-b. Merchant Token
-c. APIKey
-d. APISecret
+	a. Merchant ID
+	b. Merchant Token
+	c. APIKey
+	d. APISecret
 
 Define the Fiserv Object Parameters: Parameters must be updated in the following files: 
 
-•           Constants.java
-•           EnvData.java
+ - Constants.java
+ - EnvData.java
 
 Update the Constants.java file with the Merchant ID and Gateway Tokenization parameters. Note that:
 
-• The Merchant ID will be shared by the Integration team and
-• The Gateway Tokenization parameter defaults to ‘firstdata’. 
+ - The Merchant ID will be shared by the Integration team and
+ - The Gateway Tokenization parameter defaults to ‘firstdata’. 
 
 In the EnvData.java file, set the following environment variables, which will be shared by the Integration Team:
 
-APIKey –
-Token – 
-APISecret – 
- 
+ - APIKey –
+ - Token – 
+ - APISecret – 
 
-envMap.put("CERT", new EnvPropertiesImpl( "CERT",
+```{r}
 
- "https://cert.api.firstdata.com/gateway/v1/payments",
-
- "---------", "----------", "-----------"));
-
+envMap.put("CERT", new EnvPropertiesImpl( "CERT", "https://cert.api.firstdata.com/gateway/v1/payments", "---------", "----------", "-----------"));
+``` 
 gatewayMerchantId and the APIGEE credentials will be provided by the Integration Team.
-
 
 ### Credit Card for Testing
 
