@@ -111,7 +111,9 @@ payload – The actual body content passed as the POST request
 Note that the Payment Details page cannot be captured for security reasons.
 
 <img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/ipg-na/assets/images/GooglePay1.jpg">
-![MarineGEO circle logo](/ipg-na/assets/images/GooglePay1.jpg )
+![MarineGEO circle logo](/assets/images/GooglePay1.jpg)
+<img src="/assets/images/GooglePay1.jpg" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+
 Sample Google Pay Request:
 
 
