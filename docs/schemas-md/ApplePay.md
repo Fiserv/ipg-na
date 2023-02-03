@@ -112,7 +112,8 @@ Endpoint: "https://cert.api.firstdata.com/gateway/v2/payments"
       "currency":"USD"
    }
 }
-```  
+
+	```    
 
 ## Sample Apple Pay Response
 
@@ -163,4 +164,7 @@ Endpoint: "https://cert.api.firstdata.com/gateway/v2/payments"
         }
     }
 }
-```  
+
+	```  
+
+	  

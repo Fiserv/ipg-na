@@ -76,11 +76,11 @@ In the EnvData.java file, set the following environment variables, which will be
 	 - Token – 
 	 - APISecret – 
 
-```{r}
+	```{r}
 
 envMap.put("CERT", new EnvPropertiesImpl( "CERT", "https://cert.api.firstdata.com/gateway/v1/payments", "---------", "----------", "-----------"));
 
-``` 
+	``` 
  
 gatewayMerchantId and the APIGEE credentials will be provided by the Integration Team.
 
@@ -138,6 +138,10 @@ Sample Google Pay Request:
     "currency": "USD"
   }
 }
+
+	```  
+
+	 
  
 Sample Google Pay Response:
 
@@ -192,6 +196,7 @@ Sample Google Pay Response:
     }
 }
 
-```    
+	```  
+	    
 
 
