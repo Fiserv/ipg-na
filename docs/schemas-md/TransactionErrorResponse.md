@@ -9,7 +9,7 @@
 | ipgTransactionId |    ``` string ```  *example: 838916029301*. The response transaction ID.|
 | orderId |    ``` string ```  *example: 123456*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
 | transactionType | TransactionType   ``` string ```  *example: SALE*. Type of transaction to perform. Primary transaction types in requests include 'SALE', 'PREAUTH', 'CREDIT' and 'FORCED_TICKET'. Enum:    > Array [ 9 ] - [ SALE, PREAUTH, CREDIT, FORCED_TICKET, VOID, RETURN, POSTAUTH, PAYER_AUTH, DISBURSEMENT ]|
-| paymentToken | |
+| paymentToken |    ``` integer ``` ($int64) ,  *example:   Germany*. Country of the card issued.|
 | transactionOrigin | TransactionOrigin   ``` string ```  *example: ECOM*. The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face). Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
 | paymentMethodDetails | |
 | country |    ``` string ```  *example: USA*. Country of the card issuer.|
