@@ -3,8 +3,8 @@
 
 | *description*:   | *Request to verify card validity.*|
 |----|----|
-| paymentCard |  |
-| billingAddress |   |
+| paymentCard | [PaymentCard](?path=docs/schemas-md/PaymentCard.md)| 
+| billingAddress |  [Address](?path=docs/schemas-md/Address.md)|
 | storeId |    ``` string ```  *maxLength: 20  example: 12345500000*. An optional outlet ID for clients that support multiple stores in the same app.|   
 
 **CardVerificationRequest Example:**
