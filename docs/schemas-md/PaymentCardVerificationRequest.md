@@ -7,5 +7,5 @@
 | billingAddress |    |  
 | storeId |    ``` string ```  *maxLength: 20  example: 12345500000*. An optional outlet ID for clients that support multiple stores in the same app.|
 | merchantTransactionId |    ``` string ```   * maxLength: 40 example: lsk23532djljff3*. The unique merchant transaction ID from the request, if supplied.|
-| additionalDetails |    |
+| additionalDetails | [AdditionalDetails](?path=docs/schemas-md/AdditionalDetails.md)|
 | paymentCard |    |

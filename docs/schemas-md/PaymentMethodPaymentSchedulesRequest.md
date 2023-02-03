@@ -12,13 +12,12 @@
 | purchaseOrderNumber |   ``` string ```  *example: 123055342*. Purchase order number.|
 | transactionOrigin |  TransactionOrigin  ``` string ```  *example: ECOM*.The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face). Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
 | dynamicMerchantName |   ``` string ```  *example: MyWebsite*. Dynamic merchant name for the cardholder's statement.|
-| frequency |   |
+| frequency | [Frequency](?path=docs/schemas-md/Frequency.md)|
 | transactionAmount | [Amount](?path=docs/schemas-md/Amount.md)|
 | clientLocale |   |
 | orderId |    ``` string ```  *example: 123456*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
-| billing |   |
-| shipping |   |
-| industrySpecificExtensions |   |
+| billing | [Billing](?path=docs/schemas-md/Billing.md)|  
+| shipping | [Shipping](?path=docs/schemas-md/Shipping.md)|  | industrySpecificExtensions |  [IndustrySpecificExtensions](?path=docs/schemas-md/IndustrySpecificExtensions.md)|
 | comments |    ``` string ```  *example: This scheduled payment series is to pay for the thing.*. User supplied comments.|
 | paymentMethod |   |   
 

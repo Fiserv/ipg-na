@@ -11,7 +11,7 @@
 | transactionType | TransactionType   ``` string ```  *example: SALE*. Type of transaction to perform. Primary transaction types in requests include 'SALE', 'PREAUTH', 'CREDIT' and 'FORCED_TICKET'. Enum:    > Array [ 9 ] - [ SALE, PREAUTH, CREDIT, FORCED_TICKET, VOID, RETURN, POSTAUTH, PAYER_AUTH, DISBURSEMENT ]|
 | paymentToken |    ``` integer ``` ($int64) ,  *example:   Germany*. Country of the card issued.|
 | transactionOrigin | TransactionOrigin   ``` string ```  *example: ECOM*. The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face). Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
-| paymentMethodDetails | |
+| paymentMethodDetails | [PaymentMethodDetails](?path=docs/schemas-md/PaymentMethodDetails.md)|
 | country |    ``` string ```  *example: USA*. Country of the card issuer.|
 | terminalId | ResponseType   ``` string ```  *maxLength: 30  example: 123456*. The terminal that is processing the transaction.|
 | merchantId | ResponseType   ``` string ```  *example: 199950008*. The unique (on Acquirer level) mechant ID. Usually this value has been chosen from the merchant itself and will be used in communication with the endpoint.|
