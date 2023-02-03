@@ -110,7 +110,7 @@ payload – The actual body content passed as the POST request
 
 Note that the Payment Details page cannot be captured for security reasons.
 
-https://github.com/Fiserv/ipg-na/blob/637f64ada1a6a751e50b0891403103faff69db79/assets/images/GooglePay1.jpg?raw=true
+"https://github.com/Fiserv/ipg-na/blob/637f64ada1a6a751e50b0891403103faff69db79/assets/images/GooglePay1.jpg?raw=true"
 
 Sample Google Pay Request:
 
