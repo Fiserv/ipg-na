@@ -9,7 +9,7 @@
 | requestStatus |    ``` string ```  *example: SUCCESS*. Request status. If it is anything other than 'SUCCESS', please refer to 400s HTTP error codes or decline. See Error object for details. Enum:    > Array [ 4 ] - [ SUCCESS, VALIDATION_FAILED, PROCESSING_FAILED, FAILURE ]|
 | orderId |    ``` string ```  *example: 123456*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
 | state | RecurringPaymentState   ``` string ```  *example: Installed*. State of the recurring payment. Enum:Array [ 3 ] - [ Installed, Inactivated, Cancelled ]|
-| transactionResponse |  |
+| transactionResponse | [TransactionResponse](?path=docs/schemas-md/TransactionResponse.md)|
 | error | [Error](?path=docs/schemas-md/Error.md)|   
   
 
