@@ -49,7 +49,7 @@ Developers wishing to use the Fiserv Google Pay sample application will need the
 	 - JavaJRE(JDKfordevelopment) as per Android SDK requirements.
 Your project should be able to compile against Android 4.4 (KITKAT) or higher.
 
-For more details, please refer https://developers.google.com/pay/api/android/guides/setup
+For more details, please refer "https://developers.google.com/pay/api/android/guides/setup"
 
 ### Changes to be made in the Application 
 
@@ -110,13 +110,12 @@ payload – The actual body content passed as the POST request
 
 Note that the Payment Details page cannot be captured for security reasons.
 
-<img style="display:block;margin:0 auto;" src="/ipg-na/assets/images/GooglePay1.jpg">
-![Google Pay Test Store](/ipg-na/assets/images/GooglePay1.jpg)
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/ipg-na/develop/assets/images/GooglePay1.jpg">
 
 Sample Google Pay Request:
 
 
-	```{r}
+```{r}
 
 {
 
@@ -138,15 +137,14 @@ Sample Google Pay Request:
     "currency": "USD"
   }
 }
-
-	```  
+```    
 
 	 
  
 Sample Google Pay Response:
 
 
-	```{r}
+```{r}
 
 {
     "clientRequestId": "741666",
@@ -196,7 +194,7 @@ Sample Google Pay Response:
     }
 }
 
-	```  
+```    
 	    
 
 
