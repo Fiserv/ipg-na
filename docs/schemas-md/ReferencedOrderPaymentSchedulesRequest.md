@@ -14,7 +14,7 @@
 | dynamicMerchantName |   ``` string ```  *example: MyWebsite*.Dynamic merchant name for the cardholder's statement.|
 | frequency | [Frequency](?path=docs/schemas-md/Frequency.md)|
 | transactionAmount | [Amount](?path=docs/schemas-md/Amount.md)|
-| clientLocale |   |
+| clientLocale | [ClientLocale](?path=docs/schemas-md/ClientLocale.md)|
 | orderId |    ``` string ```  *example: 123456*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
 | billing | [Billing](?path=docs/schemas-md/Billing.md)|  
 | shipping | [Shipping](?path=docs/schemas-md/Shipping.md)|

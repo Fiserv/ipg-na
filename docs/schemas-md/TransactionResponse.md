@@ -33,7 +33,7 @@
 | schemeTransactionId |    ``` string ```  *maxLength: 40  example: 019078743804756*. The transaction ID received from schemes for the initial transaction of card on file flows.|
 | processor | [ProcessorData](?path=docs/schemas-md/ProcessorData.md)|
 | additionalDetails | [AdditionalDetails](?path=docs/schemas-md/AdditionalDetails.md)|
-| accountUpdaterResponse |   |
+| accountUpdaterResponse |  [AccountUpdaterResponse](?path=docs/schemas-md/AccountUpdaterResponse.md)|
 | achResponse |  [AchResponse](?path=docs/schemas-md/AchResponse.md)|
 | currencyConversionResponse |  [CurrencyConversionResponse](?path=docs/schemas-md/CurrencyConversionResponse.md)|
 | requiredActions | [RequiredActions](?path=docs/schemas-md/RequiredActions.md)|
