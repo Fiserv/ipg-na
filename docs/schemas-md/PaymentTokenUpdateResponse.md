@@ -8,5 +8,7 @@
 | responseType | ResponseType   ``` string ```  *example: Unauthenticated*. The type of the response. Enum:    > Array [ 9 ] - [ BadRequest, Unauthenticated, Unauthorized, NotFound, GatewayDeclined, EndpointDeclined, ServerError, EndpointCommunicationError, UnsupportedMediaType ]|
 | requestStatus |    ``` string ```  *example: DELETED*. Request status. If it is anything other than 'SUCCESS', please refer to 400s HTTP error codes or decline. See Error object for details. Enum:    > Array [ 3 ] - [ FAILED, SUCCESS, PARTIAL_SUCCESS ]|
 | requestTime |    ``` string ```   *example:   1554308829345*. Card brand.|
-| error |   |  
+| error | [Error](?path=docs/schemas-md/Error.md)|  
+
+
 
