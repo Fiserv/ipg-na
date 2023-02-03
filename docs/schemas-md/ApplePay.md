@@ -86,7 +86,7 @@ In the SDK enter the URL, api key and api secret and build the app:
 
 Endpoint: "https://cert.api.firstdata.com/gateway/v2/payments"
 
-	```{r} 
+```{r}
 
 {
 
@@ -112,12 +112,12 @@ Endpoint: "https://cert.api.firstdata.com/gateway/v2/payments"
       "currency":"USD"
    }
 }
-
-	```    
+``` 
+    
 
 ## Sample Apple Pay Response
 
-	```{r}  
+```{r}
 
 {
     "clientRequestId": "741666",
@@ -164,7 +164,8 @@ Endpoint: "https://cert.api.firstdata.com/gateway/v2/payments"
         }
     }
 }
-
-	```  
+```
+  
+  
 
 	  

@@ -118,7 +118,6 @@ Sample Google Pay Request:
 ```{r}
 
 {
-
   "requestType": "WalletSaleTransaction",
   "walletPaymentMethod": {
     "walletType": "EncryptedGooglePayWalletPaymentMethod",
@@ -138,7 +137,6 @@ Sample Google Pay Request:
   }
 }
 ```    
-
 	 
  
 Sample Google Pay Response:
@@ -193,8 +191,8 @@ Sample Google Pay Response:
         "walletProvider": "GOOGLE_PAY"
     }
 }
-
-```    
+``` 
+    
 	    
 
 
