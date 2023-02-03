@@ -42,11 +42,11 @@ Please reach out to your local Integration Support team for getting your account
 
 Developers wishing to use the Fiserv Google Pay sample application will need the following software and hardware:
 
- - Google Play Services version 18.0.0
- - A physical device or an emulator to use for developing and testing. Google Play services can only be installed on an emulator with an AVD that runs Google APIs platform based on Android 4.4 or higher.
- - The latest version of Android Studio. This includes:
-o The latest version of the AndroidSDK, including the SDK Tools component. The SDK is available from the Android SDK Manager
- - JavaJRE(JDKfordevelopment) as per Android SDK requirements.
+	 - Google Play Services version 18.0.0
+	 - A physical device or an emulator to use for developing and testing. Google Play services can only be installed on an emulator with an AVD that runs Google APIs platform based on Android 4.4 or higher.
+ 	 - The latest version of Android Studio. This includes:
+		o The latest version of the AndroidSDK, including the SDK Tools component. The SDK is available from the Android SDK Manager
+	 - JavaJRE(JDKfordevelopment) as per Android SDK requirements.
 Your project should be able to compile against Android 4.4 (KITKAT) or higher.
 
 For more details, please refer https://developers.google.com/pay/api/android/guides/setup
@@ -62,24 +62,26 @@ The following parameters need to be defined:
 
 Define the Fiserv Object Parameters: Parameters must be updated in the following files: 
 
- - Constants.java
- - EnvData.java
+	 - Constants.java
+	 - EnvData.java
 
 Update the Constants.java file with the Merchant ID and Gateway Tokenization parameters. Note that:
 
- - The Merchant ID will be shared by the Integration team and
- - The Gateway Tokenization parameter defaults to ‘firstdata’. 
+	 - The Merchant ID will be shared by the Integration team and
+	 - The Gateway Tokenization parameter defaults to ‘firstdata’. 
 
 In the EnvData.java file, set the following environment variables, which will be shared by the Integration Team:
 
- - APIKey –
- - Token – 
- - APISecret – 
+	 - APIKey –
+	 - Token – 
+	 - APISecret – 
 
 ```{r}
 
 envMap.put("CERT", new EnvPropertiesImpl( "CERT", "https://cert.api.firstdata.com/gateway/v1/payments", "---------", "----------", "-----------"));
+
 ``` 
+ 
 gatewayMerchantId and the APIGEE credentials will be provided by the Integration Team.
 
 ### Credit Card for Testing
@@ -103,8 +105,8 @@ payload – The actual body content passed as the POST request
 
 ### Google Pay APK Installation to Device
 
- - Once the downloaded code for the sample app is built successfully in Android Studio, build the APK and install it on your device.
- - Once the APK is installed, select the Open option to access the application. The screenshots below show the sample application installed on the test device (nonPROD environment), and the response from a payment processed in the First Data nonPROD environment/Google test environment.
+	 - Once the downloaded code for the sample app is built successfully in Android Studio, build the APK and install it on your device.
+	 - Once the APK is installed, select the Open option to access the application. The screenshots below show the sample application installed on the test device (nonPROD environment), and the response from a payment processed in the First Data nonPROD environment/Google test environment.
 
 Note that the Payment Details page cannot be captured for security reasons.
 
@@ -112,6 +114,7 @@ Note that the Payment Details page cannot be captured for security reasons.
 ![Google Pay Test Store](../../../../assets/images/assets/images/GooglePay1.jpg)
 
 Sample Google Pay Request:
+
 
 ```{r}
 
@@ -187,7 +190,7 @@ Sample Google Pay Response:
         "walletProvider": "GOOGLE_PAY"
     }
 }
-```  
 
+```    
 
 
