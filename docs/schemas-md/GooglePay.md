@@ -110,8 +110,8 @@ payload – The actual body content passed as the POST request
 
 Note that the Payment Details page cannot be captured for security reasons.
 
-
-![Google Pay Test Store](../../../../assets/images/assets/images/GooglePay1.jpg)
+<img style="display:block;margin:0 auto;" src="/ipg-na/assets/images/GooglePay1.jpg">
+![Google Pay Test Store](/ipg-na/assets/images/GooglePay1.jpg)
 
 Sample Google Pay Request:
 
