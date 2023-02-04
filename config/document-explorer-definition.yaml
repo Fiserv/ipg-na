@@ -248,3 +248,10 @@
       link: docs/schemas-md/ResponseAmountComponents.md  
     - title: ChinaDomesticPaymentMethod 
       link: docs/schemas-md/ChinaDomesticPaymentMethod.md                        
+    - title: ApmPaymentMethod 
+      link: docs/schemas-md/ApmPaymentMethod.md                         
+    - title: IntegrationData 
+      link: docs/schemas-md/IntegrationData.md
+    - title: ConsumerData 
+      link: docs/schemas-md/ConsumerData.md  
+        
