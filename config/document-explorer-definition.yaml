@@ -266,6 +266,32 @@
       link: docs/schemas-md/AdditionalParameters.md  
     - title: EncryptedApplePayWalletPaymentMethod 
       link: docs/schemas-md/EncryptedApplePayWalletPaymentMethod.md    
+    - title: EncryptedGooglePayWalletPaymentMethod 
+      link: docs/schemas-md/EncryptedGooglePayWalletPaymentMethod.md    
+    - title: EncryptedSamsungPayWalletPaymentMethod 
+      link: docs/schemas-md/EncryptedSamsungPayWalletPaymentMethod.md     
+    - title: DecryptedApplePayWalletPaymentMethod 
+      link: docs/schemas-md/DecryptedApplePayWalletPaymentMethod.md   
+    - title: DecryptedGooglePayWalletPaymentMethod 
+      link: docs/schemas-md/DecryptedGooglePayWalletPaymentMethod.md  
+    - title: DecryptedSamsungPayWalletPaymentMethod 
+      link: docs/schemas-md/DecryptedSamsungPayWalletPaymentMethod.md  
+    - title: MasterpassWalletPaymentMethod 
+      link: docs/schemas-md/MasterpassWalletPaymentMethod.md  
+    - title: WalletPaymentMethod 
+      link: docs/schemas-md/WalletPaymentMethod.md  
+    - title: AliPayPaymentMethod 
+      link: docs/schemas-md/AliPayPaymentMethod.md  
+    - title: KoreanPaymentMethod 
+      link: docs/schemas-md/KoreanPaymentMethod.md 
+    - title: PayPalPaymentMethod 
+      link: docs/schemas-md/PayPalPaymentMethod.md     
+    - title: SepaSalePaymentMethod 
+      link: docs/schemas-md/SepaSalePaymentMethod.md    
+    - title: SepaCreditPaymentMethod 
+      link: docs/schemas-md/SepaCreditPaymentMethod.md 
+      - title: PaymentTokenPaymentMethod 
+      link: docs/schemas-md/PaymentTokenPaymentMethod.md   
       
       
         
