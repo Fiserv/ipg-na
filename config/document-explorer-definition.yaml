@@ -241,5 +241,10 @@
     - title: PaymentAccountReferenceFlag 
       link: docs/schemas-md/PaymentAccountReferenceFlag.md  
     - title: Amount 
-      link: docs/schemas-md/Amount.md  
-                          
+      link: docs/schemas-md/Amount.md 
+    - title: AmountComponents 
+      link: docs/schemas-md/AmountComponents.md     
+    - title: ResponseAmountComponents 
+      link: docs/schemas-md/ResponseAmountComponents.md  
+    - title: ChinaDomesticPaymentMethod 
+      link: docs/schemas-md/ChinaDomesticPaymentMethod.md                        
