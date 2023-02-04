@@ -175,9 +175,9 @@
     - title: PaymentDevicePreAuthTransaction
       link: docs/schemas-md/PaymentDevicePreAuthTransaction.md    
     - title: PaymentDeviceSaleTransaction
-      link: docs/schemas-md/PaymentDeviceSaleTransaction .md   
+      link: docs/schemas-md/PaymentDeviceSaleTransaction.md   
     - title: PaymentDeviceCreditTransaction 
-      link: docs/schemas-md/PaymentDeviceCreditTransaction .md   
+      link: docs/schemas-md/PaymentDeviceCreditTransaction.md   
     - title: PaymentDeviceDisbursementTransaction  
       link: docs/schemas-md/PaymentDeviceDisbursementTransaction.md
     - title: KoreanPaymentSaleTransaction 
@@ -228,5 +228,18 @@
       link: docs/schemas-md/AdditionalTransactionDetails.md    
     - title: AdditionalResponseData 
       link: docs/schemas-md/AdditionalResponseData.md    
-      
+    - title: AccountUpdaterResponse 
+      link: docs/schemas-md/AccountUpdaterResponse.md  
+    - title: TransactionType 
+      link: docs/schemas-md/TransactionType.md  
+    - title: TransactionOrigin 
+      link: docs/schemas-md/TransactionOrigin.md  
+    - title: DecrementalPreAuthFlag 
+      link: docs/schemas-md/DecrementalPreAuthFlag.md  
+    - title: IncrementalPreAuthFlag 
+      link: docs/schemas-md/IncrementalPreAuthFlag.md    
+    - title: PaymentAccountReferenceFlag 
+      link: docs/schemas-md/PaymentAccountReferenceFlag.md  
+    - title: Amount 
+      link: docs/schemas-md/Amount.md  
                           
