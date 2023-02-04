@@ -3,7 +3,7 @@
 
 | *description*:   | *Request to create Sale primary transaction using ACH telecheck details.*|
 |----|----|
-| requestType |    ``` string ```  *example:   PaymentCardCreditTransaction*.Object name of the primary transaction request.|
+| requestType |    ``` string ```  *example:   PaymentCardCreditTransaction*. Object name of the primary transaction request.|
 | transactionAmount | [Amount](?path=docs/schemas-md/Amount.md)|
 | storeId |    ``` string ```  *maxLength: 20  example: 12345500000*. An optional outlet ID for clients that support multiple stores in the same app.|
 | merchantTransactionId |    ``` string ```   * maxLength: 40 example: lsk23532djljff3*. The unique merchant transaction ID from the request, if supplied.|

@@ -254,4 +254,18 @@
       link: docs/schemas-md/IntegrationData.md
     - title: ConsumerData 
       link: docs/schemas-md/ConsumerData.md  
+    - title: RequiredActions 
+      link: docs/schemas-md/RequiredActions.md   
+    - title: RequiredConsumerData 
+      link: docs/schemas-md/RequiredConsumerData.md    
+    - title: RequiredIntegrationData 
+      link: docs/schemas-md/RequiredIntegrationData.md   
+    - title: RequiredRedirectionData 
+      link: docs/schemas-md/RequiredRedirectionData.md  
+    - title: AdditionalParameters 
+      link: docs/schemas-md/AdditionalParameters.md  
+    - title: EncryptedApplePayWalletPaymentMethod 
+      link: docs/schemas-md/EncryptedApplePayWalletPaymentMethod.md    
+      
+      
         
