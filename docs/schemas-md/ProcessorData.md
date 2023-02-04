@@ -9,8 +9,8 @@
 | network |   ``` string ```  *example: NYCE*. Network used for transaction.|
 | associationResponseCode |   ``` string ```  *example: 00*. Raw response code from issuer.
 | responseMessage |   ``` string ```  *example: Amount specified exceeds allowable limit*. Message returned from endpoints.|
-| avsResponse |   | 
-| cardholderInfoResponse |   |
+| avsResponse |  [AVSResponse](?path=docs/schemas-md/AVSResponse.md)| 
+| cardholderInfoResponse | [cardholderInfoResponse](?path=docs/schemas-md/cardholderInfoResponse.md)|
 | securityCodeResponse |   ``` string ```  *example: NOT_MATCHED*. Code returned for CVV. Enum:Array [ 6 ] - [ MATCHED, NOT_MATCHED, NOT_PROCESSED, NOT_PRESENT, NOT_CERTIFIED, NOT_CHECKED ]|
 | merchantAdviceCodeIndicator |   ``` string ```  *pattern: [0-9]{2}  example: 01*. Code to map merchant advice code to ISO specification.|
 | responseIndicator |   ``` string ```  *example:0100*.Indicates whether the transaction was routed through the payment card's own network or through a different network.|

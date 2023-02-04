@@ -9,7 +9,8 @@
 | accountVerification |  ``` boolean ```  *default: false  example: true*. If the account should be verified prior to token creation.|
 | merchantTransactionId |    ``` string ```   * maxLength: 40 example: lsk23532djljff3*. The unique merchant transaction ID from the request, if supplied.|
 | additionalDetails | [AdditionalDetails](?path=docs/schemas-md/AdditionalDetails.md)|
-| paymentCard |    |   
+| paymentCard | [PaymentCard](?path=docs/schemas-md/PaymentCard.md)|  
+  
 
 **PaymentCardPaymentTokenizationRequest Example:**
 
