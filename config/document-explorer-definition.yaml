@@ -290,8 +290,15 @@
       link: docs/schemas-md/SepaSalePaymentMethod.md    
     - title: SepaCreditPaymentMethod 
       link: docs/schemas-md/SepaCreditPaymentMethod.md 
-      - title: PaymentTokenPaymentMethod 
+    - title: PaymentTokenPaymentMethod 
       link: docs/schemas-md/PaymentTokenPaymentMethod.md   
-      
-      
-        
+    - title: PaymentCardPaymentMethod 
+      link: docs/schemas-md/PaymentCardPaymentMethod.md   
+    - title: AuthOptimization 
+      link: docs/schemas-md/AuthOptimization.md   
+    - title: PaymentDevicePaymentMethod 
+      link: docs/schemas-md/PaymentDevicePaymentMethod.md    
+    - title: PaymentMethodDetails 
+      link: docs/schemas-md/PaymentMethodDetails.md  
+    - title: PaymentMethodType 
+      link: docs/schemas-md/PaymentMethodType.md       
