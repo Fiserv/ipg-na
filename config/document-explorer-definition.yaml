@@ -311,4 +311,12 @@
     - title: Secure3D21AuthenticationResult 
       link: docs/schemas-md/Secure3D21AuthenticationResult.md          
     - title: Secure3DAuthenticationResult 
-      link: docs/schemas-md/Secure3DAuthenticationResult.md  
+      link: docs/schemas-md/Secure3DAuthenticationResult.md
+    - title: Secure3D10AuthenticationRequest 
+      link: docs/schemas-md/Secure3D10AuthenticationRequest.md    
+    - title: Secure3D21AuthenticationRequest 
+      link: docs/schemas-md/Secure3D21AuthenticationRequest.md    
+    - title: cardHolderBrowserParams 
+      link: docs/schemas-md/cardHolderBrowserParams.md      
+    - title: Secure3DAuthenticationRequest 
+      link: docs/schemas-md/Secure3DAuthenticationRequest.md     

@@ -118,7 +118,8 @@ Endpoint: "https://cert.api.firstdata.com/gateway/v2/payments"
 
 ## Sample Apple Pay Response
 
-```{r}  
+```{r}   
+
 
 {
     "clientRequestId": "741666",
