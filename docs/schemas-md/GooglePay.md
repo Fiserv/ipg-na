@@ -115,7 +115,7 @@ Note that the Payment Details page cannot be captured for security reasons.
 Sample Google Pay Request:
 
 
-```{r}
+```{r}  
 
 {
   "requestType": "WalletSaleTransaction",
@@ -142,7 +142,7 @@ Sample Google Pay Request:
 Sample Google Pay Response:
 
 
-```{r}
+```{r}  
 
 {
     "clientRequestId": "741666",

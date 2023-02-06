@@ -1,5 +1,5 @@
 
-## PaymentMethodType
+# PaymentMethodType
 
 | *description*:   | *Type of payment method.*|
 |----|----|

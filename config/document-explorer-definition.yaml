@@ -307,4 +307,6 @@
     - title: NetworkToken 
       link: docs/schemas-md/NetworkToken.md    
     - title: Secure3D10AuthenticationResult 
-      link: docs/schemas-md/Secure3D10AuthenticationResult.md      
+      link: docs/schemas-md/Secure3D10AuthenticationResult.md
+    - title: Secure3D21AuthenticationResult 
+      link: docs/schemas-md/Secure3D21AuthenticationResult.md          

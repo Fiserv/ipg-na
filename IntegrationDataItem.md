@@ -1,5 +1,5 @@
 
-## IntegrationDataItem
+# IntegrationDataItem
 
 | *description*:   | *Type of integration data item.*|
 |----|----|
