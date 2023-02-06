@@ -310,3 +310,5 @@
       link: docs/schemas-md/Secure3D10AuthenticationResult.md
     - title: Secure3D21AuthenticationResult 
       link: docs/schemas-md/Secure3D21AuthenticationResult.md          
+    - title: Secure3DAuthenticationResult 
+      link: docs/schemas-md/Secure3DAuthenticationResult.md  
