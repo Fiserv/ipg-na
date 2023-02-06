@@ -302,3 +302,9 @@
       link: docs/schemas-md/PaymentMethodDetails.md  
     - title: PaymentMethodType 
       link: docs/schemas-md/PaymentMethodType.md       
+    - title: PaymentCard 
+      link: docs/schemas-md/PaymentCard.md
+    - title: NetworkToken 
+      link: docs/schemas-md/NetworkToken.md    
+    - title: Secure3D10AuthenticationResult 
+      link: docs/schemas-md/Secure3D10AuthenticationResult.md      
