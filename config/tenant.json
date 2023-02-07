@@ -21,7 +21,7 @@
         "version": "1.0.0",
         "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2022/march.md",
-        "apiSpecFileNames": ["gateway-services-devportal"]
+        "apiSpecFileNames": ["gateway-services"]
       }
   ],
   "product": {

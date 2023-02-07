@@ -1,9 +1,2 @@
+
 # Getting Started
-
-Sample
-
-
-___
-
-
- 

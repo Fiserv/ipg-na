@@ -1,0 +1,11 @@
+
+# DisbursementTransactionType
+
+| *description*:   | *Push disbursement information.*|
+|----|----|
+| disbursementType |    ``` string ```  *example: FundingTransactionType* The type of disbursement.|
+| senderInf* | [SenderInfo](?path=docs/schemas-md/SenderInfo.md)|
+| receiverInfo* | [ReceiverInfo](?path=docs/schemas-md/ReceiverInfo.md)|  
+
+
+

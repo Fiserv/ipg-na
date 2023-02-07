@@ -1,0 +1,14 @@
+
+# RequiredActions
+
+| *description*:   | *Provides details which actions need to be performed to fulfill requirements of integration data.*|
+|----|----|
+| requiredConsumerData* | Consumer data details which need to be provided by the payer. [RequiredConsumerData](?path=docs/schemas-md/RequiredConsumerData.md)|
+| requiredIntegrationData* | Provides details for data requested from the application. [RequiredIntegrationData](?path=docs/schemas-md/RequiredIntegrationData.md)|
+| requiredIntegrationData* | Provides details for data requested from the application. [RequiredRedirectionData](?path=docs/schemas-md/RequiredRedirectionData.md)|  
+
+
+
+
+
+
