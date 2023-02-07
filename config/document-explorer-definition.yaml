@@ -322,4 +322,22 @@
     - title: Secure3DAuthenticationResponse 
       link: docs/schemas-md/Secure3DAuthenticationResponse.md
     - title: Expiration 
-      link: docs/schemas-md/Expiration.md        
+      link: docs/schemas-md/Expiration.md  
+    - title: SepaSale 
+      link: docs/schemas-md/SepaSale.md          
+    - title: SepaCredit 
+      link: docs/schemas-md/SepaCredit.md  
+    - title: SepaCredit 
+      link: docs/schemas-md/SepaCredit.md
+    - title: PayPal 
+      link: docs/schemas-md/PayPal.md      
+    - title: AVSResponse 
+      link: docs/schemas-md/AVSResponse.md      
+    - title: CardholderInfoResponse 
+      link: docs/schemas-md/CardholderInfoResponse.md      
+    - title: DecoupledAuthenticationParameters 
+      link: docs/schemas-md/DecoupledAuthenticationParameters.md      
+    - title: CardholderBrowserParameters 
+      link: docs/schemas-md/CardholderBrowserParameters.md      
+    
+      

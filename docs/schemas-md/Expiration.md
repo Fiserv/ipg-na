@@ -7,6 +7,15 @@
 | year* |  ``` string ```  *pattern: ^([0-9]{2})$ example: 21*  Year of the card expiration date in YY format.|  
 
 
+**Expiration Example:**
+
+```{r}
+
+{
+  "month": "03",
+  "year": "22"
+}
+```
 
 
 
