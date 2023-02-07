@@ -28,6 +28,7 @@
 # the delivery of this work
 ################################################################################
 header:
+  bold:
   productionDescription: Payment Gateway API Specification
 #featuredFeatures:
 #  - title: REPLACE ME
