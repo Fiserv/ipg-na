@@ -316,7 +316,11 @@
       link: docs/schemas-md/Secure3D10AuthenticationRequest.md    
     - title: Secure3D21AuthenticationRequest 
       link: docs/schemas-md/Secure3D21AuthenticationRequest.md    
-    - title: cardHolderBrowserParams 
+    - title: CardHolderBrowserParams 
       link: docs/schemas-md/cardHolderBrowserParams.md      
     - title: Secure3DAuthenticationRequest 
       link: docs/schemas-md/Secure3DAuthenticationRequest.md     
+    - title: UnionPayAuthenticationRequest 
+      link: docs/schemas-md/UnionPayAuthenticationRequest.md  
+    - title: Secure3DAuthenticationResponse 
+      link: docs/schemas-md/Secure3DAuthenticationResponse.md    

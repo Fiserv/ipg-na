@@ -16,7 +16,7 @@
 | secure3DThreeRIIndicator |  ``` string ```  *nullable: true example: 01  01 = Recurring transaction 02 = Instalment transaction 03 = Add card 04 = Maintain card information 05 = Account verification 06 = Split/delayed shipment 07 = Top-up 08 = Mail Order 09 = Telephone Order 10 = Whitelist status check 11 = Other payment Enum:Array [ 11 ] - [ 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11 ]* |
 | recurringExpiry |  ``` string ```  *pattern: ^([0-9]{4})(1[0-2]|0[1-9])(3[01]|0[1-9]|[12][0-9])$  nullable: true example: 20210819* Date after which no further authorisations shall be performed.|
 | recurringFrequency |  ``` integer ```  *($int32) minimum: 1 maximum: 9999 nullable: true example: 30* Indicates the minimum number of days between authorisations.|
-| cardHolderBrowserParams | {[cardHolderBrowserParams](?path=docs/schemas-md/cardHolderBrowserParams.md)}|
+| cardHolderBrowserParams | {[cardHolderBrowserParams](?path=docs/schemas-md/CardHolderBrowserParams.md)}|
 
 
 **Secure3D21AuthenticationRequest Example:**

@@ -16,7 +16,7 @@
 | authenticationIndicator |  ``` string ```  *default: 01 example: 01*  Provides additional information to the ACS to determine the best approach for handling an authentication request. 01 = Payment transaction 02 = Recurring transaction 03 = Installment transaction 04 = Add card 05 = Maintain card 06 = Card holder verification as part of EMV token ID and Value. Enum:Array [ 6 ] - [ 01, 02, 03, 04, 05, 06 ]|
 | recurringExpiry |  ``` string ```  *pattern: ^([0-9]{4})(1[0-2]|0[1-9])(3[01]|0[1-9]|[12][0-9])$  nullable: true example: 20210819* Date after which no further authorisations shall be performed.|
 | recurringFrequency |  ``` integer ```  *($int32) minimum: 1 maximum: 9999 nullable: true example: 30* Indicates the minimum number of days between authorisations.|
-| cardHolderBrowserParams | {[cardHolderBrowserParams](?path=docs/schemas-md/cardHolderBrowserParams.md)}|  
+| cardHolderBrowserParams | {[cardHolderBrowserParams](?path=docs/schemas-md/CardHolderBrowserParams.md)}|  
 | skipTRA |  SkipTRA  ``` boolean ```   *default: false* skip TRA exemption for the transaction.|
 
 
