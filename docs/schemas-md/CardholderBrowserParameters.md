@@ -11,9 +11,9 @@
 | browserTimeZone |  ``` string ```  *maxLength: 5 example: -300* Browser time zone (zone offset value in minutes).|
 | browserUserAgent |  ``` string ```  *maxLength: 2048 example: Lynx/2.8.4rel.1 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.6c* The browsers user agent string| 
 
-**CardholderBrowserParameters Example:**
+**CardholderBrowserParameters Example:** 
 
-```{r} 
+```{r}
 
 {
   "browserAcceptHeaders": "Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8",

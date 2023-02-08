@@ -9,7 +9,7 @@
 
 **DecoupledAuthenticationParameters Example:**
 
-```{r} 
+```{r}
 
 {
   "decMaxTime": 10,
