@@ -339,5 +339,67 @@
       link: docs/schemas-md/DecoupledAuthenticationParameters.md      
     - title: CardholderBrowserParameters 
       link: docs/schemas-md/CardholderBrowserParameters.md      
+    - title: AliPay 
+      link: docs/schemas-md/AliPay.md   
+    - title: KoreanPayment 
+      link: docs/schemas-md/KoreanPayment.md   
+    - title: ChinaDomestic 
+      link: docs/schemas-md/ChinaDomestic.md  
+    - title: EncryptedApplePay 
+      link: docs/schemas-md/EncryptedApplePay.md  
+    - title: EncryptedGooglePay 
+      link: docs/schemas-md/EncryptedGooglePay.md
+    - title: EncryptedSamsungPay 
+      link: docs/schemas-md/EncryptedSamsungPay.md
+    - title: DecryptedApplePay 
+      link: docs/schemas-md/DecryptedApplePay.md
+    - title: DecryptedGooglePay 
+      link: docs/schemas-md/DecryptedGooglePay.md    
+    - title: DecryptedSamsungPay 
+      link: docs/schemas-md/DecryptedSamsungPay.md  
     - title: Order 
       link: docs/schemas-md/Order.md
+    - title: Billing 
+      link: docs/schemas-md/Billing.md
+    - title: Contact 
+      link: docs/schemas-md/Contact.md
+    - title: Shipping 
+      link: docs/schemas-md/Shipping.md
+    - title: Address 
+      link: docs/schemas-md/Address.md
+    - title: ReceiptRequestInfo 
+      link: docs/schemas-md/ReceiptRequestInfo.md    
+    - title: Receipt 
+      link: docs/schemas-md/Receipt.md
+    - title: ReceiptLine 
+      link: docs/schemas-md/ReceiptLine.md
+    - title: BancontactQR 
+      link: docs/schemas-md/BancontactQR.md
+    - title: IndustrySpecificExtensions 
+      link: docs/schemas-md/IndustrySpecificExtensions.md
+    - title: StoredCredential 
+      link: docs/schemas-md/StoredCredential.md
+    - title: Airline 
+      link: docs/schemas-md/Airline.md
+    - title: Lodging 
+      link: docs/schemas-md/Lodging.md
+    - title: CarRental 
+      link: docs/schemas-md/CarRental.md 
+    - title: Mcc6012 
+      link: docs/schemas-md/Mcc6012 .md
+    - title: InstallmentOptions 
+      link: docs/schemas-md/InstallmentOptions.md
+    - title: RevolvingOptions 
+      link: docs/schemas-md/RevolvingOptions.md
+    - title: StandInDetails 
+      link: docs/schemas-md/StandInDetails.md 
+    - title: TokenCryptogramstring 
+      link: docs/schemas-md/TokenCryptogramstring.md  
+    - title: AdditionalAmountRate 
+      link: docs/schemas-md/AdditionalAmountRate.md 
+    - title: PaymentUrlRequest 
+      link: docs/schemas-md/PaymentUrlRequest.md   
+    - title: PaymentUrlRequest 
+      link: docs/schemas-md/PaymentUrlRequest.md  
+                                
+    
