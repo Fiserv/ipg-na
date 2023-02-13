@@ -403,5 +403,17 @@
       link: docs/schemas-md/Basket.md  
     - title: BasketItem 
       link: docs/schemas-md/BasketItem.md    
-                                
+    - title: Option 
+      link: docs/schemas-md/Option.md
+    - title: PaymentUrlDetail 
+      link: docs/schemas-md/PaymentUrlDetail.md
+    - title: PaymentUrlStatusstring 
+      link: docs/schemas-md/PaymentUrlStatusstring.md
+    - title: PaymentFacilitator 
+      link: docs/schemas-md/PaymentFacilitator.md
+    - title: SubMerchantData 
+      link: docs/schemas-md/SubMerchantData.md
+    - title: Document 
+      link: docs/schemas-md/Document.md        
+                                    
     
