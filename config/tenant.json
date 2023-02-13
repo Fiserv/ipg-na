@@ -26,8 +26,6 @@
   ],
   "product": {
     "featured": true,
-    "description": "REPLACE To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "longDescription": "REPLACE To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
     "apiSpecification": "/v1/apis/IPGNA",
     "layout": "/v1/layouts/IPGNA",
     "documentation": "/v1/docs/IPGNA",
