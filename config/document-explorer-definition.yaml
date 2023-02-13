@@ -399,7 +399,9 @@
       link: docs/schemas-md/AdditionalAmountRate.md 
     - title: PaymentUrlRequest 
       link: docs/schemas-md/PaymentUrlRequest.md   
-    - title: PaymentUrlRequest 
-      link: docs/schemas-md/PaymentUrlRequest.md  
+    - title: Basket 
+      link: docs/schemas-md/Basket.md  
+    - title: BasketItem 
+      link: docs/schemas-md/BasketItem.md    
                                 
     

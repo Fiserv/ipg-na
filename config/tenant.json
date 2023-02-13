@@ -26,6 +26,8 @@
   ],
   "product": {
     "featured": true,
+    "description": "",
+	"longDescription": "",
     "apiSpecification": "/v1/apis/IPGNA",
     "layout": "/v1/layouts/IPGNA",
     "documentation": "/v1/docs/IPGNA",
