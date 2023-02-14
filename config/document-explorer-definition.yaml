@@ -437,11 +437,28 @@
       link: docs/schemas-md/Secure3DAuthenticationUpdateRequest.md 
     - title: ACSResponse 
       link: docs/schemas-md/ACSResponse.md 
+    - title: AuthenticationUpdateRequest 
+      link: docs/schemas-md/AuthenticationUpdateRequest.md  
     - title: Secure3dResponse 
       link: docs/schemas-md/Secure3dResponse.md 
     - title: StandinResponseDetails 
-      link: docs/schemas-md/StandinResponseDetails.md       
+      link: docs/schemas-md/StandinResponseDetails.md    
+    - title: CardInfoLookupRequest 
+      link: docs/schemas-md/CardInfoLookupRequest.md  
+    - title: AccountInfoLookupRequest 
+      link: docs/schemas-md/AccountInfoLookupRequest.md  
+    - title: PaymentCardInfoLookupRequest 
+      link: docs/schemas-md/PaymentCardInfoLookupRequest.md  
+    - title: PaymentTokenInfoLookupRequest 
+      link: docs/schemas-md/PaymentTokenInfoLookupRequest.md  
+    - title: CardInfoLookupResponse 
+      link: docs/schemas-md/CardInfoLookupResponse.md  
+    - title: CardInfo 
+      link: docs/schemas-md/CardInfo.md  
+    - title: PaymentDevice 
+      link: docs/schemas-md/PaymentDevice.md  
+    - title: AchResponse 
+      link: docs/schemas-md/AchResponse.md                       
             
                          
-                                    
     
