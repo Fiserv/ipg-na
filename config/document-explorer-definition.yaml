@@ -414,6 +414,34 @@
     - title: SubMerchantData 
       link: docs/schemas-md/SubMerchantData.md
     - title: Document 
-      link: docs/schemas-md/Document.md        
+      link: docs/schemas-md/Document.md   
+    - title: SoftDescriptor 
+      link: docs/schemas-md/SoftDescriptor.md 
+    - title: DCCExchangeRateRequest 
+      link: docs/schemas-md/DCCExchangeRateRequest.md 
+    - title: DynamicPricingExchangeRateRequest 
+      link: docs/schemas-md/DynamicPricingExchangeRateRequest.md 
+    - title: Dcc 
+      link: docs/schemas-md/Dcc.md 
+    - title: DynamicPricing 
+      link: docs/schemas-md/DynamicPricing.md 
+    - title: CurrencyConversion 
+      link: docs/schemas-md/CurrencyConversion.md 
+    - title: UnionPayAuthenticationUpdateRequest 
+      link: docs/schemas-md/UnionPayAuthenticationUpdateRequest.md 
+    - title: Secure3D10AuthenticationUpdateRequest 
+      link: docs/schemas-md/Secure3D10AuthenticationUpdateRequest.md 
+    - title: Secure3D21AuthenticationUpdateRequest 
+      link: docs/schemas-md/Secure3D21AuthenticationUpdateRequest.md 
+    - title: Secure3DAuthenticationUpdateRequest 
+      link: docs/schemas-md/Secure3DAuthenticationUpdateRequest.md 
+    - title: ACSResponse 
+      link: docs/schemas-md/ACSResponse.md 
+    - title: Secure3dResponse 
+      link: docs/schemas-md/Secure3dResponse.md 
+    - title: StandinResponseDetails 
+      link: docs/schemas-md/StandinResponseDetails.md       
+            
+                         
                                     
     
