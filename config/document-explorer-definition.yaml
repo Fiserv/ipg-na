@@ -534,4 +534,34 @@
       link: docs/schemas-md/FraudRegistrationDeviceItems.md
     - title: ClientRegistration 
       link: docs/schemas-md/ClientRegistration.md          
+    - title: PaymentRegistration 
+      link: docs/schemas-md/PaymentRegistration.md
+    - title: RegistrationMethod 
+      link: docs/schemas-md/RegistrationMethod.md
+    - title: FraudRegistrationCard 
+      link: docs/schemas-md/FraudRegistrationCard.md
+    - title: FraudRegistrationResponse 
+      link: docs/schemas-md/FraudRegistrationResponse.md
+    - title: FraudScore 
+      link: docs/schemas-md/FraudScore.md
+    - title: FraudScoreExplanation 
+      link: docs/schemas-md/FraudScoreExplanation.md
+    - title: FraudRegistrationError 
+      link: docs/schemas-md/FraudRegistrationError.md
+    - title: ErrorMessage 
+      link: docs/schemas-md/ErrorMessage.md
+    - title: ManagedRedirectTransactionType 
+      link: docs/schemas-md/ManagedRedirectTransactionType.md
+    - title: RedirectAttributes 
+      link: docs/schemas-md/RedirectAttributes.md
+    - title: SkipTRA 
+      link: docs/schemas-md/SkipTRA.md
+    - title: ManagedRedirectPrimaryRequest 
+      link: docs/schemas-md/ManagedRedirectPrimaryRequest.md
+    - title: PaymentCardManagedRedirectRequest 
+      link: docs/schemas-md/PaymentCardManagedRedirectRequest.md
+    - title: GenericManagedRedirectRequest 
+      link: docs/schemas-md/GenericManagedRedirectRequest.md
+    - title: SepaSaleManagedRedirectRequest 
+      link: docs/schemas-md/SepaSaleManagedRedirectRequest.md                              
               
