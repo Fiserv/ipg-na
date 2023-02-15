@@ -459,6 +459,28 @@
       link: docs/schemas-md/PaymentDevice.md  
     - title: AchResponse 
       link: docs/schemas-md/AchResponse.md                       
+    - title: IdInfo 
+      link: docs/schemas-md/IdInfo.md
+    - title: TeleCheckAchPaymentMethod 
+      link: docs/schemas-md/TeleCheckAchPaymentMethod.md
+    - title: AchRecurringType 
+      link: docs/schemas-md/AchRecurringType.md
+    - title: TeleCheckICAPaymentMethod 
+      link: docs/schemas-md/TeleCheckICAPaymentMethod.md
+    - title: TeleCheckCBPPaymentMethod 
+      link: docs/schemas-md/TeleCheckCBPPaymentMethod.md
+    - title: TeleCheckPPDPaymentMethod 
+      link: docs/schemas-md/TeleCheckPPDPaymentMethod.md
+    - title: ExchangeRateDetails 
+      link: docs/schemas-md/ExchangeRateDetails.md
+    - title: CurrencyConversionResponse 
+      link: docs/schemas-md/CurrencyConversionResponse.md
+    - title: PaymentBrandResponse 
+      link: docs/schemas-md/PaymentBrandResponse.md
+    - title: AvailableCurrenciesResponse 
+      link: docs/schemas-md/AvailableCurrenciesResponse.md
+    - title: AvailableIsoCountriesResponse 
+      link: docs/schemas-md/AvailableIsoCountriesResponse.md                      
             
                          
     
