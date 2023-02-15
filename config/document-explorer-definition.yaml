@@ -508,5 +508,30 @@
       link: docs/schemas-md/Items.md            
     - title: Method 
       link: docs/schemas-md/Method.md
-                           
-    
+    - title: IssuerResponse 
+      link: docs/schemas-md/IssuerResponse.md
+    - title: Location 
+      link: docs/schemas-md/Location.md
+    - title: ShipToAddress 
+      link: docs/schemas-md/ShipToAddress.md                          
+    - title: FraudOrderItems 
+      link: docs/schemas-md/FraudOrderItems.md
+    - title: FraudAddress 
+      link: docs/schemas-md/FraudAddress.md
+    - title: VerificationAvs 
+      link: docs/schemas-md/VerificationAvs.md
+    - title: Verification3ds 
+      link: docs/schemas-md/Verification3ds.md
+    - title: VerificationCvv 
+      link: docs/schemas-md/VerificationCvv.md
+    - title: ScoreOnlyResponse 
+      link: docs/schemas-md/ScoreOnlyResponse.md
+    - title: FraudRegistration 
+      link: docs/schemas-md/FraudRegistration.md
+    - title: FraudRegistrationDevice 
+      link: docs/schemas-md/FraudRegistrationDevice.md
+    - title: FraudRegistrationDeviceItems 
+      link: docs/schemas-md/FraudRegistrationDeviceItems.md
+    - title: ClientRegistration 
+      link: docs/schemas-md/ClientRegistration.md          
+              
