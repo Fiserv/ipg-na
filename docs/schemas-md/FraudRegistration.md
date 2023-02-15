@@ -8,7 +8,7 @@
 | customer* | [Customer](?path=docs/schemas-md/Customer.md)|
 | merchant* | [Merchant](?path=docs/schemas-md/Merchant.md)|
 | device | [FraudRegistrationDevice](?path=docs/schemas-md/FraudRegistrationDevice.md)|
-| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "inauthTransId": "1234" }|
+| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "inauthTransId": "1234" }<br/> }|
 
 
 **FraudRegistration Example:**

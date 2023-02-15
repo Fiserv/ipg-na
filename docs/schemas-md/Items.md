@@ -16,7 +16,7 @@
 | mac |    ``` string ```  <br/> *example: 02:00:00:00:00:00* <br/> The MAC address of the device that is connected to the Wi-Fi network.|
 | ssid |    ``` string ```  <br/> *example: Boston-5G-1* <br/> The Wi-Fi networks Service Set Identifier (SSID).|
 | bssid |    ``` string ```  <br/> *example: e8:fc:af:fb:4b:8c* <br/> The Wi-Fi networks Basic Service Set Identifier (BSSID).|
-| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "highFraudVolume": true }|  
+| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "highFraudVolume": true }<br/> }|  
 
 
 

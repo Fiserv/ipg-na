@@ -7,7 +7,7 @@
 | merchantAddress | [FraudAddress](?path=docs/schemas-md/FraudAddress.md)|
 | hierarchy |    ``` string ```  <br/> *example: FDC* <br/> Free-text field to describe a hierarchy the merchant would like to provide.|
 | timezoneOffset |    ``` string ```  <br/> *example: +02:00* <br/> The timezone offset from UTC to the merchants timezone configuration, specified in the format +hh:mm.|
-| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "phoneBrand": "samsung" }|
+| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "phoneBrand": "samsung" }<br/> }|
 
 **Location Example:**
 

@@ -14,7 +14,7 @@
 | timezoneOffset |    ``` string ```  *example: +02:00* <br/> The timezone offset from UTC to the devices timezone configuration, specified in the format +hh:mm.|
 | rooted |    ``` boolean ```  *example: false* <br/> A flag indicating that the device has been altered to allow privileged access to users. This flag should only be set to false if a test was performed and the result was negative. Leave unset otherwise.|
 | malwareDetected |    ``` boolean ```  *example: false* <br/> A flag indicating that malware was detected on the mobile phone. This flag should only be set to false if a test was performed and the result was negative. Leave unset otherwise.|
-| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "battery": "5h 10m"}|
+| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "battery": "5h 10m"}<br/> }|
 
 
 **FraudRegistrationDevice Example:**

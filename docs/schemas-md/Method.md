@@ -8,7 +8,7 @@
 | methodAlias |    ``` string ```  <br/> *example: card one* <br/> The address that should be used to send billing information for this payment method.|
 | card* | [Card](?path=docs/schemas-md/Card.md)|
 | provider |    ``` string ```   <br/> *example: apple* <br/> The wallet provider. This field should be normalized before sending through the API.|
-| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "phoneBrand": "samsung" }|
+| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "phoneBrand": "samsung" }<br/> }|
 
 
 **Method Example:**

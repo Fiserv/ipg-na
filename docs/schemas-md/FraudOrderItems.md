@@ -10,7 +10,7 @@
 | unitPrice | ``` string ```  <br/> *example: {"value": 7300, "currency": "USD"}* <br/> The price per unit.|
 | categories | [ <br/> example: List [ List [ "Books, Computers & Technology, Programming" ], List [ "Books, Text Books, Computer Science" ] ] <br/> The categories that this product belongs to. <br/> [ <br/> example: List [ "Books, Programming" ] <br/> string <br/> 	example: Books] <br/> ] <br/> ] | 
 | detailsUrl | ``` string ```  <br/> *example: https://mystore.domain/product/PRODCODE1* <br/> The URL to the merchant's management system, for reporting and analysis.|
-| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "phoneBrand": "samsung" }|
+| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "phoneBrand": "samsung" }<br/> }|
 
 **FraudOrderItems Example:**
 

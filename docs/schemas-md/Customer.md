@@ -14,7 +14,7 @@
 | gender |    ``` string ```   <br/>*example: male* <br/>The customers gender. Do not set this property if the customer does not specify a gender. <br/>Enum:[ male, female, other ]|
 | dateOfBirth |    ``` string ```   <br/>*example: 1982* <br/>The customer's year of birth. Format is YYYY.|
 | address | [CustomerAddress](?path=docs/schemas-md/CustomerAddress.md)|
-| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "previouslyAffected": "Y" }|
+| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "previouslyAffected": "Y" }<br/> }|
 
 **Customer Example:**
 

@@ -13,7 +13,7 @@
 | verificationAvs | [VerificationAvs](?path=docs/schemas-md/VerificationAvs.md)|
 | verification3ds | [Verification3ds](?path=docs/schemas-md/Verification3ds.md)|
 | verificationCvv | [VerificationCvv](?path=docs/schemas-md/VerificationCvv.md)|
-| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "previouslyAffected": "Y" }|
+| userDefined |   {<br/> description: A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. <br/> example:  { "previouslyAffected": "Y" }<br/> }|
 
 **Payment Example:**
 
