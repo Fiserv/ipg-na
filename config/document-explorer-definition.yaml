@@ -481,6 +481,32 @@
       link: docs/schemas-md/AvailableCurrenciesResponse.md
     - title: AvailableIsoCountriesResponse 
       link: docs/schemas-md/AvailableIsoCountriesResponse.md                      
-            
-                         
+      
+    - title: ScoreOnlyRequest 
+      link: docs/schemas-md/ScoreOnlyRequest.md
+    - title: Customer 
+      link: docs/schemas-md/Customer.md
+    - title: BillingAddress 
+      link: docs/schemas-md/BillingAddress.md      
+    - title: Device 
+      link: docs/schemas-md/Device.md
+    - title: Loyalty 
+      link: docs/schemas-md/Loyalty.md
+    - title: Payment 
+      link: docs/schemas-md/Payment.md
+    - title: Card 
+      link: docs/schemas-md/Card.md
+    - title: Merchant 
+      link: docs/schemas-md/Merchant.md
+    - title: FraudOrder 
+      link: docs/schemas-md/FraudOrder.md
+    - title: CustomerAddress 
+      link: docs/schemas-md/CustomerAddress.md
+    - title: Phone 
+      link: docs/schemas-md/Phone.md
+    - title: Items 
+      link: docs/schemas-md/Items.md            
+    - title: Method 
+      link: docs/schemas-md/Method.md
+                           
     
