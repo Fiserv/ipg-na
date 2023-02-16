@@ -587,5 +587,6 @@
       link: docs/schemas-md/IPAddress.md
     - title: RecurringPaymentState 
       link: docs/schemas-md/RecurringPaymentState.md 
-                              
+    - title: AuthenticationRequest 
+      link: docs/schemas-md/AuthenticationRequest.md                           
               
