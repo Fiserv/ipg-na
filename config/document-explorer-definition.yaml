@@ -588,5 +588,7 @@
     - title: RecurringPaymentState 
       link: docs/schemas-md/RecurringPaymentState.md 
     - title: AuthenticationRequest 
-      link: docs/schemas-md/AuthenticationRequest.md                           
+      link: docs/schemas-md/AuthenticationRequest.md
+    - title: AuthenticationResult 
+      link: docs/schemas-md/AuthenticationResult.md                              
               
