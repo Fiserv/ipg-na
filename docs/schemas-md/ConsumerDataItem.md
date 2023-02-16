@@ -3,7 +3,7 @@
 
 | *description*:   | *Type of consumer data item.*|
 |----|----|
-|    |  ``` string ```  * example: BLIK_CODE*. Enum:Array [ 1 ] - [ BLIK_CODE ]|
+|    |  ``` string ```   <br/> *example: BLIK_CODE*.  <br/> Enum:Array [ 1 ] - [ BLIK_CODE ]|
 
 **ConsumerDataItem Example:**
 

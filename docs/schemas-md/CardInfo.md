@@ -3,12 +3,12 @@
 
 | *description*:   | *Card information.*|
 |----|----|
-| brand |    ``` string ```  *example: VISA* The card brand.|
-| brandProductId |    ``` string ```  *example: VISA BUSINESS* The product ID of the brand.|
+| brand |    ``` string ``` <br/> *example: VISA* <br/>  The card brand.|
+| brandProductId |    ``` string ```  <br/>  *example: VISA BUSINESS*  <br/> The product ID of the brand.|
 | cardFunction | [CardFunction](?path=docs/schemas-md/CardFunction.md)|
-| commercialCard |    ``` string ```  *example: CORPORATE* Indicates whether it is a corporate or non-corporate card.- Enum:[ CORPORATE, NON_CORPORATE ]|
-| issuerCountry |    ``` string ```  *example: DE* The country of the issuer.|
-| issuerName |    ``` string ```  *example: First National Bank of Omaha* The name of the issuer.|
+| commercialCard |    ``` string ``` <br/>   *example: CORPORATE*  <br/> Indicates whether it is a corporate or non-corporate card. <br/>  Enum:[ CORPORATE, NON_CORPORATE ]|
+| issuerCountry |    ``` string ``` <br/>   *example: DE* <br/>  The country of the issuer.|
+| issuerName |    ``` string ```  <br/>  *example: First National Bank of Omaha*  <br/> The name of the issuer.|
 
 **CardInfo Example:**
 

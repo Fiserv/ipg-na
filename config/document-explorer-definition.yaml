@@ -481,7 +481,6 @@
       link: docs/schemas-md/AvailableCurrenciesResponse.md
     - title: AvailableIsoCountriesResponse 
       link: docs/schemas-md/AvailableIsoCountriesResponse.md                      
-      
     - title: ScoreOnlyRequest 
       link: docs/schemas-md/ScoreOnlyRequest.md
     - title: Customer 

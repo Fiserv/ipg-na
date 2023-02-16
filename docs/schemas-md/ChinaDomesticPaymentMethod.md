@@ -4,7 +4,7 @@
 | *description*:   | *Payment method containing China Domestic information.*|
 |----|----|
 | chinaDomestic* |  [ChinaDomestic](?path=docs/schemas-md/ChinaDomestic.md)|
-| brand* |    ``` string ```   Enum:Array [ 3 ] - [ ALIPAY_DOMESTIC, CUP_DOMESTIC, WECHAT_DOMESTIC ]|
+| brand* |    ``` string ```  <br/>   Enum:Array [ 3 ] - [ ALIPAY_DOMESTIC, CUP_DOMESTIC, WECHAT_DOMESTIC ]|
 
 **ChinaDomesticPaymentMethod Example:**
 

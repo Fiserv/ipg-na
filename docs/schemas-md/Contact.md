@@ -3,10 +3,10 @@
 
 | *description*: | *Customer contact information.*|
 |----|----|
-| phone |    ``` string ```   *maxLength: 32 example: 5555555555* Primary phone number.|
-| mobilePhone |    ``` string ```   *maxLength: 32 example: 5555555555* Mobile phone number.|
-| fax |    ``` string ```   *maxLength: 32 example: 5555555555* Fax number.|
-| email |    ``` string ```   *maxLength: 254 example: john@test.com* Email address.|
+| phone |    ``` string ```    <br/> maxLength: 32  <br/> *example: 5555555555*  <br/> Primary phone number.|
+| mobilePhone |    ``` string ```   <br/> maxLength: 32  <br/> *example: 5555555555*  <br/> Mobile phone number.|
+| fax |    ``` string ```   <br/> maxLength: 32  <br/> *example: 5555555555*  <br/> Fax number.|
+| email |    ``` string ```  <br/> maxLength: 254  <br/> *example: john@test.com*  <br/> Email address.|
 
 **Contact Example:**
 

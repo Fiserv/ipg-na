@@ -3,8 +3,8 @@
 
 | *description*:   | *Country and language of client.*|
 |----|----|
-| language |     ``` string ``` *pattern: ^(?!\s*$).+   example: en*. Language used by client.|
-| country |    ``` string ```  *pattern: ^(?!\s*$).+ example: GB*. Country of the client.|  
+| language |     ``` string ```  <br/> *pattern: ^(?!\s*$).+    <br/> *example: en*. Language used by client.|
+| country |    ``` string ```  <br/> pattern: ^(?!\s*$).+  <br/> *example: GB*.  <br/> Country of the client.|  
 
 **ClientLocale Example:**
 
