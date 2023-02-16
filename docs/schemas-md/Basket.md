@@ -3,6 +3,6 @@
 
 | *description*:   | *Indicates basket of items.*|
 |----|----|
-| productStock |    ``` string ```  *example: check* Product stock.|
-| items |  [ The list of items included in the order. [BasketItem](?path=docs/schemas-md/BasketItem.md) ]|
+| productStock |    ``` string ```  <br/> *example: check* <br/>Product stock.|
+| items |  [ <br/>The list of items included in the order. <br/>[BasketItem](?path=docs/schemas-md/BasketItem.md) <br/>]|
 

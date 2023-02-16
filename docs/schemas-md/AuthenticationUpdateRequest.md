@@ -1,10 +1,10 @@
 
 # AuthenticationUpdateRequest
 
-| *description*: | *Provides shared fields for all AuthenticationUpdateRequest types. Abstract class, do not use this class directly, use one of its children.*| 
+| *description*: | *Provides shared fields for all AuthenticationUpdateRequest types. <br/> Abstract class, do not use this class directly, use one of its children.*| 
 |----|----|
-| storeId* |  ``` string ```  *maxLength: 20 example: 12345500000* An optional Outlet ID for clients that support multiple stores in the same developer app.|
-| authenticationType |  ``` string ```  *example: Secure3DAuthenticationUpdateRequest* Object name of the authentication update request.|
+| storeId* |  ``` string ```   <br/> maxLength: 20  <br/> *example: 12345500000*  <br/> An optional Outlet ID for clients that support multiple stores in the same developer app.|
+| authenticationType |  ``` string ```  <br/>  *example: Secure3DAuthenticationUpdateRequest* <br/>  Object name of the authentication update request.|
 | billingAddress |  [Address](?path=docs/schemas-md/Address.md)|
 
 **AuthenticationUpdateRequest Example:**

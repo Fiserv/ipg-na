@@ -3,9 +3,9 @@
 
 | *description*:   | *Access token generation request.*|
 |----|----|
-| domain |     ``` string ``` *example: somedomain.com*. Domain name.|
-| token |    ``` string ```  *example: gfgF92JHDJFjxcJHCQ23IbI12D*. The token value.|
-| publicKeyRequired |    ``` string ```  *example: true*. Indicates whether public key is requested or not.|  
+| domain |     ``` string ``` <br/> *example: somedomain.com*.  <br/> Domain name.|
+| token |    ``` string ```   <br/> *example: gfgF92JHDJFjxcJHCQ23IbI12D*.  <br/> The token value.|
+| publicKeyRequired |    ``` string ```   <br/> *example: true*.  <br/> Indicates whether public key is requested or not.|  
 
 **AccessTokenRequest Example:**
 

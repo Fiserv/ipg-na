@@ -564,4 +564,29 @@
       link: docs/schemas-md/GenericManagedRedirectRequest.md
     - title: SepaSaleManagedRedirectRequest 
       link: docs/schemas-md/SepaSaleManagedRedirectRequest.md                              
+    - title: ManagedRedirectPaymentMethod
+      link: docs/schemas-md/ManagedRedirectPaymentMethod.md
+    - title: SepaSaleManagedRedirectPaymentMethod 
+      link: docs/schemas-md/SepaSaleManagedRedirectPaymentMethod.md
+    - title: ManagedRedirectResponse 
+      link: docs/schemas-md/ManagedRedirectResponse.md
+    - title: GetNetworkTokenCryptogramRequest 
+      link: docs/schemas-md/GetNetworkTokenCryptogramRequest.md
+    - title: GetNetworkTokenCryptogramResponse 
+      link: docs/schemas-md/GetNetworkTokenCryptogramResponse.md
+    - title: StoreCurrency 
+      link: docs/schemas-md/StoreCurrency.md
+    - title: StoreCountry 
+      link: docs/schemas-md/StoreCountry.md
+    - title: iso31661Alpha2Codes 
+      link: docs/schemas-md/iso31661Alpha2Codes.md
+    - title: iso31661Alpha3Codes 
+      link: docs/schemas-md/iso31661Alpha3Codes.md
+    - title: iso31661NumericCodes 
+      link: docs/schemas-md/iso31661NumericCodes.md
+    - title: IPAddress 
+      link: docs/schemas-md/IPAddress.md
+    - title: RecurringPaymentState 
+      link: docs/schemas-md/RecurringPaymentState.md 
+                              
               

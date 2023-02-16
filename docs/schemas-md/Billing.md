@@ -3,11 +3,11 @@
 
 | *description*:   | *Customer billing information.*|
 |----|----|
-| name |    ``` string ```   *maxLength: 96 example: John Doe* Billing name.|
-| firstName |    ``` string ```   *maxLength: 48 example: John* Billing first name. Note - Only supported for AMEX.|
-| lastName |    ``` string ```   *maxLength: 48 example: Doe* Billing last name. Note - Only supported for AMEX.|
-| customerId |    ``` string ```   *maxLength: 32 example: 1234567890* Customer ID for billing purpose.|
-| birthDate |    ``` string ```   *($date) example: 1980-01-31* Customer birth date.|
+| name |    ``` string ```    <br/> maxLength: 96  <br/> *example: John Doe*  <br/> Billing name.|
+| firstName |    ``` string ```   <br/> maxLength: 48  <br/> *example: John*  <br/> Billing first name. Note - Only supported for AMEX.|
+| lastName |    ``` string ```    <br/> maxLength: 48  <br/> *example: Doe* <br/>  Billing last name. Note - Only supported for AMEX.|
+| customerId |    ``` string ```    <br/> maxLength: 32  <br/> *example: 1234567890*  <br/> Customer ID for billing purpose.|
+| birthDate |    ``` string ```   <br/> ($date)  <br/> *example: 1980-01-31*  <br/> Customer birth date.|
 | contact | [Contact](?path=docs/schemas-md/Contact.md)|
 | address | [Address](?path=docs/schemas-md/Address.md)| 
 
