@@ -10,7 +10,7 @@
 | maximumFailures |    ``` integer ``` ($int32)  *minimum: 1 maximum: 999  example: 10  example: 1*.  Number of failures that can be encountered before re-tries cease.|
 | invoiceNumber |   ``` string ```  *example: 96126098*. Invoice number.|
 | purchaseOrderNumber |   ``` string ```  *example: 123055342*. Purchase order number.|
-| transactionOrigin |  TransactionOrigin  ``` string ```  *example: ECOM*.The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face). Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
+| transactionOrigin |  [TransactionOrigin](?path=docs/schemas-md/TransactionOrigin.md)  <br/>  ``` string ```  <br/>  *example: ECOM*  <br/> The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face). Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
 | dynamicMerchantName |   ``` string ```  *example: MyWebsite*. Dynamic merchant name for the cardholder's statement.|
 | frequency | [Frequency](?path=docs/schemas-md/Frequency.md)|
 | transactionAmount | [Amount](?path=docs/schemas-md/Amount.md)|

@@ -10,7 +10,7 @@
 | orderId |    ``` string ```  *example: 123456*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
 | transactionType | TransactionType   ``` string ```  *example: SALE*. Type of transaction to perform. Primary transaction types in requests include 'SALE', 'PREAUTH', 'CREDIT' and 'FORCED_TICKET'. Enum:    > Array [ 9 ] - [ SALE, PREAUTH, CREDIT, FORCED_TICKET, VOID, RETURN, POSTAUTH, PAYER_AUTH, DISBURSEMENT ]|
 | paymentToken | [PaymentTokenDetails](?path=docs/schemas-md/PaymentTokenDetails.md)|
-| transactionOrigin | TransactionOrigin   ``` string ```  *example: ECOM*. The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face). Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
+| transactionOrigin | [TransactionOrigin](?path=docs/schemas-md/TransactionOrigin.md)  <br/>   ``` string ```   <br/> *example: ECOM*   <br/> The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face). Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
 | paymentMethodDetails | [PaymentMethodDetails](?path=docs/schemas-md/PaymentMethodDetails.md)|
 | country |    ``` string ```  *example: USA*. Country of the card issuer.|
 | terminalId | ResponseType   ``` string ```  *maxLength: 30  example: 123456*. The terminal that is processing the transaction.|

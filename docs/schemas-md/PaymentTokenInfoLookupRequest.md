@@ -3,8 +3,8 @@
 
 | *description*:   | *Used to request card information associated with a payment token.*|
 |----|----|
-| requestType |    ``` string ```  *example: PaymentCardInfoLookupRequest* Object name of the account verification request.|
-| storeId |    ``` string ```  *maxLength: 20  example: 12345500000*. An optional outlet ID for clients that support multiple stores in the same app.|
+| requestType |    ``` string ```  <br/>  *example: PaymentCardInfoLookupRequest* Object name of the account verification request.|
+| storeId |    ``` string ```   <br/> maxLength: 20   <br/> *example: 12345500000*.  <br/> An optional outlet ID for clients that support multiple stores in the same app.|
 | paymentToken* | [UsePaymentToken](?path=docs/schemas-md/UsePaymentToken.md)|
 
 
