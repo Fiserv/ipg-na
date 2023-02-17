@@ -3,7 +3,7 @@
 
 | *description*:   | *Wallet payment method containing encrypted Apple Pay information.*|
 |----|----|
-| walletType |    ``` string ```  *example: EncryptedApplePayWalletPaymentMethod|
+| walletType |    ``` string ```  <br/>  *example: EncryptedApplePayWalletPaymentMethod|
 | encryptedApplePay* | [EncryptedApplePay](?path=docs/schemas-md/EncryptedApplePay.md)|   
 
 

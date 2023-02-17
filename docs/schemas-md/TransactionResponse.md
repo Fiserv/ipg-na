@@ -29,7 +29,7 @@
 | secure3dResponse |  [Secure3dResponse](?path=docs/schemas-md/Secure3dResponse.md)|
 | standinResponseDetails |  [StandinResponseDetails](?path=docs/schemas-md/StandinResponseDetails.md)|
 | redirectURL |    ``` string ```  *example:  `http://pay.issuer-bank.com/sessionID=123&sharedKey=456`*. The endpoint redirection URL.|
-| authenticationResponse | [AuthenticationResponse](?path=docs/schemas-md/AuthenticationResponse.md)|
+| authenticationResponse | [Secure3DAuthenticationResponse](?path=docs/schemas-md/Secure3DAuthenticationResponse.md)|
 | schemeTransactionId |    ``` string ```  *maxLength: 40  example: 019078743804756*. The transaction ID received from schemes for the initial transaction of card on file flows.|
 | processor | [ProcessorData](?path=docs/schemas-md/ProcessorData.md)|
 | additionalDetails | [AdditionalDetails](?path=docs/schemas-md/AdditionalDetails.md)|

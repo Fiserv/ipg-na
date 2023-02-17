@@ -3,7 +3,7 @@
 
 | *description*: | *Customer model for customers registered at merchant's website.*|
 |----|----|
-| id* |    ``` string ```  <br/>pattern: ^(?!\s*$).+ <br/> *example: 125Xasdf57D* <br/>Unique ID for the customer, if registered. This field is required if the parent object is present.|
+| id* |    ``` string ```  <br/> *pattern: ^(?!\s*$).+ <br/> *example: 125Xasdf57D* <br/>Unique ID for the customer, if registered. This field is required if the parent object is present.|
 | startDate |    ``` string ```   <br/>*example: 2017-01-04* <br/>The timestamp of the customers registration in the merchants platform. Format is YYYY-MM-DD.|
 | firstName |    ``` string ```   <br/>*example: John*  <br/>Customer's first name.|
 | lastName |    ``` string ```   <br/>*example: Smith* <br/>Customer's last name.|

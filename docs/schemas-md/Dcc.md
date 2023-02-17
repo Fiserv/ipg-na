@@ -3,9 +3,9 @@
 
 | *description*:   | *Request to perform a dynamic pricing exchange rate inquiry.*|
 |----|----|
-| conversionType* |    ``` string ```  *example: Dcc* Type of currency conversion.|
-| inquiryRateId* |    ``` string ```  *pattern: ^(?!\s*$).+ example: 123456* Inquiry rate id.|
-| dccApplied |   ``` string ```  *example: true* Indicates whether customer agrees with rate to be used.|
+| conversionType* |    ``` string ``` <br/> *example: Dcc*  <br/> Type of currency conversion.|
+| inquiryRateId* |    ``` string ```  <br/>  *pattern: ^(?!\s*$).+ example: 123456*  <br/> Inquiry rate id.|
+| dccApplied |   ``` string ```  <br/>  *example: true*  <br/> Indicates whether customer agrees with rate to be used.|
 
 **Dcc Example:**
 
