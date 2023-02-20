@@ -2,12 +2,12 @@
 
 | *description*:   | *Additional version-dependent information used to decrypt and verify the payment.*|
 |----|----|
-| applicationDataHash |    ``` string ```  *example: 94ee059335e587e501cc4bf90613e0814f00a7b08bc7c648fd865a2af6a22cc2* Merchant supplied information about the payment request. Contains Base64-encoded SHA256 hash of the applicationData property of the original PKPaymentRequest. Note - applicationData from PaymentData of PKPaymentToken Refer to Apple Pay documentation.|
-| ephemeralPublicKey* |    ``` string ```  *pattern: ^(?!\s*$).+ example: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiaU1SbkYTJy/j5L1t51vtGDh4KlNl5MFPWzo/C8r0WcrktWriz5pdRaDVUDvU++KlDu2iuQsd2xSNKJlFscbDQ==* Temporary key for generating shared secret from a device.|
-| publicKeyHash* |    ``` string ```  *pattern: ^(?!\s*$).+ example: YmSWN7lj4+A6fVJVPicP8TgS7gI7ougD8rEWB5LXtMM=*  Hash of the X.509 encoded public key bytes of the merchant’s certificate.|
-| transactionId* |    ``` string ```  *pattern: ^(?!\s*$).+ example: 31323334353637* Transaction identifier, generated on the device.
+| applicationDataHash |    ``` string ``` <br/>  *example: 94ee059335e587e501cc4bf90613e0814f00a7b08bc7c648fd865a2af6a22cc2* <br/>  Merchant supplied information about the payment request. Contains Base64-encoded SHA256 hash of the applicationData property of the original PKPaymentRequest.  <br/> Note - applicationData from PaymentData of PKPaymentToken Refer to Apple Pay documentation.|
+| ephemeralPublicKey* |    ``` string ```  <br/>  *pattern: ^(?!\s*$).+  <br/> example: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiaU1SbkYTJy/j5L1t51vtGDh4KlNl5MFPWzo/C8r0WcrktWriz5pdRaDVUDvU++KlDu2iuQsd2xSNKJlFscbDQ==*  <br/> Temporary key for generating shared secret from a device.|
+| publicKeyHash* |    ``` string ```  <br/>  *pattern: ^(?!\s*$).+  <br/> example: YmSWN7lj4+A6fVJVPicP8TgS7gI7ougD8rEWB5LXtMM=*  <br/>  Hash of the X.509 encoded public key bytes of the merchant’s certificate.|
+| transactionId* |    ``` string ```  <br/>  *pattern: ^(?!\s*$).+  <br/> example: 31323334353637*  <br/> Transaction identifier, generated on the device.
 |
-| publicKeyHash* |    ``` string ```  *pattern: ^(?!\s*$).+ example: YmSWN7lj4+A6fVJVPicP8TgS7gI7ougD8rEWB5LXtMM=*  Hash of the X.509 encoded public key bytes of the merchant’s certificate.|
+| publicKeyHash* |    ``` string ```  <br/>  *pattern: ^(?!\s*$).+  <br/> example: YmSWN7lj4+A6fVJVPicP8TgS7gI7ougD8rEWB5LXtMM=*   <br/> Hash of the X.509 encoded public key bytes of the merchant’s certificate.|
    
 
 

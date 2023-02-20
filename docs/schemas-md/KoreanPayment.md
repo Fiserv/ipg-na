@@ -3,9 +3,9 @@
 
 | *description*:   | *The payment object for AliPay transactions. Use this to populate AliPay payment method details*|
 |----|----|
-| billKeyId* |    ``` string ```   *maxLength: 28* |
-| entry |    ``` string ```   *example: web* Enum:Array [ 2 ] - [ mobile, web ]|
-| billType |    ``` string ```   *example: TAX_FREE*  Enum:Array [ 2 ] - [ TAXABLE, TAX_FREE ]|
+| billKeyId* |    ``` string ```  <br/>   *maxLength: 28* |
+| entry |    ``` string ```   <br/>  *example: web*  <br/> Enum:Array [ 2 ] - [ mobile, web ]|
+| billType |    ``` string ```  <br/>   *example: TAX_FREE*   <br/> Enum:Array [ 2 ] - [ TAXABLE, TAX_FREE ]|
 
 
 **KoreanPayment Example:**

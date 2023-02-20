@@ -3,12 +3,12 @@
 
 | *description*: | *Level3 - lineItems*|
 |----|----|
-| commodityCode |    ``` string ```   *example: ab12* Commodity Code.|
-| productCode |    ``` string ```   *example: 0001212120888* Product Code|
-| description |    ``` string ```   *maxLength: 4 example: Dinner and movie* Description of the line item.|
-| quantity |    ``` number ```   *example: 5* Quantity.|
-| unitMeasure |    ``` number ```   *example: 25* Number of units.|
-| unitPrice |    ``` number ```   *example: 30.075* Unit Price.|
+| commodityCode |    ``` string ```  <br/>   *example: ab12* <br/>  Commodity Code.|
+| productCode |    ``` string ```  <br/>   *example: 0001212120888* <br/>  Product Code|
+| description |    ``` string ```  <br/>   *maxLength: 4 <br/>  example: Dinner and movie*  <br/> Description of the line item.|
+| quantity |    ``` number ```   <br/>  *example: 5*  <br/> Quantity.|
+| unitMeasure |    ``` number ```  <br/>   *example: 25*  <br/> Number of units.|
+| unitPrice |    ``` number ```   <br/>  *example: 30.075*  <br/> Unit Price.|
 | vatAmountAndRate | [AdditionalAmountRate](?path=docs/schemas-md/AdditionalAmountRate.md)|
 | discountAmountAndRate | [AdditionalAmountRate](?path=docs/schemas-md/AdditionalAmountRate.md)|
 

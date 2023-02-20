@@ -3,8 +3,8 @@
 
 | *description*:   | *Basket option.*|
 |----|----|
-| name |    ``` string ```  name.|
-| choice |    ``` string ```  choice.|  
+| name |    ``` string ```   <br/> name.|
+| choice |    ``` string ```   <br/> choice.|  
 
 
 

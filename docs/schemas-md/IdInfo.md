@@ -3,8 +3,8 @@
 
 | *description*: | *Identification information.*|
 |----|----|
-| idType |    ``` string ```   *maxLength: 2 example: DL* Identification type.|
-| idData | ``` string ```  *minLength: 1 maxLength: 35 example: 12345678* Identification data. |
+| idType |    ``` string ```   <br/>  maxLength: 2  <br/> *example: DL*  <br/> Identification type.|
+| idData | ``` string ``` <br/> minLength: 1 <br/>  maxLength: 35  <br/> example: 12345678*  <br/> Identification data. |
 
 **IdInfo Example:**
 
