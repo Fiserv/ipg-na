@@ -3,10 +3,10 @@
 
 | *description*:   | *Payment facilitator details provided by the merchant.*|
 |----|----|
-| externalMerchantId |    ``` string ```  *pattern: ^(?!\s*$).+ example: 151623999* External merchant ID of the payment facilitator.|
-| paymentFacilitatorId |    ``` string ```  *pattern: \d{1,11} example: 13579246801* Independent sales organization (ISO) ID provided by Mastercard.|
-| saleOrganizationId |   ``` string ```  *example: Unauthenticated*. The type of the response. Enum:    > Array [ 9 ] - [ BadRequest, Unauthenticated, Unauthorized, NotFound, GatewayDeclined, EndpointDeclined, ServerError, EndpointCommunicationError, UnsupportedMediaType ]|
-| name |  ``` string ```  *maxLength: 50 pattern: ^(?!\s*$).+ example: First Reseller* Payment facilitator name.|
+| externalMerchantId |    ``` string ```  <br/>  *pattern: ^(?!\s*$).+ example: 151623999* <br/>  External merchant ID of the payment facilitator.|
+| paymentFacilitatorId |    ``` string ```  <br/>  *pattern: \d{1,11}  <br/> example: 13579246801*  <br/> Independent sales organization (ISO) ID provided by Mastercard.|
+| saleOrganizationId |   ``` string ```  <br/>  *example: Unauthenticated* <br/> The type of the response.  <br/> Enum:    > Array [ 9 ] - [ BadRequest, Unauthenticated, Unauthorized, NotFound, GatewayDeclined, EndpointDeclined, ServerError, EndpointCommunicationError, UnsupportedMediaType ]|
+| name |  ``` string ```  <br/> maxLength: 50  <br/> pattern: ^(?!\s*$).+ <br/> example: First Reseller*  <br/> Payment facilitator name.|
 | subMerchantData |  [SubMerchantData](?path=docs/schemas-md/SubMerchantData.md)|        
 
 **PaymentFacilitator Example:**

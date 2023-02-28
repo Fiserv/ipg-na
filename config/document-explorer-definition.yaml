@@ -39,10 +39,10 @@
     - title: Google Pay
       link: docs/schemas-md/GooglePay.md  
 - sections:
-  - title: Release notes
+  - title: Additional Info
     sections:
-    - title: March 2022
-      link: docs/release-notes/2022/march.md
+    - title: Response Codes
+      link: docs/additionalInfo/ResponseCodes.md
 - sections:
   - title: Resources
     sections:
