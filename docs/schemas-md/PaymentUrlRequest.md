@@ -3,15 +3,15 @@
 
 | *description*:   | *Request to generate an embedded payment link.*|
 |----|----|
-storeId |    ``` string ```   *maxLength: 20 example: 12345500000* An optional Outlet ID for clients that support multiple stores in the same developer app.|
+storeId |    ``` string ```  <br/> maxLength: 20  <br/> example: 12345500000* <br/>  An optional Outlet ID for clients that support multiple stores in the same developer app.|
 | clientLocale | [ClientLocale](?path=docs/schemas-md/ClientLocale.md)| 
 | transactionAmount* | [Amount](?path=docs/schemas-md/Amount.md)| 
-| transactionType | TransactionTypestring   ``` string ```   *example: SALE* Type of transaction to perform. Primary transaction types in requests include 'SALE', 'PREAUTH', 'CREDIT' and 'FORCED_TICKET'. Enum:[ SALE, PREAUTH, CREDIT, FORCED_TICKET, VOID, RETURN, POSTAUTH, PAYER_AUTH, DISBURSEMENT ]|
-| orderId |    ``` string ```   *example: 123456* Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
+| transactionType | TransactionTypestring   ``` string ```  <br/>   *example: SALE*  <br/> Type of transaction to perform. Primary transaction types in requests include 'SALE', 'PREAUTH', 'CREDIT' and 'FORCED_TICKET'. Enum:[ SALE, PREAUTH, CREDIT, FORCED_TICKET, VOID, RETURN, POSTAUTH, PAYER_AUTH, DISBURSEMENT ]|
+| orderId |    ``` string ```  <br/>   *example: 123456*  <br/> Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
 | billing | [Billing](?path=docs/schemas-md/Billing.md)|
 | shipping | [Shipping](?path=docs/schemas-md/Shipping.md)|
 | industrySpecificExtensions |  [IndustrySpecificExtensions](?path=docs/schemas-md/IndustrySpecificExtensions.md)|
-| transactionNotificationURL |    ``` string ```   *example: "https://showmethepaymentresult.com" * URL for notifying merchant of payment result.|
+| transactionNotificationURL |    ``` string ```  <br/>   *example: "https://showmethepaymentresult.com" *  <br/> URL for notifying merchant of payment result.|
 | expiration |    ``` integer ```   *($int64) example: 4102358400* Expiration time of the payment URL in seconds in the timestamp format.|
 | authenticateTransaction |    ``` boolean ```   *example: true* If 3D secure should be applied.|
 | dynamicMerchantName |    ``` boolean ```   *example: MyWebsite* Dynamic merchant name for the cardholder's statement.|
