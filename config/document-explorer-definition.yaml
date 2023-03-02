@@ -30,7 +30,7 @@
 
 - sections:
   - title: 3DSecure  
-    link: docs/3DSecure.md
+    link: docs/3dsecure-md/3DSecure.md
 - sections:
   - title: Digital Wallets
     sections:
