@@ -1,13 +1,13 @@
 
 # 3-D Secure
 
-3-D Secure is a messaging protocol developed by EMVCo to support app-based authentication and integration with digital wallets, as well as traditional browser based eCommerce transactions. The solution introduces many benefits to the marketplace as they will reflect the payment communitys objective to secure consumer eCommerce transactions while optimizing the user experience.
+3-D Secure is a messaging protocol developed by EMVCo to support app-based authentication and integration with digital wallets, as well as traditional browser based eCommerce transactions. The solution introduces many benefits to the marketplace as they will reflect the payment communities objective to secure consumer eCommerce transactions while optimizing the user experience.
 
 If your merchant account is enabled for 3-D Secure, all sale or preauth transactions that you initiate by posting an HTML form will by default go through the 3-D Secure process without the need for you to do anything, i.e. cardholders with an enrolled card will see a page from the card issuer to enter the password unless the card issuer decides not to check it.
 
 After the authentication, we bring the cardholder back to your webstore. If your credit card agreement includes 3-D Secure and your Merchant ID has been activated to use this service, you do not need to modify your payment page.
 
-The following represents an example of a Sale transaction request with minimum set of fields including optional “Challenge Indicator” element:
+The following represents an example of a ***Sale*** transaction request with minimum set of fields including optional ***Challenge Indicator*** element:
 
 ```{r}
 
@@ -39,7 +39,7 @@ The following represents an example of a Sale transaction request with minimum s
 
 **NOTE**: *In case you submitted OrderId element in your request, please make sure to include only allowed characters: A-Z, a-z, 0-9, -*
 
-The result of the transaction will be sent back to the defined responseSuccessURL or responseFailURL as hidden fields:
+The result of the transaction will be sent back to the defined ***responseSuccessURL*** or ***responseFailURL*** as hidden fields:
 
 ```{r}
 
@@ -86,14 +86,14 @@ Upon completion, the transaction details will be sent back to the defined respon
 
 Return code indicating the classification of the transaction:
 
-1 – Successful authentication (VISA ECI 05, MasterCard ECI 02)
-2 – Successful authentication without AVV (VISA ECI 05, MasterCard ECI 02)
-3 – Authentication failed / incorrect password / authentication rejected by the DS or ACS (transaction declined by the Gateway)
-4 – Authentication attempt (VISA ECI 06, MasterCard ECI 01)
-5 – Unable to authenticate / DS not responding (VISA ECI 07) - relevant for 3DS 1.0
-6 – Unable to authenticate / ACS or DS not responding (VISA ECI 07)
-7 – Cardholder not enrolled for 3-D Secure (VISA ECI 07) - relevant for 3DS 1.0
-8 – Invalid 3-D Secure values received 
+1. Successful authentication (VISA ECI 05, MasterCard ECI 02)
+2. Successful authentication without AVV (VISA ECI 05, MasterCard ECI 02)
+3. Authentication failed / incorrect password / authentication rejected by the DS or ACS (transaction declined by the Gateway)
+4. Authentication attempt (VISA ECI 06, MasterCard ECI 01)
+5. Unable to authenticate / DS not responding (VISA ECI 07) - relevant for 3DS 1.0
+6. Unable to authenticate / ACS or DS not responding (VISA ECI 07)
+7. Cardholder not enrolled for 3-D Secure (VISA ECI 07) - relevant for 3DS 1.0
+8. Invalid 3-D Secure values received 
 
 ## Alternative Options
 
@@ -107,7 +107,7 @@ Return code indicating the classification of the transaction:
 
 The optional parameter authenticateTransaction can be used in case you want to send specific transactions without 3-D Secure.  
 
-Check out how on our [Form Fields for Specific Functionalities](?path=docs/3dsecure-md/FormFieldsForSpecificFunctionality.md) page
+Check out how on our [Form Fields for Specific Functionalities](?path=docs/3dsecure-md/FormFieldsForSpecificFuncationality.md) page
 
 ## Dynamic 3-D Secure
 
@@ -121,4 +121,4 @@ Check out our [Dynamic 3-D Secure](?path=docs/3dsecure-md/Dynamic3DSecure.md) pa
  
 - Credit card transactions with 3-D Secure hold in a pending status while cardholders search for their password or need to activate their card for 3-D Secure during their shopping experience. During this time when the final transaction result of the transaction is not yet determined, the payment gateway sets the Approval Code to „?:waiting 3dsecure“. If the session expires before the cardholder returns from the 3-D Secure dialogue with his bank, the transaction will be shown as “N:-5103:Cardholder did not return from ACS”.
  
-- Please note that the technical process of 3-D Secure transactions differs in some points compared to a normal transaction flow. If you already have an existing shop integration and plan to activate 3-D Secure subsequently, we recommend performing some test transactions on our test environment, test data producing different authentication results can be found here: [3-D Secure Test Data](?path=docs/3dsecure-md/3DSecureTestData.md) 
+- Please note that the technical process of 3-D Secure transactions differs in some points compared to a normal transaction flow. If you already have an existing shop integration and plan to activate 3-D Secure subsequently, we recommend performing some test transactions on our test environment, test data producing different authentication results can be found here: [3-D Secure Test Data](?path=docs/3dsecure-md/3DSecureTestData.md) 	

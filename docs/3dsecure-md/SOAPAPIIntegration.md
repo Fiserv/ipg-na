@@ -3,13 +3,13 @@
 
 ## Using the Gateway API for cardholder authentication
 
-In case you use the Gateway for 3-D Secure web based authentication, in the first step you need to submit a verification request with an *AuthenticateTransaction* parameter set to *true* and indicate which URL the result of the authentication should be sent to with using ‘TermUrl’ parameter.
+In case you use the Gateway for 3-D Secure web based authentication, in the first step you need to submit a verification request with an ***AuthenticateTransaction*** parameter set to ***true*** and indicate which URL the result of the authentication should be sent to with using ***TermUrl*** parameter.
 
-If you wish to be notified about 3DS Method form display completion, you need to also submit the optional element “ThreeDSMethodNotificationURL” in your transaction request. The URL should be uniquely identifiable, so when there is a notification received on this URL, you should be able to map it with the corresponding transaction. This eliminates any dependency on the ThreeDSServerTransID, which you will receive with the 3DS Method form response. An easy way how to ensure correct transaction mapping is to is to pass a transaction reference as a query string.
+If you wish to be notified about 3DS Method form display completion, you need to also submit the optional element ***ThreeDSMethodNotificationURL*** in your transaction request. The URL should be uniquely identifiable, so when there is a notification received on this URL, you should be able to map it with the corresponding transaction. This eliminates any dependency on the ThreeDSServerTransID, which you will receive with the 3DS Method form response. An easy way how to ensure correct transaction mapping is to is to pass a transaction reference as a query string.
 
 For example: https://www.mywebshop.com/process3dSecureMethodNotification?transactionReferenceNumber=ffffffff-ba0b-539f-8000-016b2343ad7e
 
-In case you would like to set the preference for the authentication flow, you can submit optional “Challenge Indicator” element with one of the values listed below. In case Challenge Indicator is not sent within your transaction request, the Gateway will populate the value “01” – No preference.
+In case you would like to set the preference for the authentication flow, you can submit optional ***Challenge Indicator*** element with one of the values listed below. In case Challenge Indicator is not sent within your transaction request, the Gateway will populate the value ***01*** – No preference.
 
 Challenge indicator available values for 3-D Secure protocol version 2.1 are:
 
@@ -75,11 +75,11 @@ Examples of transaction request and response can be found here: [Frictionless Fl
 
 This flow is triggered, when the transaction is not considered as low risk or in case the issuer requires additional authentication of the cardholder. The whole process starts with initial Sale transaction request until the step where 3DS Method is displayed.
 
-Once the 3DS Method call has been completed, you need to notify the Gateway that the authentication process can continue by submitting the ‘Secure3DMethodNotificationStatus’ element as explained in Frictionless Flow.
+Once the 3DS Method call has been completed, you need to notify the Gateway that the authentication process can continue by submitting the ***Secure3DMethodNotificationStatus*** element as explained in Frictionless Flow.
 
 Examples of transaction request and responses can be found here: [Challenge Flow](?path=docs/3dsecure-md/ChallengeFlow.md)
 
-In the next step you need to POST the data to the indicated URL usually implemented as auto-submit form. This needs to be implemented within your website. We recommend you to POST the challenge request element without capitals (e.g. ‘creq’) to avoid any problems in a communication with the ACS.
+In the next step you need to POST the data to the indicated URL usually implemented as auto-submit form. This needs to be implemented within your website. We recommend you to POST the challenge request element without capitals (e.g. ***creq***) to avoid any problems in a communication with the ACS.
 
 ```{r}
 
@@ -96,7 +96,7 @@ After you receive the data from the ACS you need to submit them to the Gateway i
 
 ## Fallback to 3-D Secure 1.0.2 
 
-For cases, where card issuers do not support the EMV 3DS protocol yet, the Gateway provides an option to “downgrade” to 3-D Secure 1.0.2 authentication instead. 
+For cases, where card issuers do not support the EMV 3DS protocol yet, the Gateway provides an option to ***downgrade*** to 3-D Secure 1.0.2 authentication instead. 
 
 In the first step you submit Sale transaction request as for 3-D Secure 2.x version: [Fallback Verification](?path=docs/3dsecure-md/FallbackVerification.md)
 
@@ -110,11 +110,11 @@ Examples of transaction request and response can be found here: [EMV 3DS Pass-th
 
 ## Non-Payment Authentication (NPA)
 
-For cases, where you would prefer to register your customers’ credit card on file without charging them in the same session, you can submit a payerAuth request to our Gateway with a value ‘02’ in “threeDSEmvCoMessageCategory” element.
+For cases, where you would prefer to register your customers’ credit card on file without charging them in the same session, you can submit a payerAuth request to our Gateway with a value ***02*** in ***threeDSEmvCoMessageCategory*** element.
 
-As it is mandatory to use Strong Customer Authentication (SCA) for all new cards added to Card-On-File, NPA transaction request must include “ThreeDSRequestorChallengeIndicator” value ’04’ and “ThreeDSRequestorAuthenticationIndicator” value ‘04=Add card’.
+As it is mandatory to use Strong Customer Authentication (SCA) for all new cards added to Card-On-File, NPA transaction request must include ***ThreeDSRequestorChallengeIndicator*** value ***04*** and “ThreeDSRequestorAuthenticationIndicator” value ‘04=Add card’.
 
-The following represents an example of a ‘payerAuth’ request with basic set of elements:
+The following represents an example of a ***payerAuth*** request with basic set of elements:
 
 ```{r}
 

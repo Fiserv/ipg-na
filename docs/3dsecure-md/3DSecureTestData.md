@@ -3,7 +3,7 @@
 
 The purpose of 3DS test cards is to simulate AUTHENTICATION responses, it means that they do not automatically guarantee approved AUTHORIZATION.
 
-Test cards should only be used for the AUTHENTICATION SCENARIO / TEST CASE they support, misusing the card for any other authentication responses will not provide the correct result. The description suggests applicable scenario, e.g. “Frictionless Y” test card is able to provide authentication transStatus = Y and corresponding ECI value (02 or 05).
+Test cards should only be used for the AUTHENTICATION SCENARIO / TEST CASE they support, misusing the card for any other authentication responses will not provide the correct result. The description suggests applicable scenario, e.g. ***Frictionless Y*** test card is able to provide authentication transStatus = Y and corresponding ECI value (02 or 05).
 
 Expiry date for all cards =  any future date
 CVV = any 3digits number, e.g. 999 or 123
@@ -31,7 +31,7 @@ CVV = any 3digits number, e.g. 999 or 123
 
 ## Frictionless Flow + 3DSMethod
 
-|*Test Case*|*   IPG 3DS Response Code*|*Authentication TransStatus*|*Test Card Number*|
+|*Test Case*|*IPG 3DS Response Code*|*Authentication TransStatus*|*Test Card Number*|
 |----|----|----|----|
 |Frictionless Fully Authenticated  + 3DSMethod|1|Y|4012000000012011004 <br/> 4265880000000007 <br/> 4265880000000049 <br/> 4099000000001978 <br/> 5204740000002711|
 |Frictionless Not Authenticated + 3DSMethod|3|N|5426064000425117 <br/> 4012000000012011012 <br/> 5426064000425190 <br/> 4265880000000015 <br/> 4099000000001986 <br/> 5204740000002729|
