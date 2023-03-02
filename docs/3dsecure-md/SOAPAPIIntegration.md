@@ -3,11 +3,11 @@
 
 ## Using the Gateway API for cardholder authentication
 
-In case you use the Gateway for 3-D Secure web based authentication, in the first step you need to submit a verification request with an ‘AuthenticateTransaction’ parameter set to “true” and indicate which URL the result of the authentication should be sent to with using ‘TermUrl’ parameter.
+In case you use the Gateway for 3-D Secure web based authentication, in the first step you need to submit a verification request with an *AuthenticateTransaction* parameter set to *true* and indicate which URL the result of the authentication should be sent to with using ‘TermUrl’ parameter.
 
 If you wish to be notified about 3DS Method form display completion, you need to also submit the optional element “ThreeDSMethodNotificationURL” in your transaction request. The URL should be uniquely identifiable, so when there is a notification received on this URL, you should be able to map it with the corresponding transaction. This eliminates any dependency on the ThreeDSServerTransID, which you will receive with the 3DS Method form response. An easy way how to ensure correct transaction mapping is to is to pass a transaction reference as a query string.
 
-For example: "https://www.mywebshop.com/process3dSecureMethodNotification?transactionReferenceNumber=ffffffff-ba0b-539f-8000-016b2343ad7e"
+For example: https://www.mywebshop.com/process3dSecureMethodNotification?transactionReferenceNumber=ffffffff-ba0b-539f-8000-016b2343ad7e
 
 In case you would like to set the preference for the authentication flow, you can submit optional “Challenge Indicator” element with one of the values listed below. In case Challenge Indicator is not sent within your transaction request, the Gateway will populate the value “01” – No preference.
 
@@ -20,7 +20,7 @@ Challenge indicator available values for 3-D Secure protocol version 2.1 are:
 
 Challenge Indicator represents only the preference, the issuer retains the ability to make the decision on the flow type.
 
-In case you would like to define the size of the challenge window displayed to your customers during the authentication process, you can submit optional "Challenge Window Size" element with one of the values listed below. 
+In case you would like to define the size of the challenge window displayed to your customers during the authentication process, you can submit optional Challenge Window Size element with one of the values listed below. 
 
 01 = 250 x 400 
 02 = 390 x 400 
@@ -28,9 +28,9 @@ In case you would like to define the size of the challenge window displayed to y
 04 = 600 x 400 
 05 = Full screen
 
-Note: Based on the payment schemes' observation it is highly recommended to use the value "05 - Full screen" only for browser-based flows. Using full screen mode in app-based flows where the authentication of the cardholder happens on a smartphone or tablet might cause time-outs and trigger an error on issuer/ACS side.
+Note: Based on the payment schemes observation it is highly recommended to use the value 05 - Full screen only for browser-based flows. Using full screen mode in app-based flows where the authentication of the cardholder happens on a smartphone or tablet might cause time-outs and trigger an error on issuer/ACS side.
 
-In case you would like to indicate the type of authentication request, you can submit optional "ThreeDSRequestorAuthenticationIndicator" element in order to provide additional information to the ACS to determine the best approach for handing an authentication request:
+In case you would like to indicate the type of authentication request, you can submit optional ThreeDSRequestorAuthenticationIndicator element in order to provide additional information to the ACS to determine the best approach for handing an authentication request:
 
 01 = Payment transaction
 04 = Add card
@@ -39,7 +39,7 @@ In case you would like to indicate the type of authentication request, you can s
 
 We strongly recommend to also include billing and shipping information in your transaction request so that these details can be used in the transaction risk analysis for optimization of the EMV 3-D Secure flows.
 
-You can also include optional "CardHolderBrowserInformation" element if you are able to collect such data:
+You can also include optional CardHolderBrowserInformation element if you are able to collect such data:
 
 ```{r}
 
@@ -65,9 +65,9 @@ When a transaction is considered to be a low risk transaction or an exemption is
 
 Once the 3DS Method call has been completed, you need to notify the Gateway that the authentication process can continue by submitting the **Secure3DMethodNotificationStatus** element with the values based on corresponding conditions:
 
-- **Secure3DMethodNotificationStatus = 'RECEIVED'** in case you have submitted the element ThreeDSMethodNotificationURL in the initial Sale transaction request and have received the notification from ACS within 10 seconds, you will receive HTTP POST message from ACS, which will contain  a unique transaction identifier represented by threeDSServerTransID
-- **Secure3DMethodNotificationStatus = 'EXPECTED_BUT_NOT_RECEIVED'** in case you have submitted the element ThreeDSMethodNotificationURL in the initial Sale transaction request and have not received the notification from ACS within 10 seconds
-- **Secure3DMethodNotificationStatus = 'NOT_EXPECTED'** in case you have NOT submitted the element ThreeDSMethodNotificationURL in the initial Sale transaction request.
+- **Secure3DMethodNotificationStatus = RECEIVED** in case you have submitted the element ThreeDSMethodNotificationURL in the initial Sale transaction request and have received the notification from ACS within 10 seconds, you will receive HTTP POST message from ACS, which will contain  a unique transaction identifier represented by threeDSServerTransID
+- **Secure3DMethodNotificationStatus = EXPECTED_BUT_NOT_RECEIVED** in case you have submitted the element ThreeDSMethodNotificationURL in the initial Sale transaction request and have not received the notification from ACS within 10 seconds
+- **Secure3DMethodNotificationStatus = NOT_EXPECTED** in case you have NOT submitted the element ThreeDSMethodNotificationURL in the initial Sale transaction request.
 
 Examples of transaction request and response can be found here: [Frictionless Flow](?path=docs/3dsecure-md/3DSFrictionLessFlow.md)
 
@@ -83,7 +83,7 @@ In the next step you need to POST the data to the indicated URL usually implemen
 
 ```{r}
 
-<form name="frm" method="POST" action="https://3ds-acs.test.modirum.com/mdpayacs/creq ">
+<form name=frm method=POST action=https://3ds-acs.test.modirum.com/mdpayacs/creq >
   <input type=”hidden” name=”creq” value=”ewogICAiYWNzVHJhbCIgOiA...wMDAtMDAwMDAwMDA0MWE5Igp9”>
   <input type=”hidden” name=”threeDSSessionData” value=”50F2156E03083CA665BCB4..”>
 </form>
@@ -110,7 +110,7 @@ Examples of transaction request and response can be found here: [EMV 3DS Pass-th
 
 ## Non-Payment Authentication (NPA)
 
-For cases, where you would prefer to register your customers’ credit card on file without charging them in the same session, you can submit a 'payerAuth' request to our Gateway with a value ‘02’ in “threeDSEmvCoMessageCategory” element.
+For cases, where you would prefer to register your customers’ credit card on file without charging them in the same session, you can submit a payerAuth request to our Gateway with a value ‘02’ in “threeDSEmvCoMessageCategory” element.
 
 As it is mandatory to use Strong Customer Authentication (SCA) for all new cards added to Card-On-File, NPA transaction request must include “ThreeDSRequestorChallengeIndicator” value ’04’ and “ThreeDSRequestorAuthenticationIndicator” value ‘04=Add card’.
 
@@ -118,13 +118,13 @@ The following represents an example of a ‘payerAuth’ request with basic set of e
 
 ```{r}
 
-<?xml version="1.0" encoding="UTF-8"?><SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<?xml version=1.0 encoding=UTF-8?><SOAP-ENV:Envelope xmlns:SOAP-ENV=http://schemas.xmlsoap.org/soap/envelope/>
     <SOAP-ENV:Header/>
     <SOAP-ENV:Body>
         <ns4:IPGApiOrderRequest 
-xmlns:ns4="http://ipg-online.com/ipgapi/schemas/ipgapi" 
-xmlns:ns2="http://ipg-online.com/ipgapi/schemas/v1" 
-xmlns:ns3="http://ipg-online.com/ipgapi/schemas/a1">
+xmlns:ns4=http://ipg-online.com/ipgapi/schemas/ipgapi 
+xmlns:ns2=http://ipg-online.com/ipgapi/schemas/v1 
+xmlns:ns3=http://ipg-online.com/ipgapi/schemas/a1>
             <ns2:Transaction>
                 <ns2:CreditCardTxType>
                     <ns2:StoreId>1109950006</ns2:StoreId>
@@ -160,13 +160,13 @@ After this request a standard EMV 3-D Secure authentication flow as described ab
 
 ```{r}
 
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Envelope xmlns:SOAP-ENV=http://schemas.xmlsoap.org/soap/envelope/>
    <SOAP-ENV:Header/>
    <SOAP-ENV:Body>
       <ipgapi:IPGApiOrderResponse 
-xmlns:a1="http://ipg-online.com/ipgapi/schemas/a1" 
-xmlns:ipgapi="http://ipg-online.com/ipgapi/schemas/ipgapi" 
-xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1">
+xmlns:a1=http://ipg-online.com/ipgapi/schemas/a1 
+xmlns:ipgapi=http://ipg-online.com/ipgapi/schemas/ipgapi 
+xmlns:v1=http://ipg-online.com/ipgapi/schemas/v1>
          <ipgapi:ApprovalCode>Y:ECI2/5:Authenticated</ipgapi:ApprovalCode>
          <ipgapi:Brand>VISA</ipgapi:Brand>
          <ipgapi:Country>USA</ipgapi:Country>
