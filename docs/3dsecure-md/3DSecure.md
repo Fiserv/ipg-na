@@ -1,13 +1,13 @@
 
 # 3-D Secure
 
-3-D Secure is a messaging protocol developed by EMVCo to support app-based authentication and integration with digital wallets, as well as traditional browser based eCommerce transactions. The solution introduces many benefits to the marketplace as they will reflect the payment community’s objective to secure consumer eCommerce transactions while optimizing the user experience.
+3-D Secure is a messaging protocol developed by EMVCo to support app-based authentication and integration with digital wallets, as well as traditional browser based eCommerce transactions. The solution introduces many benefits to the marketplace as they will reflect the payment communitys objective to secure consumer eCommerce transactions while optimizing the user experience.
 
 If your merchant account is enabled for 3-D Secure, all sale or preauth transactions that you initiate by posting an HTML form will by default go through the 3-D Secure process without the need for you to do anything, i.e. cardholders with an enrolled card will see a page from the card issuer to enter the password unless the card issuer decides not to check it.
 
 After the authentication, we bring the cardholder back to your webstore. If your credit card agreement includes 3-D Secure and your Merchant ID has been activated to use this service, you do not need to modify your payment page.
 
-The following represents an example of a ‘Sale’ transaction request with minimum set of fields including optional “Challenge Indicator” element:
+The following represents an example of a Sale transaction request with minimum set of fields including optional “Challenge Indicator” element:
 
 ```{r}
 
@@ -39,7 +39,7 @@ The following represents an example of a ‘Sale’ transaction request with minimum
 
 **NOTE**: *In case you submitted OrderId element in your request, please make sure to include only allowed characters: A-Z, a-z, 0-9, -*
 
-The result of the transaction will be sent back to the defined ‘responseSuccessURL’ or ‘responseFailURL’ as hidden fields:
+The result of the transaction will be sent back to the defined responseSuccessURL or responseFailURL as hidden fields:
 
 ```{r}
 
