@@ -3,8 +3,8 @@
 
 | *description*: | *Represents a line in the receipt response.*|
 |----|----|
-| endOfLine |    ``` boolean ```   *example: true* Flag to indicate if the text ends at the end of this receipt line.|
-| text |``` string ``` *example:MerchantName* Text that represents a line of the actual receipt data, that can be printed out.|
+| endOfLine |    ``` boolean ```  <br/> *example: true*  <br/> Flag to indicate if the text ends at the end of this receipt line.|
+| text |``` string ```  <br/> *example:MerchantName*  <br/> Text that represents a line of the actual receipt data, that can be printed out.|
 
 **ReceiptLine Example:**
 

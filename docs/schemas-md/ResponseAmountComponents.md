@@ -3,14 +3,14 @@
 
 | *description*:   | *Amount component details, used in responses.*|
 |----|----|
-| subtotal* |    ``` number ```   *example: 8*. Subtotal amount.|
-| vatAmount |    ``` number ```   *example: 0*. Value-added tax amount.|
-| localTax |    ``` number ```   *example: 1*. Local tax amount.|
-| shipping |    ``` number ```   *example: 1.24*. Shipping amount.|
-| cashback |    ``` number ```   *example: 2*. Cashback amount.|
-| tip |    ``` number ```   *example: 6*. Tip amount.|
-| surcharge |    ``` number ```   *example: 2.5*. Surcharge  amount.|
-| convenienceFee |    ``` number ```   *example: 2.5*. Amount added for proccessing or handling fees.|   
+| subtotal* |    ``` number ```   <br/>  *example: 8* <br/>  Subtotal amount.|
+| vatAmount |    ``` number ```  <br/>   *example: 0* <br/>  Value-added tax amount.|
+| localTax |    ``` number ```  <br/>   *example: 1* <br/>  Local tax amount.|
+| shipping |    ``` number ```  <br/>   *example: 1.24* <br/>  Shipping amount.|
+| cashback |    ``` number ```  <br/>   *example: 2* <br/>  Cashback amount.|
+| tip |    ``` number ```   <br/>  *example: 6*. <br/>  Tip amount.|
+| surcharge |    ``` number ```  <br/>   *example: 2.5* <br/>  Surcharge  amount.|
+| convenienceFee |    ``` number ```   <br/>  *example: 2.5* <br/>  Amount added for proccessing or handling fees.|   
 
 **ResponseAmountComponents Example:**
 

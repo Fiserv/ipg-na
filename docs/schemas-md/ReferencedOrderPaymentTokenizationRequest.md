@@ -3,14 +3,14 @@
 
 | *description*:   | *Used to generate payment tokens with an existing order ID.*|
 |----|----|
-| requestType |    ``` string ```  *example: PaymentCardVerificationRequest*. Object name of the account verification request.|
-| storeId |    ``` string ```  *maxLength: 20  example: 12345500000*. An optional outlet ID for clients that support multiple stores in the same app.|
+| requestType |    ``` string ```  <br/>  *example: PaymentCardVerificationRequest* <br/> Object name of the account verification request.|
+| storeId |    ``` string ```  <br/> maxLength: 20   <br/> *example: 12345500000* <br/>  An optional outlet ID for clients that support multiple stores in the same app.|
 | billingAddress |  [Address](?path=docs/schemas-md/Address.md)|  
 | createToken | [CreatePaymentToken](?path=docs/schemas-md/CreatePaymentToken.md)|     
-| accountVerification |  ``` boolean ```  *default: false  example: true*. If the account should be verified prior to token creation.|
-| merchantTransactionId |    ``` string ```   * maxLength: 40 example: lsk23532djljff3*. The unique merchant transaction ID from the request, if supplied.|
+| accountVerification |  ``` boolean ```  <br/> default: false  <br/> *example: true* <br/>  If the account should be verified prior to token creation.|
+| merchantTransactionId |    ``` string ```   <br/> maxLength: 40  <br/> *example: lsk23532djljff3* <br/> The unique merchant transaction ID from the request, if supplied.|
 | additionalDetails | [AdditionalDetails](?path=docs/schemas-md/AdditionalDetails.md)|
-| referencedOrderId |  ``` string ```  *pattern: ^(?!\s*$).+  example: R-f9c2c198-b7cc-491a-a711-93d22fd0e589* Order ID used to create recurring payment from existing transaction.|  
+| referencedOrderId |  ``` string ```  <br/> pattern: ^(?!\s*$).+   <br/> *example: R-f9c2c198-b7cc-491a-a711-93d22fd0e589*  <br/> Order ID used to create recurring payment from existing transaction.|  
 
 **ReferencedOrderPaymentTokenizationRequest Example:**
 

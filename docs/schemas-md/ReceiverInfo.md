@@ -3,16 +3,16 @@
 
 | *description*:   | *Receiver information for a funding transaction.*|
 |----|----|
-| name* |    ``` string ```  *maxLength: 70 pattern: ^(?!\s*$).+   example: George Washington.* Receiver name.|
-| streetAddress* | ``` string ```  *maxLength: 50 pattern: ^(?!\s*$).+   example: 2900 Westside Pkwy*  Sender street address.|
-| city* | ``` string ```  *maxLength: 25 pattern: ^(?!\s*$).+   example: Alpharetta*  Sender city.|  
-| stateCode* | ``` string ```  *maxLength: 25 pattern: [A-Z]{2}   example: GA*  Sender state.|  
-| countryCode* | ``` string ```  *maxLength: 25 pattern:[A-Z]{2}   example: USA*  Sender country code.| 
-| postalCode* | ``` string ```  *maxLength: 5 pattern: ^(?!\s*$).+   example: 30004*  Sender postal code.| 
-| phoneNumber* | ``` string ```  *maxLength: 25 pattern:[0-9]{10}   example: 4044040740* Sender phone number.|  
-| birthDate | ``` string ```  *maxLength: 25 pattern:^([0-9]{4})(1[0-2]|0[1-9])(3[01]|0[1-9]|[12][0-9])$   example: 19560121* Sender date of birth (YYYYMMDD).|   
-| referenceNumber* | ``` string ```  *maxLength:19  pattern: ^(?!\s*$).+   example: 123456*  Sender reference number.|
-| accountNumber* | ``` string ```  *maxLength: 19 pattern: ^(?!\s*$).+   example: 135246*  Sender account number.|
+| name* |    ``` string ```  <br/> maxLength: 70  <br/> pattern: ^(?!\s*$).+  <br/> *example: George Washington* <br/> Receiver name.|
+| streetAddress* | ``` string ```  <br/> maxLength: 50  <br/> pattern: ^(?!\s*$).+   <br/> *example: 2900 Westside Pkwy* <br/>   Sender street address.|
+| city* | ``` string ```   <br/> maxLength: 25  <br/> pattern: ^(?!\s*$).+    <br/> *example: Alpharetta*  <br/>  Sender city.|  
+| stateCode* | ``` string ```  *maxLength: 25 <br/>  pattern: [A-Z]{2}   <br/> *example: GA*  <br/>  Sender state.|  
+| countryCode* | ``` string ```  <br/>  *maxLength: 25  <br/> pattern:[A-Z]{2}    <br/> *example: USA*  <br/>  Sender country code.| 
+| postalCode* | ``` string ```  <br/>  *maxLength: 5  <br/> pattern: ^(?!\s*$).+    <br/> *example: 30004*  <br/>  Sender postal code.| 
+| phoneNumber* | ``` string ```  <br/> *maxLength: 25  <br/> pattern:[0-9]{10}    <br/> *example: 4044040740* <br/>  Sender phone number.|  
+| birthDate | ``` string ```   <br/> *maxLength: 25  <br/> pattern:^([0-9]{4})(1[0-2]|0[1-9])(3[01]|0[1-9]|[12][0-9])$    <br/> *example: 19560121* <br/>  Sender date of birth (YYYYMMDD).|   
+| referenceNumber* | ``` string ```  <br/>  *maxLength:19   <br/> pattern: ^(?!\s*$).+    <br/> *example: 123456*  <br/>  Sender reference number.|
+| accountNumber* | ``` string ```  <br/>  *maxLength: 19  <br/> pattern: ^(?!\s*$).+    <br/> *example: 135246*   <br/> Sender account number.|
 
 
 **ReceiverInfo Example:**

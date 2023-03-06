@@ -3,9 +3,9 @@
 
 | *description*:   | *Provides details for data requested from the payer.*|
 |----|----|
-| hint |    ``` string ```  *maxLength: 2048*. Description of required data that need to be provided.|
-| validationExpression |    ``` string ```  *maxLength: 2048*. Regexp validation expression for requested data.|
-| key |  ``` string ```  *maxLength: 2048*. Key for required data item.|
+| hint |    ``` string ```   <br/> *maxLength: 2048* <br/>  Description of required data that need to be provided.|
+| validationExpression |    ``` string ```  <br/>  *maxLength: 2048* <br/>  Regexp validation expression for requested data.|
+| key |  ``` string ``` <br/>   *maxLength: 2048* <br/>  Key for required data item.|
 
 **RequiredConsumerData Example:**
 
