@@ -1748,7 +1748,7 @@ components:
         type: string
       in: header
       required: false
-      description: Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
+      description: Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to <a href="../docs?path=docs/additionalInfo/MessageSignature.md">How to generate a message signature</a>
       x-link:
         name: "How to Create Message Signature"
         link: "https://docs.firstdata.com/org/gateway/node/394"
