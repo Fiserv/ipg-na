@@ -3,15 +3,15 @@
 
 | *description*: | *Additional information about the route.*|
 |----|----|
-| departureDate |    ``` string ```   *($date) example: 2018-	01-28 Date of departure.|
-| origin |    ``` string ```   *maxLength: 3 example: MIA* The IATA code for the departure airport.|
-| destination |    ``` string ```   *maxLength: 3 example: ATL* The IATA code for the destination. airport.|
-| carrierCode |    ``` string ```   *maxLength: 2 example: DL* The IATA code for the carrier.|
-| serviceClass |    ``` string ```   *maxLength: 1 example: J* The airline code for the service class of the ticket.|
-| stopoverType |    ``` string ```   *example: DIRECT* Indicates whether the route is direct. Enum:[ DIRECT, STOPOVER ]|
-| fareBasisCode |    ``` string ```   *maxLength: 2 example: F* The airline fare basis code.|
-| departureTax |    ``` number ```   *maximum: 999999999999 example: 75* Fee charged by a country when a person leaves the country.|
-| flightNumber |    ``` string ```   *maxLength: 10 example: 765599* The airline flight number associated with the ticket.|
+| departureDate |    ``` string ```  <br/>   *($date) example: 2018-01-28 <br/>  Date of departure.|
+| origin |    ``` string ```   <br/>  *maxLength: 3  <br/> example: MIA*  <br/> The IATA code for the departure airport.|
+| destination |    ``` string ```    <br/> *maxLength: 3 <br/> example: ATL* <br/> The IATA code for the destination. airport.|
+| carrierCode |    ``` string ```   <br/>  *maxLength: 2  <br/> example: DL*  <br/> The IATA code for the carrier.|
+| serviceClass |    ``` string ```    <br/> *maxLength: 1  <br/> example: J*  <br/> The airline code for the service class of the ticket.|
+| stopoverType |    ``` string ```    <br/> *example: DIRECT*  <br/> Indicates whether the route is direct.  <br/> Enum:[ DIRECT, STOPOVER ]|
+| fareBasisCode |    ``` string ```   <br/>  *maxLength: 2  <br/> example: F* <br/>  The airline fare basis code.|
+| departureTax |    ``` number ```   <br/>  *maximum: 999999999999  <br/> example: 75*  <br/> Fee charged by a country when a person leaves the country.|
+| flightNumber |    ``` string ```    <br/> *maxLength: 10  <br/> example: 765599*  <br/> The airline flight number associated with the ticket.|
 
 
 **TravelRoute Example:**

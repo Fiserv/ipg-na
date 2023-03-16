@@ -20,6 +20,7 @@ To ensure data integrity, prevent replay attacks, and eliminate stale requests.
 	2. CLIENT_REQUEST_ID: Unique request id, 128-bit UUIDv4 format recommended
 	3. TIMESTAMP: Epoch timestamp in milliseconds
 	4. PAYLOAD: The request body if applicable
+
 The ClientRequestID is a randomly generated number that is unique for each request. It is used as nonce and validated against all ClientRequestIDs received by First Data within a predetermined timeframe (five minutes is the default) to prevent replay attacks. First Data uses the timestamp of the request to validate against stale requests. Any request older than the specified duration is rejected.
 
 ## Code Examples

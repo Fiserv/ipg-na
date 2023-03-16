@@ -3,8 +3,8 @@
 
 | *description*: | *The payment object for SEPA Credit Local Payment.*| 
 |----|----|
-| iban* |  ``` string ```  *maxLength: 34 pattern: ^(?!\s*$).+ example: DE34500100600032121604* Bank account in IBAN format.|
-| name* |  ``` string ```  *maxLength: 70 pattern: ^(?!\s*$).+ example: John Doe* The name of the Account Holder.|  
+| iban* |  ``` string ``` <br/> maxLength: 34  <br/> pattern: ^(?!\s*$).+  <br/> *example: DE34500100600032121604*  <br/> Bank account in IBAN format.|
+| name* |  ``` string ```   <br/> maxLength: 70  <br/> pattern: ^(?!\s*$).+  <br/> *example: John Doe*  <br/> The name of the Account Holder.|  
 
 
 **SepaCredit Example:**

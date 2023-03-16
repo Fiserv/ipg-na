@@ -3,41 +3,41 @@
 
 | *description*:   | *Common object for primary and secondary payment request responses.*|
 |----|----|
-| clientRequestId |    ``` string ```  *example:   30dd879c-ee2f-11db-8314-0800200c9a66*. Echoes back the value in the request header for tracking.|
-| apiTraceId |    ``` string ```  *example: rrt-0bd552c12342d3448-b-ea-1142-12938318-7*. Request identifier in API, can be used to request logs from the support team.|
-| responseType | ResponseType   ``` string ```  *example: Unauthenticated*. The type of the response. Enum:    > Array [ 9 ] - [ BadRequest, Unauthenticated, Unauthorized, NotFound, GatewayDeclined, EndpointDeclined, ServerError, EndpointCommunicationError, UnsupportedMediaType ]|
-| ipgTransactionId |    ``` string ```  *example: 838916029301*. The response transaction ID.|
-| orderId |    ``` string ```  *example: 123456*. Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
-| transactionType | TransactionType   ``` string ```  *example: SALE*. Type of transaction to perform. Primary transaction types in requests include 'SALE', 'PREAUTH', 'CREDIT' and 'FORCED_TICKET'. Enum:    > Array [ 9 ] - [ SALE, PREAUTH, CREDIT, FORCED_TICKET, VOID, RETURN, POSTAUTH, PAYER_AUTH, DISBURSEMENT ]|
+| clientRequestId |    ``` string ```  <br/>  *example:   30dd879c-ee2f-11db-8314-0800200c9a66* <br/> Echoes back the value in the request header for tracking.|
+| apiTraceId |    ``` string ```  <br/>  *example: rrt-0bd552c12342d3448-b-ea-1142-12938318-7* <br/>  Request identifier in API, can be used to request logs from the support team.|
+| responseType | ResponseType   ``` string ```  <br/>  *example: Unauthenticated* <br/>  The type of the response.  <br/> Enum:    > Array [ 9 ] - [ BadRequest, Unauthenticated, Unauthorized, NotFound, GatewayDeclined, EndpointDeclined, ServerError, EndpointCommunicationError, UnsupportedMediaType ]|
+| ipgTransactionId |    ``` string ```   <br/> *example: 838916029301* <br/> The response transaction ID.|
+| orderId |    ``` string ```  <br/>  *example: 123456* <br/>  Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).|
+| transactionType | TransactionType   <br/>  ``` string ``` <br/>   *example: SALE* <br/>  Type of transaction to perform. Primary transaction types in requests include 'SALE', 'PREAUTH', 'CREDIT' and 'FORCED_TICKET'. <br/>  Enum:    > Array [ 9 ] - [ SALE, PREAUTH, CREDIT, FORCED_TICKET, VOID, RETURN, POSTAUTH, PAYER_AUTH, DISBURSEMENT ]|
 | paymentToken | [PaymentTokenDetails](?path=docs/schemas-md/PaymentTokenDetails.md)|
-| transactionOrigin | [TransactionOrigin](?path=docs/schemas-md/TransactionOrigin.md)  <br/>   ``` string ```   <br/> *example: ECOM*   <br/> The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face). Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
+| transactionOrigin | [TransactionOrigin](?path=docs/schemas-md/TransactionOrigin.md)  <br/>   ``` string ```   <br/> *example: ECOM*   <br/> The source of the transaction. The possible values are ECOM (if the order was received via email or Internet), MOTO (mail order, telephone order), MAIL, PHONE and RETAIL (face to face).  <br/> Enum:Array [ 5 ] - [ ECOM, MOTO, MAIL, PHONE, RETAIL ]|
 | paymentMethodDetails | [PaymentMethodDetails](?path=docs/schemas-md/PaymentMethodDetails.md)|
-| country |    ``` string ```  *example: USA*. Country of the card issuer.|
-| terminalId | ResponseType   ``` string ```  *maxLength: 30  example: 123456*. The terminal that is processing the transaction.|
-| merchantId | ResponseType   ``` string ```  *example: 199950008*. The unique (on Acquirer level) mechant ID. Usually this value has been chosen from the merchant itself and will be used in communication with the endpoint.|
-| merchantTransactionId |    ``` string ```  *maxLength: 40  example: lsk23532djljff3*. The unique merchant transaction ID from the request header, if supplied.|
-| transactionTime |    ``` integer ```  *example: 1518811817*. The transaction time in seconds since epoch.|
+| country |    ``` string ```  <br/>  *example: USA* <br/> Country of the card issuer.|
+| terminalId | ResponseType   <br/>  ``` string ``` <br/>   *maxLength: 30  <br/>  example: 123456* <br/> The terminal that is processing the transaction.|
+| merchantId | ResponseType   <br/>  ``` string ```  <br/>  *example: 199950008* <br/>  The unique (on Acquirer level) mechant ID. Usually this value has been chosen from the merchant itself and will be used in communication with the endpoint.|
+| merchantTransactionId |    ``` string ```  <br/>  *maxLength: 40  <br/>  example: lsk23532djljff3*.  <br/> The unique merchant transaction ID from the request header, if supplied.|
+| transactionTime |    ``` integer ```  <br/>  *example: 1518811817* <br/> The transaction time in seconds since epoch.|
 | approvedAmount | [Amount](?path=docs/schemas-md/Amount.md)|
-| transactionStatus |    ``` string ```  *example: APPROVED*. Represents the status of a transaction immediately following the original processing request. This value is not stored for the transaction and is only available in the response when the transaction is processed. TransactionStatus is not returned on either the transaction inquiry or on the order inquiry. Enum:Array [ 6 ] - [ APPROVED, WAITING, PARTIAL, VALIDATION_FAILED, PROCESSING_FAILED, DECLINED ]|
-| approvalCode |    ``` string ```  *example: N:-30031:No terminal setup*. Shows the transaction approvalcode.|
-| errorMessage |    ``` string ```  *example: 000100: Tx was processed but response was not stored correctly*. Shows the transaction errorMessage.|
+| transactionStatus |    ``` string ```  <br/>  *example: APPROVED* <br/> Represents the status of a transaction immediately following the original processing request. This value is not stored for the transaction and is only available in the response when the transaction is processed. TransactionStatus is not returned on either the transaction inquiry or on the order inquiry. Enum:Array [ 6 ] - [ APPROVED, WAITING, PARTIAL, VALIDATION_FAILED, PROCESSING_FAILED, DECLINED ]|
+| approvalCode |    ``` string ```  <br/>  *example: N:-30031:No terminal setup* <br/>  Shows the transaction approvalcode.|
+| errorMessage |    ``` string ```  <br/>  *example: 000100: Tx was processed but response was not stored correctly* <br/>  Shows the transaction errorMessage.|
 | transactionState |    ``` string ```  *example: AUTHORIZED*. Shows the state of the current transaction.Enum:Array [ 12 ] - [ AUTHORIZED, CAPTURED, DECLINED, CHECKED, COMPLETED_GET, INITIALIZED, PENDING, READY, TEMPLATE, SETTLED, VOIDED, WAITING ]|
-| approvalCode |    ``` string ```  *example: N:-30031:No terminal setup*. Shows the transaction approvalcode.|
-| errorMessage |    ``` string ```  *example: 000100: Tx was processed but response was not stored correctly*. Shows the transaction errorMessage.|
-| transactionState | ResponseType   ``` string ```  *example: AUTHORIZED*. Shows the state of the current transaction. Enum:Array [ 12 ] - [ AUTHORIZED, CAPTURED, DECLINED, CHECKED, COMPLETED_GET, INITIALIZED, PENDING, READY, TEMPLATE, SETTLED, VOIDED, WAITING ]|
-| paymentAccountReferenceNumber |    ``` string ```  *maxLength: 30  example: 1234001AB101112131415161718CV*. Payment Account Reference Number from response, if supplied.|
+| approvalCode |    ``` string ```  <br/>  *example: N:-30031:No terminal setup* <br/>  Shows the transaction approvalcode.|
+| errorMessage |    ``` string ```  <br/>  *example: 000100: Tx was processed but response was not stored correctly* <br/>  Shows the transaction errorMessage.|
+| transactionState | ResponseType   <br/>  ``` string ```  <br/>  *example: AUTHORIZED* <br/> Shows the state of the current transaction. <br/>  Enum:Array [ 12 ] - [ AUTHORIZED, CAPTURED, DECLINED, CHECKED, COMPLETED_GET, INITIALIZED, PENDING, READY, TEMPLATE, SETTLED, VOIDED, WAITING ]|
+| paymentAccountReferenceNumber |    ``` string ```  <br/>  *maxLength: 30   <br/> example: 1234001AB101112131415161718CV* <br/>  Payment Account Reference Number from response, if supplied.|
 | secure3dResponse |  [Secure3dResponse](?path=docs/schemas-md/Secure3dResponse.md)|
 | standinResponseDetails |  [StandinResponseDetails](?path=docs/schemas-md/StandinResponseDetails.md)|
-| redirectURL |    ``` string ```  *example:  `http://pay.issuer-bank.com/sessionID=123&sharedKey=456`*. The endpoint redirection URL.|
+| redirectURL |    ``` string ```   <br/> *example:  `http://pay.issuer-bank.com/sessionID=123&sharedKey=456`* <br/>  The endpoint redirection URL.|
 | authenticationResponse | [Secure3DAuthenticationResponse](?path=docs/schemas-md/Secure3DAuthenticationResponse.md)|
-| schemeTransactionId |    ``` string ```  *maxLength: 40  example: 019078743804756*. The transaction ID received from schemes for the initial transaction of card on file flows.|
+| schemeTransactionId |    ``` string ``` <br/>   *maxLength: 40  example: 019078743804756* <br/> The transaction ID received from schemes for the initial transaction of card on file flows.|
 | processor | [ProcessorData](?path=docs/schemas-md/ProcessorData.md)|
 | additionalDetails | [AdditionalDetails](?path=docs/schemas-md/AdditionalDetails.md)|
 | accountUpdaterResponse |  [AccountUpdaterResponse](?path=docs/schemas-md/AccountUpdaterResponse.md)|
 | achResponse |  [AchResponse](?path=docs/schemas-md/AchResponse.md)|
 | currencyConversionResponse |  [CurrencyConversionResponse](?path=docs/schemas-md/CurrencyConversionResponse.md)|
 | requiredActions | [RequiredActions](?path=docs/schemas-md/RequiredActions.md)|
-| plannedDueDate |    ``` string ```  *pattern: ^\d{4}-(0[1-9]P1[0-2])-(0[1-9]P[12][0-9]P3[01])$  example: 2022-03-03*. Capture PlannedDueDate field sent for SEPA transactions.|
+| plannedDueDate |    ``` string ```  <br/>  *pattern: ^\d{4}-(0[1-9]P1[0-2])-(0[1-9]P[12][0-9]P3[01])$   <br/> example: 2022-03-03* <br/> Capture PlannedDueDate field sent for SEPA transactions.|
 | networkToken | [NetworkToken](?path=docs/schemas-md/NetworkToken.md)|  
 
 **TransactionResponse Example:**

@@ -3,8 +3,8 @@
 
 | *description*: | *Encapsulates 3DS authentication details in transaction responses.*| 
 |----|----|
-| type* |  ``` string ```  *string example: 3D_SECURE* The type of authentication. Enum:Array [ 1 ] - [ 3D_SECURE ]|
-| version |  ``` string ```  *example: 2.1* The version of 3DS used to authenticate. Enum:Array [ 3 ] - [ 1.0, 2.1, 2.2 ]|
+| type* |  ``` string ```  <br/> *example: 3D_SECURE*  <br/> The type of authentication. <br/>  Enum:Array [ 1 ] - [ 3D_SECURE ]|
+| version |  ``` string ```  <br/>  *example: 2.1*  <br/> The version of 3DS used to authenticate.  <br/> Enum:Array [ 3 ] - [ 1.0, 2.1, 2.2 ]|
 | params | {[params](?path=docs/schemas-md/Params.md)}| 
 | secure3dMethod | {[secure3dMethod](?path=docs/schemas-md/Secure3dMethod.md)}| 
 

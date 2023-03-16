@@ -3,7 +3,7 @@
 
 | *description*:   | *Various wallet payment methods the gateway supports. Abstract class, do not use this class directly, use one of its children: EncryptedApplePayWalletPaymentMethod, EncryptedGooglePayWalletPaymentMethod, EncryptedSamsungPayWalletPaymentMethod, DecryptedApplePayWalletPaymentMethod, DecryptedGooglePayWalletPaymentMethod, DecryptedSamsungPayWalletPaymentMethod, MasterpassWalletPaymentMethod*|
 |----|----|
-| walletType* |    ``` string ```  *example: EncryptedApplePayWalletPaymentMethod.* Type of wallet.|
+| walletType* |    ``` string ```   <br/> *example: EncryptedApplePayWalletPaymentMethod.*  <br/> Type of wallet.|
 
 
 **WalletPaymentMethod Example:**

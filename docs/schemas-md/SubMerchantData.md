@@ -3,13 +3,13 @@
 
 | *description*:   | *Once sub-merchant element is given, the transaction is considered to be a sub-merchant transaction.*|
 |----|----|
-| mcc* |    ``` string ```  *pattern: [0-9]{4} example: 7311* Merchant category code.|
-| legalName |    ``` string ```  *maxLength: 100 example: Walmart* Inc.Store legal name.|
-| email |   ``` string ```  *maxLength: 254 example: abcd.1234@fiserv.com* Sub-merchant email.|
-| timezone |  ``` string ```  *maxLength: 500 example: Europe/London* Timezone.|
+| mcc* |    ``` string ``` <br/> *pattern: [0-9]{4}  <br/> *example: 7311*  <br/> Merchant category code.|
+| legalName |    ``` string ```  <br/> maxLength: 100  <br/> *example: Walmart*  <br/> Inc.Store legal name.|
+| email |   ``` string ```   <br/> maxLength: 254  <br/> example: abcd.1234@fiserv.com*  <br/> Sub-merchant email.|
+| timezone |  ``` string ```   <br/> maxLength: 500  <br/> *example: Europe/London*  <br/> Timezone.|
 | address |  [Address](?path=docs/schemas-md/Address.md)|        
 | document |  [Document](?path=docs/schemas-md/Document.md)|
-| merchantId |   ``` string ```  * maxLength: 50  example: 987654321* Sub-merchant ID.|
+| merchantId |   ``` string ```  <br/>  maxLength: 50   <br/> *example: 987654321*  <br/> Sub-merchant ID.|
 
 **SubMerchantData Example:**
 

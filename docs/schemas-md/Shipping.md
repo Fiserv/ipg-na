@@ -3,7 +3,7 @@
 
 | *description*: | *Shipping information.*|
 |----|----|
-| name |    ``` string ```   *example: John Doe maxLength: 96* Name of customer for shipping.|
+| name |    ``` string ```  <br/> *example: John Doe maxLength: 96*  <br/> Name of customer for shipping.|
 | contact | [Contact](?path=docs/schemas-md/Contact.md)|
 | address | [Address](?path=docs/schemas-md/Address.md)|
 
