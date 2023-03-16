@@ -26,19 +26,29 @@ The ClientRequestID is a randomly generated number that is unique for each reque
 
 ### Javascript
 
+```{r}
+
 let msg = API_KEY + CLIENT_REQUEST_ID + TIMESTAMP + JSON.stringify(PAYLOAD);
 
 const hmac = CryptoJS.algo.HMAC.create(CryptoJS.algo.SHA256, API_SECRET);
 hmac.update(msg);
 const messageSignature = base64.encode(hmac.finalize().toString());
  
+```
+ 
 ### PHP
+
+```{r}
 
 $msg = $API_KEY . $CLIENT_REQUEST_ID . $TIMESTAMP . $JSON_SERIALIZED_PAYLOAD;
 $hmac = hash_hmac('sha256', $msg, $API_SECRET);
 $messageSignature = base64_encode($hmac);
  
+```
+ 
 ### Java
+
+```{r}
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
@@ -56,4 +66,7 @@ public class Example {
         final String messageSignature = Base64.encodeBase64String(hex);
     }
 }
+
+``` 
+
 
