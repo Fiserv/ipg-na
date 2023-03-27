@@ -4,7 +4,7 @@
 
 **Address Verification Service (AVS) Results**
 
-*The AVS response logic is the following: * the 1st letter of the AVS code relates to the street address * the 2nd letter of the AVS code relates to the postcode/zip whereas the letters indicate:*
+*The AVS response logic is the following:* <br/> **The 1st letter of the AVS code relates to the street address <br/> The 2nd letter of the AVS code relates to the postcode/zip whereas the letters indicate:**
 
 | *Value*:   | *Meaning*|
 |----|----|
