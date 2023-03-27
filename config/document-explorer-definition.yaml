@@ -43,6 +43,11 @@
     sections:
     - title: Response Codes
       link: docs/additionalInfo/ResponseCodes.md
+    - sections:
+    - title: Getting Started
+      sections:
+      - title: Hosted Payment Pages
+        link: docs/additionalInfo/HostedPaymentPages.md  
 - sections:
   - title: Resources
     sections:
