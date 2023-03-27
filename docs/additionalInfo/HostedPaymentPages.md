@@ -25,4 +25,5 @@ If you do not want to let your customer select the payment method on the hosted 
 ## Optional Fields
 
 > [Billing/Shipping fields](?path=docs/additionalInfo/BillingShippingFields.md)
+
 > [Other Optional fields](?path=docs/additionalInfo/OtherOptionalFields.md)
