@@ -12,7 +12,7 @@ The hosted pages show your merchant name at the top and allow you to display a s
 
 ## Required Fields
 
-In addition to the [fields that are mandatory for every payment request](?path=docs/schemas-md/PreAuthorizationSale.md) that you initiate through a HTML form, the following fields are required for the hosted payment page integration:
+In addition to the [fields that are mandatory for every payment request](?path=docs/additionalInfo/PreAuthorizationSale.md) that you initiate through a HTML form, the following fields are required for the hosted payment page integration:
 
 | *Field*: | *Comment*|
 |----|----|
