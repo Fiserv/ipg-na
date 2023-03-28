@@ -45,15 +45,15 @@
       link: docs/additionalInfo/ResponseCodes.md
 - sections:
   - title: Getting Started
-  sections:
-  - title: Hosted Payment Pages
-    link: docs/additionalInfo/HostedPaymentPages.md
-  - title: Direct Deposit 
-    link: docs/additionalInfo/DirectDeposit.md    
-  - title: Tokenization with JavaScript 
-    link: docs/additionalInfo/TokenizationWithJavaScript.md 
-  - title: APIs 
-    link: docs/additionalInfo/APIs.md 
+    sections:
+    - title: Hosted Payment Pages
+      link: docs/additionalInfo/HostedPaymentPages.md
+    - title: Direct Deposit 
+      link: docs/additionalInfo/DirectDeposit.md    
+    - title: Tokenization with JavaScript 
+      link: docs/additionalInfo/TokenizationWithJavaScript.md 
+    - title: APIs 
+      link: docs/additionalInfo/APIs.md 
 - sections:
   - title: Resources
     sections:
