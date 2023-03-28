@@ -33,20 +33,36 @@ Some functionalities create the need additional fields or fields that become man
 
 ## Credential-on-file Transactions
 
+| *Field*: | *Comment*|
+|----|----|
+|unscheduledCredentialOnFileType|This field allows you to flag transactions as unscheduled credential on file type. Currently the valid values are: FIRST, CARDHOLDER_INITIATED or MERCHANT_INITIATED to advise the type of transaction for these scenarios|
+|referencedSchemeTransactionId|This field allows you to include the payment scheme's transaction ID that has been returned in the response of the initial transaction (when credentials have been stored) in order to provide a reference to that original transaction|
 
 ## Purchasing Cards - Level II Data
 
+| *Field*: | *Comment*|
+|----|----|
+|pcCustomerReferenceID|Merchant-defined reference for the customer that will appear on the customer’s statement.|
+|pcSupplierInvoiceNumber|Merchant-defined reference for the invoice – invoice number.|
+|pcSupplierVATRegistrationNumber|The ID number assigned by the tax authorities to the merchant.|
+|pcTotalDiscountAmount|Total discount applied to a transaction (i.e. total transaction percentage discounts, fixed transaction amount reductions or summarization of line item discounts).|
+|pcTotalDiscountRate|Rate of discount for the whole transaction.|
+|pcVATShippingRate|Total shipping amount applied to the transaction. Merchants can choose to deliver contents of a single transaction in multiple shipments and this field reflects the total cost of those deliveries|
+|pcVATShippingAmount|Total shipping amount applied to the transaction. Merchants can choose to deliver contents of a single transaction in multiple shipments and this field reflects the total cost of those deliveries|
+|pcLineItemsJson|Line item details in JSON format. See table below.|
 
-## MCC6012 Mandate in the UK
+## Purchasing Cards - Level III Data (line item details in JSON format)
+
+| *Field*: | *Comment*|
+|----|----|
+|CommodityCode|Reference to a commodity code used to classify a purchased item.|
+|ProductCode|Reference to a merchant product identifier – Universal Product Code (UPC) of a purchased item.|
+|Description|Description of purchased item.|
+|Quantity|Quantity of purchased items.|
+|UnitOfMeasure|Unit of measure of purchased items.|
+|UnitPrice| Mandatory data for Level III transactions.|
+|VATAmountAndRate|Rate of the VAT amount e.g. 0.09 = 9%|
+|DiscountAmountAndRate|Rate of the discounted amount e.g. 0.09 = 9%|
+|LineItemTotal|Calculation of the unit cost multiplied by the quantity and less the discount per line item.<br/>[Unit Cost * Quantity] – Discount per Line Item = Line Item Total.|
 
 
-## DCC and Installment Card Related
-
-
-## Sepa Direct Debit
-
-
-## China Domestic Payments
-
-
-## Korea Domestic Payments

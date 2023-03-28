@@ -43,11 +43,17 @@
     sections:
     - title: Response Codes
       link: docs/additionalInfo/ResponseCodes.md
-    - sections:
-    - title: Getting Started
-      sections:
-      - title: Hosted Payment Pages
-        link: docs/additionalInfo/HostedPaymentPages.md  
+- sections:
+  - title: Getting Started
+  sections:
+  - title: Hosted Payment Pages
+    link: docs/additionalInfo/HostedPaymentPages.md
+  - title: Direct Deposit 
+    link:     
+  - title: Tokenization with JavaScript 
+    link:  
+  - title: APIs 
+    link:  
 - sections:
   - title: Resources
     sections:
