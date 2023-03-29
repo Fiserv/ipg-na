@@ -40,4 +40,43 @@ You will get the production URL with your production account credentials.
 
 Independently of the payment method, there are some mandatory fields that need to be included in your transaction request:
 
+| *Field* | *Comment*|
+|----|----|
+|txntype|The type of the transaction: preauth, sale or payer_auth (see info on payer_auth here)|
+|timezone|The timezone of the transaction in Area/Location format,<br/>e.g. America/New_York  or Europe/Berlin|
+|txndatetime|The exact time of the transaction in format<br/>YYYY:MM:DD-hh:mm:ss|
+|hash_algorithm|This is to indicate the algorithm that you use for hash calculation. Valid values are: HMACSHA256 or HMACSHA384 or HMACSHA512|
+|hashExtended|The extended hash needs to be calculated using all request parameters in ascending order of the parameter names.<br/>When you are using Direct Post, there is also an option where you do not need to know the card details (PAN, CVV and Expiry Date) for the hash calculation. This will be managed with a specific setting performed on your store. Please contact your local support team if you want to enable this feature.|
+|storename|The ID of the store provided to you by First Data, e.g. 541234567|
+|chargetotal|The total amount of the transaction using a dot or comma as decimal separator, e.g. 12.34 for an amount of 12 Dollar and 34 Cents. Group separators like 1,000.01 / 1.000,01 are not allowed.|
+|currency|The numeric ISO code of the transaction currency <br/>e.g. 840 for US Dollar or 978 for Euro|
 
+## Sample Code for Your Checkout Form
+
+Example of a form with the minimum number of fields:
+
+```
+
+<form method="post" action="https://test.ipg-online.com/connect/gateway/processing">
+  <input type="hidden" name="txntype" value="preauth">
+  <input type="hidden" name="timezone" value="Europe/Berlin">
+  <input type="hidden" name="txndatetime" value="<% getDateTime() %>"/>
+  <input type="hidden" name="hash_algorithm" value="HMACSHA256"/>
+  <input type="hidden" name="hashExtended" value="<% call createExtendedHash( "13.00","978" ) %>"/>
+  <input type="hidden" name="storename" value="10123456789">
+  <input type="text" name="chargetotal" value="13.00">
+  <input type="hidden" name="currency" value="978">
+  <input type="submit" value="Submit">
+</form>
+
+```
+> [How to generate a hash](?path=docs/additionalInfo/HowToGenerateHash.md)
+> [Values for defining the payment method](?path=docs/additionalInfo/PaymentMethodValues.md)
+> [Parameters for billing/shipping information](?path=docs/additionalInfo/BillingShippingFields.md)
+
+## Next Steps
+
+> [Transaction Response](?path=docs/additionalInfo/TransactionResponse.md)
+> [Completion (Post-Authorization)](?path=docs/additionalInfo/Completion.md)
+> [Void](?path=docs/additionalInfo/Void.md)
+> [Return](?path=docs/additionalInfo/Return.md)
