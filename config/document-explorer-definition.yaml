@@ -49,7 +49,7 @@
     - title: Hosted Payment Pages
       link: docs/additionalInfo/HostedPaymentPages.md
     - title: Direct Deposit 
-#      link: docs/additionalInfo/DirectDeposit.md    
+      link: docs/additionalInfo/DirectPost.md    
     - title: Tokenization with JavaScript 
 #      link: docs/additionalInfo/TokenizationWithJavaScript.md 
     - title: APIs 
