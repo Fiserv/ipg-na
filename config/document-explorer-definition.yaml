@@ -51,9 +51,9 @@
     - title: Direct Deposit 
       link: docs/additionalInfo/DirectPost.md    
     - title: Tokenization with JavaScript 
-#      link: docs/additionalInfo/TokenizationWithJavaScript.md 
+      link: docs/additionalInfo/TokenizationWithJavaScript.md 
     - title: APIs 
-#      link: docs/additionalInfo/APIs.md 
+      link: docs/additionalInfo/APIs.md 
 - sections:
   - title: Resources
     sections:

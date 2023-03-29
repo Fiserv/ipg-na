@@ -10,7 +10,7 @@ This comes with many advantages and benefits to you with regard to both the cust
 
 
 
-If you choose the Direct Post option and create your own forms, there are additional fields that must be included in your transaction requests. The available options are listed below. It is also important that you check that JavaScript is enabled in your customer’s browser. If necessary, inform your customer that JavaScript needs to be enabled for the payment process.
+If you choose the Direct Post option and create your own forms, there are additional fields that must be included in your transaction requests. The available options are listed below. It is also important that you check that JavaScript is enabled in your customer's browser. If necessary, inform your customer that JavaScript needs to be enabled for the payment process.
 
 ## Required Fields
 
@@ -18,7 +18,7 @@ After your customer has decided on his/her payment method, you present a corresp
 
 | *Field*: | *Comment*|
 |----|----|
-|paymentMethod|If you let the customer select the payment method (e. g. MasterCard, Visa, Direct Debit) in your shop environment or want to define the payment type yourself, transmit the parameter ‘paymentMethod’ along with your Sale or PreAuth transaction.<br/>If you do not submit this parameter, the payment gateway will display a drop-down menu to the customer to choose from the payment methods available for your shop.<br/><br/> > [See valid values here](?path=docs/additionalInfo/PaymentMethodValues.md)|
+|paymentMethod|If you let the customer select the payment method (e. g. MasterCard, Visa, Direct Debit) in your shop environment or want to define the payment type yourself, transmit the parameter 'paymentMethod' along with your Sale or PreAuth transaction.<br/>If you do not submit this parameter, the payment gateway will display a drop-down menu to the customer to choose from the payment methods available for your shop.<br/><br/> > [See valid values here](?path=docs/additionalInfo/PaymentMethodValues.md)|
 |responseFailURL|	The URL where you wish to direct customers after a declined or unsuccessful transaction (your Sorry URL) – only needed if not setup in Virtual Terminal / Customization.|
 |responseSuccessURL	|	The URL where you wish to direct customers after a successful transaction (your Thank You URL) – only needed if not setup in Virtual Terminal / Customization.|
 
@@ -26,10 +26,10 @@ After your customer has decided on his/her payment method, you present a corresp
 
 | *Field*: | *Comment*|
 |----|----|
-|cardnumber|Your customer’s card number (12-24 digits)|
+|cardnumber|Your customer's card number (12-24 digits)|
 |expmonth|Card expiry month (2 digits) (mandatory if credit card)|
 |expyear|Card expiry year (4 digits) (mandatory if credit card)|
-|cvm|Card code, usually back of the card (3/4 digits) (mandatory if credit card) (optional “if on card”) (not needed for Bancontact)|
+|cvm|Card code, usually back of the card (3/4 digits) (mandatory if credit card) (optional "if on card") (not needed for Bancontact)|
 
 ## For SEPA Direct Debit Details
 
@@ -48,7 +48,7 @@ You can also transfer [billing and shipping](?path=docs/additionalInfo/BillingSh
 
 ## Validity Checks
 
-Prior to the authorization request for transactions, the Gateway performs the payment methods’ specific validation checks.
+Prior to the authorization request for transactions, the Gateway performs the payment methods' specific validation checks.
 
 For Credit/Debit Card or SEPA Direct Debit transactions the following checks are performed:
 
@@ -57,9 +57,9 @@ For Credit/Debit Card or SEPA Direct Debit transactions the following checks are
 > - Structure of the card number must be correct
 > - Name of the account holder for SEPA Direct Debit transactions must be submitted
 > - IBAN for SEPA Direct Debit transactions must be correct and contain up to 34 digits
-> - If an IBAN belongs to one of the following countries: Andorra, Switzerland, United Kingdom (incl. Jersey, Guernsey, Isle of Man), Gibraltar, Iceland, Liechtenstein, Monaco, Norway, San Marino, Vatican City, then the account holder’s address details must be submitted.
+> - If an IBAN belongs to one of the following countries: Andorra, Switzerland, United Kingdom (incl. Jersey, Guernsey, Isle of Man), Gibraltar, Iceland, Liechtenstein, Monaco, Norway, San Marino, Vatican City, then the account holder's address details must be submitted.
 
-If the submitted data is invalid, the Gateway would usually send a corresponding data entry page to the customer. However, using the silent post feature, you can transmit an additional parameter along with transaction data: ‘full_bypass=true’. In this case, you get the result of the validity check back in the transaction response and can display your own error page.
+If the submitted data is invalid, the Gateway would usually send a corresponding data entry page to the customer. However, using the silent post feature, you can transmit an additional parameter along with transaction data: 'full_bypass=true'. In this case, you get the result of the validity check back in the transaction response and can display your own error page.
 
 ## Sample Code for the HTML Form
 
