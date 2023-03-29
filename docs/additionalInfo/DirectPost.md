@@ -19,8 +19,8 @@ After your customer has decided on his/her payment method, you present a corresp
 | *Field*: | *Comment*|
 |----|----|
 |paymentMethod|If you let the customer select the payment method (e. g. MasterCard, Visa, Direct Debit) in your shop environment or want to define the payment type yourself, transmit the parameter 'paymentMethod' along with your Sale or PreAuth transaction.<br/>If you do not submit this parameter, the payment gateway will display a drop-down menu to the customer to choose from the payment methods available for your shop.<br/><br/> > [See valid values here](?path=docs/additionalInfo/PaymentMethodValues.md)|
-|responseFailURL|	The URL where you wish to direct customers after a declined or unsuccessful transaction (your Sorry URL) – only needed if not setup in Virtual Terminal / Customization.|
-|responseSuccessURL	|	The URL where you wish to direct customers after a successful transaction (your Thank You URL) – only needed if not setup in Virtual Terminal / Customization.|
+|responseFailURL|	The URL where you wish to direct customers after a declined or unsuccessful transaction (your Sorry URL), only needed if not setup in Virtual Terminal / Customization.|
+|responseSuccessURL	|	The URL where you wish to direct customers after a successful transaction (your Thank You URL), only needed if not setup in Virtual Terminal / Customization.|
 
 ## For Credit/Debit Card Details
 
