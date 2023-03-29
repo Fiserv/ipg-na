@@ -70,13 +70,19 @@ Example of a form with the minimum number of fields:
 </form>
 
 ```
+
 > [How to generate a hash](?path=docs/additionalInfo/HowToGenerateHash.md)
+
 > [Values for defining the payment method](?path=docs/additionalInfo/PaymentMethodValues.md)
+
 > [Parameters for billing/shipping information](?path=docs/additionalInfo/BillingShippingFields.md)
 
 ## Next Steps
 
 > [Transaction Response](?path=docs/additionalInfo/TransactionResponse.md)
+
 > [Completion (Post-Authorization)](?path=docs/additionalInfo/Completion.md)
+
 > [Void](?path=docs/additionalInfo/Void.md)
+
 > [Return](?path=docs/additionalInfo/Return.md)
