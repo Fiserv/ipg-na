@@ -1,39 +1,33 @@
 
-# Billing/Shipping Information
+# Return (aka Refund)
 
 
-If you post a HTML form to initiate the payment, you can include billing and shipping information in your request by using the following fields. Some of these fields are mandatory for specific alternative payment methods or relevant for fraud prevention purpose.
+## Step 5: Giving Money Back When Goods Have Been Returned
 
-### Alternative Options
+If you want to return funds to a customer's card against an existing order, you can use the Order ID as a reference so that you do not need to submit card details for this activity. You can return the full amount of the order or a partial amount.
 
-> [Billing information in API requests](https://developer.fiserv.com/product/IPGNA/api/?type=post&path=/authentication/access-tokens&branch=main&version=1.0.0)
+### Initiate a Return Using REST API
 
-> [Shipping information in API requests](https://developer.fiserv.com/product/IPGNA/api/?type=post&path=/authentication/access-tokens&branch=main&version=1.0.0)
+There are two options to initiate a Return using the API:
 
-## Billing Information
+|   |   |
+|---|---|
+|__POST:__ /orders/{order_id}| Use /orders and the Order ID to reference to the order where you want to perform a full or partial refund and include the amount and currency to be returned in the payload|
+| __POST:__ /payments/{transaction_id} |Use /payments and the Transaction ID (ipgTransactionId or merchantTransactionId) if you want to send a full or partial refund for a specific transaction and include the amount and currency to be returned in the payload|
 
-| *Field*: | *Comment*|
-|----|----|
-| bcompany | Customer's company name. Alphanumeric characters, spaces and dashes limited to 96.|
-| bname | Customer's name. Alphanumeric characters, spaces and dashes limited to 96.|
-| baddr1 | Customer's billing address 1. Limit of 96 characters including spaces.| 
-| baddr2 | Customer's billing address 2. Limit of 96 characters including spaces.| 
-| bcity | Billing City. Limit of 96 characters including spaces.| 
-| bstate | State, Province or Territory. Limit of 96 characters including spaces.| 
-| bcountry | Country of Billing Address. Two letter country code.| 
-| bzip | Zip or Postal Code. Limit of 24 characters including spaces.| 
-| phone | Customer's Phone Number. Limit of 32 characters.| 
-| fax |	Customer's Fax Number. Limit of 32 characters.| 
-| email | Customer's Email Address. Limit of 254 characters.|
 
-## Shipping Information
+### REST API Request Example
 
-| *Field*: | *Comment*|
-|----|----|
-|sname|	Ship-to name. Alphanumeric characters, spaces and dashes limited to 96.|
-|saddr1|Shipping Address Line 1. Limit of 96 characters including spaces.|
-|saddr2|Shipping Address Line 2. Limit of 96 characters including spaces.|
-|scity|	Shipping City. Limit of 96 characters including spaces.|
-|sstate|State, Province or Territory. Limit of 96 characters including spaces.|
-|scountry| Country of Billing Address. Two letter country code.|
-|szip| Zip or Postal Code. Limit of 24 characters including spaces.|
+```
+
+{
+  "requestType": "ReturnTransaction",
+  "transactionAmount": {
+    "total": "20.00",
+    "currency": "USD"
+  }
+}
+
+```
+
+> [REST API Reference](?path=docs/schemas-md/ReturnTransaction.md)

@@ -1,39 +1,29 @@
 
-# Billing/Shipping Information
+# Completion (Post-Authorization)
 
+## Step 3: Completion When Goods Get Shipped
 
-If you post a HTML form to initiate the payment, you can include billing and shipping information in your request by using the following fields. Some of these fields are mandatory for specific alternative payment methods or relevant for fraud prevention purpose.
+If you have used the transaction type Pre-Authorization when your customer checked out in your webshop, funds have been reserved on the customer's card account but have not been transferred to your account yet.
 
-### Alternative Options
+In order to complete a transaction and initiate the settlement process, you will need to send a Post-Authorization (postauth) via our API or initiate the completion manually using our Virtual Terminal.
 
-> [Billing information in API requests](https://developer.fiserv.com/product/IPGNA/api/?type=post&path=/authentication/access-tokens&branch=main&version=1.0.0)
+|   |   |
+|---|---|
+|__POST:__ /orders/{order_id}| Use /orders and the Order ID to reference to the order with the pre-authorized balance |
+| __POST:__ /payments/{transaction_id} | 	Use /payments and the Transaction ID <br/> (ipgTransactionId or merchantTransactionId) if you want to reference to a specific pre-authorization transaction that you want to complete |
 
-> [Shipping information in API requests](https://developer.fiserv.com/product/IPGNA/api/?type=post&path=/authentication/access-tokens&branch=main&version=1.0.0)
+### REST API Request Example
 
-## Billing Information
+```
+	
+{
+  "requestType": "PostAuthTransaction",
+  "transactionAmount": {
+    "total": "28.59",
+    "currency": "GBP"
+  }
+}
 
-| *Field*: | *Comment*|
-|----|----|
-| bcompany | Customer's company name. Alphanumeric characters, spaces and dashes limited to 96.|
-| bname | Customer's name. Alphanumeric characters, spaces and dashes limited to 96.|
-| baddr1 | Customer's billing address 1. Limit of 96 characters including spaces.| 
-| baddr2 | Customer's billing address 2. Limit of 96 characters including spaces.| 
-| bcity | Billing City. Limit of 96 characters including spaces.| 
-| bstate | State, Province or Territory. Limit of 96 characters including spaces.| 
-| bcountry | Country of Billing Address. Two letter country code.| 
-| bzip | Zip or Postal Code. Limit of 24 characters including spaces.| 
-| phone | Customer's Phone Number. Limit of 32 characters.| 
-| fax |	Customer's Fax Number. Limit of 32 characters.| 
-| email | Customer's Email Address. Limit of 254 characters.|
+```
 
-## Shipping Information
-
-| *Field*: | *Comment*|
-|----|----|
-|sname|	Ship-to name. Alphanumeric characters, spaces and dashes limited to 96.|
-|saddr1|Shipping Address Line 1. Limit of 96 characters including spaces.|
-|saddr2|Shipping Address Line 2. Limit of 96 characters including spaces.|
-|scity|	Shipping City. Limit of 96 characters including spaces.|
-|sstate|State, Province or Territory. Limit of 96 characters including spaces.|
-|scountry| Country of Billing Address. Two letter country code.|
-|szip| Zip or Postal Code. Limit of 24 characters including spaces.|
+> [REST API Reference](?path=docs/schemas-md/PaymentCardPreAuthTransaction.md)
