@@ -46,6 +46,16 @@
 - sections:
   - title: Getting Started
     sections:  
+    - title: Hosted Payment Pages
+      link: docs/additionalInfo/HostedPaymentPages.md
+    - title: Direct Post 
+      link: docs/additionalInfo/DirectPost.md  
+    - title: Tokenization with JavaScript 
+      link: docs/additionalInfo/TokenizationWithJavaScript.md 
+    - title: APIs 
+      link: docs/additionalInfo/APIs.md 
+    - title: Recurring Payments 
+      link: docs/additionalInfo/RecurringPayments.md
     - title: Online Store Integration  
       link: docs/additionalInfo/OnlineStoreIntegration.md    
       sections:
@@ -60,17 +70,7 @@
       - title: Return (aka Refund)  
         link: docs/additionalInfo/Return.md
       - title: Zero Dollar Authorization  
-        link: docs/additionalInfo/ZeroDollarAuthorization.md
-    - title: Hosted Payment Pages
-      link: docs/additionalInfo/HostedPaymentPages.md
-    - title: Direct Post 
-      link: docs/additionalInfo/DirectPost.md  
-    - title: Tokenization with JavaScript 
-      link: docs/additionalInfo/TokenizationWithJavaScript.md 
-    - title: APIs 
-      link: docs/additionalInfo/APIs.md 
-    - title: Recurring Payments 
-      link: docs/additionalInfo/RecurringPayments.md  
+        link: docs/additionalInfo/ZeroDollarAuthorization.md    
     - title: Virtual Terminal (Coming Soon)  
   #   link: docs/additionalInfo/VirtualTerminal.md    
       sections:
