@@ -45,6 +45,22 @@
       link: docs/additionalInfo/ResponseCodes.md
 - sections:
   - title: Getting Started
+    sections:  
+    - title: Online Store Integration (Coming Soon)  
+      link: docs/additionalInfo/OnlineStoreIntegration.md    
+      sections:
+      - title: Pre-Authorization/Sale  
+        link: docs/additionalInfo/PreAuthorizationSale.md
+      - title: Transaction Response  
+        link: docs/additionalInfo/TransactionResponse.md   
+      - title: Completion (Post-Authorization)  
+        link: docs/additionalInfo/Completion.md
+      - title: Void 
+        link: docs/additionalInfo/Void.md
+      - title: Return (aka Refund)  
+        link: docs/additionalInfo/Return.md
+      - title: Zero Dollar Authorization  
+        link: docs/additionalInfo/ZeroDollarAuthorization.md
     sections:
     - title: Hosted Payment Pages
       link: docs/additionalInfo/HostedPaymentPages.md
@@ -60,7 +76,17 @@
   #   link: docs/additionalInfo/VirtualTerminal.md    
       sections:
       - title: Select Products  
-  #     link: docs/additionalInfo/SelectProducts.md  
+  #     link: docs/additionalInfo/SelectProducts.md
+      - title: Add Order Information  
+  #     link: docs/additionalInfo/AddOrderInformation.md   
+      - title: Card Transactions  
+  #     link: docs/additionalInfo/CardTransactions.md
+      - title: Direct Debit Transactions 
+  #     link: docs/additionalInfo/DirectDebitTransactions.md
+      - title: Complete the Transaction  
+  #     link: docs/additionalInfo/CompleteTheTransaction.md
+      - title: Transaction Result  
+  #     link: docs/additionalInfo/TransactionResult.md
 - sections:
   - title: Resources
     sections:
