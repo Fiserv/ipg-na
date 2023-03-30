@@ -49,11 +49,13 @@
     - title: Hosted Payment Pages
       link: docs/additionalInfo/HostedPaymentPages.md
     - title: Direct Post 
-      link: docs/additionalInfo/DirectPost.md    
+      link: docs/additionalInfo/DirectPost.md  
     - title: Tokenization with JavaScript 
       link: docs/additionalInfo/TokenizationWithJavaScript.md 
     - title: APIs 
       link: docs/additionalInfo/APIs.md 
+    - title: Recurring Payments 
+      link: docs/additionalInfo/RecurringPayments.md  
 - sections:
   - title: Resources
     sections:
