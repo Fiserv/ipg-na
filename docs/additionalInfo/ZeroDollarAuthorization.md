@@ -12,4 +12,3 @@ A Zero Dollar Authorization, also sometimes referred to as a Verification transa
 
 Note: U.S. Domestic Discover (JCB) $0.00 authorizations are not supported at this time.
 
-> [Return to Online Store Integration](?path=docs/schemas-md/OnlineStoreIntegration.md.md)

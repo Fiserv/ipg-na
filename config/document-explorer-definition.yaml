@@ -46,7 +46,7 @@
 - sections:
   - title: Getting Started
     sections:  
-    - title: Online Store Integration (Coming Soon)  
+    - title: Online Store Integration  
       link: docs/additionalInfo/OnlineStoreIntegration.md    
       sections:
       - title: Pre-Authorization/Sale  
