@@ -61,7 +61,6 @@
         link: docs/additionalInfo/Return.md
       - title: Zero Dollar Authorization  
         link: docs/additionalInfo/ZeroDollarAuthorization.md
-    sections:
     - title: Hosted Payment Pages
       link: docs/additionalInfo/HostedPaymentPages.md
     - title: Direct Post 
