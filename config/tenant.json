@@ -34,6 +34,8 @@
     "documenttree": "/v1/docs/IPGNA",
     "documenttreeV2": "/v2/docs/IPGNA",
     "sandbox": "/v1/sandboxrun/IPGNA",
+    "accessConfig": "/v1/fileAccess/IPGNA",
+    "assets": "/v1/assets/IPGNA",
     "feature":[
       {
         "name": "sandBox",
