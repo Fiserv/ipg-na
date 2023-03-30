@@ -108,3 +108,5 @@ In case you have received **SchemeTransactionId** in the response from the Gatew
 </SOAP-ENV:Envelope>
 
 ```
+
+> [Recurring Payments main page](?path=docs/additionalInfo/RecurringPayments.md)
