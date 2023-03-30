@@ -59,7 +59,7 @@
     - sections:
       - title: Virtual Terminal (Coming Soon)
         sections:
-        - title: Virtual Terminal 
+        - title: Virtual Terminal Details
   #       link: docs/additionalInfo/VirtualTerminal.md
         - title: Select Products  
   #       link: docs/additionalInfo/SelectProducts.md  
