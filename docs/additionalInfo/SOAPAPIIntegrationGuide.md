@@ -2,4 +2,4 @@
 
 User Manual File
 
-[IPG_IntegrationGuide_API_2022-2.pdf]D(/assets/files/IPG_IntegrationGuide_API_2022-2.pdf)
+[IPG_IntegrationGuide_API_2022-2.pdf]D(ipg-na/assets/files/IPG_IntegrationGuide_API_2022-2.pdf)
