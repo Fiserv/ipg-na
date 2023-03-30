@@ -57,11 +57,12 @@
     - title: Recurring Payments 
       link: docs/additionalInfo/RecurringPayments.md  
     - sections:
-      - title: Virtual Terminal
-      link: docs/additionalInfo/VirtualTerminal.md
+      - title: Virtual Terminal (Coming Soon)
       sections:
-      - title: Select Products 
-#     link: docs/additionalInfo/RecurringPayments.md  
+      - title: Virtual Terminal 
+#       link: docs/additionalInfo/VirtualTerminal.md
+      - title: Select Products  
+#       link: docs/additionalInfo/SelectProducts.md  
 - sections:
   - title: Resources
     sections:
