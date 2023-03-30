@@ -56,7 +56,7 @@
       link: docs/additionalInfo/APIs.md 
     - title: Recurring Payments 
       link: docs/additionalInfo/RecurringPayments.md  
-    - sections:
+      sections:
       - title: Virtual Terminal (Coming Soon)
         sections:
         - title: Virtual Terminal Details
