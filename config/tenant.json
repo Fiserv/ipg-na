@@ -27,7 +27,7 @@
   "product": {
     "featured": true,
     "description": "Internet Payment Gateway is an application which offers Internet payment services. It gives merchants the ability to process transactions over a secure Internet connection via eCommerce enabled web sites, custom commerce applications and web browserbased solutions for Mail Order/Telephone",
-	"longDescription": "Internet Payment Gateway is an application which offers Internet payment services. It gives merchants the ability to process transactions over a secure Internet connection via eCommerce enabled web sites, custom commerce applications and web browserbased solutions for Mail Order/Telephone",
+	"longDescription": "Internet Payment Gateway is an application which offers Internet payment services. It gives merchants the ability to process transactions over a secure Internet connection via eCommerce enabled web sites, custom commerce applications and web browserbased solutions for Mail Order/Telephone-Test",
     "apiSpecification": "/v1/apis/IPGNA",
     "layout": "/v1/layouts/IPGNA",
     "documentation": "/v1/docs/IPGNA",
