@@ -1,3 +1,4 @@
+**The SDK's on this page are deprecated.  The links below are for reference only.**
 
 # SDKs
 
