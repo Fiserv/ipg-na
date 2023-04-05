@@ -1,4 +1,4 @@
-**The SDK's on this page are deprecated.  The links below are for reference only.**
+**The SDK's on this page are deprecated. The links below are for reference only**
 
 # SDKs
 
@@ -14,7 +14,7 @@
 
 [PHP](https://github.com/GBSEcom/PHP)
 
-[Javascript](https://github.com/GBSEcom/NPM)
+[Javascript](ht	tps://github.com/GBSEcom/NPM)
 
 ## PACKAGES
 
