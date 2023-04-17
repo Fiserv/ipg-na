@@ -6,9 +6,9 @@ If you post a HTML form to initiate the payment, you can include billing and shi
 
 ### Alternative Options
 
-> [Billing information in API requests](https://developer.fiserv.com/product/IPGNA/api/?type=post&path=/authentication/access-tokens&branch=main&version=1.0.0)
+> [Billing information in API requests](?path=docs/schemas-md/Billing.md)
 
-> [Shipping information in API requests](https://developer.fiserv.com/product/IPGNA/api/?type=post&path=/authentication/access-tokens&branch=main&version=1.0.0)
+> [Shipping information in API requests](?path=docs/schemas-md/Shipping.md)
 
 ## Billing Information
 
