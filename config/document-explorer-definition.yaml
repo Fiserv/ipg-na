@@ -71,21 +71,21 @@
         link: docs/additionalInfo/Return.md
       - title: Zero Dollar Authorization  
         link: docs/additionalInfo/ZeroDollarAuthorization.md    
-    - title: Virtual Terminal (Coming Next)  
-  #   link: docs/additionalInfo/VirtualTerminal.md    
+    - title: Virtual Terminal  
+      link: docs/additionalInfo/VirtualTerminal.md    
       sections:
       - title: Select Products  
-  #     link: docs/additionalInfo/SelectProducts.md
+        link: docs/additionalInfo/SelectProducts.md
       - title: Add Order Information  
-  #     link: docs/additionalInfo/AddOrderInformation.md   
+        link: docs/additionalInfo/AddOrderInformation.md   
       - title: Card Transactions  
-  #     link: docs/additionalInfo/CardTransactions.md
+        link: docs/additionalInfo/CardTransactions.md
       - title: Direct Debit Transactions 
-  #     link: docs/additionalInfo/DirectDebitTransactions.md
+        link: docs/additionalInfo/DirectDebitTransactions.md
       - title: Complete the Transaction  
-  #     link: docs/additionalInfo/CompleteTheTransaction.md
+        link: docs/additionalInfo/CompleteTheTransaction.md
       - title: Transaction Result  
-  #     link: docs/additionalInfo/TransactionResult.md
+        link: docs/additionalInfo/TransactionResult.md
 - sections:
   - title: Resources
     sections:
