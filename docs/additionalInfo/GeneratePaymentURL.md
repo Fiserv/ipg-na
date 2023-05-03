@@ -79,7 +79,7 @@ The generated link is shown on the ‘Transaction Result’ page where it can be sel
 
 ![](/ipg-na/assets/images/assets/images/generatePaymentUrl_1.jpg)
 
-                                                                                            Option to generate a Payment URL
+                                                                   Option to generate a Payment URL
 
 
 The generated URL will be shown on the Transaction Result page where it can be selected (copied) to provide it to the customer. The URL can also be copied from the Order Details page at a later point.
@@ -87,19 +87,19 @@ The generated URL will be shown on the Transaction Result page where it can be s
 
 ![](/ipg-na/assets/images/assets/images/generatePaymentUrl_2.jpg)
 
-                                                                                            Option to 'Select' in order to copy the link'  
+                                                                   Option to 'Select' in order to copy the link'  
 
 The generated link is shown in real-time reports accessible in the Virtual Terminal with an approval code ‘?:Payment URL created’.
 
 ![](/ipg-na/assets/images/assets/images/generatePaymentUrl_3.jpg)
 
-                                                                                            Order Details overview
+                                                                   Order Details overview
 
 Once your consumer has accessed the URL link and made the payment, you will see the result of this payment transaction in the reports and the total amount will be updated with the payment made.
 
 ![](/ipg-na/assets/images/assets/images/generatePaymentUrl_4.jpg)
 
-                                                                                            Option to review the status of a payment on 'Order Details' page
+                                                   Option to review the status of a payment on 'Order Details' page
 
 API users also have the ability to delete a Payment URL to cancel the validity.  If a deletion has been performed and a consumer selects the URL thereafter they will be presented with display information advising the URL is no longer valid.  You will be able to see the deleted status in the Order Details as below:
 
