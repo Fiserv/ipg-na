@@ -8,3 +8,12 @@ Next enter how often you wish to charge the customer. In the Bill the customer f
 Select the month / day / year to start charging the customer in the Start on dropdown boxes.
 
 Enter the number of times to charge the customer in the End After textbox.
+
+![](/ipg-na/assets/images/assets/images/recurringPayments.jpg)
+
+												Virtual Terminal: Recurring Payments input fields
+												
+
+Please see the Reports chapter in this document for details about how to modify or cancel Recurring Payments.
+
+> Return to [Performing a Virtual Terminal Transaction](?path=docs/additionalInfo/VirtualTerminal.md)														

@@ -11,7 +11,7 @@ The Payment URL solution offers you the following:
 
 - The capability to generate a link (a payment URL) for a specific amount through an Application Programming Interface (API) call or manually through a Virtual Terminal on the web.
 - A hosted payment page where your customer can select the preferred payment method (based on the payment methods that are activated for your account/store) and make the payment.
-- A hosted result page that tells your customer if the payment was successful or not, including a ‘Retry’ button that allows a customer to choose a different payment method in case the transaction was not successful.
+- A hosted result page that tells your customer if the payment was successful or not, including a 'Retry' button that allows a customer to choose a different payment method in case the transaction was not successful.
 
 As a default, the Payment Links stay valid for 182 days.
 
@@ -75,7 +75,7 @@ After login into the Virtual Terminal, if you have the Payment URL functionality
 
 If the Generate Payment URL checkbox is selected, the Card section (Credit Card, Direct Debit) and Recurring sections will be hidden. You can then complete the required information for the payment URL and continue the transaction as usual.
 
-The generated link is shown on the ‘Transaction Result’ page where it can be selected and copied by you in order to be provided to the customer, e.g. in an email invoice you are sending.. The link can also be obtained from the ‘Order Details’ page at a later point, when needed.
+The generated link is shown on the 'Transaction Result' page where it can be selected and copied by you in order to be provided to the customer, e.g. in an email invoice you are sending.. The link can also be obtained from the 'Order Details' page at a later point, when needed.
 
 ![](/ipg-na/assets/images/assets/images/generatePaymentUrl_1.jpg)
 
@@ -86,10 +86,10 @@ The generated URL will be shown on the Transaction Result page where it can be s
 
 
 ![](/ipg-na/assets/images/assets/images/generatePaymentUrl_2.jpg)
-
+q
                                                                    Option to 'Select' in order to copy the link'  
 
-The generated link is shown in real-time reports accessible in the Virtual Terminal with an approval code ‘?:Payment URL created’.
+The generated link is shown in real-time reports accessible in the Virtual Terminal with an approval code '?:Payment URL created'.
 
 ![](/ipg-na/assets/images/assets/images/generatePaymentUrl_3.jpg)
 

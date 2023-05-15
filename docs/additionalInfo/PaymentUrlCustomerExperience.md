@@ -1,15 +1,20 @@
 
-# Pre-validation of Card Type
+# Customer Experience of a Payment URL
 
-If the functionality is activated for your store and a card number is entered, the field Debit / Credit will automatically populate with whether the card number belongs to a credit or debit card based on a BIN file lookup in the background.
+When your customers click on the link provided by you, they will get to a secure Internet page to make the payment. All sensitive data entered goes directly to Fiserv and never touches your systems.
 
-In case of dual functionality cards the field will be enabled to let merchants choose the card function for the transaction (drop-down).
+![](/ipg-na/assets/images/assets/images/paymentUrlCustomerExperience_1.jpg)
 
+				            Page shown directly after a link was accessed by a customer
 
-*Virtual Terminal: Card type pre-validation*
+The availability of the payment methods shown on this page depends on your account/store settings.
 
-The card type is also shown on the Confirmation Page, the Order Details and the Receipt.
+![](/ipg-na/assets/images/assets/images/paymentUrlCustomerExperience_2.jpg)
 
- 
+				            Customer has an option to select a payment method and proceed with a payment
 
-> Return to [Performing a Virtual Terminal Transaction](?path=docs/additionalInfo/VirtualTerminal.md)
+When your customers made the payment, they will be presented with result page that tells if the payment was successful and provides a ‘Print’ button to print it as a confirmation or in case the transaction was not successful – with a ‘Retry’ button so that your customer can choose a different payment method.
+
+![](/ipg-na/assets/images/assets/images/paymentUrlCustomerExperience_3.jpg)
+
+				            Customer result page
