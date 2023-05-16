@@ -77,7 +77,7 @@ If the Generate Payment URL checkbox is selected, the Card section (Credit Card,
 
 The generated link is shown on the 'Transaction Result' page where it can be selected and copied by you in order to be provided to the customer, e.g. in an email invoice you are sending.. The link can also be obtained from the 'Order Details' page at a later point, when needed.
 
-![](/api/hosted-image/IPGNA/assets/images/generatePaymentUrl_1.jpg)
+![Option to generate a Payment URL](/api/hosted-image/IPGNA/assets/images/generatePaymentUrl_1.jpg)
 
                                                                    Option to generate a Payment URL
 
@@ -91,19 +91,19 @@ The generated URL will be shown on the Transaction Result page where it can be s
 
 The generated link is shown in real-time reports accessible in the Virtual Terminal with an approval code '?:Payment URL created'.
 
-![](/ipg-na/assets/images/assets/images/generatePaymentUrl_3.jpg)
+![](/api/hosted-image/IPGNA/assets/images/generatePaymentUrl_3.jpg)
 
                                                                    Order Details overview
 
 Once your consumer has accessed the URL link and made the payment, you will see the result of this payment transaction in the reports and the total amount will be updated with the payment made.
 
-![](/ipg-na/assets/images/assets/images/generatePaymentUrl_4.jpg)
+![](/api/hosted-image/IPGNA/assets/images/generatePaymentUrl_4.jpg)
 
                                                    Option to review the status of a payment on 'Order Details' page
 
 API users also have the ability to delete a Payment URL to cancel the validity.  If a deletion has been performed and a consumer selects the URL thereafter they will be presented with display information advising the URL is no longer valid.  You will be able to see the deleted status in the Order Details as below:
 
-![](/ipg-na/assets/images/assets/images/generatePaymentUrl_5.jpg)
+![](/api/hosted-image/IPGNA/assets/images/generatePaymentUrl_5.jpg)
 
 
 * If you are a MCC6012 Merchant you can still utilize this functionality, the additional entries required for MCC6012 will need to be completed at the time of generating the URL and saved to be added to the transaction should the consumer opt to pay with Visa or MasterCard.
