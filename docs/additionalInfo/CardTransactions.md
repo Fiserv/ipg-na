@@ -66,7 +66,7 @@ All other required fields (except Transaction origin and Transaction type) becom
 
 If something should go wrong and this field does not fill in when you swipe the card, check your reader to make sure it's configured correctly. If the reader is configured correctly and you are still unable to swipe the card, the card may be unreadable. Go to the previous field (Are you swiping the card?), uncheck the Yes checkbox, and enter the card data manually.
 
-Note: If your store has been activated for GlobalChoice™ please click here for further information.
+Note: If your store has been activated for GlobalChoice please click here for further information.
 
  
 
@@ -78,7 +78,7 @@ Select the card's Expiry Date from the dropdown boxes. Select the month first, t
 
 ### *Step 6: Enter the Card Security Code*
 
-The Card Security Code is a 3 or 4-digit number usually found on the back of the customer’s credit card, on the same line as the customer’s signature, following the last four digits of the credit card number. There are many different names for this code: Visa calls this code CVV2, MasterCard calls it CVC2, American Express 4DBC.
+The Card Security Code is a 3 or 4-digit number usually found on the back of the customer's credit card, on the same line as the customer's signature, following the last four digits of the credit card number. There are many different names for this code: Visa calls this code CVV2, MasterCard calls it CVC2, American Express 4DBC.
 
  
 
