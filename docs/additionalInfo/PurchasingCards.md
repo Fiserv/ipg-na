@@ -28,7 +28,7 @@ The information for the whole transaction is required
 - VAT Shipping Rate
 - Complete the fields in the table also, per item purchased, to achieve Level 3.  This is valid for both Visa and MasterCard.
 
-When performing a transation, under the ‘Card’ heading there is a tick box entitled Purchase Cards. Select this box to show the fields for Level 2, and a table for Level 3.  
+When performing a transation, under the 'Card' heading there is a tick box entitled Purchase Cards. Select this box to show the fields for Level 2, and a table for Level 3.  
 
 If you have this option enabled you can decide whether to not complete any specific Purchasing Card detail fields, complete only Level 2 detail or continue on to complete all to achieve Level 3
 
