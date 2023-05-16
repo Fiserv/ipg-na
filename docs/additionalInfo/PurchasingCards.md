@@ -11,7 +11,7 @@ There are three levels of details required:
 
 Purchasing Cards Level 2 and Level 3 fields are available for transactions processed using the Virtual Terminal. When completing the transaction information.  
 
-![](/ipg-na/assets/images/assets/images/purchasingCards.jpg)
+![](/api/hosted-image/IPGNA/assets/images/purchasingCards.jpg)
 
 Level 2 can be completed alone for Visa transactions. 
 

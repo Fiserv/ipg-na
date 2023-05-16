@@ -79,7 +79,7 @@ The generated link is shown on the 'Transaction Result' page where it can be sel
 
 ![](/api/hosted-image/IPGNA/assets/images/generatePaymentUrl_1.jpg)
 
-  			Option to generate a Payment URL
+  																   Option to generate a Payment URL
 
 The generated URL will be shown on the Transaction Result page where it can be selected (copied) to provide it to the customer. The URL can also be copied from the Order Details page at a later point.
 

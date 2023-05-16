@@ -5,7 +5,7 @@ The *Order Information* section has only one required field: the total amount of
 
 You must fill out all required fields. To enter Order Information, follow the steps below.
 
-![](/ipg-na/assets/images/assets/images/addOrderInfo.jpg)
+![](/api/hosted-image/IPGNA/assets/images/addOrderInfo.jpg)
 
 ### *Order Number (optional)*
 

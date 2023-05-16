@@ -30,7 +30,9 @@ Steps to create a Payment processing certificate in the Apple portal:
 	 - In-order to generate certificate you must have a paid apple developer account or an organization account. New users must follow the prompts to set up a developer account.
 	 - Select Certificates, Identifiers and Profile :  
  
-   ![Certificates, Identifiers and Profile](../../../../assets/images/assets/images/ApplePay1.jpg)  
+   ![](/api/hosted-image/IPGNA/assets/images/ApplePay1.jpg)  
+   						Certificates, Identifiers and Profile
+   							
    
 	 - Select Identifier's and in the dropdown in the upper-right corner select merchant id
 	 - Enter a unique merchant id, and upload a valid CSR in .pem format.
@@ -42,8 +44,8 @@ Steps to create a Payment processing certificate in the Apple portal:
 
 	 - Request a new certificate from your keychain access.  
  
-   ![Certificate From Your Keychain Access](../../../../assets/images/assets/images/ApplePay2.jpg)  
-   
+   ![](/api/hosted-image/IPGNA/assets/images/ApplePay2.jpg)  
+   						Certificate From Your Keychain Access	
 	 - Follow the prompt and request the certificate to be saved on file.
 	 - In the 'Certificate' section in the apple portal, click on the '+' and follow the prompt to request apple developer certificate for 'IOS' development.
 	 - Upload the requested certificate
@@ -72,8 +74,8 @@ Now the Xcode is set-up for coding.
 
 In the SDK enter the URL, api key and api secret and build the app:  
 
-   ![Enter URL,API Key and Secret](../../../../assets/images/assets/images/ApplePay3.jpg)
-   	  
+   ![](/api/hosted-image/IPGNA/assets/images/ApplePay3.jpg)
+   	 					Enter URL,API Key and Secret 
 	 - Merchant id: Enter any valid merchant id registered in the apple portal. This gives the capability for a single user to use multiple merchant id's
 	 - Amount: Enter the amount of the transaction
 	 - Transaction type: Select PreAuth or Sale.

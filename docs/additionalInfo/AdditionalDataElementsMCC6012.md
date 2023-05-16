@@ -3,7 +3,7 @@
 
 This section will only show if you are a UK merchant with a category code of 6012 (Financial Institutions) and Visa or MasterCard* has been selected as the payment card.
 
-![](/ipg-na/assets/images/assets/images/additionalDataElementsMCC6012inputfields.jpg)
+![](/api/hosted-image/IPGNA/assets/images/additionalDataElementsMCC6012inputfields.jpg)
 
 												Virtual Terminal: Additional Data Elements MCC 6012 input fields
 												

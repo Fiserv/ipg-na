@@ -9,7 +9,7 @@ Select the month / day / year to start charging the customer in the Start on dro
 
 Enter the number of times to charge the customer in the End After textbox.
 
-![](/ipg-na/assets/images/assets/images/recurringPayments.jpg)
+![](/api/hosted-image/IPGNA/assets/images/recurringPayments.jpg)
 
 												Virtual Terminal: Recurring Payments input fields
 												

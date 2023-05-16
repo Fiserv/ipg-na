@@ -5,7 +5,7 @@ The *Payment Details* section shows fields required for a Sale, Authorise Only, 
 
 A graphic for each card type that has been setup for your store is shown.
 
-![](/ipg-na/assets/images/assets/images/cardTransactions.jpg)
+![](/api/hosted-image/IPGNA/assets/images/cardTransactions.jpg)
 
 
                                               Virtual Terminal: Card data input fields 

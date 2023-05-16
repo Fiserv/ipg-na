@@ -24,7 +24,7 @@ If you have made an error in entering any of the product quantities or options, 
 Once you've completed your product selections, click on the POS Main button to return to the Virtual Terminal main page, where you can enter payment and contact information for this order.
 A table should appear at the top of the page showing all the products selected for this order along with the subtotal of the order.
 
-![](/ipg-na/assets/images/assets/images/selectProducts.jpg)
+![](/api/hosted-image/IPGNA/assets/images/selectProducts.jpg)
 
                                               Virtual Terminal: Products selected from Product Catalogue
 

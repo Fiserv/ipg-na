@@ -5,7 +5,7 @@ The Installment section allows the merchants to create a Sale transaction with I
 Number of instalments you wish to divide the payment into, enter a number from 2 to 99 with no decimal places, choose if you wish to charge the customer with an instalment interest and select 
 how many months the first payment could be delayed. At least one of the fields needs to be populated for the transaction being classified as Instalment payment.
 
-![](/ipg-na/assets/images/assets/images/installments.jpg)
+![](/api/hosted-image/IPGNA/assets/images/installments.jpg)
 
 												Installment Information			
 
