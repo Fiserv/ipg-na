@@ -77,10 +77,9 @@ If the Generate Payment URL checkbox is selected, the Card section (Credit Card,
 
 The generated link is shown on the 'Transaction Result' page where it can be selected and copied by you in order to be provided to the customer, e.g. in an email invoice you are sending.. The link can also be obtained from the 'Order Details' page at a later point, when needed.
 
-![Option to generate a Payment URL](/api/hosted-image/IPGNA/assets/images/generatePaymentUrl_1.jpg)
+![](/api/hosted-image/IPGNA/assets/images/generatePaymentUrl_1.jpg)
 
-                                                                   Option to generate a Payment URL
-
+  			Option to generate a Payment URL
 
 The generated URL will be shown on the Transaction Result page where it can be selected (copied) to provide it to the customer. The URL can also be copied from the Order Details page at a later point.
 
