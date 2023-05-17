@@ -72,15 +72,15 @@ Update the Constants.java file with the Merchant ID and Gateway Tokenization par
 
 In the EnvData.java file, set the following environment variables, which will be shared by the Integration Team:
 
-	 - APIKey –
-	 - Token – 
-	 - APISecret – 
+	 - APIKey -
+	 - Token - 
+	 - APISecret - 
 
-	```{r}
+```{r}
 
 envMap.put("CERT", new EnvPropertiesImpl( "CERT", "https://cert.api.firstdata.com/gateway/v1/payments", "---------", "----------", "-----------"));
 
-	``` 
+``` 
  
 gatewayMerchantId and the APIGEE credentials will be provided by the Integration Team.
 
@@ -97,11 +97,11 @@ The Authorization parameter, required as part of the Header for a Fiserv API tra
 
 Construct the data param by appending the following parameters in the order shown:
 
-apikey – the developer’s API key
-nonce – A secure random number
-timestamp – Epoch timestamp in milliseconds
-token – the Merchant Token 
-payload – The actual body content passed as the POST request 
+apikey - the developer’s API key<br/>
+nonce - A secure random number<br/>
+timestamp - Epoch timestamp in milliseconds<br/>
+token - the Merchant Token<br/> 
+payload - The actual body content passed as the POST request <br/>
 
 ### Google Pay APK Installation to Device
 
@@ -115,7 +115,8 @@ Note that the Payment Details page cannot be captured for security reasons.
 Sample Google Pay Request:
 
 
-```{r}  
+```{r}
+
 
 {
   "requestType": "WalletSaleTransaction",
@@ -136,13 +137,16 @@ Sample Google Pay Request:
     "currency": "USD"
   }
 }
-```    
+
+```
+
 	 
  
 Sample Google Pay Response:
 
 
-```{r}  
+```{r}
+
 
 {
     "clientRequestId": "741666",
@@ -191,7 +195,9 @@ Sample Google Pay Response:
         "walletProvider": "GOOGLE_PAY"
     }
 }
+
 ``` 
+
     
 	    
 
