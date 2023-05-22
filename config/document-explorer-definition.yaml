@@ -432,7 +432,7 @@
     - title: CarRental 
       link: docs/schemas-md/CarRental.md 
     - title: Mcc6012 
-      link: docs/schemas-md/Mcc6012 .md
+      link: docs/schemas-md/Mcc6012.md
     - title: InstallmentOptions 
       link: docs/schemas-md/InstallmentOptions.md
     - title: RevolvingOptions 
