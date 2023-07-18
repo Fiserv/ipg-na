@@ -28,6 +28,9 @@
 # the delivery of this work - Test
 ################################################################################
 - sections:
+  - title: Getting Started
+    link: docs/additionalInfo/HostedPaymentPages.md
+- sections:
   - title: Release Notes
     open : false
     link: docs/release-notes/2023.md
