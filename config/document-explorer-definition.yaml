@@ -28,25 +28,6 @@
 # the delivery of this work - Test
 ################################################################################
 - sections:
-  - title: Release Notes
-    open : false
-    link: docs/release-notes/2023.md
-- sections:
-  - title: 3DSecure  
-    link: docs/3dsecure-md/3DSecure.md
-- sections:
-  - title: Digital Wallets
-    sections:
-    - title: Apple Pay
-      link: docs/schemas-md/ApplePay.md  
-    - title: Google Pay
-      link: docs/schemas-md/GooglePay.md  
-- sections:
-  - title: Additional Info
-    sections:
-    - title: Response Codes
-      link: docs/additionalInfo/ResponseCodes.md
-- sections:
   - title: Getting Started
     sections:  
     - title: Hosted Payment Pages
@@ -89,6 +70,68 @@
         link: docs/additionalInfo/CompleteTheTransaction.md
       - title: Transaction Result  
         link: docs/additionalInfo/TransactionResult.md
+- sections:
+  - title: Release Notes
+    open : false
+    link: docs/release-notes/2023.md
+- sections:
+  - title: 3DSecure  
+    link: docs/3dsecure-md/3DSecure.md
+- sections:
+  - title: Digital Wallets
+    sections:
+    - title: Apple Pay
+      link: docs/schemas-md/ApplePay.md  
+    - title: Google Pay
+      link: docs/schemas-md/GooglePay.md  
+- sections:
+  - title: Additional Info
+    sections:
+    - title: Response Codes
+      link: docs/additionalInfo/ResponseCodes.md
+# - sections:
+#   - title: Getting Started
+#     sections:  
+#     - title: Hosted Payment Pages
+#       link: docs/additionalInfo/HostedPaymentPages.md
+#     - title: Direct Post 
+#       link: docs/additionalInfo/DirectPost.md  
+#     - title: Tokenization with JavaScript 
+#       link: docs/additionalInfo/TokenizationWithJavaScript.md 
+#     - title: APIs 
+#       link: docs/additionalInfo/APIs.md 
+#     - title: Recurring Payments 
+#       link: docs/additionalInfo/RecurringPayments.md
+#     - title: Online Store Integration  
+#       link: docs/additionalInfo/OnlineStoreIntegration.md    
+#       sections:
+#       - title: Pre-Authorization/Sale  
+#         link: docs/additionalInfo/PreAuthorizationSale.md
+#       - title: Transaction Response  
+#         link: docs/additionalInfo/TransactionResponse.md   
+#       - title: Completion (Post-Authorization)  
+#         link: docs/additionalInfo/Completion.md
+#       - title: Void 
+#         link: docs/additionalInfo/Void.md
+#       - title: Return (aka Refund)  
+#         link: docs/additionalInfo/Return.md
+#       - title: Zero Dollar Authorization  
+#         link: docs/additionalInfo/ZeroDollarAuthorization.md    
+#     - title: Virtual Terminal  
+#       link: docs/additionalInfo/VirtualTerminal.md    
+#       sections:
+#       - title: Select Products  
+#         link: docs/additionalInfo/SelectProducts.md
+#       - title: Add Order Information  
+#         link: docs/additionalInfo/AddOrderInformation.md   
+#       - title: Card Transactions  
+#         link: docs/additionalInfo/CardTransactions.md
+#       - title: Direct Debit Transactions 
+#         link: docs/additionalInfo/DirectDebitTransactions.md
+#       - title: Complete the Transaction  
+#         link: docs/additionalInfo/CompleteTheTransaction.md
+#       - title: Transaction Result  
+#         link: docs/additionalInfo/TransactionResult.md
 - sections:
   - title: Resources
     sections:
