@@ -27,9 +27,9 @@
 # are granted or extended by this work or 
 # the delivery of this work - Test
 ################################################################################
-# - sections:
-#   - title: Getting Started
-#     link: docs/additionalInfo/HostedPaymentPages.md
+- sections:
+  - title: Getting Started
+    link: docs/additionalInfo/HostedPaymentPages.md
 - sections:
   - title: Release Notes
     open : false
@@ -50,7 +50,7 @@
     - title: Response Codes
       link: docs/additionalInfo/ResponseCodes.md
 - sections:
-  - title: Getting Started
+  - title: Getting Started Payment Pages
     link: docs/additionalInfo/HostedPaymentPages.md
     sections:  
     - title: Hosted Payment Pages
