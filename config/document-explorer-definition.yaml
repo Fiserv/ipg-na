@@ -29,6 +29,7 @@
 ################################################################################
 - sections:
   - title: Getting Started
+    link: docs/additionalInfo/HostedPaymentPages.md
     sections:  
     - title: Hosted Payment Pages
       link: docs/additionalInfo/HostedPaymentPages.md
