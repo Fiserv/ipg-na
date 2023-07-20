@@ -28,6 +28,7 @@
 # the delivery of this work - Test
 ################################################################################
 header:
+getStarted: /docs/additionalInfo/HostedPaymentPages.md
 productionDescription: Payment Gateway API Specification
 #featuredFeatures:
 #  - title: REPLACE ME
