@@ -19,13 +19,13 @@
   "apiVersions": [
       {
         "version": "23.3.0",
-        "versionType": "major",
+        "versionType": "minor",
         "releaseNotesPath": "docs/release-notes/Release-Notes.md",
         "apiSpecFileNames": ["gateway-services"]
       },
       {
 	    "version": "23.4.0",
-	    "versionType": "minor",
+	    "versionType": "major",
 	    "releaseNotesPath": "docs/release-notes/Release-Notes.md",
 	    "apiSpecFileNames": ["gateway-services.mustache"]
 	  }
