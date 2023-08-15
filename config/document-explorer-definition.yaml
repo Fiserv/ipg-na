@@ -33,7 +33,7 @@
 - sections:
   - title: Release Notes
     open : false
-    link: docs/release-notes/2023.md
+    link: docs/release-notes/Release-Notes.md
 - sections:
   - title: 3DSecure  
     link: docs/3dsecure-md/3DSecure.md
