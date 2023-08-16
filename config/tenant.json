@@ -27,7 +27,7 @@
 	    "version": "23.4.0",
 	    "versionType": "major",
 	    "releaseNotesPath": "docs/release-notes/Release-Notes.md",
-	    "apiSpecFileNames": ["gateway-services.mustache"]
+	    "apiSpecFileNames": ["gateway-services"]
 	  }
   ],
   "featureBranches": ["develop"],
