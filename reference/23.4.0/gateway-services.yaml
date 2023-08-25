@@ -626,8 +626,6 @@ paths:
       tags:
         - Payment APM
       x-proxy-name: 'Perform an action on an existing Transaction'
-      x-tio-request-headers:
-        - $ref: '#/x-tio-request-headers/PaymentsApmAction'
       operationId: submitApmUpdateTransaction
       summary: Perform action on existing APM transaction
       description: Perform an action on an existing APM transaction.
