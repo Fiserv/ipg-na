@@ -1521,7 +1521,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/requestBodies/ExchangeRateRequest'
+              $ref: '#/components/schemas/ExchangeRateRequest'
         required: true
         description: 'Accepted request types: DCCExchangeRateRequest and DynamicPricingExchangeRateRequest.'
       responses:
