@@ -15,7 +15,7 @@
       ]
     }
   ],
-  "getStartedFilePath": "/docs/Getting-Started/Getting-Started-General.md",
+  "getStartedFilePath": "/docs/additionalInfo/HostedPaymentPages.md",
   "apiVersions": [
       {
         "version": "23.3.0",
