@@ -246,93 +246,41 @@ paths:
                 summary: "PaymentCardDisbursementTransaction"
                 value:
                   transactionAmount:
-			        total: '50'
-			        currency: EUR
-			      disbursement:
-			        disbursementType: 'FundingTransactionType'
-			        fundingSource: 'CREDIT_ACCOUNT'
-			        senderInfo:
-			          name: 'Franklin Sender Roosevelt'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          birthDate: '19560121'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			        receiverInfo:
-			          name: 'Abraham Receiver Lincoln'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			          accountType: 'EMAIL'
-			          participationId: '123456789123456789123456789123'
-			        paymentMethod:
-			          paymentCard:
-			            number: '5424180279791732'
-			            expiryDate:
-			              month: '12'
-			              year: '25'
-			            securityCode: '977'
-			  PaymentCardDisbursementTransaction - 3DS:
-                summary: "PaymentCardDisbursementTransaction"
-                value:
-                  transactionAmount:
-			        total: '50'
-			        currency: EUR
-			      disbursement:
-			        disbursementType: 'FundingTransactionType'
-			        fundingSource: 'CREDIT_ACCOUNT'
-			        senderInfo:
-			          name: 'Franklin Sender Roosevelt'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          birthDate: '19560121'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			        receiverInfo:
-			          name: 'Abraham Receiver Lincoln'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			          accountType: 'EMAIL'
-			          participationId: '123456789123456789123456789123'
-			        authenticationResult:
-			          authenticationType: 'Secure3D21AuthenticationResult'
-			          cavv": 'AAABBJkZUQAAAABXSBlRAAAAAAA='
-			          xid": 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
-			          transactionId": 'f38e6948-5388-41a6-bca4-b49723c19437'
-			          authenticationResponse: 'Y'
-			          transactionStatus": 'Y'
-			        order:
-        			  additionalDetails:
-			            comments: 'This is Card Disbursement transaction'
-			            invoiceNumber: '984424645416'
-			            purchaseOrderNumber: '4545623458'
-			            transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_TRANSFER'
-			        paymentMethod:
-			          paymentCard:
-			            number: '5424180279791732'
-			            expiryDate:
-			              month: '12'
-			              year: '25'
-			            securityCode: '977'
+                    total: '50'
+                    currency: EUR
+                  disbursement:
+                    disbursementType: 'FundingTransactionType'
+                    fundingSource: 'CREDIT_ACCOUNT'
+                    senderInfo:
+                      name: 'Franklin Sender Roosevelt'
+                      streetAddress: 5565 Glenridge Connector
+                      city: Atlanta
+                      stateCode: GA
+                      countryCode: US
+                      postalCode: "30342"
+                      phoneNumber: '4044040740'
+                      birthDate: '19560121'
+                      referenceNumber: '12345678'
+                      accountNumber: '135246'
+                    receiverInfo:
+                      name: 'Abraham Receiver Lincoln'
+                      streetAddress: 5565 Glenridge Connector
+                      city: Atlanta
+                      stateCode: GA
+                      countryCode: US
+                      postalCode: "30342"
+                      phoneNumber: '4044040740'
+                      referenceNumber: '12345678'
+                      accountNumber: '135246'
+                      accountType: 'EMAIL'
+                      participationId: '123456789123456789123456789123'
+                    paymentMethod:
+                      paymentCard:
+                      number: '5424180279791732'
+                      expiryDate:
+                        month: '12'
+                        year: '25'
+                      securityCode: '977'
               PaymentTokenCreditTransaction:
                 summary: "PaymentTokenCreditTransaction"
                 value:
@@ -379,93 +327,41 @@ paths:
                 summary: "PaymentTokenDisbursementTransaction"
                 value:
                   transactionAmount:
-			        total: '50'
-			        currency: EUR
-			      disbursement:
-			        disbursementType: 'FundingTransactionType'
-			        fundingSource: 'CREDIT_ACCOUNT'
-			        senderInfo:
-			          name: 'Franklin Sender Roosevelt'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          birthDate: '19560121'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			        receiverInfo:
-			          name: 'Abraham Receiver Lincoln'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			          accountType: 'EMAIL'
-			          participationId: '123456789123456789123456789123'
-			        paymentMethod:
-			          paymentCard:
-			            number: '5424180279791732'
-			            expiryDate:
-			              month: '12'
-			              year: '25'
-			            securityCode: '977'
-			  PaymentTokenDisbursementTransaction - 3DS:
-                summary: "PaymentCardDisbursementTransaction"
-                value:
-                  transactionAmount:
-			        total: '50'
-			        currency: EUR
-			      disbursement:
-			        disbursementType: 'FundingTransactionType'
-			        fundingSource: 'CREDIT_ACCOUNT'
-			        senderInfo:
-			          name: 'Franklin Sender Roosevelt'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          birthDate: '19560121'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			        receiverInfo:
-			          name: 'Abraham Receiver Lincoln'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			          accountType: 'EMAIL'
-			          participationId: '123456789123456789123456789123'
-			        authenticationResult:
-			          authenticationType: 'Secure3D21AuthenticationResult'
-			          cavv": 'AAABBJkZUQAAAABXSBlRAAAAAAA='
-			          xid": 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
-			          transactionId": 'f38e6948-5388-41a6-bca4-b49723c19437'
-			          authenticationResponse: 'Y'
-			          transactionStatus": 'Y'
-			        order:
-        			  additionalDetails:
-			            comments: 'This is Card Disbursement transaction'
-			            invoiceNumber: '984424645416'
-			            purchaseOrderNumber: '4545623458'
-			            transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_TRANSFER'
-			        paymentMethod:
-			          paymentCard:
-			            number: '5424180279791732'
-			            expiryDate:
-			              month: '12'
-			              year: '25'
-			            securityCode: '977'          
+                    total: '50'
+                    currency: EUR
+                    disbursement:
+                      disbursementType: 'FundingTransactionType'
+                      fundingSource: 'CREDIT_ACCOUNT'
+                      senderInfo:
+                        name: 'Franklin Sender Roosevelt'
+                        streetAddress: 5565 Glenridge Connector
+                        city: Atlanta
+                        stateCode: GA
+                        countryCode: US
+                        postalCode: "30342"
+                        phoneNumber: '4044040740'
+                        birthDate: '19560121'
+                        referenceNumber: '12345678'
+                        accountNumber: '135246'
+                      receiverInfo:
+                        name: 'Abraham Receiver Lincoln'
+                        streetAddress: 5565 Glenridge Connector
+                        city: Atlanta
+                        stateCode: GA
+                        countryCode: US
+                        postalCode: "30342"
+                        phoneNumber: '4044040740'
+                        referenceNumber: '12345678'
+                        accountNumber: '135246'
+                        accountType: 'EMAIL'
+                        participationId: '123456789123456789123456789123'
+                      paymentMethod:
+                        paymentCard:
+                          number: '5424180279791732'
+                          expiryDate:
+                            month: '12'
+                            year: '25'
+                          securityCode: '977'
               PaypalCreditTransaction:
                 summary: "PaypalCreditTransaction"
                 value:
@@ -600,94 +496,43 @@ paths:
               PaymentDeviceDisbursementTransaction:
                 summary: "PaymentDeviceDisbursementTransaction"
                 value:
+                  requestType: PaymentDeviceDisbursementTransaction
                   transactionAmount:
-			        total: '50'
-			        currency: EUR
-			      disbursement:
-			        disbursementType: 'FundingTransactionType'
-			        fundingSource: 'CREDIT_ACCOUNT'
-			        senderInfo:
-			          name: 'Franklin Sender Roosevelt'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          birthDate: '19560121'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			        receiverInfo:
-			          name: 'Abraham Receiver Lincoln'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			          accountType: 'EMAIL'
-			          participationId: '123456789123456789123456789123'
-			        paymentMethod:
-			          paymentCard:
-			            number: '5424180279791732'
-			            expiryDate:
-			              month: '12'
-			              year: '25'
-			            securityCode: '977'
-			  PaymentDeviceDisbursementTransaction - 3DS:
-                summary: "PaymentCardDisbursementTransaction"
-                value:
-                  transactionAmount:
-			        total: '50'
-			        currency: EUR
-			      disbursement:
-			        disbursementType: 'FundingTransactionType'
-			        fundingSource: 'CREDIT_ACCOUNT'
-			        senderInfo:
-			          name: 'Franklin Sender Roosevelt'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          birthDate: '19560121'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			        receiverInfo:
-			          name: 'Abraham Receiver Lincoln'
-			          streetAddress: 5565 Glenridge Connector
-			          city: Atlanta
-			          stateCode: GA
-			          countryCode: US
-			          postalCode: "30342"
-			          phoneNumber: '4044040740'
-			          referenceNumber: '12345678'
-			          accountNumber: '135246'
-			          accountType: 'EMAIL'
-			          participationId: '123456789123456789123456789123'
-			        authenticationResult:
-			          authenticationType: 'Secure3D21AuthenticationResult'
-			          cavv": 'AAABBJkZUQAAAABXSBlRAAAAAAA='
-			          xid": 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
-			          transactionId": 'f38e6948-5388-41a6-bca4-b49723c19437'
-			          authenticationResponse: 'Y'
-			          transactionStatus": 'Y'
-			        order:
-        			  additionalDetails:
-			            comments: 'This is Card Disbursement transaction'
-			            invoiceNumber: '984424645416'
-			            purchaseOrderNumber: '4545623458'
-			            transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_TRANSFER'
-			        paymentMethod:
-			          paymentCard:
-			            number: '5424180279791732'
-			            expiryDate:
-			              month: '12'
-			              year: '25'
-			            securityCode: '977'          
+                    total: '50'
+                    currency: EUR
+                  disbursement:
+                    disbursementType: 'FundingTransactionType'
+                    fundingSource: 'CREDIT_ACCOUNT'
+                    senderInfo:
+                      name: 'Franklin Sender Roosevelt'
+                      streetAddress: 5565 Glenridge Connector
+                      city: Atlanta
+                      stateCode: GA
+                      countryCode: US
+                      postalCode: "30342"
+                      phoneNumber: '4044040740'
+                      birthDate: '19560121'
+                      referenceNumber: '12345678'
+                      accountNumber: '135246'
+                    receiverInfo:
+                      name: 'Abraham Receiver Lincoln'
+                      streetAddress: 5565 Glenridge Connector
+                      city: Atlanta
+                      stateCode: GA
+                      countryCode: US
+                      postalCode: "30342"
+                      phoneNumber: '4044040740'
+                      referenceNumber: '12345678'
+                      accountNumber: '135246'
+                      accountType: 'EMAIL'
+                      participationId: '123456789123456789123456789123'
+                    paymentMethod:
+                      paymentCard:
+                        number: '5424180279791732'
+                        expiryDate:
+                          month: '12'
+                          year: '25'
+                        securityCode: '977'
         description: 'Accepted request types: AliPaySaleTransaction, ChinaPnRSaleTransaction, PaymentCardCreditTransaction, PaymentCardForcedTicketTransaction, PaymentCardSaleTransaction, PaymentCardPreAuthTransaction, PaymentCardPayerAuthTransaction, PaymentCardDisbursementTransaction, PaymentTokenCreditTransaction, PaymentTokenPreAuthTransaction, PaymentTokenSaleTransaction, PaymentTokenDisbursementTransaction, PaypalCreditTransaction, SepaSaleTransaction, SepaCreditTransaction, WalletSaleTransaction, and WalletPreAuthTransaction, PaymentDeviceSaleTransaction, PaymentDevicePreAuthTransaction, PaymentDeviceCreditTransaction, PaymentDeviceDisbursementTransaction, AchPreAuthTransaction, AchSaleTransaction, AchCreditTransaction.'
         required: true
       responses:
@@ -869,7 +714,7 @@ paths:
         - $ref: '#/components/parameters/RegionParam'
         - $ref: '#/components/parameters/TransactionIdParam'
         - $ref: '#/components/parameters/StoreIdParam'
-      requestBody:
+        requestBody:
         content:
           application/json:
             schema:
