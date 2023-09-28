@@ -714,7 +714,7 @@ paths:
         - $ref: '#/components/parameters/RegionParam'
         - $ref: '#/components/parameters/TransactionIdParam'
         - $ref: '#/components/parameters/StoreIdParam'
-        requestBody:
+      requestBody:
         content:
           application/json:
             schema:
