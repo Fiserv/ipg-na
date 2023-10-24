@@ -2575,6 +2575,8 @@ components:
             $ref: '#/components/schemas/TransactionOrigin'
           paymentMethodDetails:
             $ref: '#/components/schemas/PaymentMethodDetails'
+          accountVerificationResponse:
+            $ref: '#/components/schemas/AccountVerificationResponse'  
           country:
             description: Country of the card issuer.
             type: string
@@ -3418,6 +3420,8 @@ components:
           $ref: '#/components/schemas/TransactionOrigin'
         additionalDetails:
           $ref: '#/components/schemas/AdditionalDetails'
+        accountOwner:
+            $ref: '#/components/schemas/AccountOwner'  
       example:
         requestType: 'PaymentCardVerificationRequest'
         paymentCard:
@@ -3431,6 +3435,10 @@ components:
           city: Atlanta
           postalCode: "30342"
           country: USA
+        accountOwner:
+          firstName: Pete
+          middleName: Maverick
+          lastName: Mitchell  
     PaymentCardVerificationRequest:
       title: PaymentCardVerificationRequest
       description: Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.
@@ -6954,6 +6962,28 @@ components:
           example: 'Secure3DAuthenticationResult'
       example:
         authenticationType: 'Secure3DAuthenticationResult'
+    AccountOwner:
+      description: Used for PaymentCard or PaymentToken Account Verification.
+      properties:
+        firstName:
+          description: Account Holder First Name.
+          type: string
+          maxLength: 35
+          example: John
+        middleName:
+          description: Account Holder Middle Name.
+          type: string
+          maxLength: 35
+          example: Doe
+        lastName:
+          description: Account Holder Last Name.
+          type: string
+          maxLength: 35
+          example: Doe  
+      example:
+        firstName: Pete
+        middleName: Maverick
+        lastName: Mitchell
     Secure3D10AuthenticationResult:
       description: Submit the result of the authentication managed outside of the gateway for a 3-D Secure 1.0 scheme. For more convenient usage without implementing 3-D Secure yourself see "authenticationRequest" section. DEPRECATED - use Secure3DAuthenticationResult instead
       allOf:
@@ -7650,6 +7680,34 @@ components:
         streetMatch: 'Y'
         postalCodeMatch: 'N'
         associationAvsResponse: 'Y'
+    AccountVerificationResponse:
+      description: Account Verification Response.
+      properties:
+        firstNameMatch:
+          description: 'Results of First Name Verification.'
+          type: string
+          enum: [MATCH, PARTIAL_MATCH, NO_MATCH]
+          example: 'MATCH'
+        middleNameMatch:
+          description: 'Results of Middle Name Verification.'
+          type: string
+          enum: [MATCH, PARTIAL_MATCH, NO_MATCH]
+          example: 'PARTIAL_MATCH'
+        lastNameMatch:
+          description: 'Results of Last Name Verification.'
+          type: string
+          enum: [MATCH, PARTIAL_MATCH, NO_MATCH]
+          example: 'NO_MATCH'
+        nameMatchIndicator:
+          description: 'Name Matching Indicator.'
+          type: string
+          enum: [PERFORMED, NOT_SUPPORTED, NOT_PERFORMED]
+          example: 'NOT_SUPPORTED'
+      example:
+        firstNameMatch: 'MATCH'
+        middleNameMatch: 'PARTIAL_MATCH'
+        lastNameMatch: 'NO_MATCH'
+        nameMatchIndicator: 'NOT_SUPPOTED'    
     CardholderInfoResponse:
       description: The processor Cardholder Info Response.
       properties:
@@ -8205,6 +8263,8 @@ components:
           $ref: '#/components/schemas/Basket'
         recurringPaymentDetails:
           $ref: '#/components/schemas/RecurringPaymentDetails'
+        accountOwner:
+            $ref: '#/components/schemas/AccountOwner'  
       example:
         orderId: ABC12345
         billing:
