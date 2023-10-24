@@ -3463,6 +3463,10 @@ components:
             city: Atlanta
             postalCode: "30342"
             country: USA
+          accountOwner:
+            firstName: Pete
+            middleName: Maverick
+            lastName: Mitchell
     PaymentTokenVerificationRequest:
       title: PaymentTokenVerificationRequest
       description: Used to request account verification using a payment token.
