@@ -262,6 +262,7 @@ paths:
                       birthDate: '19560121'
                       referenceNumber: '12345678'
                       accountNumber: '135246'
+                      participationId: '123456789123456789123456789123'
                     receiverInfo:
                       name: 'Abraham Receiver Lincoln'
                       streetAddress: 5565 Glenridge Connector
@@ -273,7 +274,6 @@ paths:
                       referenceNumber: '12345678'
                       accountNumber: '135246'
                       accountType: 'EMAIL'
-                      participationId: '123456789123456789123456789123'
                     paymentMethod:
                       paymentCard:
                       number: '5424180279791732'
@@ -343,6 +343,7 @@ paths:
                         birthDate: '19560121'
                         referenceNumber: '12345678'
                         accountNumber: '135246'
+                        participationId: '123456789123456789123456789123'
                       receiverInfo:
                         name: 'Abraham Receiver Lincoln'
                         streetAddress: 5565 Glenridge Connector
@@ -354,7 +355,6 @@ paths:
                         referenceNumber: '12345678'
                         accountNumber: '135246'
                         accountType: 'EMAIL'
-                        participationId: '123456789123456789123456789123'
                       paymentMethod:
                         paymentCard:
                           number: '5424180279791732'
@@ -514,6 +514,7 @@ paths:
                       birthDate: '19560121'
                       referenceNumber: '12345678'
                       accountNumber: '135246'
+                      participationId: '123456789123456789123456789123'
                     receiverInfo:
                       name: 'Abraham Receiver Lincoln'
                       streetAddress: 5565 Glenridge Connector
@@ -525,7 +526,6 @@ paths:
                       referenceNumber: '12345678'
                       accountNumber: '135246'
                       accountType: 'EMAIL'
-                      participationId: '123456789123456789123456789123'
                     paymentMethod:
                       paymentCard:
                         number: '5424180279791732'
