@@ -7705,13 +7705,13 @@ components:
         nameMatchIndicator:
           description: 'Name Matching Indicator.'
           type: string
-          enum: [PERFORMED, NOT_SUPPORTED, NOT_PERFORMED]
-          example: 'NOT_SUPPORTED'
+          enum: [PERFORMED, RTED, NOT_PERFORMED]
+          example: 'RTED'
       example:
         firstNameMatch: 'MATCH'
         middleNameMatch: 'PARTIAL_MATCH'
         lastNameMatch: 'NO_MATCH'
-        nameMatchIndicator: 'NOT_SUPPOTED'    
+        nameMatchIndicator: 'NOT_SUPPORTED'    
     CardholderInfoResponse:
       description: The processor Cardholder Info Response.
       properties:
