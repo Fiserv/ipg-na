@@ -1,4 +1,4 @@
-openapi: 3.0.2 
+openapi: 3.0.2
 #
 info:
   version: 21.2.0.20210315.001
@@ -7705,8 +7705,8 @@ components:
         nameMatchIndicator:
           description: 'Name Matching Indicator.'
           type: string
-          enum: [PERFORMED, RTED, NOT_PERFORMED]
-          example: 'RTED'
+          enum: [PERFORMED, NOT_SUPPORTED, NOT_PERFORMED]
+          example: 'NOT_SUPPORTED'
       example:
         firstNameMatch: 'MATCH'
         middleNameMatch: 'PARTIAL_MATCH'
