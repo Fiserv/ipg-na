@@ -4487,6 +4487,10 @@ components:
             $ref: '#/components/schemas/StoredCredential'
           createToken:
             $ref: '#/components/schemas/CreatePaymentToken'
+          authenticationRequest:
+            $ref: '#/components/schemas/AuthenticationRequest'
+          authenticationResult:
+            $ref: '#/components/schemas/AuthenticationResult' 
       example:
         requestType: 'PaymentCardDisbursementTransaction'
         transactionAmount:
@@ -4538,6 +4542,10 @@ components:
             $ref: '#/components/schemas/PaymentTokenPaymentMethod'
           storedCredentials:
             $ref: '#/components/schemas/StoredCredential'
+          authenticationRequest:
+            $ref: '#/components/schemas/AuthenticationRequest'
+          authenticationResult:
+            $ref: '#/components/schemas/AuthenticationResult'  
       example:
         requestType: 'PaymentTokenDisbursementTransaction'
         transactionAmount:
@@ -4674,6 +4682,10 @@ components:
             $ref: '#/components/schemas/PaymentDevicePaymentMethod'
           disbursement:
             $ref: '#/components/schemas/Disbursement'
+          authenticationRequest:
+            $ref: '#/components/schemas/AuthenticationRequest'
+          authenticationResult:
+            $ref: '#/components/schemas/AuthenticationResult'
       example:
         requestType: 'PaymentDeviceDisbursementTransaction'
         transactionAmount:
