@@ -274,13 +274,13 @@ paths:
                       referenceNumber: '12345678'
                       accountNumber: '135246'
                       accountType: 'EMAIL'
-                    paymentMethod:
-                      paymentCard:
-                      number: '5424180279791732'
-                      expiryDate:
-                        month: '12'
-                        year: '25'
-                      securityCode: '977'
+                  paymentMethod:
+                    paymentCard:
+                    number: '5424180279791732'
+                    expiryDate:
+                      month: '12'
+                      year: '25'
+                    securityCode: '977'
               PaymentTokenCreditTransaction:
                 summary: "PaymentTokenCreditTransaction"
                 value:
@@ -355,13 +355,13 @@ paths:
                         referenceNumber: '12345678'
                         accountNumber: '135246'
                         accountType: 'EMAIL'
-                      paymentMethod:
-                        paymentCard:
-                          number: '5424180279791732'
-                          expiryDate:
-                            month: '12'
-                            year: '25'
-                          securityCode: '977'
+                    paymentMethod:
+                      paymentCard:
+                        number: '5424180279791732'
+                        expiryDate:
+                          month: '12'
+                          year: '25'
+                        securityCode: '977'
               PaypalCreditTransaction:
                 summary: "PaypalCreditTransaction"
                 value:
@@ -526,13 +526,13 @@ paths:
                       referenceNumber: '12345678'
                       accountNumber: '135246'
                       accountType: 'EMAIL'
-                    paymentMethod:
-                      paymentCard:
-                        number: '5424180279791732'
-                        expiryDate:
-                          month: '12'
-                          year: '25'
-                        securityCode: '977'
+                  paymentMethod:
+                    paymentCard:
+                      number: '5424180279791732'
+                      expiryDate:
+                        month: '12'
+                        year: '25'
+                      securityCode: '977'
         description: 'Accepted request types: AliPaySaleTransaction, ChinaPnRSaleTransaction, PaymentCardCreditTransaction, PaymentCardForcedTicketTransaction, PaymentCardSaleTransaction, PaymentCardPreAuthTransaction, PaymentCardPayerAuthTransaction, PaymentCardDisbursementTransaction, PaymentTokenCreditTransaction, PaymentTokenPreAuthTransaction, PaymentTokenSaleTransaction, PaymentTokenDisbursementTransaction, PaypalCreditTransaction, SepaSaleTransaction, SepaCreditTransaction, WalletSaleTransaction, and WalletPreAuthTransaction, PaymentDeviceSaleTransaction, PaymentDevicePreAuthTransaction, PaymentDeviceCreditTransaction, PaymentDeviceDisbursementTransaction, AchPreAuthTransaction, AchSaleTransaction, AchCreditTransaction.'
         required: true
       responses:
