@@ -28,7 +28,13 @@
 	    "versionType": "major",
 	    "releaseNotesPath": "docs/release-notes/Release-Notes.md",
 	    "apiSpecFileNames": ["gateway-services"]
-	  }
+	  },
+      {
+        "version": "23.5.0",
+	    "versionType": "major",
+	    "releaseNotesPath": "docs/release-notes/Release-Notes.md",
+	    "apiSpecFileNames": ["gateway-services"]
+      }
   ],
   "featureBranches": ["develop"],
   "product": {
