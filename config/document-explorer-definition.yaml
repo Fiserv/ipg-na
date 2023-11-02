@@ -30,6 +30,28 @@
 - sections:
   - title: Getting Started
     link: docs/additionalInfo/HostedPaymentPages.md
+- sections:
+  - title: Release Notes
+    open : false
+    link: docs/release-notes/Release-Notes.md
+- sections:
+  - title: 3DSecure  
+    link: docs/3dsecure-md/3DSecure.md
+- sections:
+  - title: Digital Wallets
+    sections:
+    - title: Apple Pay
+      link: docs/schemas-md/ApplePay.md  
+    - title: Google Pay
+      link: docs/schemas-md/GooglePay.md  
+- sections:
+  - title: Additional Info
+    sections:
+    - title: Response Codes
+      link: docs/additionalInfo/ResponseCodes.md
+- sections:
+  - title: Getting Started Payment Pages
+    link: docs/additionalInfo/HostedPaymentPages.md
     sections:  
     - title: Hosted Payment Pages
       link: docs/additionalInfo/HostedPaymentPages.md
