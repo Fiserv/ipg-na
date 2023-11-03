@@ -15,15 +15,28 @@
       ]
     }
   ],
-  
+  "getStartedFilePath": "/docs/additionalInfo/HostedPaymentPages.md",
   "apiVersions": [
       {
-        "version": "1.0.0",
-        "versionType": "major",
-        "releaseNotesPath": "docs/release-notes/2022/march.md",
+        "version": "23.3.0",
+        "versionType": "minor",
+        "releaseNotesPath": "docs/release-notes/Release-Notes.md",
         "apiSpecFileNames": ["gateway-services"]
+      },
+      {
+	    "version": "23.4.0",
+	    "versionType": "minor",
+	    "releaseNotesPath": "docs/release-notes/Release-Notes.md",
+	    "apiSpecFileNames": ["gateway-services"]
+	  },
+      {
+        "version": "23.5.0",
+	    "versionType": "major",
+	    "releaseNotesPath": "docs/release-notes/Release-Notes.md",
+	    "apiSpecFileNames": ["gateway-services"]
       }
   ],
+  "featureBranches": ["develop"],
   "product": {
     "featured": true,
     "description": "Internet Payment Gateway is an application which offers Internet payment services. It gives merchants the ability to process transactions over a secure Internet connection via eCommerce enabled web sites, custom commerce applications and web browserbased solutions for Mail Order/Telephone",

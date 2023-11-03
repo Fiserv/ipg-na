@@ -104,35 +104,39 @@ x-tio-request-headers:
     discriminators:
     - in: [transactionType]
       enum: [registration]
+  PaymentsApmAction:
+    name: TryItOut-Store
+    discriminators:
+    - in: [order, industrySpecificExtensions]
 tags:
   - name: Authentication
-    description: ""
+    description: "Authentication"
   - name: Payment
-    description: ""
+    description: "Payment"
   - name: Order
-    description: ""
+    description: "Order"
   - name: Payment Schedules
-    description: ""
+    description: "Payment Schedules"
   - name: Payment URL
-    description: ""
+    description: "Payment URL"
   - name: Payment Token
-    description: ""
+    description: "Payment Token"
   - name: Verification
-    description: ""
+    description: "Verification"
   - name: Currency Conversion
-    description: ""
+    description: "Currency Conversion"
   - name: Information Lookup
-    description: ""
+    description: "Information Lookup"
   - name: Fraud Detect
-    description: ""
+    description: "Fraud Detect"
   - name: Payment Brands
-    description: ""
+    description: "Payment Brands"
   - name: Available Currencies
-    description: ""
+    description: "Available Currencies"
   - name: Available Countries
-    description: ""
+    description: "Available Countries"
   - name: Managed Redirect Url Creation
-    description: ""
+    description: "Managed Redirect Url Creation"
 paths:
   /payments:
     post:
@@ -163,7 +167,7 @@ paths:
                   requestType: PaymentCardSaleTransaction
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   paymentMethod:
                     paymentCard:
                       number: '5424180279791732'
@@ -180,7 +184,7 @@ paths:
                   requestType: PaymentCardPreAuthTransaction
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   paymentMethod:
                     paymentCard:
                       number: '5424180279791732'
@@ -198,7 +202,7 @@ paths:
                   requestType: PaymentCardCreditTransaction
                   transactionAmount:
                     total: 123.04
-                    currency: USD
+                    currency: EUR
                   paymentMethod:
                     paymentCard:
                       number: '5424180279791732'
@@ -215,7 +219,7 @@ paths:
                   requestType: PaymentCardForcedTicketTransaction
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   paymentMethod:
                     paymentCard:
                       number: '5424180279791732'
@@ -229,7 +233,7 @@ paths:
                 value:
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   requestType: PaymentCardPayerAuthTransaction
                   paymentMethod:
                     paymentCard:
@@ -243,7 +247,7 @@ paths:
                 value:
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   requestType: PaymentTokenCreditTransaction
                   paymentMethod:
                     paymentToken:
@@ -255,7 +259,7 @@ paths:
                 value:
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   requestType: PaymentTokenPreAuthTransaction
                   paymentMethod:
                     paymentToken:
@@ -270,7 +274,7 @@ paths:
                 value:
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   requestType: PaymentTokenSaleTransaction
                   paymentMethod:
                     paymentToken:
@@ -285,7 +289,7 @@ paths:
                 value:
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   requestType: PaypalCreditTransaction
                   paymentMethod:
                     payPal:
@@ -372,7 +376,7 @@ paths:
                   requestType: PaymentDevicePreAuthTransaction
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   paymentMethod:
                     paymentDevice:
                       deviceType: SWIPE
@@ -387,7 +391,7 @@ paths:
                   requestType: PaymentDeviceSaleTransaction
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   paymentMethod:
                     paymentDevice:
                       deviceType: SWIPE
@@ -402,7 +406,7 @@ paths:
                   requestType: PaymentDeviceCreditTransaction
                   transactionAmount:
                     total: 12.04
-                    currency: USD
+                    currency: EUR
                   paymentMethod:
                     paymentDevice:
                       deviceType: SWIPE
@@ -487,8 +491,8 @@ paths:
       x-tio-request-headers:
         - $ref: '#/x-tio-request-headers/PaymentsFinalizeSecureTransactionStore'
       operationId: finalizeSecureTransaction
-      summary: Update a 3DSecure or UnionPay payment and continue processing # APAC only: UnionPay
-      description: Use this to handle a 3DSecure redirect response or UnionPay authentication, updating the transaction and continuing processing.
+      summary: Update a payment and continue processing # APAC only: UnionPay
+      description: Use this to handle a redirect response, updating the transaction and continuing processing.
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
         - $ref: '#/components/parameters/ClientRequestIdParam'
@@ -537,7 +541,7 @@ paths:
       x-tio-request-headers:
         - $ref: '#/x-tio-request-headers/SecondaryPaymentsTransaction'
       summary: Perform a secondary transaction
-      description: Use this to perform a void, postAuth or return secondary transaction. Partial postAuths and returns are allowed.
+      description: Use this to perform a  subsequent transaction, e.g. void, postAuth or return.
       operationId: submitSecondaryTransaction
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
@@ -575,13 +579,108 @@ paths:
           $ref: '#/components/responses/ServerError'
         '502':
           $ref: '#/components/responses/EndpointCommunicationError'
+  /payments/apm/{transaction-id}:
+    get:
+      tags:
+        - Payment APM
+      x-proxy-name: 'Transaction Inquiry'
+      summary: Retrieve the state of a transaction.
+      description: Use this query to get the current state of an existing transaction.
+      operationId: apmTransactionInquiry
+      parameters:
+        - $ref: '#/components/parameters/ContentTypeParam'
+        - $ref: '#/components/parameters/ClientRequestIdParam'
+        - $ref: '#/components/parameters/ApiKeyParam'
+        - $ref: '#/components/parameters/TimestampParam'
+        - $ref: '#/components/parameters/MessageSignatureParam'
+        - $ref: '#/components/parameters/RegionParam'
+        - $ref: '#/components/parameters/TransactionIdParam'
+        - $ref: '#/components/parameters/StoreIdParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetTransaction'
+      responses:
+        '200':
+          description: Success response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthenticated'
+        '403':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/TransactionGatewayDeclined'
+        '415':
+          $ref: '#/components/responses/UnsupportedMediaType'
+        '422':
+          $ref: '#/components/responses/TransactionEndpointDeclined'
+        '500':
+          $ref: '#/components/responses/ServerError'
+        '502':
+          $ref: '#/components/responses/EndpointCommunicationError'
+    patch:
+      tags:
+        - Payment APM
+      x-proxy-name: 'Perform an action on an existing Transaction'
+      x-tio-request-headers:
+        - $ref: '#/x-tio-request-headers/PaymentsApmAction'
+      operationId: submitApmUpdateTransaction
+      summary: Perform action on existing APM transaction
+      description: Perform an action on an existing APM transaction.
+      parameters:
+        - $ref: '#/components/parameters/ContentTypeParam'
+        - $ref: '#/components/parameters/ClientRequestIdParam'
+        - $ref: '#/components/parameters/ApiKeyParam'
+        - $ref: '#/components/parameters/TimestampParam'
+        - $ref: '#/components/parameters/MessageSignatureParam'
+        - $ref: '#/components/parameters/RegionParam'
+        - $ref: '#/components/parameters/TransactionIdParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateTransaction'
+        required: true
+      responses:
+        '200':
+          description: Success response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthenticated'
+        '403':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/TransactionGatewayDeclined'
+        '415':
+          $ref: '#/components/responses/UnsupportedMediaType'
+        '422':
+          $ref: '#/components/responses/TransactionEndpointDeclined'
+        '500':
+          $ref: '#/components/responses/ServerError'
+        '502':
+          $ref: '#/components/responses/EndpointCommunicationError'
   /orders/{order-id}:
     post:
       tags:
         - Order
       x-proxy-name: 'Order-Based Secondary Transactions'
       summary: Perform return or postAuth secondary transactions
-      description: Use this to perform a postAuth or return secondary transaction using order ID. Partial postAuths and returns are allowed.
+      description: Use this to perform a subsequent transaction, e.g. postAuth or return using an order ID as a reference.
       operationId: submitSecondaryTransactionFromOrder
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
@@ -657,7 +756,7 @@ paths:
         - Payment Schedules
       x-proxy-name: 'Schedule Creation'
       summary: Create gateway payment schedule
-      description: Use this to create a gateway payment schedule.
+      description: Use this to create a payment schedule managed by the gateway.
       operationId: createPaymentSchedule
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
@@ -703,7 +802,7 @@ paths:
         - Payment Schedules
       x-proxy-name: 'Schedule Inquiry'
       summary: View a gateway payment schedule
-      description: Use this to view an existing gateway payment schedule.
+      description: Use this to view details of a payment schedule managed by the gateway.
       operationId: inquiryPaymentSchedule
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
@@ -736,7 +835,7 @@ paths:
         - Payment Schedules
       x-proxy-name: 'Schedule Cancel'
       summary: Cancel a gateway payment schedule
-      description: Use this to cancel an existing gateway payment schedule.
+      description: Use this to cancel a payment schedule managed by the gateway.
       operationId: cancelPaymentSchedule
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
@@ -773,7 +872,7 @@ paths:
         - Payment Schedules
       x-proxy-name: 'Schedule Update'
       summary: Update a gateway payment schedule
-      description: Use this to update a gateway payment schedule.
+      description: Use this to update a payment schedule managed by the gateway.
       operationId: updatePaymentSchedule
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
@@ -784,7 +883,7 @@ paths:
         - $ref: '#/components/parameters/RegionParam'
         - $ref: '#/components/parameters/OrderIdParam'
       requestBody:
-        $ref: '#/components/requestBodies/PaymentSchedulesRequest'
+        $ref: '#/components/requestBodies/PaymentSchedulesPatchRequest'
       responses:
         '200':
           description: Success response.
@@ -937,7 +1036,7 @@ paths:
         - Payment URL
       x-proxy-name: 'URL Creation'
       summary: Create a payment URL
-      description: Use this to generate an embedding payment link.
+      description: Use this to generate a payment link.
       operationId: createPaymentUrl
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
@@ -977,7 +1076,7 @@ paths:
         - Payment URL
       x-proxy-name: 'Delete URL'
       summary: Delete a payment URL
-      description: Use this to delete an embedding payment link.
+      description: Use this to delete a payment link.
       operationId: deletePaymentUrl
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
@@ -1097,7 +1196,7 @@ paths:
       x-proxy-name: 'Token Creation'
       operationId: createPaymentToken
       summary: Create a payment token from a payment card
-      description: Use this to create a payment token from a payment card.
+      description: Use this to create a payment token to safely store sensitive credit card information.
       parameters:
         - $ref: '#/components/parameters/ContentTypeParam'
         - $ref: '#/components/parameters/ClientRequestIdParam'
@@ -1190,11 +1289,7 @@ paths:
         - $ref: '#/components/parameters/AccessTokenParam'
         - $ref: '#/components/parameters/RegionParam'
         - $ref: '#/components/parameters/TokenIdParam'
-        - name: storeId
-          in: query
-          required: false
-          schema:
-            type: string
+        - $ref: '#/components/parameters/StoreIdParam'
       responses:
         '200':
           description: Success response.
@@ -1226,11 +1321,7 @@ paths:
         - $ref: '#/components/parameters/AccessTokenParam'
         - $ref: '#/components/parameters/RegionParam'
         - $ref: '#/components/parameters/TokenIdParam'
-        - name: storeId
-          in: query
-          required: false
-          schema:
-            type: string
+        - $ref: '#/components/parameters/StoreIdParam'
       responses:
         '200':
           description: Success response.
@@ -1439,9 +1530,7 @@ paths:
           content:
             application/json:
               schema:
-                oneOf:
-                - $ref: '#/components/schemas/DCCExchangeRateRequest'
-                - $ref: '#/components/schemas/DynamicPricingExchangeRateRequest'
+                $ref: '#/components/schemas/ExchangeRateResponse'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -1748,7 +1837,7 @@ components:
         type: string
       in: header
       required: false
-      description: Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to <a href="../docs?path=docs/additionalInfo/MessageSignature.md">How to generate a message signature</a>
+      description: Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
       x-link:
         name: "How to Create Message Signature"
         link: "https://docs.firstdata.com/org/gateway/node/394"
@@ -1950,6 +2039,13 @@ components:
             $ref: '#/components/schemas/PaymentSchedulesRequest'
       required: true
       description: 'Accepted request types: PaymentMethodPaymentSchedulesRequest and ReferencedOrderPaymentSchedulesRequest.'
+    PaymentSchedulesPatchRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PaymentSchedulesPatchRequest'
+      required: true
+      description: 'Accepted request types: PaymentMethodPaymentSchedulesPatchRequest and ReferencedOrderPaymentSchedulesPatchRequest.'
     AuthenticationVerificationRequest:
       content:
         application/json:
@@ -2041,7 +2137,7 @@ components:
                   transactionType: 'SALE'
                   transactionAmount:
                     total: 10.24
-                    currency: USD
+                    currency: EUR
                   storeId: '1109959991'
             additionalDetails:
               $ref: '#/components/schemas/AdditionalDetails'
@@ -2246,7 +2342,7 @@ components:
         nextAttemptDate: '2018-10-25'
         transactionAmount:
           total: 10.50
-          currency: USD
+          currency: EUR
         frequency:
           every: 3
           unit: DAY
@@ -2386,8 +2482,10 @@ components:
             example: 1518811817
           approvedAmount:
             $ref: '#/components/schemas/Amount'
+          transactionAmount:
+            $ref: '#/components/schemas/TransactionAmount'
           transactionStatus:
-            description: Represents the status of a transaction immediately following the original processing request. This value is not stored for the transaction and is only available in the response when the transaction is processed. TransactionStatus is not returned on either the transaction inquiry or on the order inquiry.
+            description: This field is Deprecated. Point to 'transactionResult'.
             type: string
             enum:
             - APPROVED
@@ -2396,6 +2494,17 @@ components:
             - VALIDATION_FAILED
             - PROCESSING_FAILED
             - DECLINED
+            example: APPROVED
+          transactionResult:
+            description: This is the result of the operation, unless transaction status that represent financial status of the transaction, this fields helps us to understand if the operation is successfully executed
+            type: string
+            enum:
+            - APPROVED
+            - DECLINED
+            - FAILED
+            - WAITING
+            - PARTIAL
+            - FRAUD
             example: APPROVED
           approvalCode:
             description: Shows the transaction approvalcode.
@@ -2469,8 +2578,16 @@ components:
         transactionTime: 1518811817
         approvedAmount:
           total: 10.24
-          currency: USD
+          currency: EUR
+        transactionAmount:
+          total: 10.24
+          currency: EUR
+          components:
+            subtotal: 8.00
+            localTax: 1.00
+            shipping: 1.24
         transactionStatus: APPROVED
+        transactionResult: APPROVED
         schemeTransactionId: '019078743804756'
         processor:
           responseCode: '00'
@@ -2510,29 +2627,17 @@ components:
         additionalDetails:
           $ref: '#/components/schemas/AdditionalDetails'
         creationDate:
-          description: Deprecated. Please use creationDateFormatted. This may be removed in a future release. Date recurring payment was created.
+          description: This field should contain the date when recurring payment was created. The date can either the format Tue Jul 14 13:40:26 IST 2020 or YYYY/MM/DD.
           type: string
           example: 'Tue Jul 14 13:40:26 IST 2020'
         startDate:
-          description: Deprecated. Please use startDateFormatted. This may be removed in a future release. Date of mandate signature.
+          description: In this field, the date of signature of the mandate must be in either the format Tue Jul 14 13:40:26 IST 2020 or YYYY/MM/DD.
           type: string
           example: 'Tue Jul 14 13:40:26 IST 2020'
         nextAttemptDate:
-          description: Deprecated. Please use nextAttemptDateFormatted. This may be removed in a future release. Date of next transaction process attempt.
+          description: Next transaction process attempt date should be in either the format Tue Jul 14 13:40:26 IST 2020 or YYYY/MM/DD.
           type: string
           example: 'Tue Jul 14 13:40:26 IST 2020'
-        creationDateFormatted:
-          description: Date recurring payment was created.
-          type: string
-          example: '2018-10-25'
-        startDateFormatted:
-          description: Date of mandate signature.
-          type: string
-          example: '2018-10-25'
-        nextAttemptDateFormatted:
-          description: Date of next transaction process attempt.
-          type: string
-          example: '2018-10-25'
         transactionAmount:
           $ref: '#/components/schemas/Amount'
         paymentMethodDetails:
@@ -2555,6 +2660,8 @@ components:
           example: 10
         state:
           $ref: '#/components/schemas/RecurringPaymentState'
+        additionalRecurringData:
+          $ref: '#/components/schemas/AdditionalRecurringData'
         comments:
           description: User supplied comments.
           type: string
@@ -2566,7 +2673,7 @@ components:
         startDate: '2018-10-25'
         transactionAmount:
           total: 10.24
-          currency: USD
+          currency: EUR
         frequency:
           every: 3
           unit: DAY
@@ -2635,6 +2742,67 @@ components:
         clientLocale:
           language: 'EN'
           country: USA
+    PaymentMethodPaymentSchedulesPatchRequest:
+      title: PaymentMethodPaymentSchedulesPatchRequest
+      description: Request to create a new payment schedule using a payment method.
+      allOf:
+        - $ref: '#/components/schemas/PaymentSchedulesPatchRequest'
+        - type: object
+          required:
+            - paymentMethod
+          properties:
+            paymentMethod:
+              $ref: '#/components/schemas/PaymentCardPaymentMethod'
+      example:
+        requestType: 'PaymentMethodPaymentSchedulesPatchRequest'
+        transactionAmount:
+          total: 25.24
+          currency: 'GBP'
+        nextAttemptDate: '2021-12-31'
+        frequency:
+          every: 1
+          unit: 'MONTH'
+        paymentMethod:
+          paymentCard:
+            number: '5424180279791732'
+            expiryDate:
+              month: '12'
+              year: '25'
+            securityCode: '977'
+            brand: VISA
+    ReferencedOrderPaymentSchedulesPatchRequest:
+      title: ReferencedOrderPaymentSchedulesPatchRequest
+      description: Request to create a new payment schedule using a referenced order ID.
+      allOf:
+        - $ref: '#/components/schemas/PaymentSchedulesPatchRequest'
+        - type: object
+          required:
+            - referencedOrderId
+          properties:
+            referencedOrderId:
+              description: Order ID used to create recurring payment from existing transaction.
+              type: string
+              pattern: '^(?!\s*$).+'
+              example: 'R-f9c2c198-b7cc-491a-a711-93d22fd0e589'
+      example:
+        requestType: 'ReferencedOrderPaymentSchedulesPatchRequest'
+        referencedOrderId: 'R-f9c2c198-b7cc-491a-a711-93d22fd0e589'
+        nextAttemptDate: '2021-12-31'
+        numberOfPayments: 10
+        maximumFailures: 1
+        invoiceNumber: '96126098'
+        purchaseOrderNumber: '123055342'
+        transactionOrigin: 'ECOM'
+        dynamicMerchantName: 'MyWebsite'
+        frequency:
+          every: 1
+          unit: 'MONTH'
+        transactionAmount:
+          total: 25.24
+          currency: 'GBP'
+        clientLocale:
+          language: 'EN'
+          country: USA
     PaymentSchedulesRequest:
       description: Request to create a gateway schedule. Abstract class, do not use this class directly, use one of its children.
       x-hide-model: true
@@ -2657,6 +2825,11 @@ components:
           example: '1109959991'
         startDate:
           description: Date of mandate signature.
+          type: string
+          format: date
+          example: '2018-10-25'
+        nextAttemptDate:
+          description: Date of next transaction process attempt.
           type: string
           format: date
           example: '2018-10-25'
@@ -2711,6 +2884,114 @@ components:
       example:
         requestType: 'PaymentMethodPaymentSchedulesRequest'
         startDate: '2021-12-31'
+        nextAttemptDate: '2022-10-31'
+        numberOfPayments: 10
+        maximumFailures: 1
+        invoiceNumber: '96126098'
+        purchaseOrderNumber: '123055342'
+        transactionOrigin: 'ECOM'
+        dynamicMerchantName: 'MyWebsite'
+        frequency:
+          every: 1
+          unit: 'MONTH'
+        paymentMethod:
+          paymentCard:
+            number: "5426064000424979"
+            expiryDate:
+              month: "12"
+              year: "25"
+            securityCode: "147"
+            cardFunction: "CREDIT"
+        transactionAmount:
+          total: 25.24
+          currency: 'GBP'
+        clientLocale:
+          language: 'EN'
+          country: USA
+    PaymentSchedulesPatchRequest:
+      description: Request to create a gateway schedule. Abstract class, do not use this class directly, use one of its children.
+      x-hide-model: true
+      required:
+        - requestType
+        - transactionAmount
+        - frequency
+      discriminator:
+        propertyName: requestType
+      properties:
+        requestType:
+          description: Object name of the payment schedules patch request.
+          type: string
+          example: 'PaymentMethodPaymentSchedulesPatchRequest'
+        storeId:
+          description: Store ID number.
+          type: string
+          pattern: '^[a-zA-Z0-9]+$'
+          maxLength: 20
+          example: '1109959991'
+        nextAttemptDate:
+          description: Date of next transaction process attempt.
+          type: string
+          format: date
+          example: '2022-10-25'
+        numberOfPayments:
+          description: Number of times the recurring payment will process.
+          type: integer
+          format: int32
+          minimum: 1
+          maximum: 999
+          example: 10
+        maximumFailures:
+          description: Number of failures that can be encountered before re-tries cease.
+          type: integer
+          format: int32
+          minimum: 1
+          maximum: 999
+          example: 1
+        invoiceNumber:
+          description: Invoice number.
+          type: string
+          pattern: '^[a-zA-Z0-9]+[a-zA-Z0-9\/_-]*$'
+          maxLength: 48
+          example: '96126098'
+        purchaseOrderNumber:
+          description: Purchase order number.
+          type: string
+          pattern: '^[a-zA-Z0-9]+[a-zA-Z0-9\/_-]*$'
+          maxLength: 128
+          example: '123055342'
+        transactionOrigin:
+          $ref: '#/components/schemas/TransactionOrigin'
+        dynamicMerchantName:
+          description: Dynamic merchant name for the cardholder's statement.
+          type: string
+          maxLength: 100
+          example: 'MyWebsite'
+        frequency:
+          $ref: '#/components/schemas/Frequency'
+        transactionAmount:
+          $ref: '#/components/schemas/Amount'
+        clientLocale:
+          $ref: '#/components/schemas/ClientLocale'
+        orderId:
+          description: Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).
+          type: string
+          pattern: '^[a-zA-Z0-9]+[a-zA-Z0-9\/_-]*$'
+          maxLength: 100
+          example: 'R-f9c2c198-b7cc-491a-a711-93d22fd0e589'
+        billing:
+          $ref: '#/components/schemas/Billing'
+        shipping:
+          $ref: '#/components/schemas/Shipping'
+        industrySpecificExtensions:
+          $ref: '#/components/schemas/IndustrySpecificExtensions'
+        comments:
+          description: User supplied comments.
+          type: string
+          maxLength: 1024
+          example: 'This scheduled payment series is to pay for the thing.'
+      example:
+        requestType: 'PaymentMethodPaymentSchedulesPatchRequest'
+        nextAttemptDate: '2022-10-31'
         numberOfPayments: 10
         maximumFailures: 1
         invoiceNumber: '96126098'
@@ -2854,6 +3135,8 @@ components:
           type: string
           maxLength: 20
           example: '12345500000'
+        transactionOrigin:
+          $ref: '#/components/schemas/TransactionOrigin'
       example:
         paymentCard:
           number: '4035874000424977'
@@ -3013,6 +3296,8 @@ components:
             type: string
             maxLength: 40
             example: 'lsk23532djljff3'
+        transactionOrigin:
+          $ref: '#/components/schemas/TransactionOrigin'
         additionalDetails:
           $ref: '#/components/schemas/AdditionalDetails'
       example:
@@ -3508,7 +3793,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaymentCardForcedTicketTransaction'
         paymentMethod:
           paymentCard:
@@ -3538,7 +3823,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaymentCardPayerAuthTransaction'
         paymentMethod:
           paymentCard:
@@ -3561,7 +3846,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaypalCreditTransaction'
         paymentMethod:
           payPal:
@@ -3676,7 +3961,7 @@ components:
       example:
         transactionAmount:
           total: '16.00'
-          currency: USD
+          currency: EUR
         requestType: 'AliPaySaleTransaction'
         aliPayPaymentMethod:
           paymentDataType: 'BARCODE'
@@ -3851,7 +4136,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaymentTokenCreditTransaction'
         paymentMethod:
           paymentToken:
@@ -3888,7 +4173,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaymentTokenPreAuthTransaction'
         paymentMethod:
           paymentToken:
@@ -3926,7 +4211,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaymentTokenSaleTransaction'
         paymentMethod:
           paymentToken:
@@ -3954,6 +4239,8 @@ components:
             $ref: '#/components/schemas/SplitShipment'
           settlementSplit:
             $ref: '#/components/schemas/SettlementSplit'
+          currencyConversion:
+            $ref: '#/components/schemas/CurrencyConversion'
           authenticationRequest:
             $ref: '#/components/schemas/AuthenticationRequest'
           authenticationResult:
@@ -3969,7 +4256,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaymentCardPreAuthTransaction'
         paymentMethod:
           paymentCard:
@@ -4011,7 +4298,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaymentCardSaleTransaction'
         paymentMethod:
           paymentCard:
@@ -4040,7 +4327,7 @@ components:
       example:
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         requestType: 'PaymentCardCreditTransaction'
         paymentMethod:
           paymentCard:
@@ -4074,7 +4361,7 @@ components:
         requestType: 'PaymentCardDisbursementTransaction'
         transactionAmount:
           total: '50'
-          currency: USD
+          currency: EUR
         disbursement:
           disbursementType: 'FundingTransactionType'
           senderInfo:
@@ -4125,7 +4412,7 @@ components:
         requestType: 'PaymentTokenDisbursementTransaction'
         transactionAmount:
           total: '50'
-          currency: USD
+          currency: EUR
         disbursement:
           disbursementType: 'DisbursementTransactionType'
           senderInfo:
@@ -4181,7 +4468,7 @@ components:
         requestType: 'PaymentDevicePreAuthTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         paymentMethod:
           paymentDevice:
             deviceType: 'SWIPE'
@@ -4210,7 +4497,7 @@ components:
         requestType: 'PaymentDeviceSaleTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         paymentMethod:
           paymentDevice:
             deviceType: 'SWIPE'
@@ -4234,7 +4521,7 @@ components:
         requestType: 'PaymentDeviceCreditTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         paymentMethod:
           paymentDevice:
             deviceType: 'SWIPE'
@@ -4261,7 +4548,7 @@ components:
         requestType: 'PaymentDeviceDisbursementTransaction'
         transactionAmount:
           total: '50'
-          currency: USD
+          currency: EUR
         paymentMethod:
           paymentDevice:
             deviceType: 'SWIPE'
@@ -4329,7 +4616,7 @@ components:
         requestType: 'AchPreAuthTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         paymentMethod:
           achType: 'TeleCheckICAPaymentMethod'
           routingNumber: '128367331'
@@ -4367,7 +4654,7 @@ components:
         requestType: 'AchSaleTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         paymentMethod:
           achType: 'TeleCheckICAPaymentMethod'
           routingNumber: '128367331'
@@ -4405,7 +4692,7 @@ components:
         requestType: 'AchCreditTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         paymentMethod:
           achType: 'TeleCheckICAPaymentMethod'
           routingNumber: '128367331'
@@ -4721,7 +5008,7 @@ components:
         requestType: 'PaymentCardSaleTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         paymentMethod:
           paymentCard:
             number: '5424180279791732'
@@ -4732,6 +5019,11 @@ components:
     AdditionalDetails:
       description: Merchant supplied tracking numbers.
       properties:
+        merchantParameters:
+          description: To remain compliant the custom fields are not to be used to submit credit card detail or sensitive card holder information, please use the designated fields defined by the Gateway for this purpose.
+          type: string
+          additionalProperties:
+            type: string
         comments:
           description: Comments for the payment.
           type: string
@@ -4788,7 +5080,7 @@ components:
               locale: 'de-DE'
             - type: 'merchant'
               locale: 'en'
-              linewidth: 48
+              linewidth: 32
         scaExemptionType:
           description: Strong customer authentication exemption type indicator.
           type: string
@@ -4880,11 +5172,13 @@ components:
             $ref: '#/components/schemas/SoftDescriptor'
           parDataRequested:
             $ref: '#/components/schemas/PaymentAccountReferenceFlag'
+          currencyConversion:
+            $ref: '#/components/schemas/CurrencyConversion'
       example:
         requestType: 'PostAuthTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         splitShipment:
           totalCount: 1
           finalShipment: true
@@ -4903,7 +5197,7 @@ components:
         requestType: 'AchPostAuthTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
     ReturnTransaction:
       title: ReturnTransaction
       description: Request to perform return transaction.
@@ -4925,7 +5219,7 @@ components:
         requestType: 'ReturnTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
         currencyConversion:
           conversionType: 'Dcc'
           inquiryRateId: '123456'
@@ -4944,7 +5238,7 @@ components:
         requestType: 'AchReturnTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
     KoreanPaymentServiceReturnTransaction:
       title: KoreanPaymentServiceReturnTransaction
       description: Request to perform Korean Payment Service return transaction.
@@ -4989,6 +5283,60 @@ components:
       example:
         requestType: 'VoidPreAuthTransactions'
         comments: 'This is a comment'
+    GetTransaction:
+      title: GetTransaction
+      description: Request to get an existing APM transaction.
+      allOf:
+        - $ref: '#/components/schemas/Action'
+        - type: object
+          properties:
+            integrationData:
+              description: 'Integration data to provide information from the application.'
+              type: array
+              items:
+                $ref: '#/components/schemas/IntegrationData'
+            consumerData:
+              description: 'Integration data provided by the payer.'
+              type: array
+              items:
+                $ref: '#/components/schemas/ConsumerData'
+      example:
+        requestType: GetTransaction
+        integrationData:
+          - item: 'RETURN_URL'
+            value: 'https://clientdomain.com/orderDetails'
+          - item: 'PAYER_IP'
+            value: '1.1.1.1'
+        consumerData:
+          - item: 'BLIK_CODE'
+            value: '777153'
+    UpdateTransaction:
+      title: UpdateTransaction
+      description: Request to update an existing APM transaction to provide additional information.
+      allOf:
+        - $ref: '#/components/schemas/Action'
+        - type: object
+          properties:
+            integrationData:
+              description: 'Integration data to provide information from the application.'
+              type: array
+              items:
+                $ref: '#/components/schemas/IntegrationData'
+            consumerData:
+              description: 'Integration data provided by the payer.'
+              type: array
+              items:
+                $ref: '#/components/schemas/ConsumerData'
+      example:
+        requestType: UpdateTransaction
+        integrationData:
+          - item: 'RETURN_URL'
+            value: 'https://clientdomain.com/orderDetails'
+          - item: 'PAYER_IP'
+            value: '1.1.1.1'
+        consumerData:
+          - item: 'BLIK_CODE'
+            value: '777153'
     AchVoidTransaction: # NA only
       title: AchVoidTransaction
       description: Request to perform ACH void transaction.
@@ -5004,7 +5352,7 @@ components:
         requestType: 'AchVoidTransaction'
         transactionAmount:
           total: 12.04
-          currency: USD
+          currency: EUR
     PreAuthSecondaryTransaction:
       title: PreAuthSecondaryTransaction
       description: Request to perform pre-auth incremental secondary transaction without providing credit card information.
@@ -5020,11 +5368,13 @@ components:
             $ref: '#/components/schemas/DecrementalPreAuthFlag'
           incrementalFlag:
             $ref: '#/components/schemas/IncrementalPreAuthFlag'
+          currencyConversion:
+            $ref: '#/components/schemas/CurrencyConversion'
       example:
         requestType: 'PreAuthSecondaryTransaction'
         transactionAmount:
           total: '5.00'
-          currency: USD
+          currency: EUR
         decrementalFlag: false
         incrementalFlag: false
     SecondaryTransaction:
@@ -5059,7 +5409,29 @@ components:
         requestType: 'ReturnTransaction'
         transactionAmount:
           total: 3.00
-          currency: USD
+          currency: EUR
+    Action:
+      description: Model for financial actions. Abstract class, do not use this class directly, use one of its children.
+      x-hide-model: true
+      required:
+        - requestType
+      discriminator:
+        propertyName: requestType
+        mapping:
+          GetTransaction: '#/components/schemas/GetTransaction'
+          UpdateTransaction: '#/components/schemas/UpdateTransaction'
+      properties:
+        requestType:
+          description: Object name of the action request.
+          type: string
+          example: 'UpdateTransaction'
+        comments:
+          description: Comment for the action.
+          type: string
+          example: 'This is a comment'
+      example:
+        requestType: 'UpdateTransaction'
+        comments: 'This is a comment'
     SplitShipment:
       description: Split-shipment related information, in order to reuse the same authorization.
       properties:
@@ -5271,12 +5643,34 @@ components:
           description: ISO 4217 currency code.
           type: string
           pattern: '([A-Z]{3})|([0-9]{3})'
-          example: USD
+          example: EUR
         components:
           $ref: '#/components/schemas/AmountComponents'
       example:
         total: 10.24
-        currency: USD
+        currency: EUR
+        components:
+          subtotal: 8.00
+          localTax: 1.00
+          shipping: 1.24
+    TransactionAmount:
+      description: Amount of the transaction.
+      properties:
+        total:
+          description: Sub component values must add up to total amount.
+          type: number
+          minimum: 0
+          example: 10.24
+        currency:
+          description: ISO 4217 currency code.
+          type: string
+          pattern: '([A-Z]{3})|([0-9]{3})'
+          example: EUR
+        components:
+          $ref: '#/components/schemas/AmountComponents'
+      example:
+        total: 10.24
+        currency: EUR
         components:
           subtotal: 8.00
           localTax: 1.00
@@ -5373,10 +5767,12 @@ components:
               type: string
               enum:
                 - BLIK
+                - E-TRANSFER
                 - NATWEST_PAYIT
+                - PAYPAL
                 - POSTFINANCE_CARD
                 - POSTFINANCE_EF
-                - PAYPAL
+                - SAMSUNG_PAY
             paymentToken:
               description: 'Only applicable for type: PAYPAL. Token/HostedDataId that has been created for the user account.'
               type: string
@@ -5421,6 +5817,7 @@ components:
       description: Type of integration data item.
       type: string
       enum:
+        - ENDPOINT_REFERENCE_NUMBER
         - FAILURE_RETURN_URL
         - PAYER_IP
         - RETURN_URL
@@ -5430,7 +5827,10 @@ components:
       description: Type of consumer data item.
       type: string
       enum:
+        - ACCOUNT_IDENTIFIER
         - BLIK_CODE
+        - EMAIL_ADDRESS
+        - ETRANSFER_CHANNEL
       example: 'BLIK_CODE'
     RequiredActions:
       description: Provides details which actions need to be performed to fulfill requirements of integration data.
@@ -5463,6 +5863,11 @@ components:
           description: Key for required data item.
           type: string
           maxLength: 2048
+        options:
+          description: Provides for the consumer data possible options to select a value from.
+          type: array
+          items:
+            $ref: '#/components/schemas/ApmOption'
       example:
         hint: 'Your 6-digit Code will be provided in your mobile application'
         validationExpression: '^\\d{6}$'
@@ -5482,17 +5887,47 @@ components:
       example:
         hint: 'Payment requires the user agent information on the browser/device.'
         key: USER_AGENT
+    ApmOption:
+      description: Provide details for a consumer data option.
+      type: object
+      properties:
+        displayName:
+          description: Name of the option.
+          type: string
+          pattern: '[A-Za-z0-9\s]{1,50}'
+          example: First National Bank
+        iconUrl:
+          description: URL to the logo used for the option
+          type: string
+          format: uri
+          maxLength: 2048
+          example: https://www.ipg-online.com/connect/bankLogo.png
+        id:
+          description: Unique identifier to be sent back in the response, if this option has been chosen.
+          type: string
+          pattern: '[A-Za-z0-9]{1,50}'
+          example: fnsTknBFirstNationalBank
+        groupName:
+          description: Options can be grouped via this name.
+          type: string
+          pattern: '[A-Za-z0-9]{1,50}'
+          example: TokenBanking
+      example:
+        displayName: First National Bank
+        iconUrl: https://www.ipg-online.com/connect/bankLogo.png
+        value: fnsTknBFirstNationalBank
+        groupName: TokenBanking
     RequiredRedirectionData:
       description: Redirection details provided to the payer e.g. an external URL to complete processing on the web page of the authorisation system.
       type: object
       required:
-        - url
+        - target
       properties:
-        url:
-          description: Redirection URL.
+        target:
+          description: 'Redirection URL or just "SDK".'
           type: string
           maxLength: 2048
-        headerParameters:
+        parameters:
           description: Redirection header parameters details.
           $ref: '#/components/schemas/AdditionalParameters'
         method:
@@ -5872,6 +6307,8 @@ components:
           $ref: '#/components/schemas/PaymentCard'
         paymentMethodType:
           $ref: '#/components/schemas/PaymentMethodType'
+        paymentMethodBrand:
+          $ref: '#/components/schemas/PaymentMethodBrand'
       example:
         paymentCard:
           number: '5424180279791732'
@@ -5880,6 +6317,7 @@ components:
             year: '25'
           securityCode: '977'
         paymentMethodType: 'PAYMENT_CARD'
+        paymentMethodBrand: 'APPLEPAY'
     PaymentMethodType:
       description: Type of payment method.
       type: string
@@ -5898,6 +6336,7 @@ components:
       - DEBITDE
       - EMI
       - EPS
+      - E-TRANSFER
       - GIROPAY
       - IDEAL
       - INDIAWALLET
@@ -5914,6 +6353,7 @@ components:
       - POSTFINANCE_CARD
       - POSTFINANCE_EF
       - PRZELEWY24
+      - SAMSUNG_PAY
       - SAFETYPAY
       - SEPA
       - SOFORT
@@ -5924,6 +6364,366 @@ components:
       - WECHAT
       - WECHAT_DOMESTIC
       example: 'DEBITDE'
+    PaymentMethodBrand:
+      description: A list of all Payment Method Brands.
+      type: string
+      enum:
+        - AB_BANK_RMS
+        - ACB_RMS
+        - ADANCARD
+        - AFFIN_BANK_RMS
+        - AGRI_BANK_RMS
+        - AGRO_BANK_RMS
+        - ALIPAY
+        - ALIPAY_CHINAPNR
+        - ALIPAY_PAYSECURE_US
+        - ALIPAY_PLUS_APM_NG
+        - ALIPAY_HK_QFPAY
+        - ALIPAY_CN_QFPAY
+        - ALIPAY_SG_QFPAY
+        - WECHATPAY_SG_QFPAY
+        - GRABPAY_SG_QFPAY
+        - PAYNOW_SG_QFPAY
+        - ALIPAY_RMS
+        - ALLIANCE_BANK_RMS
+        - AMEX
+        - AM_ONLINE_RMS
+        - APAC_DIGITALPAYMENTS
+        - APLA
+        - APPLEPAY
+        - ARGENCARD
+        - ASIAN_APM
+        - ASTROPAY_CARD
+        - ASTROPAY_DIRECT
+        - ATMVA_RMS
+        - AUTOMATICA
+        - AXIS
+        - AXS_KIOSK_RMS
+        - BACA_BANK_RMS
+        - BANAMEX
+        - BANCAT
+        - BANCODOBRASIL
+        - BANCOLOMBIA
+        - BANCOMER
+        - BANGKOK_BANK_RMS
+        - BANKTRANSFER
+        - BANK_ISLAM_RMS
+        - BANK_MUAMALAT_RMS
+        - BANK_OF_AYUDHYA_RMS
+        - BANK_RAKYAT_RMS
+        - BAOVIET_BANK_RMS
+        - BBPS
+        - BBVA_CUPON
+        - BCMC
+        - BCMC_APM
+        - BENEFICIOS
+        - BIDV_RMS
+        - BITPAY
+        - BLIK
+        - BLIK_APM_NG
+        - BOLETO
+        - BOLETO_PAYMENT
+        - BOOST_RMS
+        - BRADESCO
+        - BTF_SOCIAL
+        - BUERGEL
+        - CABAL
+        - CABAL_ARGENTINA
+        - CABAL_C_L
+        - CABLEVISION
+        - CALDEN_AGR
+        - CALDEN_MC
+        - CAP_APM_NG
+        - CARD
+        - CARDCRED
+        - CARDLESSEMI
+        - CARDRED
+        - CARTE_BANCAIRE
+        - CASH
+        - CENCOSUD_MAS
+        - CENTROCARD
+        - CETELEM
+        - CFSA
+        - CIMB_CLICKS_RMS
+        - CLARIN_365
+        - CLIPER
+        - CLUB_DEL_ESTE
+        - CLUB_ESTE
+        - CLUB_LA_NACION
+        - CLUB_L_G
+        - COBROEXPRESS
+        - COMAHUE
+        - COMPRAS_NQN
+        - CONECS
+        - CONFIABLE
+        - CONSUMAX
+        - COOPEPLUS
+        - CREDENCIAL
+        - CREDICASH
+        - CREDIFE
+        - CREDIGUIA
+        - CREDIMAS
+        - CREDIMAZ
+        - CREDIQUEN
+        - CREDISI
+        - CREDI_AL
+        - CRED_MOVIL
+        - CTCILS_GC
+        - CUENTA_DNI
+        - CUP
+        - CUPON
+        - CUPONSTAR
+        - CUP_CHINAPNR
+        - C_REGALO
+        - DANSKEBANK
+        - DATA
+        - DATA2000
+        - DEBITDE
+        - DEBITDE_EAPS
+        - DEBITDE_ELV
+        - DEBITDE_GIRO
+        - DINACARD
+        - DINERSCLUB
+        - DIRECTA
+        - DIRECT_DEBIT_APM
+        - DIREKT
+        - DONGA_BANK_RMS
+        - DPAY
+        - DRAGONPAY_RMS
+        - DUITNOW
+        - DUMBDUMMY
+        - EDENRED
+        - EFECTIVA_M
+        - EFECTY
+        - EFTPOS
+        - ELEBAR
+        - ELO
+        - EME
+        - ENETS_DBS_RMS
+        - ENETS_OCBC_RMS
+        - ENETS_SCB_RMS
+        - ENETS_UOB_RMS
+        - ENTERCASH
+        - EPS
+        - ESUN_ATM_RMS
+        - ETRANSFER_APM_NG
+        - EXCL_CARD
+        - EXIM_BANK_RMS
+        - FAB_PAYIT_APM_NG
+        - FALABELLA_CMR
+        - FAVACARD
+        - FIEL
+        - FINANYA
+        - FINLANDONLINEBANKING
+        - FPS
+        - FULLCARD
+        - GC_CENCOSUD
+        - GENIAL
+        - GIFT_CARD
+        - GIROPAY
+        - GIROPAY_APM
+        - GLOBAL_BLUE
+        - GLOBAL_RED
+        - GOOGLEPAY
+        - GP_BANK_RMS
+        - GRABPAY
+        - GRABPAY_RMS
+        - GROUPON
+        - GRUPAR
+        - GRUPARCTDO
+        - G_PASEOS
+        - HANDELSBANKEN
+        - HD_BANK_RMS
+        - HELM
+        - HIPERCARD
+        - HLB_CONNECT_RMS
+        - HOGARNET
+        - HSBC_BANK_RMS
+        - HUILEN
+        - IDEAL
+        - IDEAL_APM
+        - IKEA
+        - INDIAWALLET
+        - INSTANTTRANSFER
+        - INTERNATIONALPAYOUT
+        - IRED
+        - ISLA_CARD
+        - ITALCRED
+        - ITAU_BRAZIL
+        - ITAU_CHILE
+        - JCB
+        - JERARQUICOS
+        - KADICARD
+        - KASIKORN_PAYPLUS_RMS
+        - KLARNA
+        - KPS
+        - KRUNG_THAI_BANK_RMS
+        - KUWAIT_FINANACE_RMS
+        - LASER
+        - LA_RED
+        - LA_VOZ
+        - LA_ZONAL
+        - LIDER
+        - LOS_ANDES
+        - LVPB_BANK_RMS
+        - MAESTRO
+        - MAGENTA
+        - MARITIME_BANK_RMS
+        - MASTERCARD
+        - MASTERPASS
+        - MAT_VOUCHER
+        - MAXIULTRA
+        - MAYBANK_QRPAY_RMS
+        - MAYBANK_RMS
+        - MB_BANK_RMS
+        - MC_BANCOR
+        - MEBNA
+        - MENDOZA_PS
+        - MEXICOLOCAL
+        - MILENIA
+        - MIRA
+        - MI_RENAULT
+        - MOBILETOPUP
+        - MOBILE_PAY_APM_NG
+        - MUDON
+        - MULTIBANCO
+        - MUSICRED
+        - MUTUAL_TAIS
+        - MYBANK
+        - NAMA_BANK_RMS
+        - NARANJA
+        - NATIVA
+        - NATIVA_MC
+        - NATWEST_PAYIT_APM_NG
+        - NAVI_BANK_RMS
+        - NETBANKING
+        - NEVADA
+        - NEWRED
+        - NOA_EXPRESS
+        - NORDEA
+        - NSCARD
+        - OCBC_BANK_RMS
+        - OCEAN_BANK_RMS
+        - OHGIFTCARD
+        - OPENCARD
+        - OSUUSPANKKI
+        - OXXO
+        - OXXO_CASH
+        - PAGOFACIL
+        - PATAGONIA365
+        - PAYBYBANK
+        - PAYCONIQ_APM_NG
+        - PAYLATER
+        - PAYNOW
+        - PAYNOW_RMS
+        - PAYPAL
+        - PAYPAL_APM_NG
+        - PAYSAFECARD
+        - PB_EBANK_RMS
+        - PERSONALPIN
+        - PG_BANK_RMS
+        - PHUONGDONG_RMS
+        - PIX_PAYMENT
+        - PLATINO
+        - PLAYP_CARD
+        - POLI
+        - POSTFINANCE_CARD_APM_NG
+        - POSTFINANCE_EF_APM_NG
+        - PREMIER
+        - PRIMICIA
+        - PRISMA_VALE
+        - PROCAMPO
+        - PRZELEWY24
+        - PUGGLEPAY
+        - PYME_NACION
+        - QIDA
+        - QIWI
+        - RAPICLUB
+        - RAPIPAGO
+        - RED_BENEF
+        - RED_IN
+        - RHB_NOW_RMS
+        - RIO_NEGRO
+        - RIPSA
+        - RUPAY
+        - SACOM_BANK_RMS
+        - SAFETYPAY
+        - SAIGON_BANK_RMS
+        - SAIGON_HANOI_RMS
+        - SAMSUNG_PAY
+        - SAM_KIOSK_RMS
+        - SANTANDER
+        - SANTANDER_CASH
+        - SAN_JUAN
+        - SAPUCAY
+        - SBPS_OTHER_PAYMENTS
+        - SEAA_BANK_RMS
+        - SEPAPAYOUT
+        - SERVFINANC
+        - SERVICLUB
+        - SHELL_LATAM
+        - SHOPEEPAY_RMS
+        - SIAM_COMMERCIAL_RMS
+        - SIDECREER
+        - SIMPANANNASIONAL_RMS
+        - SKRILL
+        - SOFORT
+        - SOFORT_APM
+        - SOMOS_RIVER
+        - SOROCRED
+        - SOYRECOLETA
+        - SOY_NORTE
+        - SOY_SOLAR
+        - SOY_TIGRE
+        - STAND_CHART_BANK_RMS
+        - SU_CREDITO
+        - SWISH_APM_NG
+        - TARJETA_SHOPPING
+        - TARJETA_SOL
+        - TARJ_LOCAL
+        - TARJ_PRIVAD
+        - TCI
+        - TC_GRUPO
+        - TECHCOM_BANK_RMS
+        - TELECHECK
+        - TELEINGRESO
+        - TERRICLUB
+        - TIENPHONG_BANK_RMS
+        - TITANIO
+        - TJ_VERDE
+        - TKT_NACION
+        - TNG_EWALLET_RMS
+        - TOKEN_BANKING_APM_NG
+        - TRUSTLY
+        - TRUSTPAY
+        - TUYA
+        - T_CENCOSUD
+        - T_CIUDADANA
+        - T_FARO
+        - ULTRA
+        - UNICA
+        - UNIRED
+        - UOB_BANK_RMS
+        - UPO_PAYMENT_RMS
+        - VIB_RMS
+        - VIETA_BANK_RMS
+        - VIETCOM_BANK_RMS
+        - VIETIN_BANK_RMS
+        - VIP
+        - VIPPS_APM_NG
+        - VISA
+        - VOUCHER
+        - VOUCHER_TUR
+        - VP_BANK_RMS
+        - VYCARD
+        - WECHATPAY_QFPAY
+        - WECHATPAY_RMS
+        - WECHAT_APM
+        - WECHAT_CHINAPNR
+        - WECHAT_OCEAN
+        - WECHAT_PAY_APM_NG
+        - ZIMPLER
+      example: 'GOOGLEPAY'
     PaymentCard:
       description: Payment card model.
       required:
@@ -7259,6 +8059,8 @@ components:
           $ref: '#/components/schemas/Billing'
         shipping:
           $ref: '#/components/schemas/Shipping'
+        serviceLocation:
+          $ref: '#/components/schemas/ServiceLocation'
         industrySpecificExtensions:
           $ref: '#/components/schemas/IndustrySpecificExtensions'
         purchaseCard:
@@ -7283,6 +8085,8 @@ components:
           $ref: '#/components/schemas/ClientLocale'
         basket:
           $ref: '#/components/schemas/Basket'
+        recurringPaymentDetails:
+          $ref: '#/components/schemas/RecurringPaymentDetails'
       example:
         orderId: ABC12345
         billing:
@@ -7391,6 +8195,35 @@ components:
           region: Georgia
           postalCode: "30303"
           country: USA
+    ServiceLocation:
+      description: 'Merchant service location details.'
+      type: object
+      properties:
+        city:
+          description: City or locality.
+          type: string
+          maxLength: 50
+          example: 'Sandy Springs'
+        state:
+          description: 2 or 3 chars ISO state code, like NA is ISO Code for New Hampshire state in USA.
+          type: string
+          maxLength: 3
+          example: 'NH'
+        zip:
+          description: ZIP code or postal code.
+          type: string
+          maxLength: 12
+          example: '30303'
+        country:
+          description: 'ISO-3166-1  ALPHA-2, ALPHA-3, numeric or full country name.'
+          type: string
+          maxLength: 32
+          example: USA
+      example:
+        city: 'Sandy Springs'
+        state: 'NH'
+        zip: "30303"
+        country: USA
     Address:
       description: 'Address information that is passed to the issuer (it may appear on the cardholder’s statement) or if merchant wants to pass information that differs from the information stored on our master file.'
       properties:
@@ -7454,7 +8287,7 @@ components:
           description: The line width of the receipt. Default will be 32 characters.
           type: integer
           default: 32
-          example: 48
+          example: 32
       example:
         type: 'merchant'
         locale: 'de'
@@ -7597,12 +8430,13 @@ components:
           - CARDHOLDER
           example: 'MERCHANT'
         indicatorSubcategory:
-          description: For initiator as CARDHOLDER- CREDENTIAL_ON_FILE_FIRST, STANDING_ORDER, SUBSCRIPTION, INSTALLMENT are the valid values of indicatorSubcatogory.
+          description: For initiator as CARDHOLDER- CREDENTIAL_ON_FILE_FIRST, CREDENTIAL_ON_FILE_SUBSEQUENT, STANDING_ORDER, SUBSCRIPTION, INSTALLMENT are the valid values of indicatorSubcatogory.
                        |For initiator as MERCHANT- UNSCHEDULED_CREDENTIAL_ON_FILE, STANDING_ORDER, SUBSCRIPTION, INSTALLMENT, PARTIAL_SHIPMENT, DELAYED_CHARGE, NO_SHOW_CHARGE, RESUBMISSION are the valid values as indicatorSubcategory.
                        |Not valid values will be ignored.
           type: string
           enum:
           - CREDENTIAL_ON_FILE_FIRST
+          - CREDENTIAL_ON_FILE_SUBSEQUENT
           - UNSCHEDULED_CREDENTIAL_ON_FILE
           - STANDING_ORDER
           - SUBSCRIPTION
@@ -7974,6 +8808,24 @@ components:
           description: Indicates whether the payment has been chosen as revolving type.
           type: boolean
           example: true
+    RecurringDetails:
+      description: Indicates the options for revolving payment.
+      properties:
+        startDate:
+          description: PLACEHOLDER
+          type: string
+          format: date
+          example: 2022-08-25
+        frequency:
+          $ref: '#/components/schemas/Frequency'
+        numberOfPayments:
+          description: Indicates the amount of recurring payments left in the cycle.
+          type: number
+          example: 100
+        maximumFailures:
+          description: Indicates how many times the payment can fail.
+          type: number
+          example: 1
     StandInDetails:
       description: Indicates standin transaction.
       required:
@@ -8012,7 +8864,7 @@ components:
         frequency:
           description: Indicates frequency of the standin instruction debit.
           type: string
-          enum: [WEEKLY, FORTNIGHTLY,MONTHLY,QUARTERLY,HALFYEARLY,YEARLY,UNSCHEDULED]
+          enum: [DAILY, TWICEWEEKLY, WEEKLY, TENDAYS, FORTNIGHTLY, MONTHLY, EVERYTWOMONTHS, TRIMESTER, QUARTERLY, HALFYEARLY, YEARLY, UNSCHEDULED]
           example: 'MONTHLY'
       example:
         standInType: 'FIXED_AMOUNT'
@@ -8258,12 +9110,14 @@ components:
           $ref: '#/components/schemas/RevolvingOptions'
         installmentOptions:
           $ref: '#/components/schemas/InstallmentOptions'
+        recurringDetails:
+          $ref: '#/components/schemas/RecurringDetails'
         basket:
           $ref: '#/components/schemas/Basket'
       example:
         transactionAmount:
           total: 42.42
-          currency: USD
+          currency: EUR
         transactionType: 'SALE'
         transactionNotificationURL: 'https://showmethepaymentresult.com'
         expiration: 4102358400
@@ -8324,7 +9178,7 @@ components:
           description: The currency of the original transaction.
           type: string
           pattern: '([A-Z]{3})|([0-9]{3})'
-          example: USD
+          example: EUR
         quantity:
           description: The unit in which the product is sold (e.g. litre, kilogram, etc). Leave empty if the product is sold as a complete unit.
           type: number
@@ -8366,21 +9220,23 @@ components:
           format: int64
           example: 4102358400
         merchantTransactionId:
-            description: The unique merchant transaction ID from the request, if supplied.
-            type: string
-            maxLength: 40
-            example: 'lsk23532djljff3'
+          description: The unique merchant transaction ID from the request, if supplied.
+          type: string
+          maxLength: 40
+          example: 'lsk23532djljff3'
         orderId:
-            type: string
-            description: Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).
-            example: '123456'
+          type: string
+          description: Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).
+          example: '123456'
         requestTime:
-            description: The transaction time in seconds since epoch.
-            type: integer
-            format: int64
-            example: 1518811817
+          description: The transaction time in seconds since epoch.
+          type: integer
+          format: int64
+          example: 1518811817
         status:
           $ref: '#/components/schemas/PaymentUrlStatus'
+        recurringPaymentDetails:
+          $ref: '#/components/schemas/RecurringPaymentDetails'
     PaymentUrlStatus:
       description: The status of payment URL.
       type: string
@@ -8593,11 +9449,11 @@ components:
               description: The currency code to convert for dynamic pricing in either numeric or alphabetic ISO 4217 currency code format.
               maxLength: 3
               pattern: '([A-Z]{3})|([0-9]{3})'
-              example: USD
+              example: EUR
       example:
         requestType: 'DynamicPricingExchangeRateRequest'
         baseAmount: 12.32
-        foreignCurrency: USD
+        foreignCurrency: EUR
     Dcc:
       description: Request to perform a dynamic pricing exchange rate inquiry.
       allOf:
@@ -9435,7 +10291,7 @@ components:
         clientRequestId: 30dd879c-ee2f-11db-8314-0800200c9a66
         apiTraceId: rrt-0bd552c12342d3448-b-ea-1142-12938318-7
         currencies:
-          - literalCurrencyCode: USD
+          - literalCurrencyCode: EUR
             numericCurrencyCode: 840
             decimalPlaces: 2
             defaultCurrency: true
@@ -9512,7 +10368,7 @@ components:
           description: The currency of the original transaction.
           type: string
           pattern: '([A-Z]{3})|([0-9]{3})'
-          example: USD
+          example: EUR
         customer:
           $ref: '#/components/schemas/Customer'
         billingAddress:
@@ -9538,7 +10394,7 @@ components:
         originalTransactionType: transaction/purchase
         originalTransactionId: fraudFAPI1231231
         amount: '1100'
-        currencyCode: USD
+        currencyCode: EUR
         customer:
           id: 125Xasdf57D
           startDate: '2017-01-04'
@@ -10139,7 +10995,7 @@ components:
               name: 'The Art of Computer Programming'
               quantity: 'litre'
               unit: '1'
-              unitPrice: '{"value": 7300, "currency": "USD"}'
+              unitPrice: '{"value": 7300, "currency": "EUR"}'
               categories: [["Books", "Computers & Technology", "Programming"], ["Books", "Text Books", "Computer Science"]]
               detailsUrl: 'https://mystore.domain/product/PRODCODE1'
               userDefined:
@@ -10168,7 +11024,7 @@ components:
             name: 'The Art of Computer Programming'
             quantity: 'litre'
             unit: "10.23"
-            unitPrice: '{"value": 7300, "currency": "USD"}'
+            unitPrice: '{"value": 7300, "currency": "EUR"}'
             categories: [["Books", "Computers & Technology", "Programming"], ["Books", "Text Books", "Computer Science"]]
             detailsUrl: 'https://mystore.domain/product/PRODCODE1'
             userDefined:
@@ -10446,7 +11302,7 @@ components:
         unitPrice:
           description: The price per unit.
           type: string
-          example: '{"value": 7300, "currency": "USD"}'
+          example: '{"value": 7300, "currency": "EUR"}'
         categories:
           description: The categories that this product belongs to.
           type: array
@@ -10474,7 +11330,7 @@ components:
         name: 'The Art of Computer Programming'
         quantity: 'litre'
         unit: "10.23"
-        unitPrice: '{"value": 7300, "currency": "USD"}'
+        unitPrice: '{"value": 7300, "currency": "EUR"}'
         categories: [["Books", "Computers & Technology", "Programming"], ["Books", "Text Books", "Computer Science"]]
         detailsUrl: 'https://mystore.domain/product/PRODCODE1'
         userDefined:
@@ -11400,6 +12256,85 @@ components:
       description: skip TRA exemption for the transaction
       type: boolean
       default: false
+    PaymentAdditionalAttributes:
+      description: 'Payment specific optional attributes for pass through to respective systems'
+      type: object
+      properties:
+        idealIssuerID:
+          description:
+             IDEAL issuing bank SWIFT/BIC code for IDEAL_APM transaction type
+          type: string
+          enum:
+            - 'ABNANL2A'
+            - 'INGBNL2A'
+            - 'SNSBNL2A'
+            - 'FVLBNL22'
+            - 'TRIONL2U'
+            - 'KNABNL2H'
+            - 'RABONL2U'
+            - 'RBRBNL21'
+            - 'ASNBNL21'
+            - 'BUNQNL2A'
+            - 'HANDNL2A'
+            - 'MOYONL21'
+            - 'REVOLT21'
+          example: 'ABNANL2A'
+        przelewy24TermsAccepted:
+          description:
+             Specifies whether the GDPR page is displayed before the payment page and terms accepted flag for PRZELEWY24 payment method
+             0 - The GDPR page is shown
+             1 - The GDPR page is not shown
+          type: string
+          enum:
+            - '0'
+            - '1'
+          default: '0'
+          example: '0'
+        przelewy24Method:
+          description:
+             Terms accepted flag for PRZELEWY24 payment method
+          type: string
+          maxLength: 8
+          example: 'DIRECT'
+        trustlyBeneficiaryId:
+          description:
+             Uniquely identifying the ultimate beneficiary for TRUSTLY payment method
+          type: string
+          maxLength: 256
+        trustlyBeneficiaryName:
+          description:
+             Beneficiary's full name for TRUSTLY payment method
+          type: string
+          maxLength: 256
+          example: 'John Doe'
+        trustlyBeneficiaryCountryCode:
+          description:
+             Beneficiary's country in two letter ISO Alpha code of residence for TRUSTLY payment method
+          type: object
+          properties:
+            iso31661Alpha2:
+              $ref: '#/components/schemas/iso31661Alpha2Codes'
+          example: 'ES'
+        trustlyBeneficiaryAddress:
+          description:
+             Beneficiary's full name for TRUSTLY payment method
+          type: string
+          maxLength: 256
+          example: 'Main street 1, 12345, Barcelona'
+        safetyPayTimeout:
+          description:
+             Timeout for SAFETYPAY payment method in minutes
+          type: integer
+          format: int32
+          example: 2160
+        safetyPayPaymentMethod:
+          description:
+             Payment Method for SAFETYPAY payment method
+          type: string
+          enum:
+            - 'CASH'
+            - 'ONLINE'
+          example: 'CASH'
     ManagedRedirectPrimaryRequest:
       description: Request to generate an embedded payment link for Managed redirect.
       type: object
@@ -11431,6 +12366,8 @@ components:
           $ref: '#/components/schemas/Order'
         redirectAttributes:
           $ref: '#/components/schemas/RedirectAttributes'
+        paymentAttributes:
+          $ref: '#/components/schemas/PaymentAdditionalAttributes'
     PaymentCardManagedRedirectRequest:
       description: Request to create Managed Redirect sale transaction using payment card.
       allOf:
@@ -11613,7 +12550,7 @@ components:
         literalCurrencyCode:
           description: This field contains the ISO alpha currency code.
           type: string
-          example: USD
+          example: EUR
         numericCurrencyCode:
           description: This field contains the ISO numeric currecy code.
           type: string
@@ -11628,7 +12565,7 @@ components:
           type: boolean
           example: true
       example:
-        literalCurrencyCode: USD
+        literalCurrencyCode: EUR
         numericCurrencyCode: "840"
         decimalPlaces: 2
         defaultCurrency: true
@@ -12439,3 +13376,22 @@ components:
         - Inactivated
         - Cancelled
       example: 'Installed'
+    AdditionalRecurringData:
+      description: Additional Recurring Details for Merchant Initiated Recurring transaction
+      type: object
+      properties:
+        amountIndicator:
+          type: string
+          enum:
+            - VARIABLE_AMOUNT
+          example: 'VARIABLE_AMOUNT'
+        maxAmount:
+          description: Maximum amount to be sent by merchant when Amount Indicator is VARIABLE_AMOUNT
+          type: number
+          minimum: 0
+          example: 10.24
+        validationIndicator:
+          description: If validation is performed by merchant
+          type: boolean
+          default: false
+          example: false
