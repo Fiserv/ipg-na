@@ -276,11 +276,22 @@ paths:
                       accountType: 'EMAIL'
                   paymentMethod:
                     paymentCard:
-                    number: '5424180279791732'
-                    expiryDate:
-                      month: '12'
-                      year: '25'
-                    securityCode: '977'
+                      number: '5424180279791732'
+                      expiryDate:
+                        month: '12'
+                        year: '25'
+                      securityCode: '977'
+                  order:
+                    additionalDetails:
+                      invoiceNumber: '984424645416'
+                      transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_SEND'
+                  authenticationResult:
+                    authenticationType: 'Secure3D21AuthenticationResult'
+                    cavv: 'AAABBJkZUQAAAABXSBlRAAAAAAA='
+                    xid: 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
+                    transactionId: 'f38e6948-5388-41a6-bca4-b49723c19437'
+                    authenticationResponse: 'Y'
+                    transactionStatus: 'Y'
               PaymentTokenCreditTransaction:
                 summary: "PaymentTokenCreditTransaction"
                 value:
@@ -356,12 +367,21 @@ paths:
                       accountNumber: '135246'
                       accountType: 'EMAIL'
                   paymentMethod:
-                    paymentCard:
-                      number: '5424180279791732'
-                      expiryDate:
-                        month: '12'
-                        year: '25'
+                    paymentToken:
+                      value: '1235325235236'
+                      function: 'DEBIT'
                       securityCode: '977'
+                  order:
+                    additionalDetails:
+                      invoiceNumber: '984424645416'
+                      transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_SEND'
+                  authenticationResult:
+                    authenticationType: 'Secure3D21AuthenticationResult'
+                    cavv: 'AAABBJkZUQAAAABXSBlRAAAAAAA='
+                    xid: 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
+                    transactionId: 'f38e6948-5388-41a6-bca4-b49723c19437'
+                    authenticationResponse: 'Y'
+                    transactionStatus: 'Y'
               PaypalCreditTransaction:
                 summary: "PaypalCreditTransaction"
                 value:
@@ -527,12 +547,24 @@ paths:
                       accountNumber: '135246'
                       accountType: 'EMAIL'
                   paymentMethod:
-                    paymentCard:
-                      number: '5424180279791732'
-                      expiryDate:
-                        month: '12'
-                        year: '25'
+                    paymentDevice:
+                      deviceType: SWIPE
+                      data: 02A600C0170018008292;5424********1732=1810?*B73CD8C26233D4FFEC5500ED394439D97DDA5F530942D21D0000000000000000000000000000000000000000363434543035353734326299492410027300000260DC03
                       securityCode: '977'
+                      cardholderName: First Cardholder
+                      cardFunction: CREDIT
+                      brand: VISA
+                  order:
+                    additionalDetails:
+                      invoiceNumber: '984424645416'
+                      transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_SEND'
+                  authenticationResult:
+                    authenticationType: 'Secure3D21AuthenticationResult'
+                    cavv: 'AAABBJkZUQAAAABXSBlRAAAAAAA='
+                    xid: 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
+                    transactionId: 'f38e6948-5388-41a6-bca4-b49723c19437'
+                    authenticationResponse: 'Y'
+                    transactionStatus: 'Y'
         description: 'Accepted request types: AliPaySaleTransaction, ChinaPnRSaleTransaction, PaymentCardCreditTransaction, PaymentCardForcedTicketTransaction, PaymentCardSaleTransaction, PaymentCardPreAuthTransaction, PaymentCardPayerAuthTransaction, PaymentCardDisbursementTransaction, PaymentTokenCreditTransaction, PaymentTokenPreAuthTransaction, PaymentTokenSaleTransaction, PaymentTokenDisbursementTransaction, PaypalCreditTransaction, SepaSaleTransaction, SepaCreditTransaction, WalletSaleTransaction, and WalletPreAuthTransaction, PaymentDeviceSaleTransaction, PaymentDevicePreAuthTransaction, PaymentDeviceCreditTransaction, PaymentDeviceDisbursementTransaction, AchPreAuthTransaction, AchSaleTransaction, AchCreditTransaction.'
         required: true
       responses:
@@ -4526,6 +4558,17 @@ components:
               month: '12'
               year: '25'
             securityCode: '977'
+        order:
+          additionalDetails:
+            invoiceNumber: '984424645416'
+            transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_SEND'
+        authenticationResult:
+          authenticationType: 'Secure3D21AuthenticationResult'
+          cavv: 'AAABBJkZUQAAAABXSBlRAAAAAAA='
+          xid: 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
+          transactionId: 'f38e6948-5388-41a6-bca4-b49723c19437'
+          authenticationResponse: 'Y'
+          transactionStatus: 'Y'
     PaymentTokenDisbursementTransaction:
       title: PaymentTokenDisbursementTransaction
       description: Request to create disbursement transaction using a payment token.
@@ -4579,6 +4622,17 @@ components:
             value: '1235325235236'
             function: 'DEBIT'
             securityCode: '977'
+        order:
+          additionalDetails:
+            invoiceNumber: '984424645416'
+            transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_SEND'
+        authenticationResult:
+          authenticationType: 'Secure3D21AuthenticationResult'
+          cavv: 'AAABBJkZUQAAAABXSBlRAAAAAAA='
+          xid: 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
+          transactionId: 'f38e6948-5388-41a6-bca4-b49723c19437'
+          authenticationResponse: 'Y'
+          transactionStatus: 'Y'
     PaymentDevicePreAuthTransaction:
       title: PaymentDevicePreAuthTransaction
       description: Request to create pre-auth transaction using decrypted card details from payment device. The transaction origin will be fixed as PHONE when data is manually entered into the device and as RETAIL when data is entered into the device via swipe.
@@ -4722,6 +4776,17 @@ components:
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
+        order:
+          additionalDetails:
+            invoiceNumber: '984424645416'
+            transactionTypeIdentifier: 'BUSINESS_DISBURSEMENT_MONEY_SEND'
+        authenticationResult:
+          authenticationType: 'Secure3D21AuthenticationResult'
+          cavv: 'AAABBJkZUQAAAABXSBlRAAAAAAA='
+          xid: 'G2Q6OcsXq1k0pA0mMNHVH1P02Tw='
+          transactionId: 'f38e6948-5388-41a6-bca4-b49723c19437'
+          authenticationResponse: 'Y'
+          transactionStatus: 'Y'
     KoreanPaymentSaleTransaction: # APAC only
       title: KoreanPaymentSaleTransaction
       description: Request to create sale transaction for Korean Payment.
