@@ -3444,16 +3444,16 @@ components:
           maxLength: 20
           example: '12345500000'
         merchantTransactionId:
-            description: The unique merchant transaction ID from the request, if supplied.
-            type: string
-            maxLength: 40
-            example: 'lsk23532djljff3'
+          description: The unique merchant transaction ID from the request, if supplied.
+          type: string
+          maxLength: 40
+          example: 'lsk23532djljff3'
         transactionOrigin:
           $ref: '#/components/schemas/TransactionOrigin'
         additionalDetails:
           $ref: '#/components/schemas/AdditionalDetails'
         accountOwner:
-            $ref: '#/components/schemas/AccountOwner'  
+          $ref: '#/components/schemas/AccountOwner'  
       example:
         requestType: 'PaymentCardVerificationRequest'
         paymentCard:
