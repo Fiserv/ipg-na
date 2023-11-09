@@ -3516,30 +3516,6 @@ components:
         properties:
           paymentCard:
             $ref: '#/components/schemas/PaymentCard'
-        example:
-          requestType: 'PaymentCardVerificationRequest'
-          paymentCard:
-            number: '5424180279791732'
-            expiryDate: 
-              month: '03'
-              year: '22'
-            securityCode: '888'
-            bic: 'PBNKDEFFXXX'
-            bankCode: '10010010'
-            cardFunction: 'DEBIT'
-            cardholderName: 'John Doe'
-            bin: '403587'
-            last4: '4977'
-            brand: 'VISA'
-          billingAddress:
-            address1: '5565 Glenridge Conn'
-            city: Atlanta
-            postalCode: '30342'
-            country: 'USA'
-          accountOwner:
-            firstName: 'Pete'
-            middleName: 'Maverick'
-            lastName: 'Mitchell'
     PaymentTokenVerificationRequest:
       title: PaymentTokenVerificationRequest
       description: Used to request account verification using a payment token.
