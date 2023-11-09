@@ -246,7 +246,7 @@ paths:
                 summary: "PaymentCardDisbursementTransaction"
                 value:
                   transactionAmount:
-                    total: '50'
+                    total: '52'
                     currency: EUR
                   disbursement:
                     disbursementType: 'FundingTransactionType'
@@ -4540,7 +4540,7 @@ components:
       example:
         requestType: 'PaymentCardDisbursementTransaction'
         transactionAmount:
-          total: '50'
+          total: '51'
           currency: EUR
         disbursement:
           disbursementType: 'FundingTransactionType'
