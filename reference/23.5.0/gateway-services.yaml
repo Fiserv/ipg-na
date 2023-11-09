@@ -3461,7 +3461,7 @@ components:
           expiryDate:
             month: "03"
             year: "22"
-          securityCode: "977"
+          securityCode: "999"
           bic: "PBNKDEFFXXX"
           bankCode: "10010010"
           cardFunction: "DEBIT"
@@ -3482,13 +3482,13 @@ components:
       title: PaymentCardVerificationRequest
       description: Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.
       allOf:
-        - $ref: '#/components/schemas/AccountVerificationRequest'
-        - type: object
-          required:
-          - paymentCard
-          properties:
-            paymentCard:
-              $ref: '#/components/schemas/PaymentCard'
+      - $ref: '#/components/schemas/AccountVerificationRequest'
+      - type: object
+        required:
+        - paymentCard
+        properties:
+          paymentCard:
+            $ref: '#/components/schemas/PaymentCard'
       example:
         requestType: 'PaymentCardVerificationRequest'
         paymentCard:
@@ -3496,7 +3496,7 @@ components:
           expiryDate: 
             month: "03"
             year: "22"
-          securityCode: "977"
+          securityCode: "888"
           bic: "PBNKDEFFXXX"
           bankCode: "10010010"
           cardFunction: "DEBIT"
@@ -3529,7 +3529,7 @@ components:
           paymentToken:
             value: '1235325235236'
             function: 'DEBIT'
-            securityCode: '977'
+            securityCode: '777'
           billingAddress:
             address1: '5565 Glenridge Conn'
             city: Atlanta
