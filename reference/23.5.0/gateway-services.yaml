@@ -246,7 +246,7 @@ paths:
                 summary: "PaymentCardDisbursementTransaction"
                 value:
                   transactionAmount:
-                    total: '52'
+                    total: '53'
                     currency: EUR
                   disbursement:
                     disbursementType: 'FundingTransactionType'
