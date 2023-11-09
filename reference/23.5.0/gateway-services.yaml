@@ -3460,7 +3460,7 @@ components:
           number: "5424180279791732"
           expiryDate: 
             month: "03"
-             year: "22"
+            year: "22"
           securityCode: "977"
           bic: "PBNKDEFFXXX"
           bankCode: "10010010"
