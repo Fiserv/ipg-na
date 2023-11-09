@@ -1637,7 +1637,7 @@ paths:
                   paymentCard:
                     number: '5424180279791732'
                     expiryDate: 
-                      month: '03'
+                      month: '08'
                       year: '22'
                     securityCode: '888'
                     bic: 'PBNKDEFFXXX'
@@ -1648,9 +1648,12 @@ paths:
                     last4: '4977'
                     brand: 'VISA'
                   billingAddress:
-                    address1: '5565 Glenridge Conn'
-                    city: Atlanta
-                    postalCode: '30342'
+                    company: 'Company-8'
+                    address1: '888 Oakwood Trail'
+                    address2: '8 steps forward'
+                    city: 'McDonough'
+                    region: 'GA'
+                    postalCode: '88888'
                     country: 'USA'
                   accountOwner:
                     firstName: 'Pete'
