@@ -1656,9 +1656,9 @@ paths:
                     postalCode: '88888'
                     country: 'USA'
                   accountOwner:
-                    firstName: 'Pete'
-                    middleName: 'Maverick'
-                    lastName: 'Mitchell'
+                    firstName: 'Bill'
+                    middleName: 'Joy'
+                    lastName: 'Gates'
         description: 'Accepted request type: PaymentCardVerificationRequest and PaymentTokenVerificationRequest.'
         required: true
       responses:
@@ -3484,33 +3484,6 @@ components:
           $ref: '#/components/schemas/AdditionalDetails'
         accountOwner:
           $ref: '#/components/schemas/AccountOwner'  
-      example:
-        requestType: 'PaymentCardVerificationRequest'
-        paymentCard:
-          number: '5424180279791732'
-          expiryDate:
-            month: '03'
-            year: '22'
-          securityCode: '555'
-          bic: 'PBNKDEFFXXX'
-          bankCode: '10010010'
-          cardFunction: 'DEBIT'
-          cardholderName: 'John Doe'
-          bin: '403587'
-          last4: '4977'
-          brand: 'VISA'
-        billingAddress:
-          company: 'Bare'
-          address1: '23432 Oakwood Trail'
-          address2: '9 steps forward'
-          city: 'McDonough'
-          region: 'GA'
-          postalCode: '12322'
-          country: 'USA'
-        accountOwner:
-          firstName: 'Bill'
-          middleName: 'Maverick'
-          lastName: 'Gates'  
     PaymentCardVerificationRequest:
       title: PaymentCardVerificationRequest
       description: Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.
@@ -3522,33 +3495,6 @@ components:
         properties:
           paymentCard:
             $ref: '#/components/schemas/PaymentCard'
-      example:
-        requestType: 'PaymentCardVerificationRequest'
-        paymentCard:
-          number: '5424180279791732'
-          expiryDate: 
-            month: '03'
-            year: '22'
-          securityCode: '333'
-          bic: 'PBNKDEFFXXX'
-          bankCode: '10010010'
-          cardFunction: 'DEBIT'
-          cardholderName: 'John Doe'
-          bin: '403587'
-          last4: '4977'
-          brand: 'VISA'
-        billingAddress:
-          company: 'Company'
-          address1: '133 Oakwood Trail'
-          address2: '5 steps forward'
-          city: 'McDonough'
-          region: 'GA'
-          postalCode: '30252'
-          country: 'USA'
-        accountOwner:
-          firstName: 'Pete'
-          middleName: 'Maverick'
-          lastName: 'Mitchell'
     PaymentTokenVerificationRequest:
       title: PaymentTokenVerificationRequest
       description: Used to request account verification using a payment token.
@@ -7112,9 +7058,9 @@ components:
           maxLength: 35
           example: Doe  
       example:
-        firstName: Pete
-        middleName: Maverick
-        lastName: Mitchell
+        firstName: 'firstName'
+        middleName: 'middleName'
+        lastName: 'lastName'
     Secure3D10AuthenticationResult:
       description: Submit the result of the authentication managed outside of the gateway for a 3-D Secure 1.0 scheme. For more convenient usage without implementing 3-D Secure yourself see "authenticationRequest" section. DEPRECATED - use Secure3DAuthenticationResult instead
       allOf:
