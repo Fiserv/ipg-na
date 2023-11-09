@@ -3458,7 +3458,7 @@ components:
         requestType: 'PaymentCardVerificationRequest'
         paymentCard:
           number: "5424180279791732"
-          expiryDate: 
+          expiryDate:
             month: "03"
             year: "22"
           securityCode: "977"
@@ -3482,13 +3482,13 @@ components:
       title: PaymentCardVerificationRequest
       description: Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.
       allOf:
-      - $ref: '#/components/schemas/AccountVerificationRequest'
-      - type: object
-        required:
-        - paymentCard
-        properties:
-          paymentCard:
-            $ref: '#/components/schemas/PaymentCard'
+        - $ref: '#/components/schemas/AccountVerificationRequest'
+        - type: object
+          required:
+          - paymentCard
+          properties:
+            paymentCard:
+              $ref: '#/components/schemas/PaymentCard'
       example:
         requestType: 'PaymentCardVerificationRequest'
         paymentCard:
