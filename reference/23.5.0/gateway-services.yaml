@@ -3301,7 +3301,7 @@ components:
         algorithm: 'RSA/NONE/PKCS1PADDING'
         clientRequestId: 30dd879c-ee2f-11db-8314-0800200c9a66
     CardVerificationRequest:
-      description: Request to verify card validity.
+      description: 'Request to verify card validity.'
       required:
       - paymentCard
       properties:
@@ -3310,10 +3310,10 @@ components:
         billingAddress:
           $ref: '#/components/schemas/Address'
         storeId:
-          description: An optional outlet ID for clients that support multiple stores in the same app.
+          description: 'An optional outlet ID for clients that support multiple stores in the same app.'
           type: string
           maxLength: 20
-          example: '12345500000'
+          example: '222222222222'
         transactionOrigin:
           $ref: '#/components/schemas/TransactionOrigin'
       example:
@@ -3325,9 +3325,9 @@ components:
           securityCode: '977'
         billingAddress:
           address1: '5565 Glenridge Conn'
-          city: Atlanta
-          postalCode: "30342"
-          country: USA
+          city: 'Atlanta'
+          postalCode: '30342'
+          country: 'USA'
     GenerateCashReceiptRequest:
       description: Generate cash receipt request.
       type: object
@@ -3469,7 +3469,7 @@ components:
           description: An optional outlet ID for clients that support multiple stores in the same app.
           type: string
           maxLength: 20
-          example: '12345500000'
+          example: '111111111111'
         merchantTransactionId:
           description: The unique merchant transaction ID from the request, if supplied.
           type: string
@@ -3484,27 +3484,27 @@ components:
       example:
         requestType: 'PaymentCardVerificationRequest'
         paymentCard:
-          number: "5424180279791732"
+          number: '5424180279791732'
           expiryDate:
-            month: "03"
-            year: "22"
-          securityCode: "999"
-          bic: "PBNKDEFFXXX"
-          bankCode: "10010010"
-          cardFunction: "DEBIT"
-          cardholderName: "John Doe"
-          bin: "403587"
-          last4: "4977"
-          brand: "VISA"
+            month: '03'
+            year: '22'
+          securityCode: '999'
+          bic: 'PBNKDEFFXXX'
+          bankCode: '10010010'
+          cardFunction: 'DEBIT'
+          cardholderName: 'John Doe'
+          bin: '403587'
+          last4: '4977'
+          brand: 'VISA'
         billingAddress:
           address1: '5565 Glenridge Conn'
-          city: Atlanta
-          postalCode: "30342"
-          country: USA
+          city: 'Atlanta'
+          postalCode: '30342'
+          country: 'USA'
         accountOwner:
-          firstName: Pete
-          middleName: Maverick
-          lastName: Mitchell  
+          firstName: 'Pete'
+          middleName: 'Maverick'
+          lastName: 'Mitchell'  
     PaymentCardVerificationRequest:
       title: PaymentCardVerificationRequest
       description: Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.
@@ -3516,6 +3516,30 @@ components:
         properties:
           paymentCard:
             $ref: '#/components/schemas/PaymentCard'
+      example:
+        requestType: 'PaymentCardVerificationRequest'
+        paymentCard:
+          number: '5424180279791732'
+          expiryDate: 
+            month: '03'
+            year: '22'
+          securityCode: '888'
+          bic: 'PBNKDEFFXXX'
+          bankCode: '10010010'
+          cardFunction: 'DEBIT'
+          cardholderName: 'John Doe'
+          bin: '403587'
+          last4: '4977'
+          brand: 'VISA'
+        billingAddress:
+          address1: '5565 Glenridge Conn'
+          city: Atlanta
+          postalCode: '30342'
+          country: 'USA'
+        accountOwner:
+          firstName: 'Pete'
+          middleName: 'Maverick'
+          lastName: 'Mitchell'
     PaymentTokenVerificationRequest:
       title: PaymentTokenVerificationRequest
       description: Used to request account verification using a payment token.
