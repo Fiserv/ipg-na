@@ -1639,7 +1639,7 @@ paths:
                     expiryDate: 
                       month: '03'
                       year: '22'
-                    securityCode: '888'
+                    securityCode: '999'
                     bic: 'PBNKDEFFXXX'
                     bankCode: '10010010'
                     cardFunction: 'DEBIT'
@@ -3532,10 +3532,13 @@ components:
           last4: '4977'
           brand: 'VISA'
         billingAddress:
-          address1: '5565 Glenridge Conn'
-          city: Atlanta
-          postalCode: '30342'
-          country: 'USA'
+          company: 'Company'
+          address1: '133 Oakwood Trail'
+          address2: '5 steps forward'
+          city: 'McDonough'
+          region: 'GA'
+          postalCode: '30252'
+          country: 'US'
         accountOwner:
           firstName: 'Pete'
           middleName: 'Maverick'
