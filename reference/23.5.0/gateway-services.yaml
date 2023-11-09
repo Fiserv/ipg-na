@@ -1635,7 +1635,7 @@ paths:
                 value:
                   requestType: 'PaymentCardVerificationRequest'
                   paymentCard:
-                    number: '5424180279791732'
+                    number: '8888888888888888'
                     expiryDate: 
                       month: '08'
                       year: '22'
