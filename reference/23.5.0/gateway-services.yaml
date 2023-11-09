@@ -1682,8 +1682,8 @@ paths:
                     firstName: Pete
                     middleName: Maverick
                     lastName: Mitchell  
-        required: true
         description: 'Accepted request type: PaymentCardVerificationRequest and PaymentTokenVerificationRequest.'
+        required: true
       responses:
         '200':
           description: Success response.
