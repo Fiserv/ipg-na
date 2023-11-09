@@ -1629,6 +1629,33 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/AccountVerificationRequest'
+            examples:
+              PaymentCardVerificationRequest:
+                summary: 'PaymentCardVerificationRequest'
+                value:
+                  requestType: 'PaymentCardVerificationRequest'
+                  paymentCard:
+                    number: '5424180279791732'
+                    expiryDate: 
+                      month: '03'
+                      year: '22'
+                    securityCode: '888'
+                    bic: 'PBNKDEFFXXX'
+                    bankCode: '10010010'
+                    cardFunction: 'DEBIT'
+                    cardholderName: 'John Doe'
+                    bin: '403587'
+                    last4: '4977'
+                    brand: 'VISA'
+                  billingAddress:
+                    address1: '5565 Glenridge Conn'
+                    city: Atlanta
+                    postalCode: '30342'
+                    country: 'USA'
+                  accountOwner:
+                    firstName: 'Pete'
+                    middleName: 'Maverick'
+                    lastName: 'Mitchell'
         description: 'Accepted request type: PaymentCardVerificationRequest and PaymentTokenVerificationRequest.'
         required: true
       responses:
@@ -3461,7 +3488,7 @@ components:
           expiryDate:
             month: '03'
             year: '22'
-          securityCode: '999'
+          securityCode: '555'
           bic: 'PBNKDEFFXXX'
           bankCode: '10010010'
           cardFunction: 'DEBIT'
@@ -3470,14 +3497,17 @@ components:
           last4: '4977'
           brand: 'VISA'
         billingAddress:
-          address1: '5565 Glenridge Conn'
-          city: 'Atlanta'
-          postalCode: '30342'
+          company: 'Bare'
+          address1: '23432 Oakwood Trail'
+          address2: '9 steps forward'
+          city: 'McDonough'
+          region: 'GA'
+          postalCode: '12322'
           country: 'USA'
         accountOwner:
-          firstName: 'Pete'
+          firstName: 'Bill'
           middleName: 'Maverick'
-          lastName: 'Mitchell'  
+          lastName: 'Gates'  
     PaymentCardVerificationRequest:
       title: PaymentCardVerificationRequest
       description: Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.
@@ -3496,7 +3526,7 @@ components:
           expiryDate: 
             month: '03'
             year: '22'
-          securityCode: '111'
+          securityCode: '333'
           bic: 'PBNKDEFFXXX'
           bankCode: '10010010'
           cardFunction: 'DEBIT'
@@ -3511,7 +3541,7 @@ components:
           city: 'McDonough'
           region: 'GA'
           postalCode: '30252'
-          country: 'US'
+          country: 'USA'
         accountOwner:
           firstName: 'Pete'
           middleName: 'Maverick'
@@ -3527,17 +3557,17 @@ components:
         properties:
           paymentToken:
             $ref: '#/components/schemas/UsePaymentToken'
-        example:
-          requestType: 'PaymentTokenVerificationRequest'
-          paymentToken:
-            value: '1235325235236'
-            function: 'DEBIT'
-            securityCode: '777'
-          billingAddress:
-            address1: '5565 Glenridge Conn'
-            city: Atlanta
-            postalCode: "30342"
-            country: USA
+      example:
+        requestType: 'PaymentTokenVerificationRequest'
+        paymentToken:
+          value: '1235325235236'
+          function: 'DEBIT'
+          securityCode: '777'
+        billingAddress:
+          address1: '5565 Glenridge Conn'
+          city: Atlanta
+          postalCode: "30342"
+          country: USA
     ReferencedOrderPaymentTokenizationRequest:
       title: ReferencedOrderPaymentTokenizationRequest
       description: Used to generate payment tokens with an existing order ID.
