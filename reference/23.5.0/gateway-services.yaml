@@ -1630,29 +1630,32 @@ paths:
             schema:
               $ref: '#/components/schemas/AccountVerificationRequest'
             examples:
-              requestType: 'PaymentCardVerificationRequest'
-              paymentCard:
-                number: "5424180279791732"
-                expiryDate:
-                  month: "03"
-                  year: "22"
-                securityCode: "999"
-                bic: "PBNKDEFFXXX"
-                bankCode: "10010010"
-                cardFunction: "DEBIT"
-                cardholderName: "John Doe"
-                bin: "403587"
-                last4: "4977"
-                brand: "VISA"
-              billingAddress:
-                address1: '5565 Glenridge Conn'
-                city: Atlanta
-                postalCode: "30342"
-                country: USA
-              accountOwner:
-                firstName: Pete
-                middleName: Maverick
-                lastName: Mitchell  
+              AccountVerificationRequest:
+                summary: "AccountVerificationRequest"
+                value:
+                  requestType: 'PaymentCardVerificationRequest'
+                  paymentCard:
+                    number: "5424180279791732"
+                    expiryDate:
+                      month: "03"
+                      year: "22"
+                    securityCode: "999"
+                    bic: "PBNKDEFFXXX"
+                    bankCode: "10010010"
+                    cardFunction: "DEBIT"
+                    cardholderName: "John Doe"
+                    bin: "403587"
+                    last4: "4977"
+                    brand: "VISA"
+                  billingAddress:
+                    address1: '5565 Glenridge Conn'
+                    city: Atlanta
+                    postalCode: "30342"
+                    country: USA
+                  accountOwner:
+                    firstName: Pete
+                    middleName: Maverick
+                    lastName: Mitchell  
         required: true
         description: 'Accepted request type: PaymentCardVerificationRequest and PaymentTokenVerificationRequest.'
       responses:
