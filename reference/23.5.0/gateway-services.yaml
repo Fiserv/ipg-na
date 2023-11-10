@@ -246,7 +246,7 @@ paths:
                 summary: "PaymentCardDisbursementTransaction"
                 value:
                   transactionAmount:
-                    total: '50'
+                    total: '53'
                     currency: EUR
                   disbursement:
                     disbursementType: 'FundingTransactionType'
@@ -1629,8 +1629,38 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/AccountVerificationRequest'
-        required: true
+            examples:
+              PaymentCardVerificationRequest:
+                summary: 'PaymentCardVerificationRequest'
+                value:
+                  requestType: 'PaymentCardVerificationRequest'
+                  paymentCard:
+                    number: '8888888888888888'
+                    expiryDate: 
+                      month: '08'
+                      year: '22'
+                    securityCode: '888'
+                    bic: 'PBNKDEFFXXX'
+                    bankCode: '10010010'
+                    cardFunction: 'DEBIT'
+                    cardholderName: 'John Doe'
+                    bin: '403587'
+                    last4: '4977'
+                    brand: 'VISA'
+                  billingAddress:
+                    company: 'Company-8'
+                    address1: '888 Oakwood Trail'
+                    address2: '8 steps forward'
+                    city: 'McDonough'
+                    region: 'GA'
+                    postalCode: '88888'
+                    country: 'USA'
+                  accountOwner:
+                    firstName: 'Bill'
+                    middleName: 'Joy'
+                    lastName: 'Gates'
         description: 'Accepted request type: PaymentCardVerificationRequest and PaymentTokenVerificationRequest.'
+        required: true
       responses:
         '200':
           description: Success response.
@@ -3274,7 +3304,7 @@ components:
         algorithm: 'RSA/NONE/PKCS1PADDING'
         clientRequestId: 30dd879c-ee2f-11db-8314-0800200c9a66
     CardVerificationRequest:
-      description: Request to verify card validity.
+      description: 'Request to verify card validity.'
       required:
       - paymentCard
       properties:
@@ -3283,10 +3313,10 @@ components:
         billingAddress:
           $ref: '#/components/schemas/Address'
         storeId:
-          description: An optional outlet ID for clients that support multiple stores in the same app.
+          description: 'An optional outlet ID for clients that support multiple stores in the same app.'
           type: string
           maxLength: 20
-          example: '12345500000'
+          example: '222222222222'
         transactionOrigin:
           $ref: '#/components/schemas/TransactionOrigin'
       example:
@@ -3298,9 +3328,9 @@ components:
           securityCode: '977'
         billingAddress:
           address1: '5565 Glenridge Conn'
-          city: Atlanta
-          postalCode: "30342"
-          country: USA
+          city: 'Atlanta'
+          postalCode: '30342'
+          country: 'USA'
     GenerateCashReceiptRequest:
       description: Generate cash receipt request.
       type: object
@@ -3442,35 +3472,18 @@ components:
           description: An optional outlet ID for clients that support multiple stores in the same app.
           type: string
           maxLength: 20
-          example: '12345500000'
+          example: '111111111111'
         merchantTransactionId:
-            description: The unique merchant transaction ID from the request, if supplied.
-            type: string
-            maxLength: 40
-            example: 'lsk23532djljff3'
+          description: The unique merchant transaction ID from the request, if supplied.
+          type: string
+          maxLength: 40
+          example: 'lsk23532djljff3'
         transactionOrigin:
           $ref: '#/components/schemas/TransactionOrigin'
         additionalDetails:
           $ref: '#/components/schemas/AdditionalDetails'
         accountOwner:
-            $ref: '#/components/schemas/AccountOwner'  
-      example:
-        requestType: 'PaymentCardVerificationRequest'
-        paymentCard:
-          number: '4035874000424977'
-          expiryDate:
-            month: '12'
-            year: '25'
-          securityCode: '977'
-        billingAddress:
-          address1: '5565 Glenridge Conn'
-          city: Atlanta
-          postalCode: "30342"
-          country: USA
-        accountOwner:
-          firstName: Pete
-          middleName: Maverick
-          lastName: Mitchell  
+          $ref: '#/components/schemas/AccountOwner'  
     PaymentCardVerificationRequest:
       title: PaymentCardVerificationRequest
       description: Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.
@@ -3482,23 +3495,6 @@ components:
         properties:
           paymentCard:
             $ref: '#/components/schemas/PaymentCard'
-        example:
-          requestType: 'PaymentCardVerificationRequest'
-          paymentCard:
-            number: '4035874000424977'
-            expiryDate:
-              month: '12'
-              year: '25'
-            securityCode: '977'
-          billingAddress:
-            address1: '5565 Glenridge Conn'
-            city: Atlanta
-            postalCode: "30342"
-            country: USA
-          accountOwner:
-            firstName: Pete
-            middleName: Maverick
-            lastName: Mitchell
     PaymentTokenVerificationRequest:
       title: PaymentTokenVerificationRequest
       description: Used to request account verification using a payment token.
@@ -3510,17 +3506,17 @@ components:
         properties:
           paymentToken:
             $ref: '#/components/schemas/UsePaymentToken'
-        example:
-          requestType: 'PaymentTokenVerificationRequest'
-          paymentToken:
-            value: '1235325235236'
-            function: 'DEBIT'
-            securityCode: '977'
-          billingAddress:
-            address1: '5565 Glenridge Conn'
-            city: Atlanta
-            postalCode: "30342"
-            country: USA
+      example:
+        requestType: 'PaymentTokenVerificationRequest'
+        paymentToken:
+          value: '1235325235236'
+          function: 'DEBIT'
+          securityCode: '777'
+        billingAddress:
+          address1: '5565 Glenridge Conn'
+          city: Atlanta
+          postalCode: "30342"
+          country: USA
     ReferencedOrderPaymentTokenizationRequest:
       title: ReferencedOrderPaymentTokenizationRequest
       description: Used to generate payment tokens with an existing order ID.
@@ -4526,7 +4522,7 @@ components:
       example:
         requestType: 'PaymentCardDisbursementTransaction'
         transactionAmount:
-          total: '50'
+          total: '51'
           currency: EUR
         disbursement:
           disbursementType: 'FundingTransactionType'
@@ -7062,9 +7058,9 @@ components:
           maxLength: 35
           example: Doe  
       example:
-        firstName: Pete
-        middleName: Maverick
-        lastName: Mitchell
+        firstName: 'firstName'
+        middleName: 'middleName'
+        lastName: 'lastName'
     Secure3D10AuthenticationResult:
       description: Submit the result of the authentication managed outside of the gateway for a 3-D Secure 1.0 scheme. For more convenient usage without implementing 3-D Secure yourself see "authenticationRequest" section. DEPRECATED - use Secure3DAuthenticationResult instead
       allOf:
