@@ -246,7 +246,7 @@ paths:
                 summary: "PaymentCardDisbursementTransaction"
                 value:
                   transactionAmount:
-                    total: '50'
+                    total: '53'
                     currency: EUR
                   disbursement:
                     disbursementType: 'FundingTransactionType'
@@ -574,6 +574,16 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TransactionResponse'
+              examples:
+                PaymentCardDisbursementTransactionResponse:
+                  summary: "PaymentCardDisbursementTransactionResponse"
+                  $ref: '#/components/examples/BaseResponseForMastercardMoneySend'
+                PaymentTokenDisbursementTransactionResponse:
+                  summary: "PaymentTokenDisbursementTransactionResponse"
+                  $ref: '#/components/examples/BaseResponseForMastercardMoneySend'
+                PaymentDeviceDisbursementTransactionResponse:
+                  summary: "PaymentDeviceDisbursementTransactionResponse"
+                  $ref: '#/components/examples/BaseResponseForMastercardMoneySend'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -1629,8 +1639,38 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/AccountVerificationRequest'
-        required: true
+            examples:
+              PaymentCardVerificationRequest:
+                summary: 'PaymentCardVerificationRequest'
+                value:
+                  requestType: 'PaymentCardVerificationRequest'
+                  paymentCard:
+                    number: '8888888888888888'
+                    expiryDate: 
+                      month: '08'
+                      year: '22'
+                    securityCode: '888'
+                    bic: 'PBNKDEFFXXX'
+                    bankCode: '10010010'
+                    cardFunction: 'DEBIT'
+                    cardholderName: 'John Doe'
+                    bin: '403587'
+                    last4: '4977'
+                    brand: 'VISA'
+                  billingAddress:
+                    company: 'Company-8'
+                    address1: '888 Oakwood Trail'
+                    address2: '8 steps forward'
+                    city: 'McDonough'
+                    region: 'GA'
+                    postalCode: '88888'
+                    country: 'USA'
+                  accountOwner:
+                    firstName: 'Bill'
+                    middleName: 'Joy'
+                    lastName: 'Gates'
         description: 'Accepted request type: PaymentCardVerificationRequest and PaymentTokenVerificationRequest.'
+        required: true
       responses:
         '200':
           description: Success response.
@@ -1945,6 +1985,225 @@ paths:
         '500':
           $ref: '#/components/responses/ServerError'
 components:
+  examples:
+    BaseResponseForMastercardMoneySend:
+      value:
+        clientRequestId: 30dd879c-ee2f-11db-8314-0800200c9a66
+        apiTraceId: rrt-0c80a3403e2c2def0-d-ea-28805-6810951-2
+        responseType: Unauthenticated
+        ipgTransactionId: '838916029301'
+        orderId: '123456'
+        transactionType: SALE
+        paymentToken:
+          value: 234ljl124l12
+          reusable: false
+          declineDuplicates: true
+          last4: '4997'
+          brand: VISA
+          accountVerification: false
+          type: PAYMENT_CARD
+          error:
+            code: '2303'
+            message: Invalid credit card number
+            details:
+            - field: PaymentCard.number
+              message: may not be null
+            declineReasonCode: Do not try again
+        transactionOrigin: ECOM
+        paymentMethodDetails:
+          paymentCard:
+            number: '5424180279791732'
+            expiryDate:
+              month: '03'
+              year: '22'
+            securityCode: '977'
+            bic: PBNKDEFFXXX
+            bankCode: '10010010'
+            cardFunction: DEBIT
+            cardholderName: John Doe
+            bin: '403587'
+            last4: '4977'
+            brand: VISA
+          paymentMethodType: PAYMENT_CARD
+          paymentMethodBrand: APPLEPAY
+        country: USA
+        terminalId: '123456'
+        merchantId: '199950008'
+        merchantTransactionId: lsk23532djljff3
+        transactionTime: 1518811817
+        approvedAmount:
+          total: 10.24
+          currency: EUR
+          components:
+            subtotal: 8
+            vatAmount: 0
+            localTax: 1
+            shipping: 1.24
+            cashback: 2
+            tip: 6
+            surcharge: 2.5
+        transactionAmount:
+          total: 10.24
+          currency: EUR
+          components:
+            subtotal: 8
+            vatAmount: 0
+            localTax: 1
+            shipping: 1.24
+            cashback: 2
+            tip: 6
+            surcharge: 2.5
+        transactionStatus: APPROVED
+        transactionResult: APPROVED
+        approvalCode: N:-30031:No terminal setup
+        errorMessage: '000100: Tx was processed but response was not stored correctly'
+        transactionState: AUTHORIZED
+        paymentAccountReferenceNumber: 1234001AB101112131415161718CV
+        secure3dResponse:
+          responseCode3dSecure: '3'
+          cardholderInfo: molestie nunc non blandit massa
+        standinResponseDetails:
+          secure3DEnrolmentStatus: Y
+          secure3DECI: '05'
+          secure3DAuthenticationResponse: Y
+          authenticationValue: AAABBgFWUQAAAAEzZ1ZRAAAAAAA=
+          xid: cb8QZ9mmkTUqreE89RjjjAtpJpg
+          authenticationAlgorithm: '2'
+        redirectURL: http://pay.issuer-bank.com/sessionID=123&sharedKey=456
+        authenticationResponse:
+          type: 3D_SECURE
+          version: '2.1'
+          params:
+            payerAuthenticationRequest: c7fb83b8ag...73t4a827t4af8738a
+            termURL: https://api.example.com/redirectToAcs
+            merchantData: MD123...sdfk
+            acsURL: https://3ds-acs.test.modirum.com/mdpayacs/pareq
+            cReq: ewogICAiYWNzVHJhbnNJRCIgOiAiMDAwMDAwMDAtMDAwNS01YTVhLTgwMDAtMDE2ZmE1NTYzODMyIiwKICAgImNoYWxsZW5nZVdpbmRvd1NpemUiIDogIjAzIiwKICAgIm1lc3NhZ2VUeXBlIiA6ICJDUmVxIiwKICAgIm1lc3NhZ2VWZXJzaW9uIiA6ICIyLjEuMCIsCiAgICJ0aHJlZURTU2VydmVyVHJhbnNJRCIgOiAiZGVmOWZiZDgtZjkzNS01YzcyLTgwMDAtMDAwMDAwMDgyOWVkIgp9
+            sessionData: 50F2156E03083CA665BCB4..
+          secure3dMethod:
+            methodForm: |-
+              &lt;!DOCTYPE iframe SYSTEM "about:legacy-compat"&gt; &lt;iframe id="tdsMmethodTgtFrame" name="tdsMmethodTgtFrame"
+                      style="width: 1px; height: 1px; display: none;" src="javascript:false;" xmlns="http://www.w3.org/1999/xhtml"&gt;
+              &lt;!--.--&gt; &lt;/iframe&gt;&lt;form id="tdsMmethodForm" name="tdsMmethodForm"
+                      action="https://localhost.modirum.com:8543/dstests/ACSEmu2" method="post"
+                      target="tdsMmethodTgtFrame" xmlns="http://www.w3.org/1999/xhtml"&gt; &lt;input type="hidden" name="3DSMethodData"
+                      value="eyAidGhyZWVEU1NlcnZlclRyYW5zSUQiIDogIjAwMDAwMDAwLTU2NzYtNTY2My04MDAwLTAwMDAw
+              &amp;#10;MDAwNDFhOSIsICJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIiA6ICJodHRwczovL2xvY
+                      2Fs&amp;#10;aG9zdC5tb2RpcnVtLmNvbTo4NTQzL21kcGF5bXBpL01lcmNoYW50U2VydmVyP21uPVkmdHhpZD0x
+              &amp;#10;NjgwOSZkaWdlc3Q9aSUyQnhhUEF5NWFOcVJRbllqNmozbWFDZlFJbTdFdjJYTmkwNn
+                      h6YmZNJTJG&amp;#10;R3MlM0QiIH0"/&gt; &lt;input type="hidden" name="threeDSMethodData"
+                      value="eyAidGhyZWVEU1NlcnZlclRyYW5zSUQiIDogIjAwMDAwMDAwLTU2NzYtNTY2My04MDAwLTAwMDA
+                      w&amp;#10;MDAwNDFhOSIsICJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIiA6ICJodHRwczovL2xvY
+                      2Fs&amp;#10;aG9zdC5tb2RpcnVtLmNvbTo4NTQzL21kcGF5bXBpL01lcmNoYW50U2VydmVyP21uPVkmd
+                      HhpZD0x&amp;#10;NjgwOSZkaWdlc3Q9aSUyQnhhUEF5NWFOcVJRbllqNmozbWFDZlFJbTdFdjJYTmkwNn
+                      h6YmZNJTJG&amp;#10;R3MlM0QiIH0"/&gt;
+              &lt;/form&gt;&lt;script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml"&gt;
+                      document.getElementById("tdsMmethodForm").submit(); &lt;/script&gt;
+            secure3dTransId: 3ac7caa7-aa42-2663-791b-2ac05a542c4a
+        schemeTransactionId: '019078743804756'
+        processor:
+          referenceNumber: '811720726601'
+          authorizationCode: OK7118
+          responseCode: '00'
+          network: NYCE
+          associationResponseCode: '000'
+          responseMessage: APPROVED
+          avsResponse:
+            streetMatch: Y
+            postalCodeMatch: N
+            associationAvsResponse: Y
+          cardholderInfoResponse:
+            postalCodeOrZipMatch: Y
+            addressMatch: RETRY
+            nameMatch: SERVICE_NOT_ALLOWED
+            telephoneMatch: NOT_CHECKED
+            emailMatch: N
+            associationCardholderInfoResponse: YNUSR
+          securityCodeResponse: NOT_MATCHED
+          merchantAdviceCodeIndicator: '01'
+          responseIndicator: '0100'
+          debitReceiptNumber: '123456'
+          transactionIntegrityClass: A1
+        additionalDetails:
+          comments: This is a comment
+          invoiceNumber: '551294633441'
+          purchaseOrderNumber: '1223456'
+          disbursementTransType: FUNDING
+          walletProvider: APPLE_PAY
+          receipts:
+          - type: cardholder
+            data:
+            - endOfLine: true
+              text: "--------------------------------"
+            - endOfLine: true
+              text: "              SALE              "
+          - type: merchant
+            data:
+            - endOfLine: true
+              text: "        Example Merchant        "
+            - endOfLine: true
+              text: "--------------------------------"
+          additionalResponseData:
+            issuingBankName: USA Bank
+            countryOfIssuance: USA
+            cardProductID: H
+            detailedProductID: C
+            associationResponseCodeAdtl: '00'
+            cardBrand: M
+            deferredAuthTransactionID: '3561032059730219'
+        accountUpdaterResponse:
+          updatedCard: '4012000066660018'
+          updatedToken: '1235325235236'
+          updatedExpirationDate: '1220'
+          updatedAccountStatus: ACCOUNT_CHANGED
+          updatedAccountErrorCode: VAU002
+          originalResponseCode: '00'
+        achResponse:
+          responseCode: '49'
+          approvalCode: ASF2
+          referenceNumber: '1234567'
+          preferredFlag: Y
+          transactionStatus: '1'
+        currencyConversionResponse:
+          dccApplied: false
+          exchangeRateDetails:
+            inquiryRateId: '49150'
+            foreignCurrency: AUD
+            foreignAmount: '130.33'
+            exchangeRate: '1.2968'
+            dccOffered: false
+            exchangeRateSourceTimestamp: '2018-12-05T19:13:00.000Z'
+            expirationTimestamp: '2018-12-05T20:13:00.000Z'
+            marginRatePercentage: '3'
+            exchangeRateSourceName: REUTERS WHOLESALE INTERBANK
+        requiredActions:
+          requiredConsumerData:
+          - hint: Your 6-digit Code will be provided in your mobile application
+            validationExpression: "^\\\\d{6}$"
+            key: BLIK_CODE
+            options:
+            - displayName: First National Bank
+              iconUrl: https://www.ipg-online.com/connect/bankLogo.png
+              id: fnsTknBFirstNationalBank
+              groupName: TokenBanking
+          requiredIntegrationData:
+          - hint: Payment requires the user agent information on the browser/device.
+            key: USER_AGENT
+          requiredRedirectionData:
+            target: string
+            parameters: object
+            method: GET
+        plannedDueDate: '2022-03-03'
+        networkToken:
+          value: '2343446334644554'
+          expiryMonth: '03'
+          expiryYear: '24'
+          cardLast4: '1234'
+          brand: VISA
+          cryptogram: AgAAAAADo8FZTI0AmJbMgyUAAAA=
+          authIndicator: P
+          tokenEligible: AY
+
 #-------------------------------------------------------------------------------
 # Parameter Models
 #-------------------------------------------------------------------------------
@@ -2589,139 +2848,139 @@ components:
     TransactionResponse:
       description: Common object for primary and secondary payment request responses.
       allOf:
-      - $ref: '#/components/schemas/BasicResponse'
-      - properties:
-          ipgTransactionId:
-            description:  The response transaction ID.
-            type: string
-            example: "838916029301"
-          orderId:
-            description: Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).
-            type: string
-            example: '123456'
-          transactionType:
-            $ref: '#/components/schemas/TransactionType'
-          paymentToken:
-            $ref: '#/components/schemas/PaymentTokenDetails'
-          transactionOrigin:
-            $ref: '#/components/schemas/TransactionOrigin'
-          paymentMethodDetails:
-            $ref: '#/components/schemas/PaymentMethodDetails'
-          accountVerificationResponse:
-            $ref: '#/components/schemas/AccountVerificationResponse'  
-          country:
-            description: Country of the card issuer.
-            type: string
-            example: USA
-          terminalId:
-            description: The terminal that is processing the transaction.
-            type: string
-            example: '123456'
-          merchantId:
-            description: The unique (on Acquirer level) mechant ID. Usually this value has been chosen from the merchant itself and will be used in communication with the endpoint.
-            type: string
-            maxLength: 30
-            example: '199950008'
-          merchantTransactionId:
-            description: The unique merchant transaction ID from the request header, if supplied.
-            type: string
-            maxLength: 40
-            example: 'lsk23532djljff3'
-          transactionTime:
-            description: The transaction time in seconds since epoch.
-            type: integer
-            format: int64
-            example: 1518811817
-          approvedAmount:
-            $ref: '#/components/schemas/Amount'
-          transactionAmount:
-            $ref: '#/components/schemas/TransactionAmount'
-          transactionStatus:
-            description: This field is Deprecated. Point to 'transactionResult'.
-            type: string
-            enum:
-            - APPROVED
-            - WAITING
-            - PARTIAL
-            - VALIDATION_FAILED
-            - PROCESSING_FAILED
-            - DECLINED
-            example: APPROVED
-          transactionResult:
-            description: This is the result of the operation, unless transaction status that represent financial status of the transaction, this fields helps us to understand if the operation is successfully executed
-            type: string
-            enum:
-            - APPROVED
-            - DECLINED
-            - FAILED
-            - WAITING
-            - PARTIAL
-            - FRAUD
-            example: APPROVED
-          approvalCode:
-            description: Shows the transaction approvalcode.
-            type: string
-            example: 'N:-30031:No terminal setup'
-          errorMessage:
-            description: Shows the transaction errorMessage.
-            type: string
-            example: '000100: Tx was processed but response was not stored correctly'
-          transactionState:
-            description: Shows the state of the current transaction.
-            type: string
-            enum:
-            - AUTHORIZED
-            - CAPTURED
-            - DECLINED
-            - CHECKED
-            - COMPLETED_GET
-            - INITIALIZED
-            - PENDING
-            - READY
-            - TEMPLATE
-            - SETTLED
-            - VOIDED
-            - WAITING
-            example: 'AUTHORIZED'
-          paymentAccountReferenceNumber:
-            description: Payment Account Reference Number from response, if supplied.
-            type: string
-            maxLength: 30
-            example: '1234001AB101112131415161718CV'
-          secure3dResponse:
-            $ref: '#/components/schemas/Secure3dResponse'
-          standinResponseDetails:
-            $ref: '#/components/schemas/StandinResponseDetails'
-          redirectURL:
-            description: The endpoint redirection URL.
-            type: string
-            example: 'http://pay.issuer-bank.com/sessionID=123&sharedKey=456'
-          authenticationResponse:
-            $ref: '#/components/schemas/Secure3DAuthenticationResponse'
-          schemeTransactionId:
-            description: The transaction ID received from schemes for the initial transaction of card on file flows.
-            type: string
-            maxLength: 40
-            example: '019078743804756'
-          processor:
-            $ref: '#/components/schemas/ProcessorData'
-          additionalDetails:
-            $ref: '#/components/schemas/AdditionalTransactionDetails'
-          accountUpdaterResponse:
-            $ref: '#/components/schemas/AccountUpdaterResponse'
-          achResponse:
-            $ref: '#/components/schemas/AchResponse'
-          currencyConversionResponse:
-            $ref: '#/components/schemas/CurrencyConversionResponse'
-          requiredActions:
-            $ref: '#/components/schemas/RequiredActions'
-          plannedDueDate:
-            description: Capture PlannedDueDate field sent for SEPA transactions.
-            type: string
-            pattern: '^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$'
-            example: '2022-03-03'
-          networkToken:
-                $ref: '#/components/schemas/NetworkToken'
+        - $ref: '#/components/schemas/BasicResponse'
+        - properties:
+            ipgTransactionId:
+              description:  The response transaction ID.
+              type: string
+              example: "838916029301"
+            orderId:
+              description: Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM).
+              type: string
+              example: '123456'
+            transactionType:
+              $ref: '#/components/schemas/TransactionType'
+            paymentToken:
+              $ref: '#/components/schemas/PaymentTokenDetails'
+            transactionOrigin:
+              $ref: '#/components/schemas/TransactionOrigin'
+            paymentMethodDetails:
+              $ref: '#/components/schemas/PaymentMethodDetails'
+            accountVerificationResponse:
+              $ref: '#/components/schemas/AccountVerificationResponse'  
+            country:
+              description: Country of the card issuer.
+              type: string
+              example: USA
+            terminalId:
+              description: The terminal that is processing the transaction.
+              type: string
+              example: '123456'
+            merchantId:
+              description: The unique (on Acquirer level) mechant ID. Usually this value has been chosen from the merchant itself and will be used in communication with the endpoint.
+              type: string
+              maxLength: 30
+              example: '199950008'
+            merchantTransactionId:
+              description: The unique merchant transaction ID from the request header, if supplied.
+              type: string
+              maxLength: 40
+              example: 'lsk23532djljff3'
+            transactionTime:
+              description: The transaction time in seconds since epoch.
+              type: integer
+              format: int64
+              example: 1518811817
+            approvedAmount:
+              $ref: '#/components/schemas/Amount'
+            transactionAmount:
+              $ref: '#/components/schemas/TransactionAmount'
+            transactionStatus:
+              description: This field is Deprecated. Point to 'transactionResult'.
+              type: string
+              enum:
+              - APPROVED
+              - WAITING
+              - PARTIAL
+              - VALIDATION_FAILED
+              - PROCESSING_FAILED
+              - DECLINED
+              example: APPROVED
+            transactionResult:
+              description: This is the result of the operation, unless transaction status that represent financial status of the transaction, this fields helps us to understand if the operation is successfully executed
+              type: string
+              enum:
+              - APPROVED
+              - DECLINED
+              - FAILED
+              - WAITING
+              - PARTIAL
+              - FRAUD
+              example: APPROVED
+            approvalCode:
+              description: Shows the transaction approvalcode.
+              type: string
+              example: 'N:-30031:No terminal setup'
+            errorMessage:
+              description: Shows the transaction errorMessage.
+              type: string
+              example: '000100: Tx was processed but response was not stored correctly'
+            transactionState:
+              description: Shows the state of the current transaction.
+              type: string
+              enum:
+              - AUTHORIZED
+              - CAPTURED
+              - DECLINED
+              - CHECKED
+              - COMPLETED_GET
+              - INITIALIZED
+              - PENDING
+              - READY
+              - TEMPLATE
+              - SETTLED
+              - VOIDED
+              - WAITING
+              example: 'AUTHORIZED'
+            paymentAccountReferenceNumber:
+              description: Payment Account Reference Number from response, if supplied.
+              type: string
+              maxLength: 30
+              example: '1234001AB101112131415161718CV'
+            secure3dResponse:
+              $ref: '#/components/schemas/Secure3dResponse'
+            standinResponseDetails:
+              $ref: '#/components/schemas/StandinResponseDetails'
+            redirectURL:
+              description: The endpoint redirection URL.
+              type: string
+              example: 'http://pay.issuer-bank.com/sessionID=123&sharedKey=456'
+            authenticationResponse:
+              $ref: '#/components/schemas/Secure3DAuthenticationResponse'
+            schemeTransactionId:
+              description: The transaction ID received from schemes for the initial transaction of card on file flows.
+              type: string
+              maxLength: 40
+              example: '019078743804756'
+            processor:
+              $ref: '#/components/schemas/ProcessorData'
+            additionalDetails:
+              $ref: '#/components/schemas/AdditionalTransactionDetails'
+            accountUpdaterResponse:
+              $ref: '#/components/schemas/AccountUpdaterResponse'
+            achResponse:
+              $ref: '#/components/schemas/AchResponse'
+            currencyConversionResponse:
+              $ref: '#/components/schemas/CurrencyConversionResponse'
+            requiredActions:
+              $ref: '#/components/schemas/RequiredActions'
+            plannedDueDate:
+              description: Capture PlannedDueDate field sent for SEPA transactions.
+              type: string
+              pattern: '^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$'
+              example: '2022-03-03'
+            networkToken:
+                  $ref: '#/components/schemas/NetworkToken'
       example:
         clientRequestId: 30dd879c-ee2f-11db-8314-0800200c9a66
         apiTraceId: 'rrt-0c80a3403e2c2def0-d-ea-28805-6810951-2'
@@ -3274,7 +3533,7 @@ components:
         algorithm: 'RSA/NONE/PKCS1PADDING'
         clientRequestId: 30dd879c-ee2f-11db-8314-0800200c9a66
     CardVerificationRequest:
-      description: Request to verify card validity.
+      description: 'Request to verify card validity.'
       required:
       - paymentCard
       properties:
@@ -3283,10 +3542,10 @@ components:
         billingAddress:
           $ref: '#/components/schemas/Address'
         storeId:
-          description: An optional outlet ID for clients that support multiple stores in the same app.
+          description: 'An optional outlet ID for clients that support multiple stores in the same app.'
           type: string
           maxLength: 20
-          example: '12345500000'
+          example: '222222222222'
         transactionOrigin:
           $ref: '#/components/schemas/TransactionOrigin'
       example:
@@ -3298,9 +3557,9 @@ components:
           securityCode: '977'
         billingAddress:
           address1: '5565 Glenridge Conn'
-          city: Atlanta
-          postalCode: "30342"
-          country: USA
+          city: 'Atlanta'
+          postalCode: '30342'
+          country: 'USA'
     GenerateCashReceiptRequest:
       description: Generate cash receipt request.
       type: object
@@ -3442,35 +3701,18 @@ components:
           description: An optional outlet ID for clients that support multiple stores in the same app.
           type: string
           maxLength: 20
-          example: '12345500000'
+          example: '111111111111'
         merchantTransactionId:
-            description: The unique merchant transaction ID from the request, if supplied.
-            type: string
-            maxLength: 40
-            example: 'lsk23532djljff3'
+          description: The unique merchant transaction ID from the request, if supplied.
+          type: string
+          maxLength: 40
+          example: 'lsk23532djljff3'
         transactionOrigin:
           $ref: '#/components/schemas/TransactionOrigin'
         additionalDetails:
           $ref: '#/components/schemas/AdditionalDetails'
         accountOwner:
-            $ref: '#/components/schemas/AccountOwner'  
-      example:
-        requestType: 'PaymentCardVerificationRequest'
-        paymentCard:
-          number: '4035874000424977'
-          expiryDate:
-            month: '12'
-            year: '25'
-          securityCode: '977'
-        billingAddress:
-          address1: '5565 Glenridge Conn'
-          city: Atlanta
-          postalCode: "30342"
-          country: USA
-        accountOwner:
-          firstName: Pete
-          middleName: Maverick
-          lastName: Mitchell  
+          $ref: '#/components/schemas/AccountOwner'  
     PaymentCardVerificationRequest:
       title: PaymentCardVerificationRequest
       description: Used to request account verification using a payment card. The expiryDate in paymentCard object is required to perform a PaymentCardVerificationRequest.
@@ -3482,23 +3724,6 @@ components:
         properties:
           paymentCard:
             $ref: '#/components/schemas/PaymentCard'
-        example:
-          requestType: 'PaymentCardVerificationRequest'
-          paymentCard:
-            number: '4035874000424977'
-            expiryDate:
-              month: '12'
-              year: '25'
-            securityCode: '977'
-          billingAddress:
-            address1: '5565 Glenridge Conn'
-            city: Atlanta
-            postalCode: "30342"
-            country: USA
-          accountOwner:
-            firstName: Pete
-            middleName: Maverick
-            lastName: Mitchell
     PaymentTokenVerificationRequest:
       title: PaymentTokenVerificationRequest
       description: Used to request account verification using a payment token.
@@ -3510,17 +3735,17 @@ components:
         properties:
           paymentToken:
             $ref: '#/components/schemas/UsePaymentToken'
-        example:
-          requestType: 'PaymentTokenVerificationRequest'
-          paymentToken:
-            value: '1235325235236'
-            function: 'DEBIT'
-            securityCode: '977'
-          billingAddress:
-            address1: '5565 Glenridge Conn'
-            city: Atlanta
-            postalCode: "30342"
-            country: USA
+      example:
+        requestType: 'PaymentTokenVerificationRequest'
+        paymentToken:
+          value: '1235325235236'
+          function: 'DEBIT'
+          securityCode: '777'
+        billingAddress:
+          address1: '5565 Glenridge Conn'
+          city: Atlanta
+          postalCode: "30342"
+          country: USA
     ReferencedOrderPaymentTokenizationRequest:
       title: ReferencedOrderPaymentTokenizationRequest
       description: Used to generate payment tokens with an existing order ID.
@@ -4526,7 +4751,7 @@ components:
       example:
         requestType: 'PaymentCardDisbursementTransaction'
         transactionAmount:
-          total: '50'
+          total: '51'
           currency: EUR
         disbursement:
           disbursementType: 'FundingTransactionType'
@@ -7062,9 +7287,9 @@ components:
           maxLength: 35
           example: Doe  
       example:
-        firstName: Pete
-        middleName: Maverick
-        lastName: Mitchell
+        firstName: 'firstName'
+        middleName: 'middleName'
+        lastName: 'lastName'
     Secure3D10AuthenticationResult:
       description: Submit the result of the authentication managed outside of the gateway for a 3-D Secure 1.0 scheme. For more convenient usage without implementing 3-D Secure yourself see "authenticationRequest" section. DEPRECATED - use Secure3DAuthenticationResult instead
       allOf:
