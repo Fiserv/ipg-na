@@ -1640,35 +1640,52 @@ paths:
             schema:
               $ref: '#/components/schemas/AccountVerificationRequest'
             examples:
-              PaymentCardVerificationRequest:
-                summary: 'PaymentCardVerificationRequest'
+              PaymentCardVerificationRequestWithAccountOwner:
+                summary: 'PaymentCardVerificationRequestWithAccountOwner'
                 value:
-                  requestType: 'PaymentCardVerificationRequest'
+                  requestType: PaymentCardVerificationRequest
+                  storeId: '540995300'
+                  paymentCard:
+                    cardholderName: Pete Mitchell
+                    number: '4012000033330026'
+                    expiryDate:
+                      month: '12'
+                      year: '23'
+                    securityCode: 977
+                    cardFunction: CREDIT
+                  billingAddress:
+                    address1: 5565 Glenridge Conn
+                    city: Atlanta
+                    postalCode: 30342
+                    country: USA
+                  additionalDetails:
+                    operatorId: 123456_No_show_True
+                    salesSystemId: '1234'
+                  accountOwner:
+                    firstName: FN123
+                    middleName: Mname
+                    lastName: Lname
+              PaymentCardVerificationRequestWithOutAccountOwner:
+                summary: 'PaymentCardVerificationRequestWithOutAccountOwner'
+                value:
+                  requestType: PaymentCardVerificationRequest
+                  merchantTransactionId: jun10_1
                   paymentCard:
                     number: '4012000033330026'
-                    expiryDate: 
+                    expiryDate:
                       month: '12'
                       year: '24'
                     securityCode: '979'
-                    bic: 'PBNKDEFFXXX'
-                    bankCode: '10010010'
-                    cardFunction: 'DEBIT'
-                    cardholderName: 'John Doe'
-                    bin: '403587'
-                    last4: '4977'
-                    brand: 'VISA'
+                    cardFunction: CREDIT
                   billingAddress:
-                    company: 'Company-8'
-                    address1: '888 Oakwood Trail'
-                    address2: '8 steps forward'
-                    city: 'McDonough'
-                    region: 'GA'
-                    postalCode: '88888'
-                    country: 'USA'
-                  accountOwner:
-                    firstName: 'Bill'
-                    middleName: 'Joy'
-                    lastName: 'Gates'
+                    address1: 5565 Glenridge Conn
+                    city: Atlanta
+                    postalCode: 30342
+                    country: USA
+                  additionalDetails:
+                    operatorId: '1234'
+                    salesSystemId: '1234'
+                  storeId: '540995300'
         description: 'Accepted request type: PaymentCardVerificationRequest and PaymentTokenVerificationRequest.'
         required: true
       responses:
@@ -1678,6 +1695,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TransactionResponse'
+              examples:
+                PaymentCardVerificationRequestWithAccountOwnerResponse:
+                  summary: "PaymentCardVerificationRequestWithAccountOwnerResponse"
+                  $ref: '#/components/examples/PaymentCardVerificationRequestWithAccountOwnerResponse'
+                PaymentCardVerificationRequestWithOutAccountOwnerResponse:
+                  summary: "PaymentCardVerificationRequestWithOutAccountOwnerResponse"
+                  $ref: '#/components/examples/PaymentCardVerificationRequestWithOutAccountOwnerResponse'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -2203,7 +2227,130 @@ components:
           cryptogram: AgAAAAADo8FZTI0AmJbMgyUAAAA=
           authIndicator: P
           tokenEligible: AY
-
+    PaymentCardVerificationRequestWithOutAccountOwnerResponse:
+      value:
+        clientRequestId: '2838649'
+        apiTraceId: ljklkjlkjasdflkjlkj123
+        ipgTransactionId: '84345270263'
+        orderId: R-f0150b95-a4f3-4c09-88fd-e6175e00040f
+        transactionType: PREAUTH
+        paymentToken:
+          reusable: true
+          declineDuplicates: false
+          brand: VISA
+          type: PAYMENT_CARD
+        transactionOrigin: ECOM
+        paymentMethodDetails:
+          paymentCard:
+            expiryDate:
+              month: '12'
+              year: '2024'
+            cardFunction: CREDIT
+            bin: '401200'
+            last4: '0026'
+            brand: VISA
+          paymentMethodType: PAYMENT_CARD
+          paymentMethodBrand: VISA
+        country: India
+        terminalId: '01287451'
+        merchantId: '000199770001998'
+        merchantTransactionId: jun10_1
+        transactionTime: 1700172983
+        approvedAmount:
+          total: 0
+          currency: USD
+          components: {}
+        transactionAmount:
+          total: 0
+          currency: USD
+          components: {}
+        transactionStatus: APPROVED
+        approvalCode: Y:OK152C:4345270263:YYYM:440091
+        schemeTransactionId: '013320392937567'
+        processor:
+          referenceNumber: '84345270263'
+          authorizationCode: OK152C
+          responseCode: '00'
+          network: VISA
+          associationResponseCode: '000'
+          responseMessage: APPROVAL
+          avsResponse:
+            streetMatch: Y
+            postalCodeMatch: Y
+            associationAvsResponse: Y
+          securityCodeResponse: MATCHED
+        additionalDetails:
+          additionalResponseData:
+            issuingBankName: USA Bank
+            countryOfIssuance: USA
+            cardProductID: H
+            detailedProductID: C
+            associationResponseCodeAdtl: '00'
+            cardBrand: V
+    PaymentCardVerificationRequestWithAccountOwnerResponse:
+      value:
+        clientRequestId: '2838649'
+        apiTraceId: ljklkjlkjasdflkjlkj123
+        ipgTransactionId: '84345270264'
+        orderId: R-5c09fbfd-bc03-4187-bd71-59417b822c5d
+        transactionType: PREAUTH
+        paymentToken:
+          reusable: true
+          declineDuplicates: false
+          brand: VISA
+          type: PAYMENT_CARD
+        transactionOrigin: ECOM
+        paymentMethodDetails:
+          paymentCard:
+            expiryDate:
+              month: '12'
+              year: '2023'
+            cardFunction: CREDIT
+            bin: '401200'
+            last4: '0026'
+            brand: VISA
+          paymentMethodType: PAYMENT_CARD
+          paymentMethodBrand: VISA
+        accountVerificationResponse:
+          firstNameMatch: PARTIAL_MATCH
+          middleNameMatch: MATCH
+          lastNameMatch: MATCH
+          nameMatchIndicator: PERFORMED
+        country: India
+        terminalId: '01287451'
+        merchantId: '000199770001998'
+        transactionTime: 1700173046
+        approvedAmount:
+          total: 0
+          currency: USD
+          components: {}
+        transactionAmount:
+          total: 0
+          currency: USD
+          components: {}
+        transactionStatus: APPROVED
+        approvalCode: Y:OK175C:4345270264:YYYM:440093
+        schemeTransactionId: '013320412147583'
+        processor:
+          referenceNumber: '84345270264'
+          authorizationCode: OK175C
+          responseCode: '00'
+          network: VISA
+          associationResponseCode: '000'
+          responseMessage: APPROVAL
+          avsResponse:
+            streetMatch: Y
+            postalCodeMatch: Y
+            associationAvsResponse: Y
+          securityCodeResponse: MATCHED
+        additionalDetails:
+          additionalResponseData:
+            issuingBankName: USA Bank
+            countryOfIssuance: USA
+            cardProductID: H
+            detailedProductID: C
+            associationResponseCodeAdtl: '00'
+            cardBrand: V
 #-------------------------------------------------------------------------------
 # Parameter Models
 #-------------------------------------------------------------------------------
