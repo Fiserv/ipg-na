@@ -1645,11 +1645,11 @@ paths:
                 value:
                   requestType: 'PaymentCardVerificationRequest'
                   paymentCard:
-                    number: '8888888888888888'
+                    number: '4012000033330026'
                     expiryDate: 
-                      month: '08'
-                      year: '22'
-                    securityCode: '888'
+                      month: '12'
+                      year: '24'
+                    securityCode: '979'
                     bic: 'PBNKDEFFXXX'
                     bankCode: '10010010'
                     cardFunction: 'DEBIT'
