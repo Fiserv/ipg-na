@@ -1,6 +1,7 @@
 
 # Response Codes
 
+![](/api/hosted-image/IPGNA/assets/images/thumbnail_image002.png)
 
 **Address Verification Service (AVS) Results**
 
