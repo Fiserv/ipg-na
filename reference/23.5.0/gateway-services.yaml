@@ -1696,10 +1696,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/TransactionResponse'
               examples:
-                PaymentCardVerificationRequestWithAccountOwnerResponse:
+                PaymentCardVerificationRequestWithAccountOwner:
                   summary: "PaymentCardVerificationRequestWithAccountOwnerResponse"
                   $ref: '#/components/examples/PaymentCardVerificationRequestWithAccountOwnerResponse'
-                PaymentCardVerificationRequestWithOutAccountOwnerResponse:
+                PaymentCardVerificationRequestWithOutAccountOwner:
                   summary: "PaymentCardVerificationRequestWithOutAccountOwnerResponse"
                   $ref: '#/components/examples/PaymentCardVerificationRequestWithOutAccountOwnerResponse'
         '400':
