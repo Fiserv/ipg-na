@@ -18,6 +18,12 @@
   "getStartedFilePath": "/docs/additionalInfo/HostedPaymentPages.md",
   "apiVersions": [
       {
+        "version": "24.2.0",
+        "versionType": "minor",
+        "releaseNotesPath": "docs/release-notes/Release-Notes.md",
+        "apiSpecFileNames": ["gateway-services"]
+      },
+      {
         "version": "23.3.0",
         "versionType": "minor",
         "releaseNotesPath": "docs/release-notes/Release-Notes.md",
