@@ -17,24 +17,30 @@
   ],
   "getStartedFilePath": "/docs/additionalInfo/HostedPaymentPages.md",
   "apiVersions": [
-      {
-        "version": "23.3.0",
-        "versionType": "minor",
-        "releaseNotesPath": "docs/release-notes/Release-Notes.md",
-        "apiSpecFileNames": ["gateway-services"]
-      },
-      {
+    {
+      "version": "23.3.0",
+      "versionType": "minor",
+      "releaseNotesPath": "docs/release-notes/Release-Notes.md",
+      "apiSpecFileNames": ["gateway-services"]
+    },
+    {
 	    "version": "23.4.0",
 	    "versionType": "minor",
 	    "releaseNotesPath": "docs/release-notes/Release-Notes.md",
 	    "apiSpecFileNames": ["gateway-services"]
 	  },
-      {
-        "version": "23.5.0",
-	    "versionType": "major",
+    {
+      "version": "23.5.0",
+	    "versionType": "minor",
 	    "releaseNotesPath": "docs/release-notes/Release-Notes.md",
 	    "apiSpecFileNames": ["gateway-services"]
-      }
+    },
+    {
+      "version": "24.2.0",
+      "versionType": "major",
+      "releaseNotesPath": "docs/release-notes/Release-Notes.md",
+      "apiSpecFileNames": ["gateway-services"]
+    }
   ],
   "featureBranches": ["develop"],
   "product": {
