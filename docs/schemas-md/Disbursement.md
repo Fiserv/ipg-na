@@ -23,7 +23,8 @@
     "phoneNumber": "4044040740",
     "birthDate": "19560121",
     "referenceNumber": "12345678",
-    "accountNumber": "135246"
+    "accountNumber": "135246",
+    "accountType": "CARD_ACCOUNT_NO"
   },
   "receiverInfo": {
     "name": "Abraham Receiver Lincoln",
@@ -34,7 +35,8 @@
     "postalCode": "30342",
     "phoneNumber": "4044040740",
     "referenceNumber": "12345678",
-    "accountNumber": "135246"
+    "accountNumber": "135246",
+    "accountType": "ROUTING_TRANSIT_NO_AND_BANK_ACCOUNT_NO"
   }
 }
 ``` 

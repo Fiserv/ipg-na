@@ -263,6 +263,7 @@ paths:
                       referenceNumber: '12345678'
                       accountNumber: '135246'
                       participationId: '123456789123456789123456789123'
+                      accountType: 'EMAIL'
                     receiverInfo:
                       name: 'Abraham Receiver Lincoln'
                       streetAddress: 5565 Glenridge Connector
@@ -355,6 +356,7 @@ paths:
                       referenceNumber: '12345678'
                       accountNumber: '135246'
                       participationId: '123456789123456789123456789123'
+                      accountType: 'EMAIL'
                     receiverInfo:
                       name: 'Abraham Receiver Lincoln'
                       streetAddress: 5565 Glenridge Connector
@@ -535,6 +537,7 @@ paths:
                       referenceNumber: '12345678'
                       accountNumber: '135246'
                       participationId: '123456789123456789123456789123'
+                      accountType: 'EMAIL'
                     receiverInfo:
                       name: 'Abraham Receiver Lincoln'
                       streetAddress: 5565 Glenridge Connector
@@ -4913,6 +4916,7 @@ components:
             birthDate: '19560121'
             referenceNumber: '12345678'
             accountNumber: '135246'
+            accountType: 'EMAIL'
           receiverInfo:
             name: 'Abraham Receiver Lincoln'
             streetAddress: 5565 Glenridge Connector
@@ -4923,6 +4927,7 @@ components:
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
+            accountType: 'EMAIL'
         paymentMethod:
           paymentCard:
             number: '5424180279791732'
@@ -4979,6 +4984,7 @@ components:
             birthDate: '19560121'
             referenceNumber: '12345678'
             accountNumber: '135246'
+            accountType: 'EMAIL'
           receiverInfo:
             name: 'Abraham Receiver Lincoln'
             streetAddress: 5565 Glenridge Connector
@@ -4989,6 +4995,7 @@ components:
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
+            accountType: 'EMAIL'
         paymentMethod:
           paymentToken:
             value: '1235325235236'
@@ -5138,6 +5145,7 @@ components:
             birthDate: '19560121'
             referenceNumber: '12345678'
             accountNumber: '135246'
+            accountType: 'EMAIL'
           receiverInfo:
             name: 'Abraham Receiver Lincoln'
             streetAddress: 5565 Glenridge Connector
@@ -5148,6 +5156,7 @@ components:
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
+            accountType: 'EMAIL'
         order:
           additionalDetails:
             invoiceNumber: '984424645416'
