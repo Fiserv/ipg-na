@@ -13,7 +13,7 @@
 | birthDate | ``` string ```   <br/> maxLength: 25  <br/> pattern:^([0-9]{4})(1[0-2]|0[1-9])(3[01]|0[1-9]|[12][0-9])$    <br/> *example: 19560121*  <br/> Sender date of birth (YYYYMMDD).|   
 | referenceNumber* | ``` string ```   <br/> maxLength:19   <br/> pattern: ^(?!\s*$).+    <br/> *example: 123456*  Sender reference number.|
 | accountNumber* | ``` string ```   <br/> maxLength: 19  <br/> pattern: ^(?!\s*$).+    <br/> *example: 135246*  Sender account number.|
-
+| accountType |    ``` string ```  <br/>  *example: CARD_ACCOUNT_NO*  <br/> Enumeration values: <br/> - BANK_ACCOUNT_NO_AND_BIC <br/> - CARD_ACCOUNT_NO <br/> - IBAN <br/> - ROUTING_TRANSIT_NO_AND_BANK_ACCOUNT_NO <br/> - OTHER<br/> - EMAIL<br/> - PHONE_NUMBER<br/> - WALLET_ID<br/>- SOCIAL_NETWORK_ID|
 
 **SenderInfo Example:**
 
@@ -29,7 +29,8 @@
   "phoneNumber": "4044040740",
   "birthDate": "19560121",
   "referenceNumber": "12345678",
-  "accountNumber": "135246"
+  "accountNumber": "135246",
+  "accountType": "CARD_ACCOUNT_NO"
 }
 ```
 
