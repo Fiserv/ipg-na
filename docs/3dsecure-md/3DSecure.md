@@ -29,7 +29,7 @@ The following represents an example of a ***Sale*** transaction request with min
     <input type=text name=chargetotal value=13.00 />
     <input type=hidden name=currency value=978/>
     <input type=hidden name=authenticateTransaction value=true/>
-    <input type=text name=threeDSRequestorChallengeIndicator value=”1”/>
+    <input type=text name=threeDSRequestorChallengeIndicator value=ï¿½1ï¿½/>
     <input type=submit value=Submit>
 </form>
 </body>
@@ -95,6 +95,25 @@ Return code indicating the classification of the transaction:
 7. Cardholder not enrolled for 3-D Secure (VISA ECI 07) - relevant for 3DS 1.0
 8. Invalid 3-D Secure values received 
 
+|secure3D2AuthenticationResponse | secure3D2TransactionStatus | authenticationValue | ResponseCode3dSecure| 
+|-------|--------|---------|----------|
+|null	|null	|null	|null
+|Y  |	null |	X |	1 |
+|C  |	Y  |	X	|	1  |
+|R  |	null  |	null  |	3  |
+|R	  |	null  |	 X  | 3  |
+|C  |	N  | null  |	3  |
+|C  |	N  |	X  |	3  |
+|A  |	null  |	X  |	4  |
+|C  |	U  |	null  |	5  |
+|U  |	null  |	null  |	5  |
+|N  |	null  |	null  |	7  |	
+|null  |	null  |	X  | 9  |
+|Y  |	Y  |	X  |	1  |
+|Y	  |	N  |	null  |		3  |
+|Y  |	N  |	X  |	3  |
+|Y  |	U  |	null  |	5  |
+
 ## Alternative Options
 
 > [REST API Integration](?path=docs/3dsecure-md/RESTAPIIntegration.md)
@@ -117,8 +136,8 @@ Check out our [Dynamic 3-D Secure](?path=docs/3dsecure-md/Dynamic3DSecure.md) pa
 
 ## Additional Information
 
-- In principle, it may occur that 3-D Secure authentications cannot be processed successfully for technical reasons. If one of the systems involved in the authentication process is temporarily not responding, the payment transaction will be processed as a “regular” eCommerce transaction (ECI 7). A liability shift to the card issuer for possible chargebacks is not warranted in this case. If you prefer that such transactions shall not be processed at all, our technical support teams can block them for your Store on request.
+- In principle, it may occur that 3-D Secure authentications cannot be processed successfully for technical reasons. If one of the systems involved in the authentication process is temporarily not responding, the payment transaction will be processed as a ï¿½regularï¿½ eCommerce transaction (ECI 7). A liability shift to the card issuer for possible chargebacks is not warranted in this case. If you prefer that such transactions shall not be processed at all, our technical support teams can block them for your Store on request.
  
-- Credit card transactions with 3-D Secure hold in a pending status while cardholders search for their password or need to activate their card for 3-D Secure during their shopping experience. During this time when the final transaction result of the transaction is not yet determined, the payment gateway sets the Approval Code to „?:waiting 3dsecure“. If the session expires before the cardholder returns from the 3-D Secure dialogue with his bank, the transaction will be shown as “N:-5103:Cardholder did not return from ACS”.
+- Credit card transactions with 3-D Secure hold in a pending status while cardholders search for their password or need to activate their card for 3-D Secure during their shopping experience. During this time when the final transaction result of the transaction is not yet determined, the payment gateway sets the Approval Code to ï¿½?:waiting 3dsecureï¿½. If the session expires before the cardholder returns from the 3-D Secure dialogue with his bank, the transaction will be shown as ï¿½N:-5103:Cardholder did not return from ACSï¿½.
  
 - Please note that the technical process of 3-D Secure transactions differs in some points compared to a normal transaction flow. If you already have an existing shop integration and plan to activate 3-D Secure subsequently, we recommend performing some test transactions on our test environment, test data producing different authentication results can be found here: [3-D Secure Test Data](?path=docs/3dsecure-md/3DSecureTestData.md) 	
