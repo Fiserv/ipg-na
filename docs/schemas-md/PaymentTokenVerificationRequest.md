@@ -6,12 +6,33 @@
 | requestType |    ``` string ```  <br/>  *example: PaymentCardVerificationRequest* <br/> Object name of the account verification request.|
 | billingAddress |  [Address](?path=docs/schemas-md/Address.md)|  
 | storeId |    ``` string ```  <br/> maxLength: 20  <br/> *example: 12345500000* <br/> An optional outlet ID for clients that support multiple stores in the same app.|
-| merchantTransactionId |    ``` string ```   <br/> maxLength: 40  <br/> *example: lsk23532djljff3* <br/> The unique merchant transaction ID from the request, if supplied.|
-| additionalDetails | [AdditionalDetails](?path=docs/schemas-md/AdditionalDetails.md)|
-| paymentToken | [UsePaymentToken](?path=docs/schemas-md/UsePaymentToken.md)|   
+| paymentToken | [UsePaymentToken](?path=docs/schemas-md/UsePaymentToken.md)|
+| accountOwner | [AccountOwner](?path=docs/schemas-md/AccountOwner.md)|   
 
-    
-   
+**PaymentTokenVerificationRequest Example:**
 
+```{r}
 
-
+{
+    "storeId": "541634818497",
+    "requestType": "PaymentTokenVerificationRequest",
+    "paymentToken": {
+        "value": "9988740980260042",
+        "expiryDate": {
+            "month": "12",
+            "year": "25"
+        }
+    },
+    "billingAddress": {
+        "address1": "5565 Glenridge Conn",
+        "city": "Atlanta",
+        "postalCode": "30342",
+        "country": "USA"
+    },
+    "accountOwner": {
+        "firstName": "Alexander",
+        "middleName": "Graham",
+        "lastName": "Bell"
+    }
+}
+```
