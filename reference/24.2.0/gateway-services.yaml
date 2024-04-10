@@ -1689,6 +1689,12 @@ paths:
                     operatorId: '1234'
                     salesSystemId: '1234'
                   storeId: '540995300'
+              PaymentTokenVerificationWithOutAccountOwner:
+                summary: "PaymentTokenVerificationWithOutAccountOwnerRequest"
+                $ref: '#/components/examples/PaymentTokenVerificationWithOutAccountOwnerRequest'
+              PaymentTokenVerificationWithAccountOwner:
+                summary: "PaymentTokenVerificationWithAccountOwnerRequest"
+                $ref: '#/components/examples/PaymentTokenVerificationWithAccountOwnerRequest'
         description: 'Accepted request type: PaymentCardVerificationRequest and PaymentTokenVerificationRequest.'
         required: true
       responses:
@@ -1705,6 +1711,12 @@ paths:
                 PaymentCardVerificationRequestWithOutAccountOwner:
                   summary: "PaymentCardVerificationRequestWithOutAccountOwnerResponse"
                   $ref: '#/components/examples/PaymentCardVerificationRequestWithOutAccountOwnerResponse'
+                PaymentTokenVerificationWithOutAccountOwner:
+                  summary: "PaymentTokenVerificationWithOutAccountOwnerResponse"
+                  $ref: '#/components/examples/PaymentTokenVerificationWithOutAccountOwnerResponse'
+                PaymentTokenVerificationWithAccountOwner:
+                  summary: "PaymentTokenVerificationWithAccountOwnerResponse"
+                  $ref: '#/components/examples/PaymentTokenVerificationWithAccountOwnerResponse'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -2352,6 +2364,159 @@ components:
             countryOfIssuance: USA
             cardProductID: H
             detailedProductID: C
+            associationResponseCodeAdtl: '00'
+            cardBrand: V
+    PaymentTokenVerificationWithOutAccountOwnerRequest:
+      value:
+        storeId: '541634818497'
+        requestType: PaymentTokenVerificationRequest
+        paymentToken:
+          value: '9988740980260042'
+          expiryDate:
+            month: '12'
+            year: '25'
+        billingAddress:
+          address1: 5565 Glenridge Conn
+          city: Atlanta
+          postalCode: '30342'
+          country: USA
+    PaymentTokenVerificationWithOutAccountOwnerResponse:
+      value:
+        type: transactionResponse
+        clientRequestId: '2046714'
+        apiTraceId: ZgWmft-QuDxBEOb73V67pgAAAEU
+        ipgTransactionId: '84652539185'
+        orderId: R-0f2bf225-ee6e-4111-82a2-2e0c4d5092eb
+        transactionType: PREAUTH
+        paymentToken:
+          reusable: true
+          declineDuplicates: false
+          brand: VISA
+          type: PAYMENT_CARD
+        transactionOrigin: ECOM
+        paymentMethodDetails:
+          paymentCard:
+            expiryDate:
+              month: '12'
+              year: '2025'
+            bin: '448464'
+            last4: '0042'
+            brand: VISA
+          paymentMethodType: PAYMENT_CARD
+          paymentMethodBrand: VISA
+        country: USA
+        terminalId: '1567065'
+        merchantId: '323254102995'
+        transactionTime: 1711646334
+        approvedAmount:
+          total: 0
+          currency: USD
+          components: {}
+        transactionAmount:
+          total: 0
+          currency: USD
+          components: {}
+        transactionStatus: APPROVED
+        approvalCode: Y:OK4171:4652539185:YYYX:002946
+        schemeTransactionId: '014088649053879'
+        processor:
+          referenceNumber: '84652539185'
+          authorizationCode: OK4171
+          responseCode: '00'
+          network: VISA
+          associationResponseCode: '000'
+          responseMessage: APPROVAL
+          avsResponse:
+            streetMatch: Y
+            postalCodeMatch: Y
+            associationAvsResponse: Y
+          securityCodeResponse: NOT_CHECKED
+        additionalDetails:
+          additionalResponseData:
+            issuingBankName: HTLF Ban
+            countryOfIssuance: USA
+            cardProductID: X
+            associationResponseCodeAdtl: '00'
+            cardBrand: V
+    PaymentTokenVerificationWithAccountOwnerRequest:
+      value:
+        storeId: '541634818497'
+        requestType: PaymentTokenVerificationRequest
+        paymentToken:
+          value: '9988740980260042'
+          expiryDate:
+            month: '12'
+            year: '25'
+        billingAddress:
+          address1: 5565 Glenridge Conn
+          city: Atlanta
+          postalCode: '30342'
+          country: USA
+        accountOwner:
+          firstName: Alexander
+          middleName: Graham
+          lastName: Bell
+    PaymentTokenVerificationWithAccountOwnerResponse:
+      value:
+        type: transactionResponse
+        clientRequestId: '2046714'
+        apiTraceId: ZgWmft-QuDxBEOb73V67pgAAAEU
+        ipgTransactionId: '84652539185'
+        orderId: R-0f2bf225-ee6e-4111-82a2-2e0c4d5092eb
+        transactionType: PREAUTH
+        paymentToken:
+          reusable: true
+          declineDuplicates: false
+          brand: VISA
+          type: PAYMENT_CARD
+        transactionOrigin: ECOM
+        paymentMethodDetails:
+          paymentCard:
+            expiryDate:
+              month: '12'
+              year: '2025'
+            bin: '448464'
+            last4: '0042'
+            brand: VISA
+          paymentMethodType: PAYMENT_CARD
+          paymentMethodBrand: VISA
+        country: USA
+        terminalId: '1567065'
+        merchantId: '323254102995'
+        transactionTime: 1711646334
+        approvedAmount:
+          total: 0
+          currency: USD
+          components: {}
+        transactionAmount:
+          total: 0
+          currency: USD
+          components: {}
+        transactionStatus: APPROVED
+        approvalCode: Y:OK4171:4652539185:YYYX:002946
+        schemeTransactionId: '014088649053879'
+        processor:
+          referenceNumber: '84652539185'
+          authorizationCode: OK4171
+          responseCode: '00'
+          network: VISA
+          associationResponseCode: '000'
+          responseMessage: APPROVAL
+          avsResponse:
+            streetMatch: Y
+            postalCodeMatch: Y
+            associationAvsResponse: Y
+          accountVerificationResponse:
+            firstNameMatch: MATCH
+            middleNameMatch: PARTIAL MATCH
+            lastNameMatch: NO MATCH
+            nameMatchIndicator: PERFORMED
+          securityCodeResponse: NOT_CHECKED
+        additionalDetails:
+          additionalResponseData:
+            issuingBankName: HTLF Ban
+            countryOfIssuance: USA
+            cardProductID: X
             associationResponseCodeAdtl: '00'
             cardBrand: V
 #-------------------------------------------------------------------------------
