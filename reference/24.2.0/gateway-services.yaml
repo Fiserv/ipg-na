@@ -7590,7 +7590,7 @@ components:
       example:
         authenticationType: 'Secure3DAuthenticationResult'
     AccountOwner:
-      description: Used for PaymentCard or PaymentToken Account Verification.
+      description: Used for Account Name Inquiry and Verification.
       properties:
         firstName:
           description: Account Holder First Name.
