@@ -1974,6 +1974,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AvailableIsoCountriesResponse'
+              examples:
+                AvailableIsoCountries:
+                  value:
+                    clientRequestId: 30dd879c-ee2f-11db-8314-0800200c9a66
+                    apiTraceId: rrt-0bd552c12342d3448-b-ea-1142-12938318-7
+                    defaultStoreCountry:
+                      iso31661Alpha2: US
+                      iso31661Alpha3: USA
+                      iso31661Numeric: "840"
+                      defaultCountry: true
+                    countries:
+                      - iso31661Alpha2: US
+                        iso31661Alpha3: USA
+                        iso31661Numeric: "840"
+                        defaultCountry: true
+                      - iso31661Alpha2: DM
+                        iso31661Alpha3: DMA
+                        iso31661Numeric: "212"
+                        defaultCountry: false
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -3944,9 +3963,9 @@ components:
               description: Message returned from endpoints.
               type: string
               example: 'Amount specified exceeds allowable limit.'
-      example:
-        responseCode: '0000'
-        responseMessage: 'APPROVED'
+          example:
+            responseCode: '0000'
+            responseMessage: 'APPROVED'
     DeliveryConfirmationRequest:
       description: Delivery Confirmation generation request.
       type: object
@@ -11115,23 +11134,6 @@ components:
             type: array
             items:
               $ref: '#/components/schemas/StoreCountry'
-      example:
-        clientRequestId: 30dd879c-ee2f-11db-8314-0800200c9a66
-        apiTraceId: rrt-0bd552c12342d3448-b-ea-1142-12938318-7
-        defaultStoreCountry:
-          iso31661Alpha2: US
-          iso31661Alpha3: USA
-          iso31661Numeric: "840"
-          defaultCountry: true
-        countries:
-          - iso31661Alpha2: US
-            iso31661Alpha3: USA
-            iso31661Numeric: "840"
-            defaultCountry: true
-          - iso31661Alpha2: DM
-            iso31661Alpha3: DMA
-            iso31661Numeric: "212"
-            defaultCountry: false
 #-----------------------------------------------------------------------------------------------
 # Start of Fraud Detect transaction changes. This section DOES NOT BELONG to the IPG source API.
 #-----------------------------------------------------------------------------------------------
@@ -13290,7 +13292,7 @@ components:
       description: Response for Managed redirect transaction request
       allOf:
         - $ref: '#/components/schemas/BasicResponse'
-        - properties:
+          properties:
             requestStatus:
               description: The status of the request.
               type: string
@@ -13312,6 +13314,11 @@ components:
               type: string
               description: ID code from the transaction.
               example: '123978432'
+          example:
+            requestStatus: 'SUCCESS'
+            orderId: '123456'
+            redirectURL: 'https://api.firstdata.com/connect/gateway/processing?storename=123456789&oid=R-96cdbaa4-c22e-4598-a2f1-c2b5fed79ef1&redirectRequestId=d3eb74fe-cf63-47e1-b89f-52ba0cc7965c'
+            transactionId: '123978432'
 #-----------------------------------------------
 # Start of Get Network Token Cryptogram changes.
 #-----------------------------------------------
