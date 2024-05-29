@@ -27,7 +27,7 @@
     "currency": "USD"
   },
   "disbursement": {
-    "disbursementType": "DisbursementTransactionType",
+    "disbursementType": "FundingTransactionType",
     "senderInfo": {
       "name": "Franklin Sender Roosevelt",
       "streetAddress": "5565 Glenridge Connector",
@@ -52,6 +52,16 @@
       "referenceNumber": "12345678",
       "accountNumber": "135246",
       "accountType": "ROUTING_TRANSIT_NO_AND_BANK_ACCOUNT_NO"
+    }
+  },
+  "order": {
+    "purposeOfPaymentCode": "ISCCRD",
+    "additionalDetails": {
+      "comments": "This is Token Disbursement transaction",
+      "invoiceNumber": "984424645416",
+      "purchaseOrderNumber": "4545623458",
+      "businessApplicationIdentifier": "ACCOUNT_TO_ACCOUNT",
+      "transactionTypeIdentifier": "BUSINESS_DISBURSEMENT_MONEY_SEND"
     }
   },
   "paymentMethod": {
