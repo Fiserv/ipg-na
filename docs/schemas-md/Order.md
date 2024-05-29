@@ -27,6 +27,14 @@
 
 {
   "orderId": "ABC12345",
+  "purposeOfPaymentCode": "ISCCRD",
+  "additionalDetails": {
+    "comments": "This is Token Disbursement transaction",
+    "invoiceNumber": "984424645416",
+    "purchaseOrderNumber": "4545623458",
+    "businessApplicationIdentifier": "ACCOUNT_TO_ACCOUNT",
+    "transactionTypeIdentifier": "BUSINESS_DISBURSEMENT_MONEY_SEND"
+  },
   "billing": {
     "name": "John Doe",
     "customerId": "1234567890"
