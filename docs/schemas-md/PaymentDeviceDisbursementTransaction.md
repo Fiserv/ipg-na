@@ -63,6 +63,16 @@
       "accountType": "ROUTING_TRANSIT_NO_AND_BANK_ACCOUNT_NO"
     }
   },
+  "order": {
+    "purposeOfPaymentCode": "ISCCRD",
+    "additionalDetails": {
+      "comments": "Payment Device Disbursement Transaction",
+      "invoiceNumber": "984424645416",
+      "purchaseOrderNumber": "4545623458",
+      "businessApplicationIdentifier": "ACCOUNT_TO_ACCOUNT",
+      "transactionTypeIdentifier": "BUSINESS_DISBURSEMENT_MONEY_SEND"
+    }
+  },
   "authenticationResult": {
       "authenticationType": "Secure3D21AuthenticationResult",
       "cavv": "AAABBJkZUQAAAABXSBlRAAAAAAA=",
