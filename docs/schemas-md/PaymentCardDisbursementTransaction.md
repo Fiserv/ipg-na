@@ -55,6 +55,16 @@
       "accountType": "ROUTING_TRANSIT_NO_AND_BANK_ACCOUNT_NO"
     }
   },
+  "order": {
+    "purposeOfPaymentCode": "ISCCRD",
+    "additionalDetails": {
+      "comments": "Payment Card Disbursement Transaction",
+      "invoiceNumber": "984424645416",
+      "purchaseOrderNumber": "4545623458",
+      "businessApplicationIdentifier": "ACCOUNT_TO_ACCOUNT",
+      "transactionTypeIdentifier": "BUSINESS_DISBURSEMENT_MONEY_SEND"
+    }
+  },
   "paymentMethod": {
     "paymentCard": {
       "number": "5424180279791732",
