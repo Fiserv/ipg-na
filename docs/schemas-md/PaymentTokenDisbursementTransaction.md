@@ -28,6 +28,7 @@
   },
   "disbursement": {
     "disbursementType": "FundingTransactionType",
+    "fundingSource": "CREDIT_ACCOUNT",
     "senderInfo": {
       "name": "Franklin Sender Roosevelt",
       "streetAddress": "5565 Glenridge Connector",
@@ -37,6 +38,7 @@
       "postalCode": "30342",
       "phoneNumber": "4044040740",
       "birthDate": "19560121",
+      "participationId": "123456789123456789123456789123",
       "referenceNumber": "12345678",
       "accountNumber": "135246",
       "accountType": "CARD_ACCOUNT_NO"
