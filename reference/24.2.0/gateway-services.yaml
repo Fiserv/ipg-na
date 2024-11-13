@@ -257,7 +257,7 @@ paths:
                       city: Atlanta
                       stateCode: GA
                       countryCode: US
-                      postalCode: "30342"
+                      postalCode: "30342-3456"
                       phoneNumber: '4044040740'
                       birthDate: '19560121'
                       referenceNumber: '12345678'
@@ -270,7 +270,7 @@ paths:
                       city: Atlanta
                       stateCode: GA
                       countryCode: US
-                      postalCode: "30342"
+                      postalCode: "30342-3456"
                       phoneNumber: '4044040740'
                       referenceNumber: '12345678'
                       accountNumber: '135246'
@@ -350,7 +350,7 @@ paths:
                       city: Atlanta
                       stateCode: GA
                       countryCode: US
-                      postalCode: "30342"
+                      postalCode: "30342-3456"
                       phoneNumber: '4044040740'
                       birthDate: '19560121'
                       referenceNumber: '12345678'
@@ -363,7 +363,7 @@ paths:
                       city: Atlanta
                       stateCode: GA
                       countryCode: US
-                      postalCode: "30342"
+                      postalCode: "30342-3456"
                       phoneNumber: '4044040740'
                       referenceNumber: '12345678'
                       accountNumber: '135246'
@@ -531,7 +531,7 @@ paths:
                       city: Atlanta
                       stateCode: GA
                       countryCode: US
-                      postalCode: "30342"
+                      postalCode: "30342-3456"
                       phoneNumber: '4044040740'
                       birthDate: '19560121'
                       referenceNumber: '12345678'
@@ -544,7 +544,7 @@ paths:
                       city: Atlanta
                       stateCode: GA
                       countryCode: US
-                      postalCode: "30342"
+                      postalCode: "30342-3456"
                       phoneNumber: '4044040740'
                       referenceNumber: '12345678'
                       accountNumber: '135246'
@@ -5095,7 +5095,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             birthDate: '19560121'
             referenceNumber: '12345678'
@@ -5107,7 +5107,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
@@ -5163,7 +5163,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             birthDate: '19560121'
             referenceNumber: '12345678'
@@ -5175,7 +5175,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
@@ -5324,7 +5324,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             birthDate: '19560121'
             referenceNumber: '12345678'
@@ -5336,7 +5336,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
@@ -5513,7 +5513,7 @@ components:
           city: Atlanta
           stateCode: GA
           countryCode: US
-          postalCode: "30342"
+          postalCode: "30342-3456"
           phoneNumber: '4044040740'
           birthDate: '19560121'
           referenceNumber: '12345678'
@@ -5524,7 +5524,7 @@ components:
           city: Atlanta
           stateCode: GA
           countryCode: US
-          postalCode: "30342"
+          postalCode: "30342-3456"
           phoneNumber: '4044040740'
           referenceNumber: '12345678'
           accountNumber: '135246'
@@ -5541,7 +5541,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             birthDate: '19560121'
             referenceNumber: '12345678'
@@ -5552,7 +5552,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
@@ -5569,7 +5569,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             birthDate: '19560121'
             referenceNumber: '12345678'
@@ -5580,7 +5580,7 @@ components:
             city: Atlanta
             stateCode: GA
             countryCode: US
-            postalCode: "30342"
+            postalCode: "30342-3456"
             phoneNumber: '4044040740'
             referenceNumber: '12345678'
             accountNumber: '135246'
@@ -5628,9 +5628,10 @@ components:
         postalCode:
           description: Sender postal code.
           type: string
-          maxLength: 5
-          pattern: '^(?!\s*$).+'
-          example: "30342"
+          #This pattern allows postal code of minimum of length 3  or maximum of length 10,
+          #does not allow white spaces for the first and last character and allow space,- in the middle
+          pattern: '^(?![\s-])[a-zA-Z0-9\s-]{1,9}[a-zA-Z0-9](?![\s-])$'
+          example: "30342-3456"
         phoneNumber:
           description: Sender phone number.
           type: string
@@ -5707,9 +5708,10 @@ components:
         postalCode:
           description: Receiver postal code.
           type: string
-          maxLength: 5
-          pattern: '^(?!\s*$).+'
-          example: "30342"
+          #This pattern allows postal code of minimum of length 3  or maximum of length 10,
+          #does not allow white spaces for the first and last character and allow space,- in the middle
+          pattern: '^(?![\s-])[a-zA-Z0-9\s-]{1,9}[a-zA-Z0-9](?![\s-])$'
+          example: "30342-3456"
         phoneNumber:
           description: Receiver phone number.
           type: string
