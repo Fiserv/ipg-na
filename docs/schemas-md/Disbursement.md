@@ -21,7 +21,7 @@
     "city": "Atlanta",
     "stateCode": "GA",
     "countryCode": "US",
-    "postalCode": "30342",
+    "postalCode": "30342-3456",
     "phoneNumber": "4044040740",
     "birthDate": "19560121",
     "participationId": "123456789123456789123456789123",
@@ -35,7 +35,7 @@
     "city": "Atlanta",
     "stateCode": "GA",
     "countryCode": "US",
-    "postalCode": "30342",
+    "postalCode": "30342-3456",
     "phoneNumber": "4044040740",
     "referenceNumber": "12345678",
     "accountNumber": "135246",
@@ -43,4 +43,3 @@
   }
 }
 ``` 
-
