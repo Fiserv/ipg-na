@@ -44,7 +44,7 @@ Steps to create a Payment processing certificate in the Apple portal:
 
 	 - Request a new certificate from your keychain access.  
  
-   ![](/api/hosted-image/IPGNA/assets/images/ApplePay2.jpg)  
+ ##  ![](/api/hosted-image/IPGNA/assets/images/ApplePay2.jpg)  
    						Certificate From Your Keychain Access	
 	 - Follow the prompt and request the certificate to be saved on file.
 	 - In the 'Certificate' section in the apple portal, click on the '+' and follow the prompt to request apple developer certificate for 'IOS' development.
@@ -74,7 +74,7 @@ Now the Xcode is set-up for coding.
 
 In the SDK enter the URL, api key and api secret and build the app:  
 
-   ![](/api/hosted-image/IPGNA/assets/images/ApplePay3.jpg)
+ ##  ![](/api/hosted-image/IPGNA/assets/images/ApplePay3.jpg)
    	 					Enter URL,API Key and Secret 
 	 - Merchant id: Enter any valid merchant id registered in the apple portal. This gives the capability for a single user to use multiple merchant id's
 	 - Amount: Enter the amount of the transaction
